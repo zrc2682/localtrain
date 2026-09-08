@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(uuid())
+  username     String        @unique
+  passwordHash String
+  role         String        @default("user")
+  createdAt    DateTime      @default(now())
+  submissions  Submission[]
+  usedHints    UsedHint[]
+  containers   Container[]
+}
+
+model Challenge {
+  id          String        @id @default(uuid())
+  title       String
+  description String        @default("")
+  category    String        @default("misc")
+  difficulty  String        @default("easy")
+  contest     String        @default("")
+  image       String        @default("")
+  port        Int           @default(80)
+  visible     Boolean       @default(true)
+  note        String        @default("")
+  createdAt   DateTime      @default(now())
+  hints       Hint[]        @relation("ChallengeHints")
+  submissions Submission[]
+  containers  Container[]
+  flags       Flag[]
+  attachments Attachment[]
+}
+
+model Container {
+  id            String    @id @default(uuid())
+  userId        String
+  user          User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  challengeId   String
+  challenge     Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  containerId   String
+  image         String
+  hostPort      Int
+  internalPort  Int
+  startedAt     DateTime  @default(now())
+  expiresAt     DateTime
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([userId])
+  @@index([challengeId])
+  @@index([expiresAt])
+  @@unique([userId, challengeId])
+}
+
+model Flag {
+  id          String    @id @default(uuid())
+  challengeId String
+  index       Int       // 0-based position, flag1=0, flag2=1...
+  value       String
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+
+  @@unique([challengeId, index])
+}
+
+model Attachment {
+  id           String   @id @default(uuid())
+  challengeId  String
+  filename     String
+  originalName String
+  path         String
+  size         Int
+  mimeType     String
+  visibleToUser Boolean @default(true)
+  createdAt    DateTime @default(now())
+  challenge    Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+}
+
+model Hint {
+  id           String     @id @default(uuid())
+  challengeId  String
+  challenge    Challenge  @relation("ChallengeHints", fields: [challengeId], references: [id], onDelete: Cascade)
+  level        Int        @default(1)
+  label        String     @default("")
+  content      String
+  scorePenalty Int        @default(0)
+  usedHints    UsedHint[]
+
+  @@unique([challengeId, level])
+}
+
+model UsedHint {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  hintId    String
+  hint      Hint     @relation(fields: [hintId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, hintId])
+}
+
+model Submission {
+  id                String    @id @default(uuid())
+  userId            String
+  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  challengeId       String
+  challenge         Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  flag              String    @default("")
+  isCorrect         Boolean   @default(false)
+  solvedFlagIndices Json      @default("[]")
+  solveCount        Int       @default(0)
+  score             Int       @default(0)
+  solvedAt          DateTime?
+  submittedAt       DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+
+  @@unique([userId, challengeId])
+}

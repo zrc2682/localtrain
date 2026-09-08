@@ -1,0 +1,226 @@
+{
+  "version": "1.0",
+  "note": "第十批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "sdnisc-2025-web",
+      "title": "web",
+      "contest": "SDNISC 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 5000,
+      "image": "localtrain/ctf-sdnisc-2025-web:latest",
+      "flag": "flag{sdnisc-2025-web_8946ca636ed8}",
+      "source": {
+        "repo": "CTF-Archives/2025-SDNISC-haixuan",
+        "path": "web",
+        "url": "https://github.com/CTF-Archives/2025-SDNISC-haixuan"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/sdnisc-2025/sdnisc-2025-web",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，JWT 算法混淆/权限提升后读取",
+      "notes": "Flask 烟草监管系统，使用 python-jwt + jwcrypto，端口 5000",
+      "status": "deployed"
+    },
+    {
+      "id": "hkcert-2025-ezjs",
+      "title": "ezjs",
+      "contest": "HKCTF 2025 Quals",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert-2025-ezjs:latest",
+      "flag": "flag{hkcert-2025-ezjs_64f9291b864e}",
+      "source": {
+        "repo": "CTF-Archives/HKCTF2025Quals",
+        "path": "ezjs",
+        "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-ezjs",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，JSON5 解析 / Pug 模板渲染后读取",
+      "notes": "Node.js + Express + JSON5 + Pug，端口 80",
+      "status": "deployed"
+    },
+    {
+      "id": "hkcert-2025-nettool",
+      "title": "nettool",
+      "contest": "HKCTF 2025 Quals",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert-2025-nettool:latest",
+      "flag": "flag{hkcert-2025-nettool_dd5e5abbb863}",
+      "source": {
+        "repo": "CTF-Archives/HKCTF2025Quals",
+        "path": "nettool",
+        "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-nettool",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，管理员 HTTP 工具 SSRF 后读取",
+      "notes": "FastAPI + Jinja2 后台管理工具，含内部 HTTP 请求功能，端口 80",
+      "status": "deployed"
+    },
+    {
+      "id": "hkcert-2025-labyrinth",
+      "title": "labyrinth",
+      "contest": "HKCTF 2025 Quals",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-hkcert-2025-labyrinth:latest",
+      "flag": "flag{hkcert-2025-labyrinth_766d85119fb0}",
+      "source": {
+        "repo": "CTF-Archives/HKCTF2025Quals",
+        "path": "labyrinth",
+        "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-labyrinth",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Spring Boot 迷宫/复杂逻辑漏洞后读取",
+      "notes": "Spring Boot fat jar，端口 8080",
+      "status": "deployed"
+    },
+    {
+      "id": "openharmony-2025-layers",
+      "title": "layers",
+      "contest": "OpenHarmony CTF 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-openharmony-2025-layers:latest",
+      "flag": "flag{openharmony-2025-layers_2ada0b454baa}",
+      "source": {
+        "repo": "CTF-Archives/OpenHarmonyCTF-2025",
+        "path": "Layers_of_Compromise",
+        "url": "https://github.com/CTF-Archives/OpenHarmonyCTF-2025"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/openharmony-2025/openharmony-2025-layers",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，PHP 安全文档系统多层权限绕过/模板注入后读取",
+      "notes": "PHP + Apache，多层权限（user/dev/admin）与模板预览，端口 80",
+      "status": "deployed"
+    },
+    {
+      "id": "openharmony-2025-filesystem",
+      "title": "filesystem",
+      "contest": "OpenHarmony CTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-openharmony-2025-filesystem:latest",
+      "flag": "flag{openharmony-2025-filesystem_4a8c0a55bbf1}",
+      "source": {
+        "repo": "CTF-Archives/OpenHarmonyCTF-2025",
+        "path": "Filesystem",
+        "url": "https://github.com/CTF-Archives/OpenHarmonyCTF-2025"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/openharmony-2025/openharmony-2025-filesystem",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，NestJS 文件上传/解压/下载路径穿越后读取",
+      "notes": "NestJS + TypeScript + EJS，含文件上传、解压与下载功能，端口 3000",
+      "status": "deployed"
+    },
+    {
+      "id": "jswa-2025-web1",
+      "title": "web1",
+      "contest": "JSWA 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-jswa-2025-web1:latest",
+      "flag": "flag{jswa-2025-web1_7a5dbb596430}",
+      "source": {
+        "repo": "CTF-Archives/JSWA-2025",
+        "path": "web1",
+        "url": "https://github.com/CTF-Archives/JSWA-2025"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/jswa-2025/jswa-2025-web1",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag1 和 /flag2，登录/校验码绕过与 Cookie 伪造后读取",
+      "notes": "Node.js + Express，双 flag（/flag1 和 /flag2），均使用同一 flag 值，端口 80",
+      "status": "deployed"
+    },
+    {
+      "id": "sanxia-2024-textme",
+      "title": "textme",
+      "contest": "Sanxia CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-sanxia-2024-textme:latest",
+      "flag": "flag{sanxia-2024-textme_7ab9fc6a9278}",
+      "source": {
+        "repo": "CTF-Archives/2024-Sanxia-CTF",
+        "path": "Web/textme",
+        "url": "https://github.com/CTF-Archives/2024-Sanxia-CTF"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/sanxia-2024/sanxia-2024-textme",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Rust 预编译服务漏洞后读取",
+      "notes": "Rust 预编译二进制 textme，端口 80",
+      "status": "deployed"
+    },
+    {
+      "id": "xhlj-2023-ezupload",
+      "title": "ezupload",
+      "contest": "XHLJ 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-xhlj-2023-ezupload:latest",
+      "flag": "flag{xhlj-2023-ezupload_d1e6e6903066}",
+      "source": {
+        "repo": "CTF-Archives/2023-XHLJ",
+        "path": "Web-ezupload",
+        "url": "https://github.com/CTF-Archives/2023-XHLJ"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/xhlj-2023/xhlj-2023-ezupload",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Spring Boot 文件上传漏洞后读取",
+      "notes": "Spring Boot 3.x fat jar，上传目录 /tmp/uploads，端口 8080",
+      "status": "deployed"
+    },
+    {
+      "id": "dfjk-2024-oldapi",
+      "title": "oldapi",
+      "contest": "巅峰极客 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-dfjk-2024-oldapi:latest",
+      "flag": "flag{dfjk-2024-oldapi_bc95f1403dd0}",
+      "source": {
+        "repo": "CTF-Archives/2024-dfjk",
+        "path": "Web/oldapi",
+        "url": "https://github.com/CTF-Archives/2024-dfjk"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/dfjk-2024/dfjk-2024-oldapi",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Spring Boot 旧 API 漏洞 + nginx 反代后读取",
+      "notes": "Spring Boot + nginx 双层，/readflag SUID 读取 /flag，端口 80",
+      "status": "deployed"
+    }
+  ]
+}

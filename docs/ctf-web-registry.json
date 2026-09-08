@@ -1,0 +1,332 @@
+{
+  "version": "1.0",
+  "note": "比赛 Web 题目部署登记表。status: pending/deployed/skipped/failed。来源均为国内 CTF 比赛官方仓库,经 GitHub(raw/codeload, 本机代理)下载;源码位于 docker/ctf-contests/<比赛slug>/<题目slug>/,未做任何修改。",
+  "challenges": [
+    {
+      "id": "ez-upload",
+      "title": "上传？上传！",
+      "contest": "SVUCTF WINTER 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-ez-upload:latest",
+      "flag": "flag{ez-upload_f24d80321874}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-WINTER-2023",
+        "branch": "main",
+        "path": "challenges/web/ez_upload",
+        "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/ez_upload"
+      },
+      "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/ez_upload/README.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/ez-upload.md",
+      "dir": "docker/ctf-contests/svuctf-winter-2023/ez-upload",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → init.sh 写入 /var/www/flag (chmod 444);文件上传条件竞争 getshell 后读取",
+      "notes": "基础镜像 ghcr.io/svuctf/base/php:latest(GHCR 公开镜像,非 Docker Hub 官方);nginx+php-fpm",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "flagserver",
+      "title": "FlagServer",
+      "contest": "SVUCTF WINTER 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-flagserver:latest",
+      "flag": "flag{flagserver_0120fe76f0cb}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-WINTER-2023",
+        "branch": "main",
+        "path": "challenges/web/flagserver",
+        "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/flagserver"
+      },
+      "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/flagserver/README.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/flagserver.md",
+      "dir": "docker/ctf-contests/svuctf-winter-2023/flagserver",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → Flask config.FLAG,以 admin 登录后 /home 渲染;考点为伪随机数种子预测(JumpServer re-auth 简化)",
+      "notes": "基础镜像 python:alpine;gunicorn 单进程;选手附件 attachments/app.zip 已下载",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "tonyenc",
+      "title": "热血沸腾的组合技",
+      "contest": "SVUCTF WINTER 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-tonyenc:latest",
+      "flag": "flag{tonyenc_8a27cdfe7208}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-WINTER-2023",
+        "branch": "main",
+        "path": "challenges/web/tonyenc",
+        "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/tonyenc"
+      },
+      "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/tonyenc/README.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/tonyenc.md",
+      "dir": "docker/ctf-contests/svuctf-winter-2023/tonyenc",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → init.sh 写入随机名 /flag_XXXXXXXX (chmod 444);任意文件下载+tonyenc 源码解密后发现后门执行命令读取",
+      "notes": "build/tonyenc/ 原为 git submodule(gitee.com/lfveeker/tonyenc),已按 gitee master 下载补齐;加密密钥以本地 build/core.h 为准(Dockerfile 构建时覆盖 submodule 同名文件);基础镜像 ghcr.io/svuctf/base/php:latest",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "writeup-channel",
+      "title": "题解分享频道",
+      "contest": "SVUCTF WINTER 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-writeup-channel:latest",
+      "flag": "flag{writeup-channel_cf33ed38a25b}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-WINTER-2023",
+        "branch": "main",
+        "path": "challenges/web/writeup_channel",
+        "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/writeup_channel"
+      },
+      "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/writeup_channel/README.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/writeup-channel.md",
+      "dir": "docker/ctf-contests/svuctf-winter-2023/writeup-channel",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → bot/bot.py URL 编码后写入 bot 浏览器 cookie(flag=...);存储型 XSS 在容器不出网条件下经投稿功能带出 cookie",
+      "notes": "基础镜像 python:alpine;容器内含 chromium-chromedriver+selenium bot,gunicorn 后台+bot 前台循环访问",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "http-server-emulator",
+      "title": "http server emulator",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-http-server-emulator:latest",
+      "flag": "flag{http-server-emulator_b11dcb4c63b1}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/http-server-emulator",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/http-server-emulator"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/http-server-emulator",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → Deno 服务(main.ts),按提示构造特定三位数状态码响应后通过 socket 直发 flag",
+      "notes": "基础镜像 denoland/deno:1.46.3(官方);原始 TCP 服务非 HTTP 框架;官方难度标 Easy(15 解),按协议构造复杂度记 medium",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "noscript",
+      "title": "noscript",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-noscript:latest",
+      "flag": "flag{noscript_47536bbee835}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/noscript",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/noscript"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/noscript",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → server.c 启动时 getenv 拷入全局 flag 变量;无 script 标签条件下的 XSS/泄漏类利用(官方标 Easy 但仅 3 解,按利用链记 hard)",
+      "notes": "基础镜像 ubuntu:24.04(官方);C+libmicrohttpd 自研 HTTP 服务,容器内 w3m+xvfb 充当 bot;CMD 参数指定端口 8080",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "note-taking-2",
+      "title": "note taking 2",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-note-taking-2:latest",
+      "flag": "flag{note-taking-2_8e0c254e33c5}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/note_taking_2",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/note_taking_2"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/note-taking-2",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → app.js 写入 public/<随机UUID>/flag.txt;bot 携带 uid=<flag_id> cookie 访问选手笔记,考点为 web cache deception(cl3v3r_c4ch3),非 XSS",
+      "notes": "基础镜像 node:latest(官方,未锁版本);容器内含 chromium bot(PUPPETEER_SKIP_CHROMIUM_DOWNLOAD,用系统 chromium);官方标 Medium、仅 1 解 500 分,按利用链记 hard",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "sandbox",
+      "title": "Another Sandbox",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-sandbox:latest",
+      "flag": "flag{sandbox_8e2535daede5}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/sandbox",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/sandbox"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": "ctf-writeup/susctf-2024/sandbox.md",
+      "dir": "docker/ctf-contests/susctf-2024/sandbox",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 GZCTF_FLAG → run.sh 写入 /flag (chmod 700 仅 root 可读);Python 沙箱逃逸+提权读取",
+      "notes": "基础镜像 python:3.12-slim(官方);Flask+php-cli 混合环境;仓库内自带 wp.md(选手短题解);官方标 Medium、2 解 432 分,按利用链记 hard",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "giveflag",
+      "title": "Flag点击就送！",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-giveflag:latest",
+      "flag": "flag{giveflag_d5427f697c06}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/Giveflag",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Giveflag"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/giveflag.md",
+      "dir": "docker/ctf-contests/litctf-2023/giveflag",
+      "hasDockerfile": true,
+      "flagMechanism": "环境变量 FLAG → os.getenv('FLAG') 在 /flag 路由返回;考点为 Flask session 伪造(weak secret_key='LitCTF');Dockerfile 默认 ENV FLAG=NSSCTF{123456} 需替换",
+      "notes": "基础镜像 python:3.11(官方);飞书官方题解: https://dqgom7v7dl.feishu.cn/docx/VyLmdhKDOou5E8xruA7c8bSInKf",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "sql-letmein",
+      "title": "这是什么？SQL ！注一下 ！",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-sql-letmein:latest",
+      "flag": "flag{sql-letmein_bac406c80cf3}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/SQL_Letmein",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/SQL_Letmein"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/sql-letmein.md",
+      "dir": "docker/ctf-contests/litctf-2023/sql-letmein",
+      "hasDockerfile": true,
+      "flagMechanism": "flag 存于容器内 MySQL 数据库(原题由平台注入 ctftraining.flag 表;仓库 Dockerfile 仅向 ctf.users 种入假 flag);括号闭合 SQL 注入读出",
+      "notes": "基础镜像 ctftraining/base_image_nginx_mysql_php_73(Docker Hub 第三方 CTF 一体机:nginx+mysql+php7.3),单容器含数据库",
+      "status": "deployed",
+      "built": true
+    },
+    {
+      "id": "nctf-logging",
+      "title": "logging",
+      "contest": "NCTF 2023",
+      "category": "web",
+      "source": {
+        "repo": "X1cT34m/NCTF2023",
+        "branch": "main",
+        "path": "Web/logging",
+        "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/logging"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/984",
+      "status": "deployed",
+      "reason": "src/logging.jar 为 Spring Boot fat jar(>20MB),超过附件单文件 15MB 上限,且 jsDelivr 对 >20MB 文件直接 403 无法分发",
+      "image": "localtrain/ctf-nctf-2023-logging:latest",
+      "flag": "flag{nctf-2023-logging_7599414c6baa}",
+      "port": 8080,
+      "dir": "docker/ctf-contests/nctf-2023/nctf-2023-logging",
+      "hasDockerfile": true,
+      "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,构建时写入 /flag",
+      "writeupLocal": "ctf-writeup/nctf-2023/logging.md"
+    },
+    {
+      "id": "nctf-evilmq",
+      "title": "EvilMQ",
+      "contest": "NCTF 2023",
+      "category": "web",
+      "source": {
+        "repo": "X1cT34m/NCTF2023",
+        "branch": "main",
+        "path": "Web/EvilMQ",
+        "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/EvilMQ"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/984",
+      "status": "deployed",
+      "reason": "src/EvilMQ.jar 与 src/SimpleRasp.jar 均 >20MB,超过附件单文件 15MB 上限,jsDelivr 403;原定 hard 候选(Apache InLong TubeMQ RCE+RASP 绕过+SUID readflag)",
+      "image": "localtrain/ctf-nctf-2023-evilmq:latest",
+      "flag": "flag{nctf-2023-evilmq_0a78ae6ebffc}",
+      "port": 8000,
+      "dir": "docker/ctf-contests/nctf-2023/nctf-2023-evilmq",
+      "hasDockerfile": true,
+      "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,写入 /flag(root 400),保留 SUID /readflag,以 app 用户运行 jar",
+      "writeupLocal": "ctf-writeup/nctf-2023/evilmq.md"
+    },
+    {
+      "id": "iscc-2024-quals",
+      "title": "(仓库级候选)2024-ISCC-Quals",
+      "contest": "ISCC 2024",
+      "category": "web",
+      "source": {
+        "repo": "CTF-Archives/2024-ISCC-Quals",
+        "branch": "master",
+        "path": "/",
+        "url": "https://github.com/CTF-Archives/2024-ISCC-Quals"
+      },
+      "status": "skipped",
+      "reason": "仓库仅含 README 题目描述,附件与源码不在仓库内,无法获取可部署源码"
+    },
+    {
+      "id": "hnyc-2025",
+      "title": "(仓库级候选)HappyNewYearCTF-2025",
+      "contest": "HappyNewYearCTF 2025",
+      "category": "web",
+      "source": {
+        "repo": "GitSeek2/HappyNewYearCTF-2025",
+        "branch": "main",
+        "path": "/",
+        "url": "https://github.com/GitSeek2/HappyNewYearCTF-2025"
+      },
+      "status": "skipped",
+      "reason": "仓库仅为出题模板与 base 镜像框架,challenges/web 目录为空(仅 .gitkeep),无实际题目"
+    },
+    {
+      "id": "svuctf-helloworld-2024",
+      "title": "(仓库级候选)SVUCTF-HELLOWORLD-2024",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "branch": "main",
+        "path": "challenges/web",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024/tree/main/challenges/web"
+      },
+      "status": "skipped",
+      "reason": "7 道 web 题(ez_http/ez_rce/method/param/php_class/rce/unserialize)全部为新手 easy 难度,不符合 6m/3h/1e 配比,未选用;可作后续 easy 补充来源"
+    }
+  ]
+}

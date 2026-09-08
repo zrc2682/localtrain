@@ -1,0 +1,160 @@
+{
+  "version": "1.0",
+  "note": "因 15MB 附件旧限制被各批次跳过、现已放宽后重新部署的 Web 题登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "nctf-2023-logging",
+      "title": "logging",
+      "contest": "NCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-nctf-2023-logging:latest",
+      "flag": "flag{nctf-2023-logging_7599414c6baa}",
+      "source": {
+        "repo": "X1cT34m/NCTF2023",
+        "branch": "main",
+        "path": "Web/logging",
+        "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/logging"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/984",
+      "writeupLocal": "ctf-writeup/nctf-2023/logging.md",
+      "dir": "docker/ctf-contests/nctf-2023/nctf-2023-logging",
+      "hasDockerfile": true,
+      "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,构建时写入 /flag",
+      "status": "deployed"
+    },
+    {
+      "id": "nctf-2023-evilmq",
+      "title": "EvilMQ",
+      "contest": "NCTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-nctf-2023-evilmq:latest",
+      "flag": "flag{nctf-2023-evilmq_0a78ae6ebffc}",
+      "source": {
+        "repo": "X1cT34m/NCTF2023",
+        "branch": "main",
+        "path": "Web/EvilMQ",
+        "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/EvilMQ"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/984",
+      "writeupLocal": "ctf-writeup/nctf-2023/evilmq.md",
+      "dir": "docker/ctf-contests/nctf-2023/nctf-2023-evilmq",
+      "hasDockerfile": true,
+      "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,写入 /flag(root 400),保留 SUID /readflag,以 app 用户运行 jar",
+      "status": "deployed"
+    },
+    {
+      "id": "mtgxs-2022-easyjava",
+      "title": "easyjava",
+      "contest": "美团高校赛 2022",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8090,
+      "image": "localtrain/ctf-mtgxs-2022-easyjava:latest",
+      "flag": "flag{mtgxs-2022-easyjava_85b81e990dd0}",
+      "source": {
+        "repo": "CTF-Archives/2022-mtgxs-web-easyjava",
+        "branch": "master",
+        "path": "",
+        "url": "https://github.com/CTF-Archives/2022-mtgxs-web-easyjava"
+      },
+      "writeup": "https://arsenetang.github.io/2022/09/17/WP%E7%AF%87%E4%B9%8B2022%E7%BE%8E%E5%9B%A2CTF---easyjava/",
+      "writeupLocal": "ctf-writeup/mtgxs-2022/easyjava.md",
+      "dir": "docker/ctf-contests/mtgxs-2022/mtgxs-2022-easyjava",
+      "hasDockerfile": true,
+      "flagMechanism": "entrypoint.sh 读 $FLAG 环境变量写入 /flag;Dockerfile 加 ENV FLAG=flag{...}",
+      "status": "deployed"
+    },
+    {
+      "id": "ccbgx-2022-b4bycoffee",
+      "title": "b4bycoffee",
+      "contest": "长城杯高校 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccbgx-2022-b4bycoffee:latest",
+      "flag": "flag{ccbgx-2022-b4bycoffee_e1c773902517}",
+      "source": {
+        "repo": "CTF-Archives/2022-ccbgx-web-b4bycoffee",
+        "branch": "master",
+        "path": "",
+        "url": "https://github.com/CTF-Archives/2022-ccbgx-web-b4bycoffee"
+      },
+      "writeup": "https://blog.csdn.net/uuzeray/article/details/136781454",
+      "writeupLocal": "ctf-writeup/ccbgx-2022/b4bycoffee.md",
+      "dir": "docker/ctf-contests/ccbgx-2022/ccbgx-2022-b4bycoffee",
+      "hasDockerfile": true,
+      "flagMechanism": "entrypoint.sh 读 $FLAG 环境变量写入 /flag;Dockerfile 加 ENV FLAG=flag{...}",
+      "status": "deployed"
+    },
+    {
+      "id": "zjsdxs-2023-ezweb",
+      "title": "ezWEB",
+      "contest": "浙江省大学生网络与信息安全竞赛 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9124,
+      "image": "localtrain/ctf-zjsdxs-2023-ezweb:latest",
+      "flag": "flag{zjsdxs-2023-ezweb_566955130afc}",
+      "source": {
+        "repo": "CTF-Archives/2023-zjsdxs",
+        "branch": "main",
+        "path": "Web-ezWEB",
+        "url": "https://github.com/CTF-Archives/2023-zjsdxs/tree/main/Web-ezWEB"
+      },
+      "writeup": "https://www.ctfiot.com/146026.html",
+      "writeupLocal": "ctf-writeup/zjsdxs-2023/ezweb.md",
+      "dir": "docker/ctf-contests/zjsdxs-2023/zjsdxs-2023-ezweb",
+      "hasDockerfile": false,
+      "flagMechanism": "源码 UserController 黑名单过滤 flag/proc,预期 RCE 后读 /flag;原题无 Dockerfile,自写 eclipse-temurin:18-jre 镜像,构建时写入 /flag",
+      "status": "deployed"
+    },
+    {
+      "id": "nctf-2024-h2revenge",
+      "title": "H2Revenge",
+      "contest": "NCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-nctf-2024-h2revenge:latest",
+      "flag": "flag{nctf-2024-h2revenge_c0517174d138}",
+      "source": {
+        "repo": "X1cT34m/NCTF2024",
+        "branch": "main",
+        "path": "Web/H2Revenge",
+        "url": "https://github.com/X1cT34m/NCTF2024/tree/main/Web/H2Revenge"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/1036",
+      "writeupLocal": "ctf-writeup/nctf-2024/h2revenge.md",
+      "dir": "docker/ctf-contests/nctf-2024/nctf-2024-h2revenge",
+      "hasDockerfile": true,
+      "flagMechanism": "docker-entrypoint.sh 读 $FLAG 环境变量写入 /flag(chmod 000)后切换 ctf 用户启动 jar;Dockerfile 加 ENV FLAG=flag{...}",
+      "status": "deployed"
+    },
+    {
+      "id": "qwbs8-2024-playground",
+      "title": "Playground",
+      "contest": "强网杯 S8 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5000,
+      "image": "localtrain/ctf-qwbs8-2024-playground:latest",
+      "flag": "flag{qwbs8-2024-playground_6a9532d6512e}",
+      "source": {
+        "repo": "CTF-Archives/2024-qwbs8",
+        "branch": "main",
+        "path": "Release v0.1 playground_0fc355826a425716ec93af569955da9c.zip",
+        "url": "https://github.com/CTF-Archives/2024-qwbs8"
+      },
+      "writeup": "",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/playground.md",
+      "dir": "docker/ctf-contests/qwbs8-2024/qwbs8-2024-playground",
+      "hasDockerfile": true,
+      "flagMechanism": "entrypoint.sh 读 ICQ_FLAG 环境变量写入 /flag(root 400),再启动 sandbox 和 Flask app;Dockerfile 加 ENV ICQ_FLAG=flag{...}",
+      "status": "deployed"
+    }
+  ]
+}

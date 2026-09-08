@@ -1,0 +1,197 @@
+{
+  "batch": 33,
+  "date": "2026-08-23",
+  "source": "本地未注册遗留目录与 GitHub 新下载源码（SVUCTF HELLOWORLD 2024、2025 极客少年挑战赛初赛、CUHK CTF 2025、2025 强网杯初赛）。",
+  "challenges": [
+    {
+      "id": "svuctf-helloworld-2024-ez-http",
+      "title": "SVUCTF ezHTTP",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-ez-http:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-ez-http_2f8a9e1c3b5d}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/ez-http/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/ez-http",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回 Set-Cookie",
+      "notes": "PHP 基础 HTTP 头伪造题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-param",
+      "title": "SVUCTF Param",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-param:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-param_7e3c8a1f9b2d}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/param/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/param",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回",
+      "notes": "PHP GET/POST 参数传递题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-rce",
+      "title": "SVUCTF babyRCE",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-rce:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-rce_9a4b7c2e1f8d}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/rce/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/rce",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP eval 执行 system 读取",
+      "notes": "PHP eval 无过滤 RCE 入门题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-method",
+      "title": "SVUCTF Method",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-method:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-method_1c5d8a3e7b4f}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/method/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/method",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，Flask 按 HTTP 方法分片返回",
+      "notes": "Flask HTTP 方法探测题。已替换 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-php-class",
+      "title": "SVUCTF PHP Class",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-php-class:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-php-class_6d2e9f5a8c1b}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/php-class/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/php-class",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回",
+      "notes": "PHP 类属性与 GET 参数题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-ez-rce",
+      "title": "SVUCTF ezRCE",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-ez-rce:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-ez-rce_4b8e2d7a5f9c}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/ez-rce/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/ez-rce",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，绕过 flag/空格过滤后读取",
+      "notes": "PHP eval 过滤绕过题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "svuctf-helloworld-2024-unserialize",
+      "title": "SVUCTF Unserialize",
+      "contest": "SVUCTF HELLOWORLD 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-svuctf-helloworld-2024-unserialize:latest",
+      "flag": "flag{batch33-svuctf-helloworld-2024-unserialize_3a7b6e9d2c4f}",
+      "source": {
+        "repo": "SVUCTF/SVUCTF-HELLOWORLD-2024",
+        "url": "https://github.com/SVUCTF/SVUCTF-HELLOWORLD-2024"
+      },
+      "writeup": "docker/ctf-contests/svuctf-helloworld-2024/unserialize/README.md",
+      "dir": "docker/ctf-contests/svuctf-helloworld-2024/unserialize",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，PHP 反序列化 POP 链读取",
+      "notes": "PHP 反序列化 POP 链题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+    },
+    {
+      "id": "ciscn-2024-quals-pybox",
+      "title": "pybox",
+      "contest": "CISCN 2024 初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-ciscn-2024-quals-pybox:latest",
+      "flag": "flag{batch33-ciscn-2024-quals-pybox_5e9c1a8b3d7f}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/ciscn-2024-quals/pybox",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，Flask 运行用户提交的 Python 代码，绕过沙箱读取 /flag",
+      "notes": "Python 沙箱代码执行题。源码来自 .tmp/batch31/ciscn_quals_extract，已补充 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。"
+    },
+    {
+      "id": "cuhk-ctf-2025-jain-streak-dreamers",
+      "title": "jain streak dreamers",
+      "contest": "CUHK CTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-cuhk-ctf-2025-jain-streak-dreamers:latest",
+      "flag": "flag{batch33-cuhk-ctf-2025-jain-streak-dreamers_8f2a6c4e9b1d}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/cuhk-ctf-2025/jain-streak-dreamers",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 uploads/1/flag1.txt 与 secret/flag2.txt，由 OCaml Dream 应用返回",
+      "notes": "OCaml Dream 框架 Web 应用。原 Dockerfile 使用 docker.1ms.run/ocaml/opam:alpine-ocaml-5.1 且 flag 硬编码，已添加 ARG FLAG 注入逻辑。"
+    },
+    {
+      "id": "qwbs9-2025-quals-web-log-api",
+      "title": "web-log-api",
+      "contest": "2025 强网杯初赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-qwbs9-2025-quals-web-log-api:latest",
+      "flag": "flag{batch33-qwbs9-2025-quals-web-log-api_2a7f8e3c5b9d}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/qwbs9-2025-quals/web-log-api",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag，需选手通过文件包含或日志写入读取",
+      "notes": "仅 api.php 单文件，已补充 Dockerfile 使用 php:8.2-apache。题目要求按顺序传入 timestamp 数组参数并写入日志，存在文件包含/日志污染利用点。"
+    }
+  ]
+}

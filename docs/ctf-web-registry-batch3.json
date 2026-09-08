@@ -1,0 +1,226 @@
+{
+  "version": "1.0",
+  "note": "第三批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "litctf-2023-f12",
+      "title": "F12",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-f12:latest",
+      "flag": "flag{litctf-2023-f12_2d31311259f3}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/F12",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/F12"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/F12.md",
+      "dir": "docker/ctf-contests/litctf-2023/F12",
+      "hasDockerfile": true,
+      "flagMechanism": "flag.php 中 $flag 被包含进 index.php HTML 注释，需替换为静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-ping",
+      "title": "Ping",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-ping:latest",
+      "flag": "flag{litctf-2023-ping_d70d1127df4a}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/ping",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/ping"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/Ping.md",
+      "dir": "docker/ctf-contests/litctf-2023/ping",
+      "hasDockerfile": true,
+      "flagMechanism": "index.php 中 $flag 变量直接回显，替换为静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-follow-me-and-hack-me",
+      "title": "Follow me and hack me",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-follow-me-and-hack-me:latest",
+      "flag": "flag{litctf-2023-follow-me-and-hack-me_ef9f35a19248}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/Follow me and hack me",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Follow%20me%20and%20hack%20me"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/Follow-me-and-hack-me.md",
+      "dir": "docker/ctf-contests/litctf-2023/follow-me-and-hack-me",
+      "hasDockerfile": true,
+      "flagMechanism": "index.php 中 setcookie('flag', 'FLAGGG') 使用静态 flag，替换 FLAGGG",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-vimyyds",
+      "title": "Vim yyds",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-vimyyds:latest",
+      "flag": "flag{litctf-2023-vimyyds_0573bc0160fe}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/vimyyds",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/vimyyds"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/Vim-yyds.md",
+      "dir": "docker/ctf-contests/litctf-2023/vimyyds",
+      "hasDockerfile": true,
+      "flagMechanism": "命令注入后读取 /flag 文件，镜像构建时写入静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-1zjs",
+      "title": "1zjs",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-1zjs:latest",
+      "flag": "flag{litctf-2023-1zjs_160d80abf56e}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/1zjs",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/1zjs"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/1zjs.md",
+      "dir": "docker/ctf-contests/litctf-2023/1zjs",
+      "hasDockerfile": true,
+      "flagMechanism": "main.js 中 JSFuck 编码的 flag，替换为当前静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-http-pro-max-plus",
+      "title": "http pro max plus",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-http-pro-max-plus:latest",
+      "flag": "flag{litctf-2023-http-pro-max-plus_8df510f7ff34}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/http pro max plus",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/http%20pro%20max%20plus"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/http-pro-max-plus.md",
+      "dir": "docker/ctf-contests/litctf-2023/http-pro-max-plus",
+      "hasDockerfile": true,
+      "flagMechanism": "index.php 中 $flag 变量，替换为静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-missile-trail",
+      "title": "Missile trail",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-missile-trail:latest",
+      "flag": "flag{litctf-2023-missile-trail_7f430986a4e4}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/Missile trail",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Missile%20trail"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/Missile-trail.md",
+      "dir": "docker/ctf-contests/litctf-2023/missile-trail",
+      "hasDockerfile": true,
+      "flagMechanism": "game.js 中硬编码的 flag，替换为静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "litctf-2023-homework-management-system",
+      "title": "Homework management system",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-litctf-2023-homework-management-system:latest",
+      "flag": "flag{litctf-2023-homework-management-system_30e8518b03af}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "branch": "main",
+        "path": "2023/Web/Homework management system",
+        "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Homework%20management%20system"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/Homework-management-system.md",
+      "dir": "docker/ctf-contests/litctf-2023/homework-management-system",
+      "hasDockerfile": true,
+      "flagMechanism": "命令注入后读取 /flag 文件，镜像构建时写入静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "hgame-2023-classic-childhood-game",
+      "title": "Classic Childhood Game",
+      "contest": "HGAME 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hgame-2023-classic-childhood-game:latest",
+      "flag": "flag{hgame-2023-classic-childhood-game_01ec9f6ee1e4}",
+      "source": {
+        "repo": "CTF-Archives/2023-hgame-week1-web-classic_childhood_game",
+        "branch": "master",
+        "path": "",
+        "url": "https://github.com/CTF-Archives/2023-hgame-week1-web-classic_childhood_game"
+      },
+      "writeup": "https://exp10it.io/posts/hgame-2023-web-writeup/",
+      "writeupLocal": "ctf-writeup/hgame-2023/classic-childhood-game.md",
+      "dir": "docker/ctf-contests/hgame-2023/classic-childhood-game",
+      "hasDockerfile": true,
+      "flagMechanism": "src/Res/Events.js 中 mota() 硬编码的 flag（原动态 flag 在 obfuscated 字符串中），替换为静态 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "isoon-2023-easy-unserialize",
+      "title": "easy_unserialize",
+      "contest": "2023 安洵杯",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-isoon-2023-easy-unserialize:latest",
+      "flag": "flag{isoon-2023-easy-unserialize_f116574ecd0d}",
+      "source": {
+        "repo": "D0g3-Lab/i-SOON_CTF_2023",
+        "branch": "main",
+        "path": "web/easy_unserialize",
+        "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/easy_unserialize"
+      },
+      "writeup": "https://blog.csdn.net/m0_74825093/article/details/144706002",
+      "writeupLocal": "ctf-writeup/isoon-2023/easy-unserialize.md",
+      "dir": "docker/ctf-contests/isoon-2023/easy-unserialize",
+      "hasDockerfile": true,
+      "flagMechanism": "$ICTF 环境变量写入 /FfffLlllLaAaaggGgGg，改为 Dockerfile RUN echo 'flag{...}' > /FfffLlllLaAaaggGgGg && chmod 444 写入静态 flag",
+      "status": "deployed"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+node_modules/
+dist/
+# 仅忽略平台自身的环境配置；题目源码里的 .env 是构建所需，须入库
+/packages/server/.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+.tmp/
+
+# 题目镜像归档文件（README 保留）
+docker-images/*.tar
+
+# 题目相关内容仅保留在本地（docker 环境 + writeup），不入库
+docker/
+ctf-writeup/
+cve-writeup/
+.deployed-challenges/
+
+# 运行时活数据：数据库与上传附件（用备份脚本保护，不进版本库）
+packages/server/prisma/*.db
+packages/server/prisma/*.db-journal
+packages/server/uploads/

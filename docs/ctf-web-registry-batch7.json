@@ -1,0 +1,249 @@
+{
+  "version": "1.0",
+  "note": "第七批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "qwbs9-2025-web-log-api",
+      "title": "日志系统-api",
+      "contest": "强网杯 2025 线上赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-qwbs9-2025-web-log-api:latest",
+      "flag": "flag{qwbs9-2025-web-log-api_16d3d9544b7e}",
+      "source": {
+        "repo": "CTF-Archives/2025-qwbs9-quals",
+        "path": "Web-日志系统-api.php",
+        "url": "https://github.com/CTF-Archives/2025-qwbs9-quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/qwbs9-2025/qwbs9-2025-web-log-api",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，日志文件上传/写入后 RCE 读取",
+      "notes": "单文件 PHP，需自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-semis-2025-easy_time",
+      "title": "easy_time",
+      "contest": "2025 长城杯-全国大学生信息安全竞赛半决赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 5000,
+      "image": "localtrain/ctf-ccb-semis-2025-easy_time:latest",
+      "flag": "flag{ccb-semis-2025-easy_time_dea4961f3582}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Semis",
+        "path": "easy_time.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-semis-2025/ccb-semis-2025-easy_time",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Flask 应用漏洞读取",
+      "notes": "Flask + Apache/PHP 双服务，使用原 Dockerfile 并注入 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-semis-2025-update_demo",
+      "title": "update_demo",
+      "contest": "2025 长城杯-全国大学生信息安全竞赛半决赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-ccb-semis-2025-update_demo:latest",
+      "flag": "flag{ccb-semis-2025-update_demo_a071e8cba0eb}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Semis",
+        "path": "update_demo.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-semis-2025/ccb-semis-2025-update_demo",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，上传 update.tar.gz 覆盖 index.php 后 RCE 读取",
+      "notes": "原始 web_demo/index.php 为空，已用最小上传/解压服务补全",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-ciscn-quals-2025-deprecated",
+      "title": "Deprecated",
+      "contest": "2025 CCB-CISCN 全国大学生信息安全竞赛初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccb-ciscn-quals-2025-deprecated:latest",
+      "flag": "flag{ccb-ciscn-quals-2025-deprecated_4f0574966110}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Quals",
+        "path": "Web安全-Deprecated.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-ciscn-quals-2025/ccb-ciscn-quals-2025-deprecated",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Node.js 漏洞读取",
+      "notes": "Node.js + Express + better-sqlite3，无 Dockerfile 需自写，监听 8080",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-semis-2025-intrabadge",
+      "title": "IntraBadge",
+      "contest": "2025 长城杯-全国大学生信息安全竞赛半决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-ccb-semis-2025-intrabadge:latest",
+      "flag": "flag{ccb-semis-2025-IntraBadge_98daaf64d4b5}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Semis",
+        "path": "IntraBadge.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-semis-2025/ccb-semis-2025-intrabadge",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Flask 模板/SSRF 读取",
+      "notes": "Python Flask + Redis，单容器内启动 redis-server，监听 5000",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-semis-2025-mediadrive",
+      "title": "MediaDrive",
+      "contest": "2025 长城杯-全国大学生信息安全竞赛半决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-ccb-semis-2025-mediadrive:latest",
+      "flag": "flag{ccb-semis-2025-MediaDrive_9ff0b62413b2}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Semis",
+        "path": "MediaDrive.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-semis-2025/ccb-semis-2025-mediadrive",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，PHP 文件上传/预览读取",
+      "notes": "PHP 文件上传与预览，需自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "ccbciscn-2024-ezruby",
+      "title": "ezruby",
+      "contest": "2024 CCB-CISCN 半决赛/赛区赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 4567,
+      "image": "localtrain/ctf-ccbciscn-2024-ezruby:latest",
+      "flag": "flag{ccbciscn-2024-ezruby_6f45f7d69dbe}",
+      "source": {
+        "repo": "CTF-Archives/2024-CCB-CISCN-Semis",
+        "path": "ezruby.zip",
+        "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccbciscn-2024/ccbciscn-2024-ezruby",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Ruby 对象注入/SSRF 读取",
+      "notes": "Ruby Sinatra 单文件，端口由 8888 改为 4567",
+      "status": "deployed"
+    },
+    {
+      "id": "wdb-baihu-2024-web-01",
+      "title": "web-01",
+      "contest": "2024 网鼎杯 白虎组初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-wdb-baihu-2024-web-01:latest",
+      "flag": "flag{wdb-baihu-2024-web-01_06945a43ef5b}",
+      "source": {
+        "repo": "CTF-Archives/2024-wdb-baihu",
+        "path": "Web-01.zip",
+        "url": "https://github.com/CTF-Archives/2024-wdb-baihu"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/wdb-baihu-2024/wdb-baihu-2024-web-01",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Rust 图像上传逻辑漏洞读取",
+      "notes": "Rust actix-web 单文件，端口由 8881 改为 8080，补充 dist 占位文件。构建失败：rustc 1.85.1 与 actix-web 4.14 要求的 Rust 1.88 不兼容，本地镜像无法升级到更新 Rust。",
+      "status": "failed",
+      "reason": "rustc 1.85.1 incompatible with actix-web 4.14 (requires Rust 1.88)"
+    },
+    {
+      "id": "longjian-2025-ezzupload",
+      "title": "ezzupload",
+      "contest": "2025 龙信杯决赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-longjian-2025-ezzupload:latest",
+      "flag": "flag{longjian-2025-ezzupload_3a4b5c6d7e8f}",
+      "source": {
+        "repo": "CTF-Archives/2025-LongjianCup-Finals",
+        "path": "4.ezzupload.zip",
+        "url": "https://github.com/CTF-Archives/2025-LongjianCup-Finals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/longjian-2025/longjian-2025-ezzupload",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，上传绕过/条件竞争后读取",
+      "notes": "单文件 PHP 上传，仅允许 .txt，但隐藏文件(.开头)会 chmod 0644，可作为 Web 可访问文件",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-ciscn-quals-2025-javasql",
+      "title": "JavaSql",
+      "contest": "2025 CCB-CISCN 全国大学生信息安全竞赛初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccb-ciscn-quals-2025-javasql:latest",
+      "flag": "flag{ccb-ciscn-quals-2025-javasql_8a67dce8797d}",
+      "source": {
+        "repo": "CTF-Archives/2025-CCB-CISCN-Quals",
+        "path": "Web安全-JavaSql.zip",
+        "url": "https://github.com/CTF-Archives/2025-CCB-CISCN-Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-ciscn-quals-2025/ccb-ciscn-quals-2025-javasql",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期将 flag 写入 config 表 secretKey 字段，SQL 注入获取后即为 flag",
+      "notes": "Python Flask + Java Spring Boot + MariaDB，单容器内启动数据库、Java 和 Python 服务，监听 8080",
+      "status": "deployed"
+    },
+    {
+      "id": "ccbciscn-2024-bookmanager",
+      "title": "bookmanager",
+      "contest": "2024 CCB-CISCN 半决赛/赛区赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccbciscn-2024-bookmanager:latest",
+      "flag": "flag{ccbciscn-2024-bookmanager_4c80d5678923}",
+      "source": {
+        "repo": "CTF-Archives/2024-CCB-CISCN-Semis",
+        "path": "bookmanager.zip",
+        "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccbciscn-2024/ccbciscn-2024-bookmanager",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Solon Java 应用漏洞读取",
+      "notes": "Solon Java 应用，Main-Class: server.ServerApp，监听 8080",
+      "status": "deployed"
+    }
+  ]
+}

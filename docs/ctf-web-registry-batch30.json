@@ -1,0 +1,197 @@
+{
+  "batch": 30,
+  "date": "2026-08-16",
+  "source": "CTF-Archives GitHub releases",
+  "challenges": [
+    {
+      "id": "2024-wdb-zhuque-web1",
+      "title": "Web1",
+      "contest": "2024 网鼎杯 朱雀组",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-2024-wdb-zhuque-web1:latest",
+      "flag": "flag{2024-wdb-zhuque-web1_8f3e2a1b4c5d}",
+      "source": {
+        "repo": "CTF-Archives/2024-wdb-zhuque",
+        "url": "https://github.com/CTF-Archives/2024-wdb-zhuque/releases/download/v0.1/Web1.zip"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-wdb-zhuque/2024-wdb-zhuque-web1",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 写入容器，Node.js 应用将 flag 作为 admin 用户的 post body",
+      "notes": "Node.js Express + EJS 博客；/api/search 的 username 参数使用数组可绕过 admin 检查，获取 admin 的 flag post ID，再带 auth:admin 头读取 /api/post 拿到 flag。原 Dockerfile 使用 httpd:2.4.53 已替换为 node:18-slim 直接监听 80。"
+    },
+    {
+      "id": "2025-openharmony-layers",
+      "title": "Layers of Compromise",
+      "contest": "2025 OpenHarmony CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-2025-openharmony-layers:latest",
+      "flag": "flag{2025-openharmony-layers-4c3d2b1a}",
+      "source": {
+        "repo": "CTF-Archives/2025-OpenHarmonyCTF",
+        "url": "https://github.com/CTF-Archives/2025-OpenHarmonyCTF"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2025-openharmony/2025-openharmony-layers",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "PHP 应用，无数据库。所有 PHP 文件复制到 /var/www/html；debug.php 通过 ../config.php 引用，因此额外将 config.php 复制到 /var/www/config.php 避免运行时警告。同时将 secrettttts/token.txt 复制到 /var/www/secrets/token.txt。"
+    },
+    {
+      "id": "2025-openharmony-filesystem",
+      "title": "Filesystem",
+      "contest": "2025 OpenHarmony CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-2025-openharmony-filesystem:latest",
+      "flag": "flag{2025-openharmony-filesystem-9f8e7d6c}",
+      "source": {
+        "repo": "CTF-Archives/2025-OpenHarmonyCTF",
+        "url": "https://github.com/CTF-Archives/2025-OpenHarmonyCTF"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2025-openharmony/2025-openharmony-filesystem",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "NestJS 应用，源码已含 node_modules 与 dist。使用 node:18-slim，工作目录 /app，直接运行 node dist/src/main.js。启动前创建 /opt/filesystem/adminconfig.lock（含 admin 密码 123456789）和 /opt/uploads。"
+    },
+    {
+      "id": "2024-ciscn-awdp-ezjs",
+      "title": "ezjs",
+      "contest": "2024 CISCN 总决赛 AWDP",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-2024-ciscn-awdp-ezjs:latest",
+      "flag": "flag{2024-ciscn-awdp-ezjs-1a2b3c4d}",
+      "source": {
+        "repo": "CTF-Archives/2024-ciscn-awdp",
+        "url": "https://github.com/CTF-Archives/2024-ciscn-awdp"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-ciscn-awdp/2024-ciscn-awdp-ezjs",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Node.js Express 应用，node_modules 已存在。使用 node:18-slim，运行 node app.js。确保 /app/uploads 目录存在。"
+    },
+    {
+      "id": "2024-ciscn-awdp-sharecard",
+      "title": "ShareCard",
+      "contest": "2024 CISCN 总决赛 AWDP",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8888,
+      "image": "localtrain/ctf-2024-ciscn-awdp-sharecard:latest",
+      "flag": "flag{2024-ciscn-awdp-sharecard-5e6f7a8b}",
+      "source": {
+        "repo": "CTF-Archives/2024-ciscn-awdp",
+        "url": "https://github.com/CTF-Archives/2024-ciscn-awdp"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-ciscn-awdp/2024-ciscn-awdp-sharecard",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Python Flask 应用。使用 python:3.11-slim，安装 flask、jinja2、pycryptodome、pydantic、qrcode、PyJWT 等依赖后运行 python app.py。"
+    },
+    {
+      "id": "2024-ciscn-awdp-fobee",
+      "title": "Fobee",
+      "contest": "2024 CISCN 总决赛 AWDP",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8888,
+      "image": "localtrain/ctf-2024-ciscn-awdp-fobee:latest",
+      "flag": "flag{2024-ciscn-awdp-fobee-7a8b9c0d}",
+      "source": {
+        "repo": "CTF-Archives/2024-ciscn-awdp",
+        "url": "https://github.com/CTF-Archives/2024-ciscn-awdp"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-ciscn-awdp/2024-ciscn-awdp-fobee",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Solon Java 应用 Fobee.jar，依赖土耳其 locale 的 toLowerCase 行为。使用 eclipse-temurin:8-jre-jammy，安装 locales 并设置 LANG/LC_ALL=tr_TR.UTF-8，通过 -Dserver.port=8888 监听 8888。"
+    },
+    {
+      "id": "2024-ciscn-awdp-solonmaster",
+      "title": "SolonMaster",
+      "contest": "2024 CISCN 总决赛 AWDP",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8888,
+      "image": "localtrain/ctf-2024-ciscn-awdp-solonmaster:latest",
+      "flag": "flag{2024-ciscn-awdp-solonmaster-8b9c0d1e}",
+      "source": {
+        "repo": "CTF-Archives/2024-ciscn-awdp",
+        "url": "https://github.com/CTF-Archives/2024-ciscn-awdp"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-ciscn-awdp/2024-ciscn-awdp-solonmaster",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Solon Java 应用 solon_master.jar。使用 eclipse-temurin:8-jre-jammy，通过 -Dserver.port=8888 监听 8888；启动前创建 /app/logs。"
+    },
+    {
+      "id": "2024-sanxia-babyjava",
+      "title": "babyjava",
+      "contest": "2024 三峡杯",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-2024-sanxia-babyjava:latest",
+      "flag": "flag{2024-sanxia-babyjava-2b3c4d5e}",
+      "source": {
+        "repo": "CTF-Archives/2024-sanxia",
+        "url": "https://github.com/CTF-Archives/2024-sanxia"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-sanxia/2024-sanxia-babyjava",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Spring Boot 单 jar 应用 BabyJava-0.0.1-SNAPSHOT.jar。使用 eclipse-temurin:8-jre-jammy，运行 java -jar app.jar。"
+    },
+    {
+      "id": "2024-sanxia-textme",
+      "title": "textme",
+      "contest": "2024 三峡杯",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-2024-sanxia-textme:latest",
+      "flag": "flag{2024-sanxia-textme-3c4d5e6f}",
+      "source": {
+        "repo": "CTF-Archives/2024-sanxia",
+        "url": "https://github.com/CTF-Archives/2024-sanxia"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-sanxia/2024-sanxia-textme",
+      "status": "deployed",
+      "flagMechanism": "容器启动时 entrypoint.sh 将 ENV FLAG 写入 /flag 和 /app/static/flag.txt",
+      "notes": "Rust 二进制 textme 与静态文件。使用 ubuntu:20.04，设置 SECRET_KEY，entrypoint 在启动时写入 flag，监听 80。"
+    },
+    {
+      "id": "2024-zjsdxs-qlagain",
+      "title": "QL again",
+      "contest": "2024 浙江师范大学选拔赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8089,
+      "image": "localtrain/ctf-2024-zjsdxs-qlagain:latest",
+      "flag": "flag{2024-zjsdxs-qlagain-4d5e6f7a}",
+      "source": {
+        "repo": "CTF-Archives/2024-zjsdxs",
+        "url": "https://github.com/CTF-Archives/2024-zjsdxs"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/2024-zjsdxs/2024-zjsdxs-qlagain",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Spring Boot 单 jar 应用 QL_again.jar，jar 内默认监听 8080，通过 CMD 传入 -Dserver.port=8089 强制监听 8089。使用 eclipse-temurin:8-jre-jammy。"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "version": "1.0",
+  "note": "第六批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "omctf-2024-justxss",
+      "title": "JustXSS",
+      "contest": "OMCTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1898,
+      "image": "localtrain/ctf-omctf-2024-justxss:latest",
+      "flag": "flag{omctf-2024-justxss_1a2b3c4d5e6f}",
+      "source": {
+        "repo": "CTF-Archives/2024-OMCTF",
+        "path": "Web-JustXSS.tar",
+        "url": "https://github.com/CTF-Archives/2024-OMCTF/releases/download/latest/Web-JustXSS.tar"
+      },
+      "writeup": "https://github.com/CTF-Archives/2024-OMCTF/blob/main/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/omctf-2024/omctf-2024-justxss",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，index.ts 读取 /flag 后由 Puppeteer bot 通过 cookie 注入",
+      "notes": "Node.js 22 + Fastify + Puppeteer + Chromium，端口 1898",
+      "status": "deployed"
+    },
+    {
+      "id": "omctf-2024-messy-mongo",
+      "title": "Messy Mongo",
+      "contest": "OMCTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1898,
+      "image": "localtrain/ctf-omctf-2024-messy-mongo:latest",
+      "flag": "flag{omctf-2024-messy-mongo_2b3c4d5e6f7a}",
+      "source": {
+        "repo": "CTF-Archives/2024-OMCTF",
+        "path": "Web-Messy.Mongo.tar",
+        "url": "https://github.com/CTF-Archives/2024-OMCTF/releases/download/latest/Web-Messy.Mongo.tar"
+      },
+      "writeup": "https://github.com/CTF-Archives/2024-OMCTF/blob/main/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/omctf-2024/omctf-2024-messy-mongo",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期设置 ENV FLAG，entrypoint.sh 将 flag 插入 MongoDB admin 的 todo",
+      "notes": "Debian 12 + MongoDB + Deno，单容器内启动 mongod，端口 1898",
+      "status": "deployed"
+    },
+    {
+      "id": "ciscn-2024-mossfern",
+      "title": "mossfern",
+      "contest": "CISCN 2024 初赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5000,
+      "image": "localtrain/ctf-ciscn-2024-mossfern:latest",
+      "flag": "flag{ciscn-2024-mossfern_3c4d5e6f7a8b}",
+      "source": {
+        "repo": "CTF-Archives/2024-CISCN-Quals",
+        "path": "Web-mossfern.zip",
+        "url": "https://github.com/CTF-Archives/2024-CISCN-Quals/releases/download/Latest/Web-mossfern.zip"
+      },
+      "writeup": "https://blog.csdn.net/uuzeray/article/details/139052904",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ciscn-2024/ciscn-2024-mossfern",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，runner.py 读取 /flag 作为 seed 执行选手代码",
+      "notes": "Python Flask + 沙箱 runner，无 Dockerfile，需自写",
+      "status": "deployed"
+    },
+    {
+      "id": "ciscn-2024-ezjava",
+      "title": "ezjava",
+      "contest": "CISCN 2024 初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ciscn-2024-ezjava:latest",
+      "flag": "flag{ciscn-2024-ezjava_4d5e6f7a8b9c}",
+      "source": {
+        "repo": "CTF-Archives/2024-CISCN-Quals",
+        "path": "Web-ezjava.zip",
+        "url": "https://github.com/CTF-Archives/2024-CISCN-Quals/releases/download/Latest/Web-ezjava.zip"
+      },
+      "writeup": "https://blog.csdn.net/uuzeray/article/details/139052904",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ciscn-2024/ciscn-2024-ezjava",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Java 反序列化/RCE 后读取",
+      "notes": "Spring Boot jar，无 Dockerfile，需自写 openjdk 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "dfjk-2024-php-online",
+      "title": "php_online",
+      "contest": "巅峰极客 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-dfjk-2024-php-online:latest",
+      "flag": "flag{dfjk-2024-php-online_5e6f7a8b9c0d}",
+      "source": {
+        "repo": "CTF-Archives/2024-dfjk",
+        "path": "Web-php_online.zip",
+        "url": "https://github.com/CTF-Archives/2024-dfjk/releases/download/v1.0/Web-php_online.zip"
+      },
+      "writeup": "https://exp10it.io/2024/08/%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2-2024-%E5%88%9D%E8%B5%9B-web-writeup/",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/dfjk-2024/dfjk-2024-php-online",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Flask 调用 PHP 执行沙箱后 RCE 读取",
+      "notes": "Python Flask + PHP + 模板，无 Dockerfile，需自写",
+      "status": "deployed"
+    },
+    {
+      "id": "zjsdxs-2024-web2",
+      "title": "Web2",
+      "contest": "浙江省大学生网络与信息安全竞赛 2024 决赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-zjsdxs-2024-web2:latest",
+      "flag": "flag{zjsdxs-2024-web2_6f7a8b9c0d1e}",
+      "source": {
+        "repo": "CTF-Archives/2024-zjsdxs-Finals",
+        "path": "Web2.php",
+        "url": "https://github.com/CTF-Archives/2024-zjsdxs-Finals/releases/download/v0.1/Web2.php"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/zjsdxs-2024/zjsdxs-2024-web2",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag（上级目录），eval($_GET['code']) 读取",
+      "notes": "单文件 PHP，无 Dockerfile，需自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "zjsdxs-2024-web3",
+      "title": "web3",
+      "contest": "浙江省大学生网络与信息安全竞赛 2024 决赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-zjsdxs-2024-web3:latest",
+      "flag": "flag{zjsdxs-2024-web3_7a8b9c0d1e2f}",
+      "source": {
+        "repo": "CTF-Archives/2024-zjsdxs-Finals",
+        "path": "web3.php",
+        "url": "https://github.com/CTF-Archives/2024-zjsdxs-Finals/releases/download/v0.1/web3.php"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/zjsdxs-2024/zjsdxs-2024-web3",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，PHP 反序列化 POP 链 RCE 读取",
+      "notes": "单文件 PHP，无 Dockerfile，需自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "qwbs9-2025-web-api",
+      "title": "Web-api",
+      "contest": "强网杯 2025 线上赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-qwbs9-2025-web-api:latest",
+      "flag": "flag{qwbs9-2025-web-api_8b9c0d1e2f3a}",
+      "source": {
+        "repo": "CTF-Archives/2025-qwbs9-quals",
+        "path": "Web-.-api.php",
+        "url": "https://github.com/CTF-Archives/2025-qwbs9-quals/releases/download/attachments/Web-.-api.php"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/qwbs9-2025/qwbs9-2025-web-api",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，通过文件上传/日志写入 RCE 读取",
+      "notes": "单文件 PHP，无 Dockerfile，需自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "iscc-2024-week2-web1",
+      "title": "WEEK2-web1",
+      "contest": "ISCC 2024 练武 WEEK2",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-iscc-2024-week2-web1:latest",
+      "flag": "flag{iscc-2024-week2-web1_9c0d1e2f3a4b}",
+      "source": {
+        "repo": "CTF-Archives/2024-ISCC-Quals",
+        "path": "WEEK2-web1_.py",
+        "url": "https://github.com/CTF-Archives/2024-ISCC-Quals/releases/download/%E7%BB%83%E6%AD%A6-WEEK_2/WEEK2-web1_.py"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/iscc-2024/iscc-2024-week2-web1",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag 或同级目录，签名绕过 + 文件读取",
+      "notes": "Python Flask 单文件，无 Dockerfile，需自写；需要同级 code.txt",
+      "status": "deployed"
+    },
+    {
+      "id": "ycb-2024-ycbjava",
+      "title": "ycbjava",
+      "contest": "羊城杯 2024 本科组",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ycb-2024-ycbjava:latest",
+      "flag": "flag{ycb-2024-ycbjava_0d1e2f3a4b5c}",
+      "source": {
+        "repo": "CTF-Archives/2024-YCB-Undergraduate",
+        "path": "Web-ycbjava-0.0.1-SNAPSHOT.zip",
+        "url": "https://github.com/CTF-Archives/2024-YCB-Undergraduate/releases/download/v1.0/Web-ycbjava-0.0.1-SNAPSHOT.zip"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ycb-2024/ycb-2024-ycbjava",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Java jar 反序列化/RCE 后读取",
+      "notes": "Spring Boot jar，无 Dockerfile，需自写 openjdk 镜像",
+      "status": "deployed"
+    }
+  ]
+}

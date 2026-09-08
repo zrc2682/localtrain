@@ -1,0 +1,102 @@
+{
+  "batch": 32,
+  "date": "2026-08-16",
+  "source": "本地附件与 GitHub 源码（2023 强网杯 S6 全国赛、2024 浙江省大学生网络安全竞赛预赛、2026 极客少年挑战赛初赛）。本批次初筛 10 道候选，5 道因重复或平台不支持未纳入。",
+  "challenges": [
+    {
+      "id": "qwbs6qsn-2023-ezdja",
+      "title": "ezdja",
+      "contest": "2023 强网杯 S6 全国赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-qwbs6qsn-2023-ezdja:latest",
+      "flag": "flag{batch32-qwbs6qsn-2023-ezdja_088e0583d5ea}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/qwbs6qsn-2023/ezdja",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Django 应用，数据库改为 SQLite3，python 3.11 运行 runserver 0.0.0.0:5000。"
+    },
+    {
+      "id": "qwbs6qsn-2023-fuond-cms",
+      "title": "fuond cms",
+      "contest": "2023 强网杯 S6 全国赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-qwbs6qsn-2023-fuond-cms:latest",
+      "flag": "flag{batch32-qwbs6qsn-2023-fuond-cms_b12a66a3ea40}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/qwbs6qsn-2023/fuond-cms",
+      "status": "deployed",
+      "flagMechanism": "flag.sh 写入 /flag，容器启动时初始化 MySQL 数据库",
+      "notes": "PHP CMS，使用 ctftraining/base_image_nginx_mysql_php_73 单容器 LAMP。"
+    },
+    {
+      "id": "zjsdxs-2024-qualifier-cybersecurity-knowledge",
+      "title": "CyberSecurity Knowledge",
+      "contest": "2024 浙江省大学生网络安全竞赛预赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-zjsdxs-2024-qualifier-cybersecurity-knowledge:latest",
+      "flag": "flag{batch32-zjsdxs-2024-qualifier-cybersecurity-knowledge_d9977688c4f3}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/zjsdxs-2024-qualifier/cybersecurity-knowledge",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag 并通过 /flag 路由暴露",
+      "notes": "纯前端静态页面，使用 nginx:alpine 提供。"
+    },
+    {
+      "id": "jksn-2026-quals-teacher-panel",
+      "title": "teacher panel",
+      "contest": "2026 极客少年挑战赛初赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-jksn-2026-quals-teacher-panel:latest",
+      "flag": "flag{batch32-jksn-2026-quals-teacher-panel_77815cb602a4}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jksn-2026-quals/teacher-panel",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /tmp/flag",
+      "notes": "Flask 应用，从 /tmp/flag 读取 flag，监听 8000。"
+    },
+    {
+      "id": "jksn-2026-quals-waf-bypass",
+      "title": "WAF bypass",
+      "contest": "2026 极客少年挑战赛初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-jksn-2026-quals-waf-bypass:latest",
+      "flag": "flag{batch32-jksn-2026-quals-waf-bypass_334833704e2d}",
+      "source": {
+        "repo": "local",
+        "url": ""
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jksn-2026-quals/waf-bypass",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Spring Boot 可执行 jar ez-fastjson，监听 8080。"
+    }
+  ]
+}

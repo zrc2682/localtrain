@@ -1,0 +1,226 @@
+{
+  "version": "1.0",
+  "note": "第八批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "dfjk-2024-admin-test",
+      "title": "admin_Test",
+      "contest": "巅峰极客 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-dfjk-2024-admin-test:latest",
+      "flag": "flag{dfjk-2024-admin-test_ae39f2966448}",
+      "source": {
+        "repo": "CTF-Archives/2024-dfjk",
+        "path": "Web/admin_Test",
+        "url": "https://github.com/CTF-Archives/2024-dfjk"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/dfjk-2024/dfjk-2024-admin-test",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，PHP 登录/上传 getshell 后读取",
+      "notes": "单文件 PHP 登录与上传页面，无 Dockerfile，自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "qwb-qsnxbs-2024-mysqlprobe",
+      "title": "mysqlprobe",
+      "contest": "2024 强网杯 青少年专项赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-qwb-qsnxbs-2024-mysqlprobe:latest",
+      "flag": "flag{qwb-qsnxbs-2024-mysqlprobe_7b2299cae9fa}",
+      "source": {
+        "repo": "CTF-Archives/2024-qwb-qsnxbs",
+        "path": "mysqlprobe.php",
+        "url": "https://github.com/CTF-Archives/2024-qwb-qsnxbs"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/qwb-qsnxbs-2024/qwb-qsnxbs-2024-mysqlprobe",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，反序列化/命令执行后读取",
+      "notes": "单文件 PHP 网页，无 Dockerfile，自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "susctf-2024-note-taking-1",
+      "title": "note taking 1",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 3000,
+      "image": "localtrain/ctf-susctf-2024-note-taking-1:latest",
+      "flag": "flag{susctf-2024-note-taking-1_3dc55d550fc0}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "path": "challenges/web/note_taking_1",
+        "url": "https://github.com/susers/susctf-2024"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/susctf-2024-note-taking-1",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期将静态 flag 写入 /app/public/flag/flag.txt，通过 bot 访问带出",
+      "notes": "Node.js + Express + EJS + Puppeteer bot，沿用 build/Dockerfile，仅替换 flag 来源",
+      "status": "deployed"
+    },
+    {
+      "id": "qwb-qsnxbs-2024-qiandao-manhua",
+      "title": "签到漫画",
+      "contest": "2024 强网杯 青少年专项赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-qwb-qsnxbs-2024-qiandao-manhua:latest",
+      "flag": "flag{qwb-qsnxbs-2024-qiandao-manhua_4c80d5678923}",
+      "source": {
+        "repo": "CTF-Archives/2024-qwb-qsnxbs",
+        "path": "签到漫画.zip",
+        "url": "https://github.com/CTF-Archives/2024-qwb-qsnxbs"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/qwb-qsnxbs-2024/qwb-qsnxbs-2024-qiandao-manhua",
+      "hasDockerfile": true,
+      "flagMechanism": "flag 嵌入在 index.html 的 HTML 注释中",
+      "notes": "Next.js 静态导出站点，用 nginx 部署；flag 隐藏于页面源码注释",
+      "status": "deployed"
+    },
+    {
+      "id": "qwb-qsnxbs-2024-ezfindshell",
+      "title": "ezFindShell",
+      "contest": "2024 强网杯 青少年专项赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-qwb-qsnxbs-2024-ezfindshell:latest",
+      "flag": "flag{qwb-qsnxbs-2024-ezfindshell_2ae46f926160}",
+      "source": {
+        "repo": "CTF-Archives/2024-qwb-qsnxbs",
+        "path": "ezFindShell.zip",
+        "url": "https://github.com/CTF-Archives/2024-qwb-qsnxbs"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/qwb-qsnxbs-2024/qwb-qsnxbs-2024-ezfindshell",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，在众多 PHP 文件中找到隐藏 webshell 后读取",
+      "notes": "大量 PHP 文件，需找出其中 webshell；无 Dockerfile，自写 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "pengcheng-2025-ezdjango",
+      "title": "ezDjango（鹏城杯 2025 初赛）",
+      "contest": "2025 鹏城杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-pengcheng-2025-ezdjango:latest",
+      "flag": "flag{pengcheng-2025-ezdjango_7b406c46e653}",
+      "source": {
+        "repo": "CTF-Archives/2025-pengchengcup-quals",
+        "path": "Web/ezDjango",
+        "url": "https://github.com/CTF-Archives/2025-pengchengcup-quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/pengcheng-2025/pengcheng-2025-ezdjango",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Django 缓存反序列化 RCE 后读取",
+      "notes": "Django 3.2 + gunicorn；与 batch4 的 pcb-2025-ezdjango 区分 id 与 flag",
+      "status": "deployed"
+    },
+    {
+      "id": "dfjk-lab-tpcms",
+      "title": "tpcms",
+      "contest": "巅峰极客 Lab",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-dfjk-lab-tpcms:latest",
+      "flag": "flag{dfjk-lab-tpcms_c5f650ff5781}",
+      "source": {
+        "repo": "dfjk-Lab/tpcms",
+        "path": "题目附件/tpcms_*.zip",
+        "url": "https://github.com/dfjk-Lab/tpcms"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/dfjk-lab/dfjk-lab-tpcms",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，CMS 漏洞 getshell 后读取",
+      "notes": "ThinkPHP 3.2 CMS，内层 zip 解压后得到 www 源码；需 PHP+Apache+MySQL 单容器",
+      "status": "deployed"
+    },
+    {
+      "id": "ccbciscn-2024-java-again",
+      "title": "java_again",
+      "contest": "2024 CCB-CISCN 半决赛/赛区赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccbciscn-2024-java-again:latest",
+      "flag": "flag{ccbciscn-2024-java-again_13ea59683ff0}",
+      "source": {
+        "repo": "CTF-Archives/2024-CCB-CISCN-Semis",
+        "path": "java_again.zip",
+        "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Semis"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccbciscn-2024/ccbciscn-2024-java-again",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Spring Boot 漏洞 RCE 后读取",
+      "notes": "Spring Boot 3.1.3 fat jar，默认端口 8888，运行时用 SERVER_PORT=8080 覆盖",
+      "status": "deployed"
+    },
+    {
+      "id": "ciscn-finals-2025-awdp-web-ota",
+      "title": "awdp-web-ota",
+      "contest": "CISCN 2025 决赛 AWDP",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-ciscn-finals-2025-awdp-web-ota:latest",
+      "flag": "flag{ciscn-finals-2025-awdp-web-ota_887597e454a8}",
+      "source": {
+        "repo": "CTF-Archives/2025-CISCN-Finals",
+        "path": "awdp/web/ota.zip",
+        "url": "https://github.com/CTF-Archives/2025-CISCN-Finals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ciscn-finals-2025/ciscn-finals-2025-awdp-web-ota",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，Spring Boot 漏洞 RCE 后读取",
+      "notes": "Spring Boot 3.3.3 fat jar，默认端口 8000，运行时用 SERVER_PORT=8080 覆盖",
+      "status": "deployed"
+    },
+    {
+      "id": "ciscn-finals-2025-awdp-web-rasp",
+      "title": "awdp-web-rasp",
+      "contest": "CISCN 2025 决赛 AWDP",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-ciscn-finals-2025-awdp-web-rasp:latest",
+      "flag": "flag{ciscn-finals-2025-awdp-web-rasp_3c6a57608604}",
+      "source": {
+        "repo": "CTF-Archives/2025-CISCN-Finals",
+        "path": "awdp/web/rasp.zip",
+        "url": "https://github.com/CTF-Archives/2025-CISCN-Finals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ciscn-finals-2025/ciscn-finals-2025-awdp-web-rasp",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，OpenRASP 保护下利用 Spring Boot 漏洞 RCE 后读取",
+      "notes": "Spring Boot 2.7.17 fat jar + OpenRASP 1.3.7 agent；需要 -javaagent 启动",
+      "status": "deployed"
+    }
+  ]
+}

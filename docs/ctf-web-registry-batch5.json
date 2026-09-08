@@ -1,0 +1,232 @@
+{
+  "version": "1.0",
+  "note": "第五批比赛 Web 题目登记表。status: pending/deployed/skipped/failed。",
+  "challenges": [
+    {
+      "id": "ccb-2025-deprecated",
+      "title": "Deprecated",
+      "contest": "2025 长城杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1337,
+      "image": "localtrain/ctf-ccb-2025-deprecated:latest",
+      "flag": "flag{ccb-2025-deprecated_1a2b3c4d5e6f}",
+      "source": {
+        "repo": "CTF-Archives/2025-ccb-final",
+        "path": "web-Deprecated.zip",
+        "url": "https://github.com/CTF-Archives/2025-ccb-final/releases/tag/attachment"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-2025-final/ccb-2025-deprecated",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，通过 JWT algorithm confusion + SQLite 注入/文件读取获得",
+      "notes": "Node.js + Express + SQLite，源码在 .tmp/web-Deprecated.zip，需自写 Dockerfile",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-2025-ezwebsite",
+      "title": "EzWebSite",
+      "contest": "2025 长城杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-ccb-2025-ezwebsite:latest",
+      "flag": "flag{ccb-2025-ezwebsite_2b3c4d5e6f7a}",
+      "source": {
+        "repo": "CTF-Archives/2025-ccb-final",
+        "path": "web-EzWebSite.zip",
+        "url": "https://github.com/CTF-Archives/2025-ccb-final/releases/tag/attachment"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-2025-final/ccb-2025-ezwebsite",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，基于 PHP/YouDianCMS 漏洞 getshell 后读取",
+      "notes": "PHP + dtale/YouDianCMS 框架，源码在 .tmp/web-EzWebSite.zip，需自写 Dockerfile",
+      "status": "deployed"
+    },
+    {
+      "id": "ccb-2025-solidrockmonitor",
+      "title": "SolidRockMonitor",
+      "contest": "2025 长城杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccb-2025-solidrockmonitor:latest",
+      "flag": "flag{ccb-2025-solidrockmonitor_3c4d5e6f7a8b}",
+      "source": {
+        "repo": "CTF-Archives/2025-ccb-final",
+        "path": "web-SolidRockMonitor.zip",
+        "url": "https://github.com/CTF-Archives/2025-ccb-final/releases/tag/attachment"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/ccb-2025-final/ccb-2025-solidrockmonitor",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，通过 Shiro rememberMe 反序列化 getshell 后读取",
+      "notes": "Spring Boot 2.6 + Shiro 1.5.3 jar，源码在 .tmp/web-SolidRockMonitor.zip，需自写 Dockerfile",
+      "status": "deployed"
+    },
+    {
+      "id": "bluehat-2023-lovephp",
+      "title": "LovePHP",
+      "contest": "2023 蓝帽杯初赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-bluehat-2023-lovephp:latest",
+      "flag": "flag{bluehat-2023-lovephp_4d5e6f7a8b9c}",
+      "source": {
+        "repo": "2023-Bluehat-Quals",
+        "path": "web/LovePHP.php",
+        "url": "https://github.com/2023-Bluehat-Quals"
+      },
+      "writeup": null,
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/bluehat-2023/bluehat-2023-lovephp",
+      "hasDockerfile": true,
+      "flagMechanism": "构建期写入 /flag，PHP 反序列化 + file() 函数读取",
+      "notes": "单文件 PHP 题，需自建 PHP/Apache 镜像",
+      "status": "deployed"
+    },
+    {
+      "id": "susctf-2024-note-taking-1",
+      "title": "note taking 1",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 3000,
+      "image": "localtrain/ctf-susctf-2024-note-taking-1:latest",
+      "flag": "flag{susctf-2024-note-taking-1_3dc55d550fc0}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/note_taking_1",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/note_taking_1"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/susctf-2024-note-taking-1",
+      "hasDockerfile": true,
+      "flagMechanism": "GZCTF_FLAG 环境变量 → app.js 写入 /app/public/<flag_id>/flag.txt，bot 访问带出",
+      "notes": "Node.js + Express + EJS + Puppeteer bot，build/Dockerfile 存在；flag 在第八批重新生成并更新",
+      "status": "deployed"
+    },
+    {
+      "id": "susctf-2024-vote-now",
+      "title": "vote_now",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 9000,
+      "image": "localtrain/ctf-susctf-2024-vote-now:latest",
+      "flag": "flag{susctf-2024-vote-now_6f7a8b9c0d1e}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/vote_now",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/vote_now"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/susctf-2024-vote-now",
+      "hasDockerfile": true,
+      "flagMechanism": "GZCTF_FLAG 环境变量 → main.py 在首页模板中显示",
+      "notes": "Python + Flask，build/Dockerfile 存在，投票状态在内存",
+      "status": "deployed"
+    },
+    {
+      "id": "susctf-2024-webhook-as-a-service",
+      "title": "webhook-as-a-service",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-susctf-2024-webhook-as-a-service:latest",
+      "flag": "flag{susctf-2024-webhook-as-a-service_7a8b9c0d1e2f}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "branch": "master",
+        "path": "challenges/web/webhook-as-a-service",
+        "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/webhook-as-a-service"
+      },
+      "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/susctf-2024/susctf-2024-webhook-as-a-service",
+      "hasDockerfile": true,
+      "flagMechanism": "GZCTF_FLAG 环境变量 → run.sh 写入 /flag，通过 SSTI/RCE 后读取",
+      "notes": "Go + Iris，build/Dockerfile 存在",
+      "status": "deployed"
+    },
+    {
+      "id": "isoon-2023-whats-my-name",
+      "title": "What's my name",
+      "contest": "2023 安洵杯",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-isoon-2023-whats-my-name:latest",
+      "flag": "flag{isoon-2023-whats-my-name_8b9c0d1e2f3a}",
+      "source": {
+        "repo": "D0g3-Lab/i-SOON_CTF_2023",
+        "branch": "main",
+        "path": "web/What's my name",
+        "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/What's%20my%20name"
+      },
+      "writeup": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/blob/main/Writeup/Web.md",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/isoon-2023/isoon-2023-whats-my-name",
+      "hasDockerfile": true,
+      "flagMechanism": "ICTF 环境变量 → run.sh 写入 /flag 并嵌入 admin.php 后删除 /flag",
+      "notes": "PHP 7.3 + Apache，dockerfile 存在，create_function 匿名函数名利用",
+      "status": "deployed"
+    },
+    {
+      "id": "nctf-2024-internal-api",
+      "title": "internal_api",
+      "contest": "NCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-nctf-2024-internal-api:latest",
+      "flag": "flag{nctf-2024-internal-api_9c0d1e2f3a4b}",
+      "source": {
+        "repo": "X1cT34m/NCTF2024",
+        "branch": "main",
+        "path": "Web/internal_api",
+        "url": "https://github.com/X1cT34m/NCTF2024/tree/main/Web/internal_api"
+      },
+      "writeup": "https://github.com/X1cT34m/NCTF2024/blob/main/Writeup/Web.md",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/nctf-2024/nctf-2024-internal-api",
+      "hasDockerfile": true,
+      "flagMechanism": "FLAG 环境变量 → db::init 作为 hidden 评论插入 SQLite，需 bot 访问 /internal/search 带出",
+      "notes": "Rust + Axum + SQLite + Chromium bot，原题需 web+bot 双容器，需改造为单容器",
+      "status": "deployed"
+    },
+    {
+      "id": "isoon-2023-ezjava",
+      "title": "ezjava",
+      "contest": "2023 安洵杯",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-isoon-2023-ezjava:latest",
+      "flag": "flag{isoon-2023-ezjava_0d1e2f3a4b5c}",
+      "source": {
+        "repo": "D0g3-Lab/i-SOON_CTF_2023",
+        "branch": "main",
+        "path": "web/ezjava",
+        "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/ezjava"
+      },
+      "writeup": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/blob/main/Writeup/Web.md",
+      "writeupLocal": null,
+      "dir": "docker/ctf-contests/isoon-2023/isoon-2023-ezjava",
+      "hasDockerfile": true,
+      "flagMechanism": "D0g3CTF 环境变量 → start.sh 写入 /flag 后启动 jar",
+      "notes": "Java 8 + Spring Boot jar，Dockerfile 存在，jar 22MB",
+      "status": "deployed"
+    }
+  ]
+}

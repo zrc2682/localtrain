@@ -1,0 +1,197 @@
+{
+  "batch": 31,
+  "date": "2026-08-16",
+  "source": "本地已构建未部署镜像（含 HKCERT 2025 Quals、尖峰山杯、JSWA、NewStar、TSCTF-J）",
+  "challenges": [
+    {
+      "id": "hkcert-2025-ezjs",
+      "title": "HKCERT ezjs",
+      "contest": "HKCERT CTF 2025 Quals",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert-2025-ezjs:latest",
+      "flag": "flag{hkcert-2025-ezjs_64f9291b864e}",
+      "source": {
+        "repo": "CTF-Archives/HKCERTCTF2025Quals",
+        "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-ezjs",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Node.js 20 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+    },
+    {
+      "id": "hkcert-2025-labyrinth",
+      "title": "HKCERT Labyrinth",
+      "contest": "HKCERT CTF 2025 Quals",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-hkcert-2025-labyrinth:latest",
+      "flag": "flag{hkcert-2025-labyrinth_766d85119fb0}",
+      "source": {
+        "repo": "CTF-Archives/HKCERTCTF2025Quals",
+        "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-labyrinth",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Java 21 JRE 单 jar 应用，监听 8080。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+    },
+    {
+      "id": "hkcert-2025-nettool",
+      "title": "HKCERT nettool",
+      "contest": "HKCERT CTF 2025 Quals",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert-2025-nettool:latest",
+      "flag": "flag{hkcert-2025-nettool_dd5e5abbb863}",
+      "source": {
+        "repo": "CTF-Archives/HKCERTCTF2025Quals",
+        "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-nettool",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "Python 3.11 + uvicorn FastAPI 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+    },
+    {
+      "id": "jksn-2025-final-web2",
+      "title": "jksn final web2",
+      "contest": "2025 尖峰山杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-jksn-2025-final-web2:latest",
+      "flag": "flag{jksn-2025-final-web2_536b2259b9c3}",
+      "source": {
+        "repo": "CTF-Archives/2026-jksn-final",
+        "url": "https://github.com/CTF-Archives/2026-jksn-final"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jksn-2025-final/jksn-2025-final-web2",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "PHP 7.4 Apache，监听 80。"
+    },
+    {
+      "id": "jksn-2025-quals-login-php",
+      "title": "jksn login-php",
+      "contest": "2025 尖峰山杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-jksn-2025-quals-login-php:latest",
+      "flag": "flag{jksn-2025-quals-login-php_20f32e38edde}",
+      "source": {
+        "repo": "CTF-Archives/2026-jksn-quals",
+        "url": "https://github.com/CTF-Archives/2026-jksn-quals"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-login-php",
+      "status": "deployed",
+      "flagMechanism": "start.sh 将 flag 写入 MySQL users 表 flag_user 的 password 字段",
+      "notes": "Nginx + PHP 7.3 + MySQL，监听 80；容器启动时初始化数据库。"
+    },
+    {
+      "id": "jswa-2025-web1",
+      "title": "jswa web1",
+      "contest": "2025 JSWA",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-jswa-2025-web1:latest",
+      "flag": "flag{jswa-2025-web1_7a5dbb596430}",
+      "source": {
+        "repo": "CTF-Archives/2025-jswa",
+        "url": "https://github.com/CTF-Archives/2025-jswa"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jswa-2025/jswa-2025-web1",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag1 与 /flag2",
+      "notes": "Node.js 20 应用，监听 80。"
+    },
+    {
+      "id": "newstar-2025-strange-login",
+      "title": "strange login",
+      "contest": "NewStar CTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-strange-login:latest",
+      "flag": "flag{newstar-2025-strange-login_9a1b3c5d7e2f}",
+      "source": {
+        "repo": "CTF-Archives/2025-NewStarCTF",
+        "url": "https://github.com/CTF-Archives/2025-NewStarCTF"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/newstar-2025/strange-login",
+      "status": "deployed",
+      "flagMechanism": "ENV ICQ_FLAG 写入 /flag",
+      "notes": "Apache + PHP + MySQL，监听 80；容器启动脚本启动 apache 与 mysql。"
+    },
+    {
+      "id": "tsctf-j-2025-ez-sql",
+      "title": "TSCTF-J ez_sql",
+      "contest": "TSCTF-J 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-tsctf-j-2025-ez-sql:latest",
+      "flag": "flag{tsctf-j-2025-ez-sql_a69e87bfdc88}",
+      "source": {
+        "repo": "CTF-Archives/2025-TSCTF-J",
+        "url": "https://github.com/CTF-Archives/2025-TSCTF-J"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-ez-sql",
+      "status": "deployed",
+      "flagMechanism": "config.sh 启动时初始化数据库并写入 flag",
+      "notes": "PHP 7.4 Apache + MariaDB，监听 80；启动时通过 /config.sh 初始化数据库。"
+    },
+    {
+      "id": "tsctf-j-2025-filesystem",
+      "title": "TSCTF-J filesystem",
+      "contest": "TSCTF-J 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-tsctf-j-2025-filesystem:latest",
+      "flag": "flag{tsctf-j-2025-filesystem_a9c5289a8ee6}",
+      "source": {
+        "repo": "CTF-Archives/2025-TSCTF-J",
+        "url": "https://github.com/CTF-Archives/2025-TSCTF-J"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-filesystem",
+      "status": "deployed",
+      "flagMechanism": "entrypoint.sh 启动时将 FLAG 写入 /flag",
+      "notes": "Node.js 应用，监听 3000。"
+    },
+    {
+      "id": "jksn-2025-final-web4-lfi",
+      "title": "jksn web4-lfi",
+      "contest": "2025 尖峰山杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-web4-lfi:latest",
+      "flag": "flag{web4-lfi_0334e236bc87}",
+      "source": {
+        "repo": "CTF-Archives/2026-jksn-final",
+        "url": "https://github.com/CTF-Archives/2026-jksn-final"
+      },
+      "writeup": "待补充",
+      "dir": "docker/ctf-contests/jksn-2025-final/web4-lfi",
+      "status": "deployed",
+      "flagMechanism": "构建时 ARG FLAG 写入 /flag",
+      "notes": "PHP 7.4 Apache，监听 80；LFI 类题目。"
+    }
+  ]
+}
