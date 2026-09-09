@@ -15,7 +15,7 @@ LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题
 
 这些是本机（Windows 11 + Git Bash + Docker Desktop）的实际状况，与部分文档的陈旧描述不一致时，**以本节为准**：
 
-1. **没有版本控制**：`.git` 是空目录，git 命令全部失败。没有 commit、没有回滚。删除/覆盖文件（尤其是 `packages/server/prisma/dev.db` 和 `packages/server/uploads/` 下 800+ 附件）不可恢复，操作前先确认目标、必要时先备份。
+1. **版本控制（2026-09-09 起）**：仓库 `https://github.com/zrc2682/localtrain.git`（私有，main 分支）。**只跟踪靶场本体**（packages/、scripts/、docs/、根目录工具与文档，约 107 个文件）；题目 docker 环境（`docker/`）、writeup、`docker-images/` tar、`dev.db`、`uploads/`、`.tmp` 均被 .gitignore 排除、仅存本机——**换新机器克隆仓库拿不到题目环境**。`.gitattributes` 固定 `* -text` 禁止换行符转换（防题目脚本被转成 CRLF 后容器起不来）。push 走 Clash 代理：`git -c http.proxy=http://127.0.0.1:7890 push`。**`dev.db` 与 `uploads/` 依然没有任何备份**，删除/损坏不可恢复，操作前先确认目标、必要时先备份。
 2. **端口约定**：
    - 后端 `.env` 写的是 `PORT=3000`，但本机 Windows 会保留 3000/3001 等端口（`netsh interface ipv4 show excludedportrange` 可查），**规范启动方式是 `start.cmd` / `start.sh` / `PORT=3008 npm run dev`，后端实际跑在 3008**。
    - 前端 Vite 固定 `127.0.0.1:8080`，代理 `/api` → `http://localhost:3008`。
