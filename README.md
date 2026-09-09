@@ -403,7 +403,7 @@ npm run build -w packages/server  # 构建后端
 `test-api.sh` 是基于 curl 的端到端 API 测试，覆盖登录、创建题目、添加提示、切换角色、获取详情、启动环境、提交 flag、重置题目并验证解出次数累计等流程。
 
 ```bash
-# 确保后端已启动在 http://localhost:3000
+# 确保后端已启动在 http://localhost:3008
 bash test-api.sh
 ```
 

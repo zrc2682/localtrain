@@ -2,7 +2,7 @@ import fs from 'fs';
 import http from 'http';
 import { URL } from 'url';
 
-const BASE = `${process.env.API_BASE || 'http://localhost:3000'}/api`;
+const BASE = `${process.env.API_BASE || 'http://localhost:3008'}/api`;
 const LOGIN = { username: 'user', password: 'user' };
 const REGISTRY_FILE = 'docs/ctf-web-registry-batch30.json';
 

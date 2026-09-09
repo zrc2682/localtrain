@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE = 'http://localhost:3000/api';
+const BASE = process.env.API_BASE || 'http://localhost:3008/api';
 const LOGIN = { username: 'admin', password: 'admin' };
 const IMAGE_ARCHIVE_DIR = path.resolve(__dirname, 'docker-images');
 const TEMP_DIR = path.resolve(__dirname, '.deploy-images-tmp');

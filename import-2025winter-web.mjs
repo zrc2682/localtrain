@@ -3,7 +3,7 @@ import path from 'path';
 import http from 'http';
 import { randomUUID, randomBytes } from 'crypto';
 
-const BASE = 'http://localhost:3000/api';
+const BASE = process.env.API_BASE || 'http://localhost:3008/api';
 const LOGIN = { username: 'admin', password: 'admin' };
 const WRITEUP_DIR = 'F:/Myprojects/CTF-Writeups/2025冬季培训/Web';
 const ATTACH_DIR = path.join(WRITEUP_DIR, '部分题目附件');

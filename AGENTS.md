@@ -16,11 +16,10 @@ LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题
 这些是本机（Windows 11 + Git Bash + Docker Desktop）的实际状况，与部分文档的陈旧描述不一致时，**以本节为准**：
 
 1. **版本控制（2026-09-09 起）**：仓库 `https://github.com/zrc2682/localtrain.git`（私有，main 分支）。**只跟踪靶场本体**（packages/、scripts/、docs/、根目录工具与文档，约 107 个文件）；题目 docker 环境（`docker/`）、writeup、`docker-images/` tar、`dev.db`、`uploads/`、`.tmp` 均被 .gitignore 排除、仅存本机——**换新机器克隆仓库拿不到题目环境**。`.gitattributes` 固定 `* -text` 禁止换行符转换（防题目脚本被转成 CRLF 后容器起不来）。push 走 Clash 代理：`git -c http.proxy=http://127.0.0.1:7890 push`。**`dev.db` 与 `uploads/` 依然没有任何备份**，删除/损坏不可恢复，操作前先确认目标、必要时先备份。
-2. **端口约定**：
-   - 后端 `.env` 写的是 `PORT=3000`，但本机 Windows 会保留 3000/3001 等端口（`netsh interface ipv4 show excludedportrange` 可查），**规范启动方式是 `start.cmd` / `start.sh` / `PORT=3008 npm run dev`，后端实际跑在 3008**。
+2. **端口约定（2026-09-09 已全项目统一为 3008）**：
+   - 本机 Windows 会保留 3000/3001 等端口（`netsh interface ipv4 show excludedportrange` 可查），因此 `packages/server/.env` 的 `PORT`、`start.cmd`/`start.sh`、所有导入/验证脚本（`import-ctf-contests.mjs`、`verify-batch*.mjs`、`scripts/*.mjs`）的 `API_BASE` 默认值、`test-api.sh` 均为 **3008**。
    - 前端 Vite 固定 `127.0.0.1:8080`，代理 `/api` → `http://localhost:3008`。
-   - `test-api.sh` 硬编码 3008；`import-ctf-contests.mjs` 和 `verify-batch*.mjs` 默认 `API_BASE` 各不相同（3000 或 2800），**调用脚本前先确认后端实际端口，必要时 `API_BASE=http://localhost:3008 node ...` 显式指定**。
-   - README 和 CHALLENGE-DEPLOYMENT.md 6.3 节里的 5173/3000 是陈旧描述，不要照抄。
+   - 脚本仍支持 `API_BASE=...` 环境变量临时覆盖；历史文档（deploy-report、ctf-web-challenges、CHALLENGE-DEPLOYMENT 第 9 章）里的 3000/2800 是当时实况，无需回改。
 3. **GitHub 访问**：直连经常超时，用 Clash 代理 `http://127.0.0.1:7890`（git 全局代理通常已配置；详见用户技能 github-access）。
 4. **Docker Hub 直连不可用**：基础镜像从 `docker.m.daocloud.io`、`docker.1ms.run`、`hub.rat.dev` 等镜像源拉取后 `docker tag` 回原名；`ghcr.io` 可直连。Docker 数据目录已迁移到 `F:/Docker`。
 5. **Docker Desktop 启用 containerd snapshotter 导致两个怪癖**（详见 CHALLENGE-DEPLOYMENT.md 5.6）：

@@ -1,6 +1,6 @@
 import http from 'http';
 
-const BASE = process.env.API_BASE || 'http://localhost:3000/api';
+const BASE = process.env.API_BASE || 'http://localhost:3008/api';
 const LOGIN = { username: 'admin', password: 'admin' };
 const TITLE = process.env.TITLE || 'Django QuerySet.order_by SQLi';
 const FLAG = process.env.FLAG || 'flag{django_orderby_sqli_2e8a4c6b1d9f}';

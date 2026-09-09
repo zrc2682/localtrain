@@ -380,12 +380,12 @@ docker save -o docker-images/localtrain_ctf-hello_latest.tar localtrain/ctf-hell
 npm run dev
 ```
 
-- 前端：http://localhost:5173
-- 后端：http://localhost:3000
+- 前端：http://127.0.0.1:8080
+- 后端：http://localhost:3008
 
 #### 6. 在管理后台创建题目
 
-1. 打开 http://localhost:5173，使用默认管理员账号登录：`admin` / `admin`。
+1. 打开 http://127.0.0.1:8080，使用默认管理员账号登录：`admin` / `admin`。
 2. 点击顶部导航「切换为管理员」进入 `/admin` 管理后台。
 3. 点击「新建题目」或使用「出题模板」（Web）快速填充，然后修改以下字段：
    - **标题**：`Hello`

@@ -115,6 +115,7 @@ router.get('/', authMiddleware, async (req: AuthRequest, res) => {
   const result = challenges.map((c) => ({
     ...c,
     note: isAdmin || c.note ? c.note : undefined,
+    hints: isAdmin ? c.hints : c.hints.map((h) => ({ id: h.id, level: h.level, label: h.label, scorePenalty: h.scorePenalty })),
     flags: isAdmin ? c.flags : undefined,
     flagCount: c.flags.length,
     attachments: isAdmin ? c.attachments : undefined,
@@ -347,6 +348,7 @@ router.get('/:id', authMiddleware, async (req: AuthRequest, res) => {
     note: isAdmin || challenge.note ? challenge.note : undefined,
     hints: challenge.hints.map((h) => ({
       ...h,
+      content: isAdmin || usedHintIds.has(h.id) ? h.content : undefined,
       unlocked: usedHintIds.has(h.id),
     })),
     attachments: isAdmin ? challenge.attachments : challenge.attachments.filter((a) => a.visibleToUser),
@@ -675,7 +677,7 @@ router.put('/:id/attachments/:attachmentId', authMiddleware, requireAdmin, async
 
   const updated = await prisma.attachment.update({
     where: { id: attachment.id },
-    data: { originalName: decodeFilename(parsed.data.originalName) },
+    data: { originalName: parsed.data.originalName },
   });
   res.json(updated);
 });

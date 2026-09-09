@@ -3,6 +3,17 @@ set -e
 
 BASE="http://localhost:3008/api"
 
+# 无论成功失败，退出时删除本次创建的测试题目（DELETE 会级联停容器、清记录）
+CLEANUP_CHALLENGE_ID=""
+ADMIN_TOKEN=""
+cleanup() {
+  if [ -n "$CLEANUP_CHALLENGE_ID" ] && [ -n "$ADMIN_TOKEN" ]; then
+    curl -s -X DELETE "$BASE/challenges/$CLEANUP_CHALLENGE_ID" -H "Authorization: Bearer $ADMIN_TOKEN" > /dev/null
+    echo "cleanup: 已删除测试题目 $CLEANUP_CHALLENGE_ID"
+  fi
+}
+trap cleanup EXIT
+
 echo "1. 登录 admin"
 ADMIN_TOKEN=$(curl -s -X POST "$BASE/auth/login" -H "Content-Type: application/json" -d '{"username":"admin","password":"admin"}' | sed -n 's/.*"token":"\([^"]*\)".*/\1/p')
 echo "admin token ok"
@@ -10,6 +21,7 @@ echo "admin token ok"
 echo "2. 创建多 flag 题目"
 CHALLENGE=$(curl -s -X POST "$BASE/challenges" -H "Content-Type: application/json" -H "Authorization: Bearer $ADMIN_TOKEN" -d '{"title":"测试Web题","description":"一个测试题目","category":"web","difficulty":"medium","flags":["flag{first}","flag{second}"],"image":"vulnweb:latest","port":8080}')
 CHALLENGE_ID=$(echo "$CHALLENGE" | sed -n 's/.*"id":"\([^"]*\)","title".*/\1/p')
+CLEANUP_CHALLENGE_ID="$CHALLENGE_ID"
 echo "challenge id: $CHALLENGE_ID"
 
 echo "3. 添加提示"

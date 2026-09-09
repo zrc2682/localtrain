@@ -4,7 +4,7 @@ import http from 'http';
 import { randomUUID } from 'crypto';
 import { execSync } from 'child_process';
 
-const BASE = `${process.env.API_BASE || 'http://localhost:3000'}/api`;
+const BASE = `${process.env.API_BASE || 'http://localhost:3008'}/api`;
 const LOGIN = { username: 'admin', password: 'admin' };
 const REGISTRY_FILE = path.resolve(process.argv[2] || path.join(process.cwd(), 'docs', 'ctf-web-registry.json'));
 const TMP_DIR = path.join(process.cwd(), '.tmp');

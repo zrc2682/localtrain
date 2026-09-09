@@ -3,7 +3,7 @@ import path from 'path';
 import http from 'http';
 import { randomUUID } from 'crypto';
 
-const BASE = 'http://localhost:3000/api';
+const BASE = process.env.API_BASE || 'http://localhost:3008/api';
 const WRITEUP_DIR = 'F:/Myprojects/CTF-Writeups/网络空间安全设计与实践/writeup';
 const LOGIN = { username: 'admin', password: 'admin' };
 

@@ -6,7 +6,7 @@ import userRoutes from './routes/users.js';
 import challengeRoutes from './routes/challenges.js';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(cors());
 app.use(express.json());

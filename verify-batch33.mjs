@@ -1,7 +1,7 @@
 import fs from 'fs';
 import http from 'http';
 
-const API_BASE = process.env.API_BASE || 'http://127.0.0.1:2800';
+const API_BASE = process.env.API_BASE || 'http://localhost:3008';
 const REGISTRY = JSON.parse(fs.readFileSync('docs/ctf-web-registry-batch33.json', 'utf-8'));
 
 function request(method, path_, body, headers = {}) {
