@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import http from 'http';
 import { randomUUID } from 'crypto';
-import { execSync } from 'child_process';
+import { execSync, spawnSync } from 'child_process';
 
 const BASE = `${process.env.API_BASE || 'http://localhost:3008'}/api`;
 const LOGIN = { username: 'admin', password: 'admin' };
@@ -12,7 +12,10 @@ const TMP_DIR = path.join(process.cwd(), '.tmp');
 // 判重规则：
 //   - 同比赛同名（比赛名同样归一化比较）：视为同一题，默认跳过不导入；确认有意更新旧题时加 --allow-update 覆盖。
 //   - 不同比赛同名：允许导入，作为新题创建。
+//   - --retry：上次导入 failed 的条目也重新尝试（默认跳过 skipped/failed）。
 const ALLOW_UPDATE = process.argv.includes('--allow-update');
+// 默认跳过 failed 条目；--retry 重新尝试上次导入失败的条目（如泄题门禁拦截、附件修复后）
+const RETRY = process.argv.includes('--retry');
 
 function request(method, path_, body, headers = {}) {
   return new Promise((resolve, reject) => {
@@ -71,8 +74,8 @@ function buildMultipart(fields, files) {
 }
 
 // 收集题目附件:优先目录内现成 zip;其次 attachments/ 散文件打 zip;
-// 都没有则把题目源码整体打 zip(排除题解/利用脚本等会让选手直接看到答案的文件)
-const ZIP_EXCLUDE = new Set(['.git', 'node_modules', '__pycache__', 'readme.md', 'wp.md', 'writeup', 'exp.py', 'exploit.py', 'exploit']);
+// 都没有则把题目源码整体打 zip(排除题解/利用脚本/版本管理目录/flag 文件，避免把答案打进附件)
+const ZIP_EXCLUDE = new Set(['.git', 'node_modules', '__pycache__', 'readme.md', 'wp.md', 'writeup', 'exp.py', 'exploit.py', 'exploit', 'flag.txt', 'flag']);
 
 function makeZip(zipPath, srcPaths) {
   fs.mkdirSync(TMP_DIR, { recursive: true });
@@ -112,7 +115,12 @@ function collectAttachments(entry) {
     }
   };
   walk(dir, 0);
-  if (zips.length > 0) return zips.slice(0, 3);
+  if (zips.length > 0) {
+    if (zips.length > 3) {
+      console.warn(`[警告] ${entry.id} 发现 ${zips.length} 个 zip，只上传前 3 个，其余忽略: ${zips.slice(3).map((p) => path.basename(p)).join(', ')}`);
+    }
+    return zips.slice(0, 3);
+  }
 
   const attDir = path.join(dir, 'attachments');
   if (fs.existsSync(attDir) && fs.statSync(attDir).isDirectory()) {
@@ -132,6 +140,21 @@ function collectAttachments(entry) {
     if (zip) return [zip];
   }
   return [];
+}
+
+// 泄题门禁：解包附件 zip 并搜索 flag 原文（文件名排除挡不住内容泄露，如 writeup/源码里直接写了答案）
+// 返回 true=命中, false=未命中, null=无法解包检查
+function zipContainsFlag(zipPath, flag) {
+  try {
+    const content = execSync(`unzip -p "${zipPath.replace(/"/g, '\\"')}"`, {
+      encoding: 'latin1',
+      maxBuffer: 256 * 1024 * 1024,
+      stdio: ['ignore', 'pipe', 'pipe'],
+    });
+    return content.includes(flag);
+  } catch {
+    return null;
+  }
 }
 
 function buildDescription(entry) {
@@ -154,12 +177,12 @@ async function main() {
   const existingByNorm = new Map(listRes.data.map((c) => [normalizeTitle(c.title), c]));
 
   for (const entry of registry.challenges) {
-    if (entry.status === 'skipped' || entry.status === 'failed') continue;
+    if ((entry.status === 'skipped' || entry.status === 'failed') && !RETRY) continue;
 
-    const tarName = `localtrain_ctf-${entry.id}_latest.tar`;
-    const tarPath = path.join(process.cwd(), 'docker-images', tarName);
-    if (!fs.existsSync(tarPath)) {
-      console.warn(`[警告] 镜像归档不存在: docker-images/${tarName}(仍继续导入,启动时会尝试自动加载)`);
+    const imageName = entry.image || `localtrain/ctf-${entry.id}:latest`;
+    const hasImage = spawnSync('docker', ['image', 'inspect', imageName], { stdio: ['ignore', 'pipe', 'pipe'] }).status === 0;
+    if (!hasImage) {
+      console.warn(`[警告] 本地镜像不存在: ${imageName}（仍继续导入；平台将无法启动该题环境，请先构建镜像）`);
     }
 
     const fields = {
@@ -205,6 +228,20 @@ async function main() {
     }
 
     const attachments = collectAttachments(entry);
+
+    // 泄题门禁：附件内容含 flag 原文则拒绝导入
+    const leaked = [];
+    for (const p of attachments) {
+      const hit = zipContainsFlag(p, entry.flag);
+      if (hit === true) leaked.push(p);
+      else if (hit === null) console.warn(`[警告] ${entry.id} 附件无法解包检查，跳过内容扫描: ${path.basename(p)}`);
+    }
+    if (leaked.length > 0) {
+      entry.status = 'failed';
+      entry.reason = `泄题门禁：附件内容包含 flag 原文，未导入。清理附件后加 --retry 重跑: ${leaked.map((p) => path.basename(p)).join(', ')}`;
+      console.error(`[泄题] ${entry.title}: ${entry.reason}`);
+      continue;
+    }
     if (existing && !sameContest) {
       console.log(`[新建-同名不同比赛] ${entry.title}：平台已有 "${existing.title}"(${existing.contest})，本题为 "${entry.contest}"，作为新题导入`);
     }

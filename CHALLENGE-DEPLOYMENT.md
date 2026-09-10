@@ -84,6 +84,9 @@ localtrain/
 | `import-ctf-contests.mjs` | 读取登记表，自动创建 Challenge、上传附件 zip、写入 `contest` 标签 |
 | `scripts/import-cve-challenges.mjs` | 将 CVE 登记表中 `deployed` 状态题目导入数据库 |
 | `scripts/deploy-skipped-cve.mjs` | 重试 `skipped` 状态的 CVE 题目 |
+| `scripts/push-images-to-ghcr.mjs` | 把无 tar 备份的已部署镜像推送到 ghcr.io 私有仓做异地备份（`NO_SAVE=1` 的兜底，见 5.6） |
+| `scripts/verify-batch.mjs` | 批次验证通用脚本：`--preimport` 构建冒烟 / 默认平台验证（探活重试、flag 提交、验证后重置进度） |
+| `scripts/close-batch.mjs` | 批次收尾串联：刷查重索引 → .tmp 清理预览 → 更新 tmp 报告 → 生成文档表格草稿与手工事项清单 |
 
 ---
 
@@ -285,7 +288,8 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 
 - 在 containerd snapshotter 关闭前，新批次可继续使用 `NO_SAVE=1`；
 - 若关闭 containerd snapshotter 或 Docker Desktop 修复该 bug，应恢复默认导出 tar 的行为；
-- 个别题目修复后重新构建时，如未加 `NO_SAVE=1`，会正常导出 tar 作为备份（如第 24 批 `AAA'26`）。
+- 个别题目修复后重新构建时，如未加 `NO_SAVE=1`，会正常导出 tar 作为备份（如第 24 批 `AAA'26`）；
+- 第 23 批起无 tar 的镜像只有本地标签一份拷贝，应定期用 `node scripts/push-images-to-ghcr.mjs` 推送到 ghcr.io 私有仓库做异地备份（用法见脚本头部注释）；tar 与本地标签均不存在的题目无法备份，只能从 `docker/ctf-contests/` 源码重建。
 
 ---
 

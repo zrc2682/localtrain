@@ -22,9 +22,10 @@ LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题
    - 脚本仍支持 `API_BASE=...` 环境变量临时覆盖；历史文档（deploy-report、ctf-web-challenges、CHALLENGE-DEPLOYMENT 第 9 章）里的 3000/2800 是当时实况，无需回改。
 3. **GitHub 访问**：直连经常超时，用 Clash 代理 `http://127.0.0.1:7890`（git 全局代理通常已配置；详见用户技能 github-access）。
 4. **Docker Hub 直连不可用**：基础镜像从 `docker.m.daocloud.io`、`docker.1ms.run`、`hub.rat.dev` 等镜像源拉取后 `docker tag` 回原名；`ghcr.io` 可直连。Docker 数据目录已迁移到 `F:/Docker`。
-5. **Docker Desktop 启用 containerd snapshotter 导致两个怪癖**（详见 CHALLENGE-DEPLOYMENT.md 5.6）：
+5. **Docker Desktop 启用 containerd snapshotter 导致三个怪癖**（详见 CHALLENGE-DEPLOYMENT.md 5.6）：
    - `docker save` 导出的 tar 缺 layer blob，加载后无法建容器 → 构建统一加 `NO_SAVE=1`，只保留本地镜像标签，不导出 tar。
    - buildkit 偶发无法读取本地基础镜像 blob → `build.sh` 内部固定 `DOCKER_BUILDKIT=0` 用 legacy builder，不要改动。
+   - 个别镜像因 blob 被回收留下「有记录无数据」的陈旧内容条目：本地容器照常能跑，但 `docker push`/`docker save` 报 content digest not found，且从源码重建无效（相同内容被去重）→ 唯一修法是 `docker export` + `docker import` 扁平化重建（2026-09 batch22/23/25 的 5 个 moectf 题实例）。
 6. **构建慢/失败的惯用解法**：Debian apt 换 `mirrors.tuna.tsinghua.edu.cn`；buster 老源 404 换 `archive.debian.org` 并关 `Check-Valid-Until`；Go 加 `GOPROXY=https://goproxy.cn,direct`；容器内 shell 脚本注意 CRLF 换行问题（Windows 下 clone 的仓库常见，需转 LF）。
 7. 根目录的 `Web2.php`、`web3.php`、`cookies.txt` 及 `.tmp/` 里的 `*.class` 是解题遗留物，不是项目文件；根目录 `uploads/` 是空的历史残留，真实附件目录在 `packages/server/uploads/`。
 
@@ -47,8 +48,7 @@ localtrain/
 ├── start.cmd / start.sh      # 一键启动（设置 PORT=3008）
 ├── test-api.sh               # curl 端到端 API 测试（硬编码 3008）
 ├── CHALLENGE-DEPLOYMENT.md   # 题目部署需求文档（CVE + CTF，选题/构建/导入全流程）
-├── import-ctf-contests.mjs   # 按登记表批量导入题目到平台（admin API）
-├── verify-batch33.mjs        # 第 33 批验证脚本（每批可仿写一个）
+├── import-ctf-contests.mjs   # 按登记表批量导入题目到平台（admin API；--retry 重试 failed；自带泄题门禁）
 ├── deploy-images.mjs         # 从平台附件自动构建并部署镜像（早期流程）
 ├── update-flags.mjs          # 从 writeup 批量更新题目 flag
 ├── docker/                   # 题目源码与 Dockerfile（永久存放地）
@@ -168,6 +168,8 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 # 后端在线时加 --api 额外比对平台现有题目
 ```
 
+- 检查项：必填字段/命名规范/批内批外与平台查重/源码目录与 Dockerfile，外加构建坑静态检查（.sh 含 CRLF 报 ERROR、EXPOSE 与登记表 port 不一致、`ENV FLAG` 或缺 `ARG FLAG` 等不可靠 flag 注入方式）。
+
 **有 ERROR 不许构建/导入。** 历史事故（第 31/32 批）：标题归一化冲突导致旧题被覆盖，只能手工恢复——这个门禁就是为此设计的，不要绕过。
 
 ### 3. 构建镜像
@@ -190,6 +192,10 @@ REGISTRY_FILE=docs/ctf-web-registry-batchN.json NO_SAVE=1 bash docker/ctf-contes
 ### 4. 冒烟验证（每题必做）
 
 ```bash
+# 脚本方式（推荐）：docker run -P 随机端口 → HTTP 探活（自动重试）→ 停止删除
+node scripts/verify-batch.mjs docs/ctf-web-registry-batchN.json --preimport
+
+# 手工方式（等价）：
 docker run -d --rm -p <主机端口>:<题目端口> localtrain/ctf-<id>:latest
 curl http://localhost:<主机端口>   # 确认 HTTP 可达、按解法能读到 flag
 docker stop <容器>
@@ -201,16 +207,17 @@ docker stop <容器>
 API_BASE=http://localhost:3008 node import-ctf-contests.mjs docs/ctf-web-registry-batchN.json
 ```
 
-- 自动登录 admin、按登记表建题、打附件 zip 上传（自动排除 writeup/exp 等泄答案文件）、写 `contest` 标签，结果回写登记表 `status`。
-- 同比赛同名默认跳过；确认要覆盖旧题才加 `--allow-update`。
+- 自动登录 admin、按登记表建题、打附件 zip 上传（自动排除 writeup/exp/flag.txt 等泄答案文件，且上传前解包扫描附件内容，含 flag 原文即拒绝导入）、写 `contest` 标签，结果回写登记表 `status`。
+- 同比赛同名默认跳过；确认要覆盖旧题才加 `--allow-update`。导入失败（含泄题门禁拦截）的条目修复后加 `--retry` 重跑。
+- 导入前用 `docker image inspect` 检查本地镜像是否存在（不再看 tar，NO_SAVE 时代平台只依赖本地镜像标签）。
 - `description` 非空则直接用作题目描述，否则自动生成默认描述。
 
 ### 6. 平台侧验证 + 收尾（必做清单）
 
-- 以 user 身份逐题：启动环境 → HTTP 可访问 → 提交 flag 成功。可仿写根目录 `verify-batch33.mjs` 批量做。
+- 以 user 身份逐题批量验证（启动环境 → HTTP 可访问 → 提交 flag → 自动重置本人进度防污染账号）：`node scripts/verify-batch.mjs docs/ctf-web-registry-batchN.json`。
+- 一次性收尾（刷索引 → .tmp 清理预览 → 更新 tmp 报告 → 生成文档表格草稿 + 手工事项清单）：`node scripts/close-batch.mjs docs/ctf-web-registry-batchN.json`。
 - 更新文档：`docs/ctf-web-challenges.md` 加批次章节（构建备注/特殊处理/writeup 来源）、`CHALLENGE-DEPLOYMENT.md` 5.3 批次表 + 第 9 章历史记录。
-- `node scripts/update-deployed-index.mjs` 刷新查重索引（`.deployed-challenges/` 由它维护，不手工增删）。
-- 清理 `.tmp/batchN/` 已部署内容：`node scripts/clean-tmp-deployed.mjs --dry-run` 预览后执行；再 `node scripts/update-tmp-report.mjs` 更新报告。
+- 确认 close-batch 的清理预览无误后真实清理：`node scripts/clean-tmp-deployed.mjs`（不带 --dry-run）。
 - writeup 本地化到 `ctf-writeup/<比赛slug>/<题目slug>.md`，PDF 等无法抓取的记录链接。
 
 ### 常见构建坑速查（历史批次实录，详见 ctf-web-challenges.md）
@@ -244,7 +251,7 @@ docker builder prune -f     # build cache
 docker volume prune -f      # 未使用卷
 ```
 
-- NO_SAVE=1 期间新批次无 tar 备份，**不要随手删除已部署题目的本地镜像标签**；早期批次有 `docker-images/*.tar` 可恢复。
+- NO_SAVE=1 期间新批次无 tar 备份，**不要随手删除已部署题目的本地镜像标签**；早期批次有 `docker-images/*.tar` 可恢复。异地备份用 `node scripts/push-images-to-ghcr.mjs`（把无 tar 的 deployed 镜像推到 ghcr.io 私有仓 `ghcr.io/zrc2682/ctf-<id>:latest`；前置 `docker login ghcr.io`，PAT 需 write:packages；恢复命令见脚本头部注释）。
 - 游离的 LocalTrain 容器按 `localtrain.project=localtrain` label 识别。
 
 ## 安全注意事项（勿「修复」以下设计，属本地使用前提）
