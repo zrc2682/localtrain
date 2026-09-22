@@ -17,7 +17,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%A5%9E%E7%A7%98%E7%9A%84%E6%89%8B%E9%95%AF"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%A5%9E%E7%A7%98%E7%9A%84%E6%89%8B%E9%95%AF",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-shouzhuo",
       "hasDockerfile": true,
       "flagMechanism": "构建期将 flag 写入 html/shouzhuo.js 替换 {{FLAG}}，前端 JS 源码/控制台查看获取",
@@ -40,7 +40,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/Moe%E7%AC%91%E4%BC%A0%E4%B9%8B%E7%8C%9C%E7%8C%9C%E7%88%86"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/Moe%E7%AC%91%E4%BC%A0%E4%B9%8B%E7%8C%9C%E7%8C%9C%E7%88%86",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-guess-bao",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 app.py 中 FLAG_PLACEHOLDER，访问 /flag POST 返回 flag",
@@ -63,7 +63,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E5%88%9D%E8%AF%86%E9%87%91%E6%9B%A6%E7%8E%84%E8%BD%A8"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20%E5%88%9D%E8%AF%86%E9%87%91%E6%9B%A6%E7%8E%84%E8%BD%A8",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-jinxi-xuangu",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 app.py 中硬编码 moectf 字符串为平台 flag，响应头 X-Jinxi-Secret 返回",
@@ -86,7 +86,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%97%AE%E5%89%91%E7%9F%B3%EF%BC%81%E7%AF%A1%E5%A4%A9%E6%94%B9%E5%91%BD%EF%BC%81"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E9%97%AE%E5%89%91%E7%9F%B3%EF%BC%81%E7%AF%A1%E5%A4%A9%E6%94%B9%E5%91%BD%EF%BC%81",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-wenjian-shi",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 app.py 中 FLAG_PLACEHOLDER，/test_talent GET/POST 参数满足后返回 flag",
@@ -109,7 +109,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E6%89%93%E4%B8%8A%E9%97%A8%E6%9D%A5%EF%BC%81"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%BA%94%E7%AB%A0%20%E6%89%93%E4%B8%8A%E9%97%A8%E6%9D%A5%EF%BC%81",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-da-shang-men",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP 路径穿越读取 /flag",
@@ -132,7 +132,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E8%97%8F%E7%BB%8F%E7%A6%81%E5%88%B6%EF%BC%9F%E7%8E%84%E6%9C%BA%E5%88%9D%E6%8E%A2%EF%BC%81"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E5%85%AD%E7%AB%A0%20%E8%97%8F%E7%BB%8F%E7%A6%81%E5%88%B6%EF%BC%9F%E7%8E%84%E6%9C%BA%E5%88%9D%E6%8E%A2%EF%BC%81",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-cangjing-jinzhi",
       "hasDockerfile": true,
       "flagMechanism": "构建期将 flag 替换到 init.sql 中，登录 SQL 注入成功后前端显示 flag",
@@ -155,7 +155,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E7%81%B5%E8%9B%9B%E6%8E%A2%E7%A9%B4%E4%B8%8E%E9%98%B4%E9%98%B3%E5%8F%8C%E7%94%9F%E7%AC%A6"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%83%E7%AB%A0%20%E7%81%B5%E8%9B%9B%E6%8E%A2%E7%A9%B4%E4%B8%8E%E9%98%B4%E9%98%B3%E5%8F%8C%E7%94%9F%E7%AC%A6",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-lingzhu-shuangsheng",
       "hasDockerfile": true,
       "flagMechanism": "构建期将 ENV $FLAG 写入 flag.php 或直接通过 getenv 读取，PHP 弱类型/MD5 碰撞后输出 flag",
@@ -178,7 +178,7 @@
         "url": "https://github.com/CUHK0x/cuhk-ctf-2025-challenges/tree/main/web/32_i-want-more-cookies"
       },
       "writeup": "https://github.com/CUHK0x/cuhk-ctf-2025-challenges/tree/main/web/32_i-want-more-cookies",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/cuhk-ctf-2025/cuhk-ctf-2025.md",
       "dir": "docker/ctf-contests/cuhk-ctf-2025/cuhk-2025-i-want-more-cookies",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 app.py 中硬编码 flag 字符串为平台 flag，多阶段 cookie 满足后 /final 返回 flag",
@@ -201,7 +201,7 @@
         "url": "https://github.com/CUHK0x/cuhk-ctf-2025-challenges/tree/main/web/65_classic-sql"
       },
       "writeup": "https://github.com/CUHK0x/cuhk-ctf-2025-challenges/tree/main/web/65_classic-sql",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/cuhk-ctf-2025/cuhk-ctf-2025.md",
       "dir": "docker/ctf-contests/cuhk-ctf-2025/cuhk-2025-classic-sql",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 init_db.py 中两段硬编码 flag 为平台 flag，SQL 注入读取后拼接",
@@ -224,7 +224,7 @@
         "url": "https://github.com/team-s2/ACTF-2026/tree/main/web/TINJ"
       },
       "writeup": "https://github.com/team-s2/ACTF-2026/tree/main/web/TINJ",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/actf-2026/actf-2026.md",
       "dir": "docker/ctf-contests/actf-2026/actf-2026-tinj",
       "hasDockerfile": true,
       "flagMechanism": "构建期替换 start.sh 中硬编码 flag 为平台 flag，写入 /flag 后通过 JPHP 反序列化/SecurityManager 绕过读取",

@@ -1,0 +1,302 @@
+{
+  "batch": 34,
+  "screenedAt": "2026-09-10",
+  "notes": "筛选日期 2026-09-10，两轮筛选。第一轮:湾区杯 2026 初赛 4 道白盒源码题(无公开 writeup,解法由源码自审计:ShadowArchive=pickle逃逸+深合并污染+WAF绕过,DockRelay=SSRF策略绕过需容器内附 flag 服务,one-click-to-build=Go CMS nimbus 审计,hanziguard=SpringBoot+H2 1.4.200 CREATE ALIAS RCE)。第二轮(CTF-Archives 轻量 web 枯竭后网络搜索官方仓库):0xGame2023 官方仓(X1cT34m/0xGame2023,题目+官方WP+docker 齐全)6 道 PHP/Go 题。判重要点:pcb5-ez-django=已部署鹏城杯 ezDjango,CCSSSC 决赛 office/oa_system 也是鹏城杯原题复用,均未收录;CTFTraining 仓全为 2016-2019 老题不合规;NepCTF hive it 双容器、ez_sqli 双容器 MySQL 排除。litemall-plus 因需捆绑 MySQL 构建风险高降级 skipped。原题 flag 格式 0xGame{}/flag{}/dart{},平台 flag 统一构建期注入;0xGame 部分原题用 ENV FLAG 注入,部署时需改为 RUN echo 写文件+源码读文件(见环境事实/Runbook)。",
+  "challenges": [
+    {
+      "id": "wqb2026-shadowarchive",
+      "title": "ShadowArchive",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5000,
+      "image": "localtrain/ctf-wqb2026-shadowarchive:latest",
+      "flag": "flag{batch34-wqb2026-shadowarchive_9dae6b651a1e}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/wqb2026/shadowarchive",
+      "status": "deployed",
+      "flagMechanism": "flask 单进程内存态,无DB;pickle 逃逸 RCE 后读 /flag;构建期 RUN echo 注入"
+    },
+    {
+      "id": "wqb2026-dockrelay",
+      "title": "DockRelay",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-wqb2026-dockrelay:latest",
+      "flag": "flag{batch34-wqb2026-dockrelay_4e5c0f79d452}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "https://zone.ci/secarticles/wx/573411.html",
+      "dir": "docker/ctf-contests/wqb2026/dockrelay",
+      "status": "deployed",
+      "flagMechanism": "node SSRF 题需在容器内附加内网 flag 服务(127.0.0.1 高位端口)作为 SSRF 目标,flag 注入该服务",
+      "writeupLocal": "ctf-writeup/wqb2026/wqb2026.md"
+    },
+    {
+      "id": "wqb2026-one-click-to-build",
+      "title": "one-click-to-build",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8090,
+      "image": "localtrain/ctf-wqb2026-one-click-to-build:latest",
+      "flag": "flag{batch34-wqb2026-one-click-to-build_5af6c6169f3f}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/wqb2026/one-click-to-build",
+      "status": "deployed",
+      "flagMechanism": "go1.26 编译,仅 uuid 依赖,监听 :8090"
+    },
+    {
+      "id": "wqb2026-hanziguard",
+      "title": "hanziguard",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-wqb2026-hanziguard:latest",
+      "flag": "flag{batch34-wqb2026-hanziguard_791e8ae504b6}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/wqb2026/hanziguard",
+      "status": "deployed",
+      "flagMechanism": "SpringBoot 2.7.18 fat jar(JDK17),内嵌 H2 1.4.200;java -jar 即跑,H2 CREATE ALIAS RCE 读 /flag"
+    },
+    {
+      "id": "0xgame2023-baby-php",
+      "title": "baby_php",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-baby-php:latest",
+      "flag": "flag{batch34-0xgame2023-baby-php_5c710e0df8d5}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/baby-php",
+      "status": "deployed",
+      "flagMechanism": "原题 flag 在 src/flag.php 明文;平台 flag 直接替换 flag.php 内容",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-ping",
+      "title": "ping",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-ping:latest",
+      "flag": "flag{batch34-0xgame2023-ping_80710cf5d058}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/ping",
+      "status": "deployed",
+      "flagMechanism": "php 命令注入;构建期 RUN echo 写 /flag,RCE 后读",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-ez-upload",
+      "title": "ez_upload",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-ez-upload:latest",
+      "flag": "flag{batch34-0xgame2023-ez-upload_9df41477fdc7}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/ez-upload",
+      "status": "deployed",
+      "flagMechanism": "php 文件上传 webshell;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-ez-unserialize",
+      "title": "ez_unserialize",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-ez-unserialize:latest",
+      "flag": "flag{batch34-0xgame2023-ez-unserialize_1d92561d4606}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/ez-unserialize",
+      "status": "deployed",
+      "flagMechanism": "原题 docker-compose ENV FLAG 注入(不可靠),需改为构建期 RUN echo 写 /flag+源码改读文件;反序列化链 __wakeup 绕过+helper 任意调用",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-web-snapshot",
+      "title": "web_snapshot",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-web-snapshot:latest",
+      "flag": "",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/web-snapshot",
+      "status": "skipped",
+      "reason": "原题为 web+redis(slaveOf) 双容器依赖,cache.php 硬编码 db 主机名,合并单容器改造风险高,换 hello_http"
+    },
+    {
+      "id": "0xgame2023-goshop",
+      "title": "GoShop",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2023-goshop:latest",
+      "flag": "flag{batch34-0xgame2023-goshop_aebf9e1b279f}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/goshop",
+      "status": "deployed",
+      "flagMechanism": "gin 内存态商城,买到 Flag 商品回显 flag;原题 flag 逻辑在 main.go 源码,构建期以 ARG FLAG 替换;go mod 走 goproxy.cn",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "ccsscc-2026-final-litemall-plus",
+      "title": "litemall-plus",
+      "contest": "2026 软件系统安全赛总决赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-ccsscc-2026-final-litemall-plus:latest",
+      "flag": "",
+      "source": {
+        "repo": "CTF-Archives/2026-CCSSSC-Final",
+        "url": "https://github.com/CTF-Archives/2026-CCSSSC-Final"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/ccsssc-2026-final/litemall-plus",
+      "status": "skipped",
+      "reason": "SpringBoot 商城需同容器捆绑 MySQL(supervisord),141MB 附件构建风险高;0xGame2023 补位后无必要,降级 skipped,留作后续批次备选"
+    },
+    {
+      "id": "wqb2026-schemastudio",
+      "title": "SchemaStudio",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-wqb2026-schemastudio:latest",
+      "flag": "",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/wqb2026/schemastudio",
+      "status": "skipped",
+      "reason": "附件为 prestashop-9.2.0-beta.1 原始包,无 writeup 无漏洞定位,代码量巨大无法自审;且需捆绑 MySQL,按「无可靠资料跳过」放弃"
+    },
+    {
+      "id": "wqb2026-themeforge",
+      "title": "ThemeForge",
+      "contest": "2026 湾区杯初赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-wqb2026-themeforge:latest",
+      "flag": "",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Quals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Quals"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/wqb2026/themeforge",
+      "status": "skipped",
+      "reason": "附件仅含 player-source(选手端),服务端源码未发布,无法部署"
+    },
+    {
+      "id": "ccsscc-2026-semis-jdbc",
+      "title": "jdbc",
+      "contest": "2026 软件系统安全赛区域赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-ccsscc-2026-semis-jdbc:latest",
+      "flag": "",
+      "source": {
+        "repo": "CTF-Archives/2026-CCSSSC-Semis",
+        "url": "https://github.com/CTF-Archives/2026-CCSSSC-Semis"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/ccsssc-2026-semis/jdbc",
+      "status": "skipped",
+      "reason": "附件仅 pom.xml+WebConfig.java+start.sh,无完整源码;fix 模板是修复版 jar 不能用作漏洞版"
+    },
+    {
+      "id": "ccsscc-2026-semis-robo-admin",
+      "title": "Robo Admin",
+      "contest": "2026 软件系统安全赛区域赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-ccsscc-2026-semis-robo-admin:latest",
+      "flag": "",
+      "source": {
+        "repo": "CTF-Archives/2026-CCSSSC-Semis",
+        "url": "https://github.com/CTF-Archives/2026-CCSSSC-Semis"
+      },
+      "writeup": "",
+      "dir": "docker/ctf-contests/ccsscc-2026-semis/robo-admin",
+      "status": "skipped",
+      "reason": "README 描述像 web,实际附件为 ELF 二进制+libc/ld(nc 服务),属 pwn 非 HTTP web"
+    },
+    {
+      "id": "0xgame2023-hello-http",
+      "title": "hello_http",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-hello-http:latest",
+      "flag": "flag{batch34-0xgame2023-hello-http_c665e57070d0}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/hello-http",
+      "status": "deployed",
+      "flagMechanism": "php http 头构造入门;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    }
+  ]
+}

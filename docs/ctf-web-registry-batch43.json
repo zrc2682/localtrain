@@ -1,0 +1,206 @@
+{
+  "batch": 43,
+  "screenedAt": "2026-09-11",
+  "notes": "OWASP 2025 Top10 CTF(ProbiusOfficial/owasp2025-top10-ctf),按类别×难度分批:41=easy、42=medium、43=hard+存量补位。原题运行时注入链读 ENV FLAG,已加 ARG FLAG+ENV FLAG=$FLAG",
+  "challenges": [
+    {
+      "id": "owasp2025-a1-hard",
+      "title": "OWASP25 A01-BROKENACCESSCONTROL hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a1-hard:latest",
+      "flag": "flag{batch43-owasp2025-a1-hard_44b345eaa738}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A01-BrokenAccessControl/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a1-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A01-BROKENACCESSCONTROL hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a2-hard",
+      "title": "OWASP25 A02-SECURITYMISCONFIGURATION hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a2-hard:latest",
+      "flag": "flag{batch43-owasp2025-a2-hard_0d75a5a71a85}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A02-SecurityMisconfiguration/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a2-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A02-SECURITYMISCONFIGURATION hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a4-hard",
+      "title": "OWASP25 A04-CRYPTOGRAPHICFAILURES hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a4-hard:latest",
+      "flag": "flag{batch43-owasp2025-a4-hard_63dbf74eea4e}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A04-CryptographicFailures/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a4-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A04-CRYPTOGRAPHICFAILURES hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a5-hard",
+      "title": "OWASP25 A05-INJECTION hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a5-hard:latest",
+      "flag": "flag{batch43-owasp2025-a5-hard_12774cd7759a}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A05-Injection/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a5-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A05-INJECTION hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a6-hard",
+      "title": "OWASP25 A06-INSECUREDESIGN hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a6-hard:latest",
+      "flag": "flag{batch43-owasp2025-a6-hard_f154f84ccb16}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A06-InsecureDesign/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a6-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A06-INSECUREDESIGN hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a7-hard",
+      "title": "OWASP25 A07-AUTHENTICATIONFAILURES hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a7-hard:latest",
+      "flag": "flag{batch43-owasp2025-a7-hard_238d8cfbe8e8}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A07-AuthenticationFailures/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a7-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A07-AUTHENTICATIONFAILURES hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a8-hard",
+      "title": "OWASP25 A08-DATAINTEGRITYFAILURES hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a8-hard:latest",
+      "flag": "flag{batch43-owasp2025-a8-hard_2952f73666be}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A08-DataIntegrityFailures/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a8-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A08-DATAINTEGRITYFAILURES hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a10-hard",
+      "title": "OWASP25 A10-EXCEPTIONHANDLING hard",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a10-hard:latest",
+      "flag": "flag{batch43-owasp2025-a10-hard_93027210f721}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A10-ExceptionHandling/hard/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a10-hard",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A10-EXCEPTIONHANDLING hard\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "0xgame2024-ez-unser",
+      "title": "ez_unser",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-ez-unser:latest",
+      "flag": "flag{batch43-0xgame2024-ez-unser_8d96e50f82e9}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/ez-unser",
+      "status": "deployed",
+      "flagMechanism": "flask 反序列化;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"ez_unser\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "nctf2022-ezjava",
+      "title": "EzJava",
+      "contest": "NCTF 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-nctf2022-ezjava:latest",
+      "flag": "flag{batch43-nctf2022-ezjava_80ec2d5615d9}",
+      "source": {
+        "repo": "X1cT34m/NCTF2022",
+        "url": "https://github.com/X1cT34m/NCTF2022"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/805",
+      "dir": "docker/ctf-contests/nctf2022/ezjava",
+      "status": "deployed",
+      "flagMechanism": "java web;三保险注入",
+      "writeupLocal": "ctf-writeup/nctf2022/nctf2022.md"
+    }
+  ]
+}

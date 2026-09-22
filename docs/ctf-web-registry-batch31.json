@@ -16,11 +16,12 @@
         "repo": "CTF-Archives/HKCERTCTF2025Quals",
         "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
       },
-      "writeup": "待补充",
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/19383927",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-ezjs",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "Node.js 20 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+      "notes": "Node.js 20 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md"
     },
     {
       "id": "hkcert-2025-labyrinth",
@@ -35,11 +36,12 @@
         "repo": "CTF-Archives/HKCERTCTF2025Quals",
         "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
       },
-      "writeup": "待补充",
+      "writeup": "https://idocdown.com/app/articles/blogs/detail/17697",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-labyrinth",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "Java 21 JRE 单 jar 应用，监听 8080。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+      "notes": "Java 21 JRE 单 jar 应用，监听 8080。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md"
     },
     {
       "id": "hkcert-2025-nettool",
@@ -54,11 +56,12 @@
         "repo": "CTF-Archives/HKCERTCTF2025Quals",
         "url": "https://github.com/CTF-Archives/HKCERTCTF2025Quals"
       },
-      "writeup": "待补充",
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/19383927",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-nettool",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "Python 3.11 + uvicorn FastAPI 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。"
+      "notes": "Python 3.11 + uvicorn FastAPI 应用，监听 80。标题加 HKCERT 前缀以区分已部署的 HKCTF 同名题。",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md"
     },
     {
       "id": "jksn-2025-final-web2",
@@ -73,11 +76,12 @@
         "repo": "CTF-Archives/2026-jksn-final",
         "url": "https://github.com/CTF-Archives/2026-jksn-final"
       },
-      "writeup": "待补充",
+      "writeup": "https://www.mengxiblog.top/blog/geekyouth-2025-final",
       "dir": "docker/ctf-contests/jksn-2025-final/jksn-2025-final-web2",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "PHP 7.4 Apache，监听 80。"
+      "notes": "PHP 7.4 Apache，监听 80。",
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md"
     },
     {
       "id": "jksn-2025-quals-login-php",
@@ -92,11 +96,12 @@
         "repo": "CTF-Archives/2026-jksn-quals",
         "url": "https://github.com/CTF-Archives/2026-jksn-quals"
       },
-      "writeup": "待补充",
+      "writeup": "https://bytegeek.icu/article/6c0bffc6-cea0-462e-8c7e-cd1436f54304",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-login-php",
       "status": "deployed",
       "flagMechanism": "start.sh 将 flag 写入 MySQL users 表 flag_user 的 password 字段",
-      "notes": "Nginx + PHP 7.3 + MySQL，监听 80；容器启动时初始化数据库。"
+      "notes": "Nginx + PHP 7.3 + MySQL，监听 80；容器启动时初始化数据库。",
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md"
     },
     {
       "id": "jswa-2025-web1",
@@ -111,11 +116,12 @@
         "repo": "CTF-Archives/2025-jswa",
         "url": "https://github.com/CTF-Archives/2025-jswa"
       },
-      "writeup": "待补充",
+      "writeup": "https://github.com/CTF-Archives/2025-jswa",
       "dir": "docker/ctf-contests/jswa-2025/jswa-2025-web1",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag1 与 /flag2",
-      "notes": "Node.js 20 应用，监听 80。"
+      "notes": "Node.js 20 应用，监听 80。",
+      "writeupLocal": "ctf-writeup/jswa-2025/jswa-2025.md"
     },
     {
       "id": "newstar-2025-strange-login",
@@ -130,11 +136,12 @@
         "repo": "CTF-Archives/2025-NewStarCTF",
         "url": "https://github.com/CTF-Archives/2025-NewStarCTF"
       },
-      "writeup": "待补充",
+      "writeup": "https://newstar.wiki/wp/2025/week1/web/strange-login.html",
       "dir": "docker/ctf-contests/newstar-2025/strange-login",
       "status": "deployed",
       "flagMechanism": "ENV ICQ_FLAG 写入 /flag",
-      "notes": "Apache + PHP + MySQL，监听 80；容器启动脚本启动 apache 与 mysql。"
+      "notes": "Apache + PHP + MySQL，监听 80；容器启动脚本启动 apache 与 mysql。",
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md"
     },
     {
       "id": "tsctf-j-2025-ez-sql",
@@ -149,11 +156,12 @@
         "repo": "CTF-Archives/2025-TSCTF-J",
         "url": "https://github.com/CTF-Archives/2025-TSCTF-J"
       },
-      "writeup": "待补充",
+      "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-ez-sql",
       "status": "deployed",
       "flagMechanism": "config.sh 启动时初始化数据库并写入 flag",
-      "notes": "PHP 7.4 Apache + MariaDB，监听 80；启动时通过 /config.sh 初始化数据库。"
+      "notes": "PHP 7.4 Apache + MariaDB，监听 80；启动时通过 /config.sh 初始化数据库。",
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md"
     },
     {
       "id": "tsctf-j-2025-filesystem",
@@ -168,11 +176,12 @@
         "repo": "CTF-Archives/2025-TSCTF-J",
         "url": "https://github.com/CTF-Archives/2025-TSCTF-J"
       },
-      "writeup": "待补充",
+      "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-filesystem",
       "status": "deployed",
       "flagMechanism": "entrypoint.sh 启动时将 FLAG 写入 /flag",
-      "notes": "Node.js 应用，监听 3000。"
+      "notes": "Node.js 应用，监听 3000。",
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md"
     },
     {
       "id": "jksn-2025-final-web4-lfi",

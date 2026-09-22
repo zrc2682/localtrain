@@ -16,8 +16,8 @@
         "path": "web",
         "url": "https://github.com/CTF-Archives/2025-SDNISC-haixuan"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://github.com/davedoesdev/python-jwt/blob/master/test/vulnerability_vows.py",
+      "writeupLocal": "ctf-writeup/sdnisc-2025/sdnisc-2025.md",
       "dir": "docker/ctf-contests/sdnisc-2025/sdnisc-2025-web",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，JWT 算法混淆/权限提升后读取",
@@ -38,8 +38,8 @@
         "path": "ezjs",
         "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/19383927",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-ezjs",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，JSON5 解析 / Pug 模板渲染后读取",
@@ -60,8 +60,8 @@
         "path": "nettool",
         "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/19383927",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-nettool",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，管理员 HTTP 工具 SSRF 后读取",
@@ -82,8 +82,8 @@
         "path": "labyrinth",
         "url": "https://github.com/CTF-Archives/HKCTF2025Quals"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://idocdown.com/app/articles/blogs/detail/17697",
+      "writeupLocal": "ctf-writeup/hkcert-2025/hkcert-2025.md",
       "dir": "docker/ctf-contests/hkcert-2025/hkcert-2025-labyrinth",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Spring Boot 迷宫/复杂逻辑漏洞后读取",
@@ -105,7 +105,7 @@
         "url": "https://github.com/CTF-Archives/OpenHarmonyCTF-2025"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/openharmony-2025/openharmony-2025.md",
       "dir": "docker/ctf-contests/openharmony-2025/openharmony-2025-layers",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP 安全文档系统多层权限绕过/模板注入后读取",
@@ -127,7 +127,7 @@
         "url": "https://github.com/CTF-Archives/OpenHarmonyCTF-2025"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/openharmony-2025/openharmony-2025.md",
       "dir": "docker/ctf-contests/openharmony-2025/openharmony-2025-filesystem",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，NestJS 文件上传/解压/下载路径穿越后读取",
@@ -148,8 +148,8 @@
         "path": "web1",
         "url": "https://github.com/CTF-Archives/JSWA-2025"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://github.com/CTF-Archives/2025-jswa",
+      "writeupLocal": "ctf-writeup/jswa-2025/jswa-2025.md",
       "dir": "docker/ctf-contests/jswa-2025/jswa-2025-web1",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag1 和 /flag2，登录/校验码绕过与 Cookie 伪造后读取",
@@ -170,8 +170,8 @@
         "path": "Web/textme",
         "url": "https://github.com/CTF-Archives/2024-Sanxia-CTF"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://github.com/CTF-Archives/2024-Sanxia-CTF",
+      "writeupLocal": "ctf-writeup/sanxia-2024/sanxia-2024.md",
       "dir": "docker/ctf-contests/sanxia-2024/sanxia-2024-textme",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Rust 预编译服务漏洞后读取",

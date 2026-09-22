@@ -236,6 +236,13 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 | 第 31 批 | 2026-08-16 | 10 | 10 | 0 | 0 | HKCERT CTF 2025 Quals `HKCERT ezjs`、`HKCERT Labyrinth`、`HKCERT nettool`，2025 尖峰山杯决赛 `jksn final web2`、`jksn web4-lfi`，2025 尖峰山杯初赛 `jksn login-php`，2025 JSWA `jswa web1`，NewStar CTF 2025 `strange login`，TSCTF-J 2025 `TSCTF-J ez_sql`、`TSCTF-J filesystem`；4 道旧题因标题归一化被覆盖，已恢复为原数据；HKCERT 三道加前缀区分 |
 | 第 32 批 | 2026-08-16 | 10 | 5 | 0 | 0 | 5 道已成功部署：`ezdja`、`fuond cms`、`CyberSecurity Knowledge`、`teacher panel`、`WAF bypass`；另外 5 道候选因重复或平台不支持未纳入本批次，用户确认不再补充 |
 | 第 33 批 | 2026-08-23 | 10 | 10 | 0 | 0 | SVUCTF HELLOWORLD 2024(7)、CISCN 2024 初赛(1)、CUHK CTF 2025(1)、2025 强网杯初赛(1)；`build.sh` 支持从登记表读取 flag 注入；CUHK `jain-streak-dreamers` 因 opam 编译过久使用原题镜像 + 独立 `Dockerfile.flag-inject` 注入 flag |
+| 第 34 批 | 2026-09-11 | 10 | 10 | 0 | 0 | 2026 湾区杯初赛(4)、0xGame 2023(6)；湾区杯四道为白盒源码题无公开 writeup,由源码自审计确认解法(ShadowArchive=pickle逃逸+深合并污染,DockRelay=SSRF策略绕过+容器内附 flag 服务,nimbus=Go CMS 审计,hanziguard=H2 1.4.200 CREATE ALIAS RCE);0xGame2023 使用官方 X1cT34m 仓库 docker |
+| 第 35 批 | 2026-09-11 | 10 | 10 | 0 | 0 | 0xGame 2022(10)；nginx+php-fpm 双容器题合并为 php:7.4-apache 单容器;Ez_sql 合并 mariadb 进单容器并导入官方 sql;i_want_4090ssti/session 为 python:3.7-alpine(1337);dont_pollute_me 为 node(3000) |
+| 第 36 批 | 2026-09-11 | 10 | 10 | 0 | 0 | 0xGame 2024(10)；hello_http 的 flag 被源码 str_split 切 9 段分发,平台 flag 需 <=45 字符,故该题 flag 短格式 |
+| 第 37 批 | 2026-09-11 | 10 | 10 | 0 | 0 | MoeCTF 2022(7)、MoeCTF 2023(3)；signin/cookie flask 监听 9999 |
+| 第 38 批 | 2026-09-11 | 10 | 10 | 0 | 0 | MoeCTF 2023(7)、0xGame 2023(3)；webimp/php-72-apache 与 vulhub/php-xxe 基础镜像镜像源不可得,统一替换 php:7.4-apache;moeworld(三容器)剔除 |
+| 第 39 批 | 2026-09-11 | 10 | 10 | 0 | 0 | NCTF 2022(1)、Mini L-CTF 2023(3)、Mini L-CTF 2022(2)、0xGame 2023(2)、0xGame 2024(2)；nctf2022-ez-sql 因 deno.land 依赖被墙剔除;pycalculator 实为 socat 沙箱题剔除 |
+| 第 40 批 | 2026-09-11 | 10 | 10 | 0 | 0 | Mini L-CTF 2024(8)、Mini L-CTF 2023(1)、0xGame 2024(1)；JvavGuy/injections/smartpark-revenge(Java+DB 双容器)剔除 |
 
 **合计**：33 个批次，已部署 342 道，待构建 0 道，跳过 8 道，失败 6 道（部分失败题目为候选，未占用最终名额）。
 
@@ -491,6 +498,7 @@ node import-ctf-contests.mjs docs/ctf-web-registry-batchX.json
 - 2026-08-16：CTF 第 32 批部署完成（5 道已部署：`ezdja`、`fuond cms`、`CyberSecurity Knowledge`、`teacher panel`、`WAF bypass`）。初筛 10 道候选中，另外 5 道因重复或平台不适合未纳入本批次；`week2 web1` 与 `QL again` 曾因标题归一化错误覆盖 batch6/batch30 原题，已恢复为原数据。`docker/ctf-contests/qwbS6qsn-2023` 已重命名为 `qwbs6qsn-2023` 以符合镜像名小写要求；本批次使用 `NO_SAVE=1` 仅保留本地镜像标签。用户确认第 32 批不再补充，按 5 道题定稿。
 - 2026-08-16：题目筛选/部署流程工具化整改（针对第 32 批重复部署与覆盖事故）。新增 `scripts/update-deployed-index.mjs`（一键重建查重索引：`.tmp/deployed-*.txt` + `.deployed-challenges/` 同步）、`scripts/validate-batch-registry.mjs`（登记表预检硬性门禁：字段/命名/批内外 id 与归一化标题冲突/源码目录检查，支持 `--api` 平台侧比对）、`scripts/scan-web-candidates.mjs`（候选目录一次扫描输出 web/pwn/misc 分类与 dup 查重结论）；`import-ctf-contests.mjs` 判重改为「归一化标题 + 归一化比赛名」：同比赛同名默认跳过、`--allow-update` 才覆盖；不同比赛同名允许导入并创建新题；`docker/ctf-contests/build.sh` 恢复兼容「目录名即 id」旧规范并保留拼接 slug 新规范。5.2/5.4 已重写为脚本门禁流程。
 - 2026-08-23：CTF 第 33 批部署完成（SVUCTF HELLOWORLD 2024 7 道、CISCN 2024 初赛 1 道、CUHK CTF 2025 1 道、2025 强网杯初赛 1 道，10 道全部成功并验证 flag 可提交）。本次统一改为构建期 `ARG FLAG` + `RUN echo "$FLAG" > /flag` 注入；`docker/ctf-contests/build.sh` 增加 `REGISTRY_FILE` 支持，自动从登记表读取 flag 并作为 `--build-arg` 注入。Windows 下 3000/3001 等端口被系统保留，后端临时改用 `127.0.0.1:2800`。CUHK `jain streak dreamers` 为 OCaml Dream 应用，opam 依赖 135 个包编译耗时极长且无可用的国内 opam 镜像，因此保留原题 Dockerfile，额外编写 `Dockerfile.flag-inject` 基于已完整构建的原题镜像仅注入 flag 文件，产物仍标记为 `localtrain/ctf-cuhk-ctf-2025-jain-streak-dreamers:latest`。本批次使用 `NO_SAVE=1` 仅保留本地镜像标签。
+- 2026-09-11：CTF 第 34-40 批部署完成(每批 10 道,共 70 道全部成功并验证 flag 可提交)。来源:2026 湾区杯初赛、0xGame 2022/2023/2024、MoeCTF 2022/2023、miniL 2022/2023/2024、NCTF 2022、CCSSSC 2026 等 XDSEC/X1cT34m 官方仓库及 CTF-Archives。全部 NO_SAVE=1 仅保留本地镜像标签,并以 scripts/push-images-to-ghcr.mjs 推送 ghcr.io 私有仓做异地备份。构建前用 scripts/validate-batch-registry.mjs 静态检查(CRLF/EXPOSE/flag 注入方式),导入用泄题内容扫描门禁(源码含平台 flag 原文即拒,以脱敏 attachments.zip 提供玩家附件)。
 
 ---
 

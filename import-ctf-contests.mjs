@@ -177,7 +177,8 @@ async function main() {
   const existingByNorm = new Map(listRes.data.map((c) => [normalizeTitle(c.title), c]));
 
   for (const entry of registry.challenges) {
-    if ((entry.status === 'skipped' || entry.status === 'failed') && !RETRY) continue;
+    if (entry.status === 'skipped') continue;
+    if (entry.status === 'failed' && !RETRY) continue;
 
     const imageName = entry.image || `localtrain/ctf-${entry.id}:latest`;
     const hasImage = spawnSync('docker', ['image', 'inspect', imageName], { stdio: ['ignore', 'pipe', 'pipe'] }).status === 0;

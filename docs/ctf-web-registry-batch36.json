@@ -1,0 +1,197 @@
+{
+  "batch": 36,
+  "screenedAt": "2026-09-10",
+  "notes": "筛选日期 2026-09-10。单一比赛批次:0xGame 2024(X1cT34m/0xGame2024 官方仓,23 道 web 全部自带 Dockerfile)。官方 WP 为 Writeup/Week1-4.pdf。跳过 ez_sql/ez_rce/ez_unser(标题与 batch35 的 0xGame2022 Ez_sql/Ez_rce 归一化撞车,为平台可读性让位);跳过 jenkins(运维平台题非 CTF web)、next-db/paste_bin/WhySoSerial/cargo_shop/rogue_mysql(week3/4 medium-hard 备选池,首批 10 道未纳)。原题 flag 平台注入,统一改构建期 RUN echo。",
+  "challenges": [
+    {
+      "id": "0xgame2024-hello-web",
+      "title": "hello_web",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2024-hello-web:latest",
+      "flag": "flag{batch36-0xgame2024-hello-web_00793b827960}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/hello-web",
+      "status": "deployed",
+      "flagMechanism": "查看网页源码类入门题;构建期 RUN echo 写 /flag 或替换页面 flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-hello-http",
+      "title": "hello_http",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2024-hello-http:latest",
+      "flag": "flag{batch36-0xgame2024-hello-http_c14d2e}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/hello-http",
+      "status": "deployed",
+      "flagMechanism": "http 请求构造入门;构建期注入",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-picture",
+      "title": "picture",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2024-picture:latest",
+      "flag": "flag{batch36-0xgame2024-picture_97053c21e1e8}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/picture",
+      "status": "deployed",
+      "flagMechanism": "构建期注入",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-hello-include",
+      "title": "hello_include",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2024-hello-include:latest",
+      "flag": "flag{batch36-0xgame2024-hello-include_d3d8a217754e}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/hello-include",
+      "status": "deployed",
+      "flagMechanism": "文件包含;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-hello-shell",
+      "title": "hello_shell",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2024-hello-shell:latest",
+      "flag": "flag{batch36-0xgame2024-hello-shell_cd1c412522a8}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/hello-shell",
+      "status": "deployed",
+      "flagMechanism": "一句话木马连接;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-ez-login",
+      "title": "ez_login",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-ez-login:latest",
+      "flag": "flag{batch36-0xgame2024-ez-login_ddc98ae97570}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/ez-login",
+      "status": "deployed",
+      "flagMechanism": "flask 弱口令/逻辑;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-ez-ssti",
+      "title": "ez_ssti",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-ez-ssti:latest",
+      "flag": "flag{batch36-0xgame2024-ez-ssti_b422724d50ca}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/ez-ssti",
+      "status": "deployed",
+      "flagMechanism": "flask SSTI;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-baby-pickle",
+      "title": "baby_pickle",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-baby-pickle:latest",
+      "flag": "flag{batch36-0xgame2024-baby-pickle_b39326b2ec14}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/baby-pickle",
+      "status": "deployed",
+      "flagMechanism": "python pickle 反序列化;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-baby-xxe",
+      "title": "baby_xxe",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-baby-xxe:latest",
+      "flag": "flag{batch36-0xgame2024-baby-xxe_3172453c3d66}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/baby-xxe",
+      "status": "deployed",
+      "flagMechanism": "XXE;构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-hello-jwt",
+      "title": "hello_jwt",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-0xgame2024-hello-jwt:latest",
+      "flag": "flag{batch36-0xgame2024-hello-jwt_4e0a5b7f39a4}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/hello-jwt",
+      "status": "deployed",
+      "flagMechanism": "JWT 伪造(node);构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    }
+  ]
+}

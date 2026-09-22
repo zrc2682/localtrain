@@ -58,7 +58,8 @@
       "dir": "docker/ctf-contests/zjsdxs-2024-qualifier/cybersecurity-knowledge",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag 并通过 /flag 路由暴露",
-      "notes": "纯前端静态页面，使用 nginx:alpine 提供。"
+      "notes": "纯前端静态页面，使用 nginx:alpine 提供。",
+      "writeupLocal": "ctf-writeup/zjsdxs-2024/zjsdxs-2024.md"
     },
     {
       "id": "jksn-2026-quals-teacher-panel",

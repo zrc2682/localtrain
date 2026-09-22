@@ -1,0 +1,198 @@
+{
+  "batch": 49,
+  "screenedAt": "2026-09-19",
+  "notes": "HKCERT CTF 2024 余量八道(含 zap/chimera/ish-3/tuning-keyboard-5.5 四道五星硬题)+HKCERT CTF 2023 两道入门。全部需自建 Dockerfile。",
+  "challenges": [
+    {
+      "id": "hkcert2024-custom-server-2",
+      "title": "Custom Web Server (2)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-custom-server-2:latest",
+      "flag": "flag{batch49-hkcert2024-custom-server-2_dc30cd041324}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/custom-server-2",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 3
+    },
+    {
+      "id": "hkcert2024-zap",
+      "title": "⚡",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-zap:latest",
+      "flag": "flag{batch49-hkcert2024-zap_2eb001e25629}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/zap",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 5
+    },
+    {
+      "id": "hkcert2024-chimera",
+      "title": "Chimera",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-chimera:latest",
+      "flag": "flag{batch49-hkcert2024-chimera_88134df1b5f7}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/chimera",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 5
+    },
+    {
+      "id": "hkcert2024-webpage-to-pdf-1",
+      "title": "Webpage to PDF (1)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-webpage-to-pdf-1:latest",
+      "flag": "flag{batch49-hkcert2024-webpage-to-pdf-1_6acb09530cc4}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/webpage-to-pdf-1",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2024-webpage-to-pdf-2",
+      "title": "Webpage to PDF (2)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-webpage-to-pdf-2:latest",
+      "flag": "flag{batch49-hkcert2024-webpage-to-pdf-2_5cd6ac636fb5}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/webpage-to-pdf-2",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2024-ish-3",
+      "title": "ISH (3)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-ish-3:latest",
+      "flag": "",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/ish-3",
+      "status": "skipped",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 5,
+      "reason": "官方仓仅 README 无源码，无法容器化"
+    },
+    {
+      "id": "hkcert2024-tuning-keyboard-55",
+      "title": "Tuning Keyboard 5.5",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-tuning-keyboard-55:latest",
+      "flag": "flag{batch49-hkcert2024-tuning-keyboard-55_6190526c51f5}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/tuning-keyboard-55",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 5
+    },
+    {
+      "id": "hkcert2024-jspyaml",
+      "title": "JSPyaml",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-jspyaml:latest",
+      "flag": "flag{batch49-hkcert2024-jspyaml_9fefd3f8198f}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/jspyaml",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 4
+    },
+    {
+      "id": "hkcert2023-myblog",
+      "title": "Myblog",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-myblog:latest",
+      "flag": "flag{batch49-hkcert2023-myblog_89ba7b9414cc}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/myblog",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 1
+    },
+    {
+      "id": "hkcert2023-re-zero",
+      "title": "Re:Zero",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-re-zero:latest",
+      "flag": "flag{batch49-hkcert2023-re-zero_b3d569309a34}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/re-zero",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;五星题(zap/chimera/ish-3/tuning-keyboard-5.5)若改造代价过高可降级 skipped",
+      "stars": 0
+    }
+  ]
+}

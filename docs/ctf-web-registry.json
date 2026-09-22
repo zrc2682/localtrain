@@ -18,7 +18,7 @@
         "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/ez_upload"
       },
       "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/ez_upload/README.md",
-      "writeupLocal": "ctf-writeup/svuctf-winter-2023/ez-upload.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/svuctf-winter-2023.md",
       "dir": "docker/ctf-contests/svuctf-winter-2023/ez-upload",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → init.sh 写入 /var/www/flag (chmod 444);文件上传条件竞争 getshell 后读取",
@@ -42,7 +42,7 @@
         "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/flagserver"
       },
       "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/flagserver/README.md",
-      "writeupLocal": "ctf-writeup/svuctf-winter-2023/flagserver.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/svuctf-winter-2023.md",
       "dir": "docker/ctf-contests/svuctf-winter-2023/flagserver",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → Flask config.FLAG,以 admin 登录后 /home 渲染;考点为伪随机数种子预测(JumpServer re-auth 简化)",
@@ -66,7 +66,7 @@
         "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/tonyenc"
       },
       "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/tonyenc/README.md",
-      "writeupLocal": "ctf-writeup/svuctf-winter-2023/tonyenc.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/svuctf-winter-2023.md",
       "dir": "docker/ctf-contests/svuctf-winter-2023/tonyenc",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → init.sh 写入随机名 /flag_XXXXXXXX (chmod 444);任意文件下载+tonyenc 源码解密后发现后门执行命令读取",
@@ -90,7 +90,7 @@
         "url": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/tree/main/challenges/web/writeup_channel"
       },
       "writeup": "https://github.com/SVUCTF/SVUCTF-WINTER-2023/blob/main/challenges/web/writeup_channel/README.md",
-      "writeupLocal": "ctf-writeup/svuctf-winter-2023/writeup-channel.md",
+      "writeupLocal": "ctf-writeup/svuctf-winter-2023/svuctf-winter-2023.md",
       "dir": "docker/ctf-contests/svuctf-winter-2023/writeup-channel",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → bot/bot.py URL 编码后写入 bot 浏览器 cookie(flag=...);存储型 XSS 在容器不出网条件下经投稿功能带出 cookie",
@@ -114,7 +114,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/http-server-emulator"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/http-server-emulator",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → Deno 服务(main.ts),按提示构造特定三位数状态码响应后通过 socket 直发 flag",
@@ -138,7 +138,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/noscript"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/noscript",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → server.c 启动时 getenv 拷入全局 flag 变量;无 script 标签条件下的 XSS/泄漏类利用(官方标 Easy 但仅 3 解,按利用链记 hard)",
@@ -162,7 +162,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/note_taking_2"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/note-taking-2",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → app.js 写入 public/<随机UUID>/flag.txt;bot 携带 uid=<flag_id> cookie 访问选手笔记,考点为 web cache deception(cl3v3r_c4ch3),非 XSS",
@@ -186,7 +186,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/sandbox"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": "ctf-writeup/susctf-2024/sandbox.md",
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/sandbox",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 GZCTF_FLAG → run.sh 写入 /flag (chmod 700 仅 root 可读);Python 沙箱逃逸+提权读取",
@@ -210,7 +210,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Giveflag"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/giveflag.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/giveflag",
       "hasDockerfile": true,
       "flagMechanism": "环境变量 FLAG → os.getenv('FLAG') 在 /flag 路由返回;考点为 Flask session 伪造(weak secret_key='LitCTF');Dockerfile 默认 ENV FLAG=NSSCTF{123456} 需替换",
@@ -234,7 +234,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/SQL_Letmein"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/sql-letmein.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/sql-letmein",
       "hasDockerfile": true,
       "flagMechanism": "flag 存于容器内 MySQL 数据库(原题由平台注入 ctftraining.flag 表;仓库 Dockerfile 仅向 ctf.users 种入假 flag);括号闭合 SQL 注入读出",
@@ -262,7 +262,7 @@
       "dir": "docker/ctf-contests/nctf-2023/nctf-2023-logging",
       "hasDockerfile": true,
       "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,构建时写入 /flag",
-      "writeupLocal": "ctf-writeup/nctf-2023/logging.md"
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md"
     },
     {
       "id": "nctf-evilmq",
@@ -284,7 +284,7 @@
       "dir": "docker/ctf-contests/nctf-2023/nctf-2023-evilmq",
       "hasDockerfile": true,
       "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,写入 /flag(root 400),保留 SUID /readflag,以 app 用户运行 jar",
-      "writeupLocal": "ctf-writeup/nctf-2023/evilmq.md"
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md"
     },
     {
       "id": "iscc-2024-quals",

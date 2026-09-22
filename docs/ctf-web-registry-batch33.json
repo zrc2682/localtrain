@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/ez-http",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回 Set-Cookie",
-      "notes": "PHP 基础 HTTP 头伪造题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP 基础 HTTP 头伪造题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-param",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/param",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回",
-      "notes": "PHP GET/POST 参数传递题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP GET/POST 参数传递题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-rce",
@@ -58,7 +60,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/rce",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP eval 执行 system 读取",
-      "notes": "PHP eval 无过滤 RCE 入门题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP eval 无过滤 RCE 入门题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-method",
@@ -77,7 +80,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/method",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，Flask 按 HTTP 方法分片返回",
-      "notes": "Flask HTTP 方法探测题。已替换 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。"
+      "notes": "Flask HTTP 方法探测题。已替换 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-php-class",
@@ -96,7 +100,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/php-class",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，由 PHP 页面返回",
-      "notes": "PHP 类属性与 GET 参数题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP 类属性与 GET 参数题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-ez-rce",
@@ -115,7 +120,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/ez-rce",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，绕过 flag/空格过滤后读取",
-      "notes": "PHP eval 过滤绕过题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP eval 过滤绕过题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "svuctf-helloworld-2024-unserialize",
@@ -134,7 +140,8 @@
       "dir": "docker/ctf-contests/svuctf-helloworld-2024/unserialize",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，PHP 反序列化 POP 链读取",
-      "notes": "PHP 反序列化 POP 链题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。"
+      "notes": "PHP 反序列化 POP 链题。已替换 Dockerfile 使用 php:8.2-apache 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/svuctf-helloworld-2024/svuctf-helloworld-2024.md"
     },
     {
       "id": "ciscn-2024-quals-pybox",
@@ -168,11 +175,12 @@
         "repo": "local",
         "url": ""
       },
-      "writeup": "待补充",
+      "writeup": "https://github.com/CUHK0x/cuhk-ctf-2025-challenges/tree/main/web/27_jain-streak-dreamers",
       "dir": "docker/ctf-contests/cuhk-ctf-2025/jain-streak-dreamers",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 uploads/1/flag1.txt 与 secret/flag2.txt，由 OCaml Dream 应用返回",
-      "notes": "OCaml Dream 框架 Web 应用。原 Dockerfile 使用 docker.1ms.run/ocaml/opam:alpine-ocaml-5.1 且 flag 硬编码，已添加 ARG FLAG 注入逻辑。"
+      "notes": "OCaml Dream 框架 Web 应用。原 Dockerfile 使用 docker.1ms.run/ocaml/opam:alpine-ocaml-5.1 且 flag 硬编码，已添加 ARG FLAG 注入逻辑。",
+      "writeupLocal": "ctf-writeup/cuhk-ctf-2025/cuhk-ctf-2025.md"
     },
     {
       "id": "qwbs9-2025-quals-web-log-api",
@@ -187,11 +195,12 @@
         "repo": "local",
         "url": ""
       },
-      "writeup": "待补充",
+      "writeup": "https://blog.wm-team.cn/index.php/archives/87/",
       "dir": "docker/ctf-contests/qwbs9-2025-quals/web-log-api",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，需选手通过文件包含或日志写入读取",
-      "notes": "仅 api.php 单文件，已补充 Dockerfile 使用 php:8.2-apache。题目要求按顺序传入 timestamp 数组参数并写入日志，存在文件包含/日志污染利用点。"
+      "notes": "仅 api.php 单文件，已补充 Dockerfile 使用 php:8.2-apache。题目要求按顺序传入 timestamp 数组参数并写入日志，存在文件包含/日志污染利用点。",
+      "writeupLocal": "ctf-writeup/qwbs9-2025/qwbs9-2025.md"
     }
   ]
 }

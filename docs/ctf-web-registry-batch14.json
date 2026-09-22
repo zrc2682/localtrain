@@ -18,7 +18,7 @@
         "url": "https://github.com/CTF-Archives/2026-NCO-Quals/blob/main/web/Web-中等夺旗-个性签名生成器/source.py"
       },
       "writeup": "https://github.com/CTF-Archives/2026-NCO-Quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nco-2026/nco-2026.md",
       "dir": "docker/ctf-contests/nco-2026-quals/signature-generator",
       "hasDockerfile": true,
       "flagMechanism": "Flask 应用读取环境变量 GZCTF_FLAG 写入 /tmp/flag.txt；Dockerfile 固定 GZCTF_FLAG 并写入 /flag",
@@ -42,7 +42,7 @@
         "url": "https://github.com/CTF-Archives/2026-NCO-Final/blob/main/web/Web-Pino/app.py"
       },
       "writeup": "https://github.com/CTF-Archives/2026-NCO-Final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nco-2026/nco-2026.md",
       "dir": "docker/ctf-contests/nco-2026-final/pino",
       "hasDockerfile": true,
       "flagMechanism": "Flask 应用读取环境变量 GZCTF_FLAG 写入 /tmp/flag.txt；Dockerfile 固定 GZCTF_FLAG 并写入 /flag",
@@ -66,7 +66,7 @@
         "url": "https://github.com/CTF-Archives/2026-NCO-Final/blob/main/web/Web-What-CAN-I-Say/app.py"
       },
       "writeup": "https://github.com/CTF-Archives/2026-NCO-Final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nco-2026/nco-2026.md",
       "dir": "docker/ctf-contests/nco-2026-final/mamba",
       "hasDockerfile": true,
       "flagMechanism": "Flask 应用读取环境变量 GZCTF_FLAG 写入 /tmp/flag.txt；Dockerfile 固定 GZCTF_FLAG 并写入 /flag",
@@ -90,7 +90,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-final/blob/main/final_attachment/web2/generate_svg.php"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-final/generate-svg",
       "hasDockerfile": true,
       "flagMechanism": "PHP 解析 XML 生成 SVG；Dockerfile 将平台静态 flag 写入 /flag，选手通过 XXE 读取",
@@ -162,7 +162,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals/blob/main/attachments720/720unserialize.php"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/720unserialize",
       "hasDockerfile": true,
       "flagMechanism": "PHP 反序列化应用读取环境变量写入 /tmp/flag；Dockerfile 将平台静态 flag 写入 /tmp/flag 和 /flag",
@@ -210,7 +210,7 @@
         "url": "https://github.com/CTF-Archives/2023-ShenYangCarSecurity-CTF/blob/main/Web/expr.zip"
       },
       "writeup": "https://github.com/CTF-Archives/2023-ShenYangCarSecurity-CTF",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/shenyang-2023/shenyang-2023.md",
       "dir": "docker/ctf-contests/shenyang-2023/expr",
       "hasDockerfile": true,
       "flagMechanism": "Spring Boot jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -234,7 +234,7 @@
         "url": "https://github.com/CTF-Archives/2025-CISCN-Finals/releases/download/v1.0/awdp-web-ota_8c239f7c5cba718888e292e5cea600ec.zip"
       },
       "writeup": "https://github.com/CTF-Archives/2025-CISCN-Finals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ciscn-2025-finals/ciscn-2025-finals.md",
       "dir": "docker/ctf-contests/ciscn-2025-finals/awdp-web-ota",
       "hasDockerfile": true,
       "flagMechanism": "Spring WebFlux jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",

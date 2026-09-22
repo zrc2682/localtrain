@@ -17,7 +17,7 @@
         "url": "https://github.com/GDUTMeow-Challenges/Challenge-Crossy-Road"
       },
       "writeup": "https://github.com/GDUTMeow-Challenges/Challenge-Crossy-Road",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/adctf-2025/adctf-2025.md",
       "dir": "docker/ctf-contests/adctf-2025/adctf-2025-crossy-road",
       "hasDockerfile": true,
       "flagMechanism": "entry.sh 将 A1CTF_FLAG base64 编码后写入 script.js，前端游戏满足条件后解码展示",
@@ -40,7 +40,7 @@
         "url": "https://github.com/GDUTMeow-Challenges/Challenge-Y2K-Bank"
       },
       "writeup": "https://github.com/GDUTMeow-Challenges/Challenge-Y2K-Bank",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/adctf-2025/adctf-2025.md",
       "dir": "docker/ctf-contests/adctf-2025/adctf-2025-y2k-bank",
       "hasDockerfile": true,
       "flagMechanism": "ENV FLAG 写入容器，账户余额达到目标后返回 flag",
@@ -63,7 +63,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-ez-login",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 写入 /flag，登录成功后 JWT payload 中返回 flag",
@@ -86,7 +86,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-ez-py",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 写入 /flag，管理员角色访问 protected 路由后 SSTI 读取",
@@ -109,7 +109,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-ez-sql",
       "hasDockerfile": true,
       "flagMechanism": "init.sql 中 flag 表写入平台静态 flag，SQL 注入读取",
@@ -132,7 +132,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-rowing",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 写入 /flag，条件竞争上传 + sudo base64 读取 /flag",
@@ -155,7 +155,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-filesystem",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint.sh 原使用 ENV FLAG 动态写入随机目录，已改为固定 /flag；通过软链接/session 伪造读取",
@@ -178,7 +178,7 @@
         "url": "https://github.com/BUPTMerak/TSCTF-J-2025"
       },
       "writeup": "https://github.com/BUPTMerak/TSCTF-J-2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/tsctf-j-2025/tsctf-j-2025.md",
       "dir": "docker/ctf-contests/tsctf-j-2025/tsctf-j-2025-superfilesystem",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint.sh 原使用 ENV FLAG 动态写入随机文件，已改为固定 /flag；通过 Flask 缓存机制读取",
@@ -224,7 +224,7 @@
         "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Quals"
       },
       "writeup": "https://github.com/CTF-Archives/2024-CCB-CISCN-Quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ccbciscn-2024/ccbciscn-2024.md",
       "dir": "docker/ctf-contests/ccbciscn-2024-quals/ccbciscn-2024-quals-bookmanager",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 写入 /flag，Java Solon + Hessian 反序列化漏洞读取",

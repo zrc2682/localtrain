@@ -17,7 +17,7 @@
         "url": "https://github.com/CTF-Archives/2024-OMCTF/releases/download/latest/Web-JustXSS.tar"
       },
       "writeup": "https://github.com/CTF-Archives/2024-OMCTF/blob/main/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/omctf-2024/omctf-2024.md",
       "dir": "docker/ctf-contests/omctf-2024/omctf-2024-justxss",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，index.ts 读取 /flag 后由 Puppeteer bot 通过 cookie 注入",
@@ -39,7 +39,7 @@
         "url": "https://github.com/CTF-Archives/2024-OMCTF/releases/download/latest/Web-Messy.Mongo.tar"
       },
       "writeup": "https://github.com/CTF-Archives/2024-OMCTF/blob/main/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/omctf-2024/omctf-2024.md",
       "dir": "docker/ctf-contests/omctf-2024/omctf-2024-messy-mongo",
       "hasDockerfile": true,
       "flagMechanism": "构建期设置 ENV FLAG，entrypoint.sh 将 flag 插入 MongoDB admin 的 todo",
@@ -61,7 +61,7 @@
         "url": "https://github.com/CTF-Archives/2024-CISCN-Quals/releases/download/Latest/Web-mossfern.zip"
       },
       "writeup": "https://blog.csdn.net/uuzeray/article/details/139052904",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ciscn-2024/ciscn-2024.md",
       "dir": "docker/ctf-contests/ciscn-2024/ciscn-2024-mossfern",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，runner.py 读取 /flag 作为 seed 执行选手代码",
@@ -83,7 +83,7 @@
         "url": "https://github.com/CTF-Archives/2024-CISCN-Quals/releases/download/Latest/Web-ezjava.zip"
       },
       "writeup": "https://blog.csdn.net/uuzeray/article/details/139052904",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ciscn-2024/ciscn-2024.md",
       "dir": "docker/ctf-contests/ciscn-2024/ciscn-2024-ezjava",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Java 反序列化/RCE 后读取",
@@ -105,7 +105,7 @@
         "url": "https://github.com/CTF-Archives/2024-dfjk/releases/download/v1.0/Web-php_online.zip"
       },
       "writeup": "https://exp10it.io/2024/08/%E5%B7%85%E5%B3%B0%E6%9E%81%E5%AE%A2-2024-%E5%88%9D%E8%B5%9B-web-writeup/",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/dfjk-2024/dfjk-2024.md",
       "dir": "docker/ctf-contests/dfjk-2024/dfjk-2024-php-online",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask 调用 PHP 执行沙箱后 RCE 读取",
@@ -127,7 +127,7 @@
         "url": "https://github.com/CTF-Archives/2024-zjsdxs-Finals/releases/download/v0.1/Web2.php"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/zjsdxs-2024/zjsdxs-2024.md",
       "dir": "docker/ctf-contests/zjsdxs-2024/zjsdxs-2024-web2",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag（上级目录），eval($_GET['code']) 读取",
@@ -149,7 +149,7 @@
         "url": "https://github.com/CTF-Archives/2024-zjsdxs-Finals/releases/download/v0.1/web3.php"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/zjsdxs-2024/zjsdxs-2024.md",
       "dir": "docker/ctf-contests/zjsdxs-2024/zjsdxs-2024-web3",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP 反序列化 POP 链 RCE 读取",
@@ -170,8 +170,8 @@
         "path": "Web-.-api.php",
         "url": "https://github.com/CTF-Archives/2025-qwbs9-quals/releases/download/attachments/Web-.-api.php"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://blog.wm-team.cn/index.php/archives/87/",
+      "writeupLocal": "ctf-writeup/qwbs9-2025/qwbs9-2025.md",
       "dir": "docker/ctf-contests/qwbs9-2025/qwbs9-2025-web-api",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，通过文件上传/日志写入 RCE 读取",
@@ -192,8 +192,8 @@
         "path": "WEEK2-web1_.py",
         "url": "https://github.com/CTF-Archives/2024-ISCC-Quals/releases/download/%E7%BB%83%E6%AD%A6-WEEK_2/WEEK2-web1_.py"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://blog.crzliang.cn/archives/35796/",
+      "writeupLocal": "ctf-writeup/iscc-2024/iscc-2024.md",
       "dir": "docker/ctf-contests/iscc-2024/iscc-2024-week2-web1",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag 或同级目录，签名绕过 + 文件读取",
@@ -214,8 +214,8 @@
         "path": "Web-ycbjava-0.0.1-SNAPSHOT.zip",
         "url": "https://github.com/CTF-Archives/2024-YCB-Undergraduate/releases/download/v1.0/Web-ycbjava-0.0.1-SNAPSHOT.zip"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://idocdown.com/app/articles/blogs/detail/12218",
+      "writeupLocal": "ctf-writeup/ycb-2024/ycb-2024.md",
       "dir": "docker/ctf-contests/ycb-2024/ycb-2024-ycbjava",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Java jar 反序列化/RCE 后读取",

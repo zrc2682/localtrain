@@ -1,0 +1,192 @@
+{
+  "batch": 48,
+  "screenedAt": "2026-09-19",
+  "notes": "SUSCTF 2025(susers/susctf-2025,东南大学官方仓)六道 web,自带 Dockerfile 且原生支持 GZCTF_FLAG 动态注入(补 ARG FLAG 即适配)+HKCERT CTF 2024 四道入门(官方仓 hkcert-ctf/CTF-Challenges 仅源码,需自建 Dockerfile,README 有运行说明)。端口以部署时实测为准。",
+  "challenges": [
+    {
+      "id": "susctf2025-am-i-admin",
+      "title": "am-i-admin",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-susctf2025-am-i-admin:latest",
+      "flag": "flag{batch48-susctf2025-am-i-admin_7bf324f84e85}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/am-i-admin",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "susctf2025-am-i-admin-2",
+      "title": "am-i-admin-2",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-susctf2025-am-i-admin-2:latest",
+      "flag": "flag{batch48-susctf2025-am-i-admin-2_3ca8467d6589}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/am-i-admin-2",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "susctf2025-easyoa",
+      "title": "easyoa",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-susctf2025-easyoa:latest",
+      "flag": "flag{batch48-susctf2025-easyoa_665fa4a6e587}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/easyoa",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "susctf2025-easyprint",
+      "title": "easyprint",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-susctf2025-easyprint:latest",
+      "flag": "flag{batch48-susctf2025-easyprint_d2ea00afa0c1}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/easyprint",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "susctf2025-make-php-greater-again",
+      "title": "make_php_great_again",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-susctf2025-make-php-greater-again:latest",
+      "flag": "flag{batch48-susctf2025-make-php-greater-again_454df8dd485e}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/make-php-greater-again",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "susctf2025-susmarket",
+      "title": "susmarket",
+      "contest": "SUSCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5000,
+      "image": "localtrain/ctf-susctf2025-susmarket:latest",
+      "flag": "flag{batch48-susctf2025-susmarket_53be53d33542}",
+      "source": {
+        "repo": "susers/susctf-2025",
+        "url": "https://github.com/susers/susctf-2025"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/susctf2025/susmarket",
+      "status": "deployed",
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+    },
+    {
+      "id": "hkcert2024-custom-server-1",
+      "title": "Custom Web Server (1)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-custom-server-1:latest",
+      "flag": "flag{batch48-hkcert2024-custom-server-1_dcbc8dd83036}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/custom-server-1",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2024-new-free-lunch",
+      "title": "New Free Lunch",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-new-free-lunch:latest",
+      "flag": "flag{batch48-hkcert2024-new-free-lunch_b145e44a8e90}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/new-free-lunch",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
+      "stars": 1
+    },
+    {
+      "id": "hkcert2024-minictf-1",
+      "title": "Mystiz's Mini CTF (1)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-minictf-1:latest",
+      "flag": "flag{batch48-hkcert2024-minictf-1_f92abf28c65c}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/minictf-1",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2024-minictf-2",
+      "title": "Mystiz's Mini CTF (2)",
+      "contest": "HKCERT CTF 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2024-minictf-2:latest",
+      "flag": "",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2024/minictf-2",
+      "status": "skipped",
+      "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
+      "stars": 1,
+      "reason": "官方仓仅 README 无源码，无法容器化"
+    }
+  ]
+}

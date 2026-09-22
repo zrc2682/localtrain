@@ -1,0 +1,226 @@
+{
+  "batch": 47,
+  "screenedAt": "2026-09-12",
+  "notes": "LamentXU123/myCTFchallenges 出题人合集(XYCTF 2025 六道/LILCTF 2025/Mini V&N 2025/V&NCTF 2026)+MoeCTF 2025 余量(signin and fiction)。全部 python 系自带 Dockerfile。与已部署 XYCTF 2025 五道(Signin/ezsql/crazy/Fate/Now you see me)无撞名(Now you see me 1/2 归一化不同)。端口/难度为初值,部署时按源码核准。",
+  "challenges": [
+    {
+      "id": "xyctf2025-division",
+      "title": "division",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 13337,
+      "image": "localtrain/ctf-xyctf2025-division:latest",
+      "flag": "flag{batch47-xyctf2025-division_1782b3fdd429}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/division",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"division\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "xyctf2025-greedymen",
+      "title": "greedymen",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 13337,
+      "image": "localtrain/ctf-xyctf2025-greedymen:latest",
+      "flag": "flag{batch47-xyctf2025-greedymen_a96a371612b5}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/greedymen",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"greedymen\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "xyctf2025-now-you-see-me-1",
+      "title": "Now you see me 1",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-xyctf2025-now-you-see-me-1:latest",
+      "flag": "flag{batch47-xyctf2025-now-you-see-me-1_27a67343118c}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/now-you-see-me-1",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"Now you see me 1\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "xyctf2025-now-you-see-me-2",
+      "title": "Now you see me 2",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-xyctf2025-now-you-see-me-2:latest",
+      "flag": "flag{batch47-xyctf2025-now-you-see-me-2_9c2174412c5c}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/now-you-see-me-2",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"Now you see me 2\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "xyctf2025-chutiren-youfeng",
+      "title": "出题人又疯",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-xyctf2025-chutiren-youfeng:latest",
+      "flag": "flag{batch47-xyctf2025-chutiren-youfeng_f7ef06a019cd}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/chutiren-youfeng",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"出题人又疯\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "xyctf2025-chutiren-yifeng",
+      "title": "出题人已疯",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-xyctf2025-chutiren-yifeng:latest",
+      "flag": "flag{batch47-xyctf2025-chutiren-yifeng_6659cacc5664}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/18730353",
+      "dir": "docker/ctf-contests/xyctf2025/chutiren-yifeng",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"出题人已疯\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
+    },
+    {
+      "id": "lilctf2025-ekko-exec",
+      "title": "ekko_exec",
+      "contest": "LILCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-lilctf2025-ekko-exec:latest",
+      "flag": "flag{batch47-lilctf2025-ekko-exec_ff92be18a3a0}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://github.com/Lil-House/LilCTF-2025/tree/main/players-writeup/SS",
+      "dir": "docker/ctf-contests/lilctf2025/ekko-exec",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"ekko_exec\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/lilctf2025/lilctf2025.md"
+    },
+    {
+      "id": "minivn2025-check-in",
+      "title": "check_in",
+      "contest": "Mini V&N CTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minivn2025-check-in:latest",
+      "flag": "flag{batch47-minivn2025-check-in_3c44241eb289}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://www.cnblogs.com/LAMENTXU/articles/19328800",
+      "dir": "docker/ctf-contests/minivn2025/check-in",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"check_in\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minivn2025/minivn2025.md"
+    },
+    {
+      "id": "vnctf2026-i-really",
+      "title": "I really really really 系列",
+      "contest": "V&NCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-vnctf2026-i-really:latest",
+      "flag": "flag{batch47-vnctf2026-i-really_97b77f6c9a59}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://github.com/LamentXU123/myCTFchallenges/tree/main/V&NCTF",
+      "dir": "docker/ctf-contests/vnctf2026/i-really",
+      "status": "deployed",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "同比赛同名冲突：平台已有 \"I really really really 系列\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/vnctf2026/vnctf2026.md"
+    },
+    {
+      "id": "moectf2025-signin-and-fiction",
+      "title": "signin and fiction",
+      "contest": "MoeCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2025-signin-and-fiction:latest",
+      "flag": "",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "出题人 WP(仓库内/博客)",
+      "dir": "docker/ctf-contests/moectf2025/signin-and-fiction",
+      "status": "skipped",
+      "flagMechanism": "三保险注入(部署时按源码核准端口/启动方式)",
+      "reason": "官方仓仅提供附件文档(txt/pdf),无源码无 Dockerfile,无法容器化"
+    },
+    {
+      "id": "0xgame2024-ez-sql-24",
+      "title": "ez_sql_24",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-ez-sql-24:latest",
+      "flag": "flag{batch47-0xgame2024-ez-sql-24_514c6d3bfb43}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/ez-sql-24",
+      "status": "deployed",
+      "flagMechanism": "flask sql 注入;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"ez_sql_24\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    }
+  ]
+}

@@ -18,7 +18,7 @@
         "url": "https://github.com/CTF-Archives/2026-NCO-Quals/blob/main/web/Web-入门夺旗-超级无敌保险箱/source.html"
       },
       "writeup": "https://github.com/CTF-Archives/2026-NCO-Quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nco-2026/nco-2026.md",
       "dir": "docker/ctf-contests/nco-2026-quals/nco-quals-super-safe",
       "hasDockerfile": true,
       "flagMechanism": "静态 HTML 页面注释中藏 flag；Dockerfile 将平台静态 flag 写入 index.html",
@@ -42,7 +42,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-web1",
       "hasDockerfile": true,
       "flagMechanism": "静态站点 robots.txt 中藏 flag；Dockerfile 替换 robots.txt 为平台静态 flag",
@@ -162,7 +162,7 @@
         "url": "https://github.com/CTF-Archives/2024-Sanxia-CTF"
       },
       "writeup": "https://github.com/CTF-Archives/2024-Sanxia-CTF",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/sanxia-2024/sanxia-2024.md",
       "dir": "docker/ctf-contests/sanxia-2024/sanxia-2024-babyjava",
       "hasDockerfile": true,
       "flagMechanism": "Spring Boot jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -186,7 +186,7 @@
         "url": "https://github.com/CTF-Archives/energyCTF2025"
       },
       "writeup": "https://github.com/CTF-Archives/energyCTF2025",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/energyctf-2025/energyctf-2025.md",
       "dir": "docker/ctf-contests/energyctf-2025/energy-2025-internal-jdbc-hack",
       "hasDockerfile": true,
       "flagMechanism": "Spring Boot jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -210,7 +210,7 @@
         "url": "https://github.com/CTF-Archives/2025-CISCN-Finals/releases/download/v1.0/awdp-web-security_rasp_fe9a3afbd1233bbcec7a65972c9b2065.zip"
       },
       "writeup": "https://github.com/CTF-Archives/2025-CISCN-Finals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ciscn-2025-finals/ciscn-2025-finals.md",
       "dir": "docker/ctf-contests/ciscn-2025-finals/ciscn-2025-finals-security-rasp",
       "hasDockerfile": true,
       "flagMechanism": "Spring WebFlux + RASP jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",

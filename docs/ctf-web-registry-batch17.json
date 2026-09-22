@@ -18,7 +18,7 @@
         "url": "https://github.com/ek1ng/My-CTF-Challenges"
       },
       "writeup": "https://github.com/ek1ng/My-CTF-Challenges",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/hgame-2023-git-leakage",
       "hasDockerfile": true,
       "flagMechanism": "Node http-server 静态服务，.git 泄漏后读取 flag 文件；Dockerfile 将平台静态 flag 写入目标文件",
@@ -42,7 +42,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-final"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-final/jksn-2025-final-web2",
       "hasDockerfile": false,
       "flagMechanism": "PHP SVG XXE / 文件读取；flag 写入 /flag 后读取",
@@ -90,7 +90,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-final"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-final/jksn-2025-final-web5",
       "hasDockerfile": false,
       "flagMechanism": "PHP + MySQL SQL 注入 + 反序列化触发 eval；flag 写入 /flag 后读取",
@@ -113,8 +113,8 @@
         "path": "AWDP-WEB-ezjs.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/F12-blog/p/18324587",
+      "writeupLocal": "ctf-writeup/ciscn-awdp-2024/ciscn-awdp-2024.md",
       "dir": "docker/ctf-contests/awdp/awdp-web-ezjs",
       "hasDockerfile": false,
       "flagMechanism": "Node.js + Express + EJS 模板；flag 写入 /flag 后读取",
@@ -137,8 +137,8 @@
         "path": "AWDP-WEB-ShareCard.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/F12-blog/p/18324587",
+      "writeupLocal": "ctf-writeup/ciscn-awdp-2024/ciscn-awdp-2024.md",
       "dir": "docker/ctf-contests/awdp/awdp-web-sharecard",
       "hasDockerfile": false,
       "flagMechanism": "Flask + Jinja2 + JWT；flag 写入 /flag 后读取",
@@ -161,8 +161,8 @@
         "path": "AWDP-WEB-Fobee.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/F12-blog/p/18324587",
+      "writeupLocal": "ctf-writeup/ciscn-awdp-2024/ciscn-awdp-2024.md",
       "dir": "docker/ctf-contests/awdp/awdp-web-fobee",
       "hasDockerfile": false,
       "flagMechanism": "Java Solon + Beetl；flag 写入 /flag 后读取",
@@ -186,7 +186,7 @@
         "url": "https://github.com/CTF-Archives/Socialgroup"
       },
       "writeup": "https://github.com/CTF-Archives/Socialgroup",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/socialgroup-2022/socialgroup-2022.md",
       "dir": "docker/ctf-contests/socialgroup-2022/socialgroup-web-easyinstall",
       "hasDockerfile": false,
       "flagMechanism": "ThinkPHP 安装模块逻辑漏洞；flag 写入 /flag 后读取",
@@ -209,8 +209,8 @@
         "path": "Web-go_session.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://exp10it.io/posts/2023-ciscn-preliminary-web-writeup/",
+      "writeupLocal": "ctf-writeup/ctf-archive/ctf-archive.md",
       "dir": "docker/ctf-contests/ctf-archive/web-go-session",
       "hasDockerfile": false,
       "flagMechanism": "Go 服务 + 内嵌 Flask 5000；flag 写入 /flag 后读取",

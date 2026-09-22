@@ -1,0 +1,197 @@
+{
+  "batch": 37,
+  "screenedAt": "2026-09-10",
+  "notes": "MoeCTF 2022 七道(官方 WP 自带)+MoeCTF 2023 三道入门;支付系统(MoeCTF2022)无 Dockerfile 弃",
+  "challenges": [
+    {
+      "id": "moectf2022-baby-file",
+      "title": "baby_file",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-baby-file:latest",
+      "flag": "flag{batch37-moectf2022-baby-file_74aca92b6950}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/baby-file",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-cookiehead",
+      "title": "cookiehead",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-cookiehead:latest",
+      "flag": "flag{batch37-moectf2022-cookiehead_3356a187c0ae}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/cookiehead",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-ezhtml",
+      "title": "ezhtml",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-ezhtml:latest",
+      "flag": "flag{batch37-moectf2022-ezhtml_85cf03da0937}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/ezhtml",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-ezphp",
+      "title": "ezphp",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-ezphp:latest",
+      "flag": "flag{batch37-moectf2022-ezphp_e3dac3c3fa6d}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/ezphp",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-sqlmap-boy",
+      "title": "sqlmap_boy",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-sqlmap-boy:latest",
+      "flag": "flag{batch37-moectf2022-sqlmap-boy_bc5fd26ec1e9}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/sqlmap-boy",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-what-are-y0u-uploading",
+      "title": "what are y0u uploading？",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-what-are-y0u-uploading:latest",
+      "flag": "flag{batch37-moectf2022-what-are-y0u-uploading_834597013d28}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/what-are-y0u-uploading",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2022-god-of-aim",
+      "title": "God_of_Aim",
+      "contest": "MoeCTF 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2022-god-of-aim:latest",
+      "flag": "flag{batch37-moectf2022-god-of-aim_ed74540b759b}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2022",
+        "url": "https://github.com/XDSEC/MoeCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2022）",
+      "dir": "docker/ctf-contests/moectf2022/god-of-aim",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2022/moectf2022.md"
+    },
+    {
+      "id": "moectf2023-signin",
+      "title": "signin",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 9999,
+      "image": "localtrain/ctf-moectf2023-signin:latest",
+      "flag": "flag{batch37-moectf2023-signin_17de3edb196a}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/signin",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-cookie",
+      "title": "cookie",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 9999,
+      "image": "localtrain/ctf-moectf2023-cookie:latest",
+      "flag": "flag{batch37-moectf2023-cookie_a70f66d9f77d}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/cookie",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-http",
+      "title": "http",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-http:latest",
+      "flag": "flag{batch37-moectf2023-http_566f1f6d1fc6}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/http",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    }
+  ]
+}

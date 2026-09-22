@@ -18,7 +18,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week1/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/control-you",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -42,7 +42,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week2/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/orange",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -66,7 +66,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week2/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/dd-speed",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -90,7 +90,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week3/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/ez-chain",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -114,7 +114,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week3/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/mygo",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -138,7 +138,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week4/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/e-board",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -162,7 +162,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week3/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/whossti",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -186,7 +186,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week4/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/where-ssti",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -210,7 +210,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week4/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/sqlupload",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -234,7 +234,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week5/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch12/wk-story-final",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入,启动脚本写入 /flag;Dockerfile 固定 ICQ_FLAG 为平台静态 flag",

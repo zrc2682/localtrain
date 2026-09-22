@@ -18,7 +18,7 @@
         "url": "https://github.com/CTF-Archives/2022-xhlj-web-node_magical_login"
       },
       "writeup": "https://xz.aliyun.com/news/11574",
-      "writeupLocal": "ctf-writeup/xhlj-2022/node-magical-login.md",
+      "writeupLocal": "ctf-writeup/xhlj-2022/xhlj-2022.md",
       "dir": "docker/ctf-contests/xhlj-2022/node-magical-login",
       "hasDockerfile": true,
       "flagMechanism": "$FLAG 环境变量传入；app/start.sh 将其前 20 字符写入 /flag1、剩余写入 /flag2，两段 flag 分别通过 /flag1 响应头和 /getflag2 JSON 返回",
@@ -40,7 +40,7 @@
         "url": "https://github.com/CTF-Archives/2022-xhlj-web-easy_api"
       },
       "writeup": "https://blog.csdn.net/2301_80038080/article/details/149532264",
-      "writeupLocal": "ctf-writeup/xhlj-2022/easy-api.md",
+      "writeupLocal": "ctf-writeup/xhlj-2022/xhlj-2022.md",
       "dir": "docker/ctf-contests/xhlj-2022/easy-api",
       "hasDockerfile": true,
       "flagMechanism": "$FLAG 环境变量传入；docker-entrypoint.sh 写入 /tmp/flag（Java fastjson 反序列化 RCE 后读取）",
@@ -62,7 +62,7 @@
         "url": "https://github.com/CTF-Archives/2022-xhlj-web-real_ez_node"
       },
       "writeup": "https://xz.aliyun.com/news/11574",
-      "writeupLocal": "ctf-writeup/xhlj-2022/real-ez-node.md",
+      "writeupLocal": "ctf-writeup/xhlj-2022/xhlj-2022.md",
       "dir": "docker/ctf-contests/xhlj-2022/real-ez-node",
       "hasDockerfile": true,
       "flagMechanism": "$FLAG 环境变量传入；files/start.sh 写入 /flag.txt（SSRF 请求拆分 + 原型链污染 + EJS RCE 后读取）",
@@ -84,7 +84,7 @@
         "url": "https://github.com/CTF-Archives/2022-mtgxs-web-easypickle"
       },
       "writeup": "https://blog.csdn.net/qq_45603443/article/details/126948732",
-      "writeupLocal": "ctf-writeup/meituan-2022/easypickle.md",
+      "writeupLocal": "ctf-writeup/mtgxs-2022/mtgxs-2022.md",
       "dir": "docker/ctf-contests/meituan-2022/easypickle",
       "hasDockerfile": true,
       "flagMechanism": "$FLAG 环境变量传入；docker-entrypoint.sh 写入 /flag 并 chmod 777（pickle 反序列化 RCE 后读取）",
@@ -106,7 +106,7 @@
         "url": "https://github.com/CTF-Archives/2023-hgame-week2-web-designer"
       },
       "writeup": "https://exp10it.io/posts/hgame-2023-web-writeup/",
-      "writeupLocal": "ctf-writeup/hgame-2023/designer.md",
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/designer",
       "hasDockerfile": true,
       "flagMechanism": "flag 硬编码在 index.js：仅当以 admin 用户名且来源 127.0.0.1 注册时签入 JWT（XSS bot 窃取）；README 称可用 $FLAG 环境变量动态传入",
@@ -128,7 +128,7 @@
         "url": "https://github.com/CTF-Archives/2023-hgame-week1-web-guess_who_i_am"
       },
       "writeup": "https://exp10it.io/posts/hgame-2023-web-writeup/",
-      "writeupLocal": "ctf-writeup/hgame-2023/guess-who-i-am.md",
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/guess-who-i-am",
       "hasDockerfile": true,
       "flagMechanism": "flag 硬编码在 internal/route/route.go 的 secret 常量（连续答对 99+ 次后 /api/getScore 返回）；README 称可用 $FLAG 环境变量动态传入",
@@ -150,7 +150,7 @@
         "url": "https://github.com/CTF-Archives/2023-hgame-week4-web-shared_diary"
       },
       "writeup": "https://exp10it.io/posts/hgame-2023-web-writeup/",
-      "writeupLocal": "ctf-writeup/hgame-2023/shared-diary.md",
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/shared-diary",
       "hasDockerfile": true,
       "flagMechanism": "静态 flag 文件随镜像 COPY 到 /flag（原型链污染 + EJS SSTI 后读取）；README 称可用 $FLAG 环境变量动态传入",
@@ -172,7 +172,7 @@
         "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/Wait%20What%3F"
       },
       "writeup": "https://ctf.njupt.edu.cn/archives/984",
-      "writeupLocal": "ctf-writeup/nctf-2023/wait-what.md",
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md",
       "dir": "docker/ctf-contests/nctf-2023/wait-what",
       "hasDockerfile": true,
       "flagMechanism": "静态 flag 文件位于 Node 应用目录（app.js 中 child_process.execSync('cat flag') 读取）；选手附件 zip 内自带 Dockerfile",
@@ -194,7 +194,7 @@
         "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/Webshell%20Generator"
       },
       "writeup": "https://ctf.njupt.edu.cn/archives/984",
-      "writeupLocal": "ctf-writeup/nctf-2023/webshell-generator.md",
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md",
       "dir": "docker/ctf-contests/nctf-2023/webshell-generator",
       "hasDockerfile": true,
       "flagMechanism": "$DASFLAG 环境变量传入；flag.sh 写入 /flag 并 chmod 400，需通过 SUID /readflag 读取；选手附件 zip 内自带 Dockerfile",
@@ -216,7 +216,7 @@
         "url": "https://github.com/CTF-Archives/2024-dfjk/tree/main/Web/GoldenHornKing"
       },
       "writeup": "https://exp10it.io/posts/dfjk-2024-preliminary-web-writeup/",
-      "writeupLocal": "ctf-writeup/dfjk-2024/golden-horn-king.md",
+      "writeupLocal": "ctf-writeup/dfjk-2024/dfjk-2024.md",
       "dir": "docker/ctf-contests/dfjk-2024/golden-horn-king",
       "hasDockerfile": false,
       "flagMechanism": "无 Dockerfile（FastAPI 单文件 app.py，Python 单容器即可跑）；flag 位于 /flag 文件（Jinja2 SSTI 打内存马后 cat /flag）",
@@ -261,7 +261,7 @@
         "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/EvilMQ"
       },
       "writeup": "https://ctf.njupt.edu.cn/archives/984",
-      "writeupLocal": "ctf-writeup/nctf-2023/evilmq.md",
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md",
       "dir": "docker/ctf-contests/nctf-2023/nctf-2023-evilmq",
       "hasDockerfile": true,
       "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,写入 /flag(root 400),保留 SUID /readflag,以 app 用户运行 jar",
@@ -284,7 +284,7 @@
         "url": "https://github.com/X1cT34m/NCTF2023/tree/main/Web/logging"
       },
       "writeup": "https://ctf.njupt.edu.cn/archives/984",
-      "writeupLocal": "ctf-writeup/nctf-2023/logging.md",
+      "writeupLocal": "ctf-writeup/nctf-2023/nctf-2023.md",
       "dir": "docker/ctf-contests/nctf-2023/nctf-2023-logging",
       "hasDockerfile": true,
       "flagMechanism": "原 Dockerfile 硬编码 nctf{...} 占位 flag;改为 ENV FLAG 注入,构建时写入 /flag",
@@ -353,7 +353,7 @@
         "url": "https://github.com/CTF-Archives/2022-mtgxs-web-easyjava"
       },
       "writeup": "https://arsenetang.github.io/2022/09/17/WP%E7%AF%87%E4%B9%8B2022%E7%BE%8E%E5%9B%A2CTF---easyjava/",
-      "writeupLocal": "ctf-writeup/mtgxs-2022/easyjava.md",
+      "writeupLocal": "ctf-writeup/mtgxs-2022/mtgxs-2022.md",
       "dir": "docker/ctf-contests/mtgxs-2022/mtgxs-2022-easyjava",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint.sh 读 $FLAG 环境变量写入 /flag;Dockerfile 加 ENV FLAG=flag{...}",
@@ -376,7 +376,7 @@
         "url": "https://github.com/CTF-Archives/2022-ccbgx-web-b4bycoffee"
       },
       "writeup": "https://blog.csdn.net/uuzeray/article/details/136781454",
-      "writeupLocal": "ctf-writeup/ccbgx-2022/b4bycoffee.md",
+      "writeupLocal": "ctf-writeup/ccbgx-2022/ccbgx-2022.md",
       "dir": "docker/ctf-contests/ccbgx-2022/ccbgx-2022-b4bycoffee",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint.sh 读 $FLAG 环境变量写入 /flag;Dockerfile 加 ENV FLAG=flag{...}",
@@ -399,7 +399,7 @@
         "url": "https://github.com/CTF-Archives/2023-zjsdxs/tree/main/Web-ezWEB"
       },
       "writeup": "https://www.ctfiot.com/146026.html",
-      "writeupLocal": "ctf-writeup/zjsdxs-2023/ezweb.md",
+      "writeupLocal": "ctf-writeup/zjsdxs-2023/zjsdxs-2023.md",
       "dir": "docker/ctf-contests/zjsdxs-2023/zjsdxs-2023-ezweb",
       "hasDockerfile": false,
       "flagMechanism": "源码 UserController 黑名单过滤 flag/proc,预期 RCE 后读 /flag;原题无 Dockerfile,自写 eclipse-temurin:18-jre 镜像,构建时写入 /flag",

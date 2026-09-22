@@ -42,7 +42,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-login-php",
       "hasDockerfile": true,
       "flagMechanism": "PHP + MySQL 登录，flag 写入 login.users 中 flag_user 的 password 字段；通过 SQL 注入或 md5 盐逻辑绕过读取 flag",
@@ -66,7 +66,7 @@
         "url": "https://github.com/CTF-Archives/2026-CCSSSC-Semis/releases/download/attachments/5.nodejs.zip"
       },
       "writeup": "https://github.com/CTF-Archives/2026-CCSSSC-Semis",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ccsssc-2026-semis/ccsssc-2026-semis.md",
       "dir": "docker/ctf-contests/ccsssc-2026-semis/ccsssc-2026-semis-nodejs",
       "hasDockerfile": true,
       "flagMechanism": "Node.js + Express + vm2 + 原型链污染；/admin 后 /sandbox 执行 vm2 逃逸读 /flag；Dockerfile 写入静态 flag 到 /flag",
@@ -89,8 +89,8 @@
         "path": "Web-thinkshop.zip? (or local .tmp/qwbs7-2023-happygame-src.zip)",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://blog.wm-team.cn/index.php/archives/69/",
+      "writeupLocal": "ctf-writeup/qwbs7-2023/qwbs7-2023.md",
       "dir": "docker/ctf-contests/qwbs7-2023/qwbs7-2023-happygame",
       "hasDockerfile": true,
       "flagMechanism": "Java jar 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -113,8 +113,8 @@
         "path": "proxy1/",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://blog.xmcve.com/2024/11/04/%E5%BC%BA%E7%BD%91%E6%9D%AF2024-Writeup/",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwb8-2024-semis/qwb8-2024-semis-proxy1",
       "hasDockerfile": true,
       "flagMechanism": "Go 代理服务；/v1/api/flag 调用 SUID /readflag 读取 /flag；entrypoint.sh 将 ICQ_FLAG 写入 /flag",
@@ -137,8 +137,8 @@
         "path": "proxy2/",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://blog.yllhwa.com/qwb-2024-proxy-revenge-wp/",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwb8-2024-semis/qwb8-2024-semis-proxy2",
       "hasDockerfile": true,
       "flagMechanism": "同 proxy1：entrypoint.sh 将 ICQ_FLAG 写入 /flag，/v1/api/flag 读取",
@@ -162,7 +162,7 @@
         "url": "https://github.com/CTF-Archives/CTF-Archive-CN"
       },
       "writeup": "https://github.com/CTF-Archives/CTF-Archive-CN",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ctf-archive-cn-2023-ciscn/ctf-archive-cn-2023-ciscn.md",
       "dir": "docker/ctf-contests/ctf-archive-cn-2023-ciscn/ctf-archive-cn-web-deserbug",
       "hasDockerfile": true,
       "flagMechanism": "Java 反序列化 (CC + Hutool) 读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -186,7 +186,7 @@
         "url": "https://github.com/CTF-Archives/2023-qwbs7"
       },
       "writeup": "https://github.com/CTF-Archives/2023-qwbs7",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qwbs7-2023/qwbs7-2023.md",
       "dir": "docker/ctf-contests/qwbs7-2023/2023-qwbs7-thinkshop",
       "hasDockerfile": true,
       "flagMechanism": "PHP 商店应用；flag 写入 /fffflllaaaagggg；原题通过 $FLAG 环境变量注入，改造为 Dockerfile 直接写入静态 flag",
@@ -210,7 +210,7 @@
         "url": "https://github.com/CTF-Archives/2023-qwbs7"
       },
       "writeup": "https://github.com/CTF-Archives/2023-qwbs7",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qwbs7-2023/qwbs7-2023.md",
       "dir": "docker/ctf-contests/qwbs7-2023/2023-qwbs7-thinkshopping",
       "hasDockerfile": true,
       "flagMechanism": "thinkshop 续作，PHP 商店应用；flag 写入 /fffflllaaaagggg；改造为 Dockerfile 直接写入静态 flag",
@@ -234,7 +234,7 @@
         "url": "https://github.com/CTF-Archives/CISCN-2025-Finals-AWDP"
       },
       "writeup": "https://github.com/CTF-Archives/CISCN-2025-Finals-AWDP",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ciscn-finals-2025/ciscn-finals-2025.md",
       "dir": "docker/ctf-contests/ciscn-finals-2025/2025-ciscn-finals-awdp-web-rbac",
       "hasDockerfile": true,
       "flagMechanism": "Go Web 应用读取 /flag；由官方镜像 tar 导入后重写 /flag 为平台静态 flag",

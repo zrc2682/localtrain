@@ -1,0 +1,197 @@
+{
+  "batch": 38,
+  "screenedAt": "2026-09-10",
+  "notes": "MoeCTF 2023 其余七道(全 php/flask)+0xGame 2023 剩余三道;moeworld 三容器(flask+mysql+redis)弃",
+  "challenges": [
+    {
+      "id": "moectf2023-gas-gas-gas",
+      "title": "gas!gas!gas!",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-gas-gas-gas:latest",
+      "flag": "flag{batch38-moectf2023-gas-gas-gas_9a58f644ff66}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/gas-gas-gas",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-meo-tuchuang",
+      "title": "meo图床",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-meo-tuchuang:latest",
+      "flag": "flag{batch38-moectf2023-meo-tuchuang_39ac4a17b478}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/meo-tuchuang",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-moe-tuchuang",
+      "title": "moe图床",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-moe-tuchuang:latest",
+      "flag": "flag{batch38-moectf2023-moe-tuchuang_f2769459c9e5}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/moe-tuchuang",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-ride-your-car",
+      "title": "了解你的座驾",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-ride-your-car:latest",
+      "flag": "flag{batch38-moectf2023-ride-your-car_b81761cd7da2}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/ride-your-car",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-bian-de-flag",
+      "title": "彼岸的flag",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-bian-de-flag:latest",
+      "flag": "flag{batch38-moectf2023-bian-de-flag_936c65352ae5}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/bian-de-flag",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-needle-in-sea",
+      "title": "大海捞针",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-needle-in-sea:latest",
+      "flag": "flag{batch38-moectf2023-needle-in-sea_381d0041e83d}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/needle-in-sea",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "moectf2023-13-guns",
+      "title": "夺命十三枪",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2023-13-guns:latest",
+      "flag": "flag{batch38-moectf2023-13-guns_40a4162a1095}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2023",
+        "url": "https://github.com/XDSEC/MoeCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023）",
+      "dir": "docker/ctf-contests/moectf2023/13-guns",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/moectf2023/moectf2023.md"
+    },
+    {
+      "id": "0xgame2023-notebook",
+      "title": "notebook",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2023-notebook:latest",
+      "flag": "flag{batch38-0xgame2023-notebook_5276604b8d98}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/0xgame2023/notebook",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-ez-sandbox",
+      "title": "ez_sandbox",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-0xgame2023-ez-sandbox:latest",
+      "flag": "flag{batch38-0xgame2023-ez-sandbox_9dc019e31e2f}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/0xgame2023/ez-sandbox",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-repo-leak",
+      "title": "repo_leak",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-repo-leak:latest",
+      "flag": "flag{batch38-0xgame2023-repo-leak_8e059670a01e}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/0xgame2023/repo-leak",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    }
+  ]
+}

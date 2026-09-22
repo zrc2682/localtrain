@@ -17,7 +17,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%B8%80%E7%AB%A0%20%E7%A5%9E%E7%A7%98%E7%9A%84%E6%89%8B%E9%95%AF_revenge"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-ch1-shouzhuo-revenge",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint 将 ENV FLAG 替换 app.py 中的 FLAG_PLACEHOLDER",
@@ -40,7 +40,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%20%E7%8E%89%E9%AD%84%E7%8E%84%E5%85%B3%C2%B7%E7%A0%B4%E5%A6%84"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-ch12-yupo",
       "hasDockerfile": true,
       "flagMechanism": "构建期 Dockerfile 注入 ENV FLAG=... 并写入 /flag，PHP 一句话木马通过执行命令读取",
@@ -63,7 +63,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E5%8D%81%E7%AB%A0%20%E5%A4%A9%E6%9C%BA%E7%AC%A6%E9%98%B5_revenge"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-ch10-xxe-revenge",
       "hasDockerfile": true,
       "flagMechanism": "start.sh 将 ENV FLAG 写入 /flag.txt，XXE 读取",
@@ -86,7 +86,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E6%91%B8%E9%87%91%E5%81%B6%E9%81%87FLAG%EF%BC%8C%E6%8B%BC%E5%B0%BD%E5%85%A8%E5%8A%9B%E9%9A%BE%E6%88%98%E8%83%9C"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-mojin",
       "hasDockerfile": true,
       "flagMechanism": "app.py 从 ENV FLAG 读取，验证成功后返回",
@@ -109,7 +109,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/webshell"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-webshell",
       "hasDockerfile": true,
       "flagMechanism": "start.sh 将 ENV FLAG 写入 /flag.txt",
@@ -132,7 +132,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/webshell%20re"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-webshell-revenge",
       "hasDockerfile": true,
       "flagMechanism": "start.sh 将 ENV FLAG 写入 /flag.txt",
@@ -155,7 +155,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E5%8D%81%E4%B9%9D%E7%AB%A0%20%E6%98%9F%E7%A9%B9%E7%9C%9F%E7%9B%B8%C2%B7%E8%A1%A5%E5%A4%A9%E5%BD%92%E6%BA%90_revenge"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-ch19-php-deser-revenge",
       "hasDockerfile": true,
       "flagMechanism": "构建期 Dockerfile 注入 ENV FLAG=... 并写入 /flag，POP 链执行命令读取",
@@ -178,7 +178,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E7%AC%AC%E4%BA%8C%E5%8D%81%E4%B8%89%E7%AB%A0%20%E5%B9%BB%E5%A2%83%E8%B7%B7%E5%BF%83%C2%B7%E7%9A%87%E9%99%A8%E6%98%9F%E6%B2%89(%E5%A4%A7%E7%BB%93%E5%B1%80)"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-ch23-java-deser",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 注入 ENV FLAG=...，Java 反序列化链执行命令读取 /flag 或环境变量",
@@ -201,7 +201,7 @@
         "url": "https://github.com/XDSEC/MoeCTF_2025/tree/main/challenges/Web/%E9%99%84%E5%8A%A0%E6%8C%91%E6%88%98"
       },
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/blob/main/official_writeups/Web/Writeup.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md",
       "dir": "docker/ctf-contests/moectf-2025/moectf-2025-extra-challenge",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 注入 ENV FLAG=...，TemplatesImpl 回显读取 /flag 或环境变量",
@@ -224,7 +224,7 @@
         "url": "https://github.com/team-s2/ACTF-2026/tree/main/web/12307"
       },
       "writeup": "https://github.com/team-s2/ACTF-2026/tree/main/web/12307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/actf-2026/actf-2026.md",
       "dir": "docker/ctf-contests/actf-2026/actf-2026-12307",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile COPY flag /flag，start.sh 设置权限；JSON 重复键解析差导致危险 printPlan 执行 /usr/bin/base64 /flag",

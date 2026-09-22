@@ -1,0 +1,207 @@
+{
+  "batch": 42,
+  "screenedAt": "2026-09-11",
+  "notes": "OWASP 2025 Top10 CTF(ProbiusOfficial/owasp2025-top10-ctf),按类别×难度分批:41=easy、42=medium、43=hard+存量补位。原题运行时注入链读 ENV FLAG,已加 ARG FLAG+ENV FLAG=$FLAG",
+  "challenges": [
+    {
+      "id": "owasp2025-a1-medium",
+      "title": "OWASP25 A01-BROKENACCESSCONTROL medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a1-medium:latest",
+      "flag": "flag{batch42-owasp2025-a1-medium_c97f3a122af5}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A01-BrokenAccessControl/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a1-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A01-BROKENACCESSCONTROL medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a2-medium",
+      "title": "OWASP25 A02-SECURITYMISCONFIGURATION medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a2-medium:latest",
+      "flag": "flag{batch42-owasp2025-a2-medium_238d4b3be48c}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A02-SecurityMisconfiguration/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a2-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A02-SECURITYMISCONFIGURATION medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a4-medium",
+      "title": "OWASP25 A04-CRYPTOGRAPHICFAILURES medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a4-medium:latest",
+      "flag": "flag{batch42-owasp2025-a4-medium_13a54db78113}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A04-CryptographicFailures/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a4-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A04-CRYPTOGRAPHICFAILURES medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a5-medium",
+      "title": "OWASP25 A05-INJECTION medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a5-medium:latest",
+      "flag": "flag{batch42-owasp2025-a5-medium_42a777ea9a2a}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A05-Injection/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a5-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A05-INJECTION medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a6-medium",
+      "title": "OWASP25 A06-INSECUREDESIGN medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a6-medium:latest",
+      "flag": "flag{batch42-owasp2025-a6-medium_3ea705cd2975}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A06-InsecureDesign/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a6-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A06-INSECUREDESIGN medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a7-medium",
+      "title": "OWASP25 A07-AUTHENTICATIONFAILURES medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a7-medium:latest",
+      "flag": "flag{batch42-owasp2025-a7-medium_6cda12013276}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A07-AuthenticationFailures/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a7-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A07-AUTHENTICATIONFAILURES medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a8-medium",
+      "title": "OWASP25 A08-DATAINTEGRITYFAILURES medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a8-medium:latest",
+      "flag": "flag{batch42-owasp2025-a8-medium_0adca5ecd375}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A08-DataIntegrityFailures/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a8-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A08-DATAINTEGRITYFAILURES medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "owasp2025-a10-medium",
+      "title": "OWASP25 A10-EXCEPTIONHANDLING medium",
+      "contest": "OWASP 2025 Top10 CTF",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-owasp2025-a10-medium:latest",
+      "flag": "flag{batch42-owasp2025-a10-medium_6b29567d1adf}",
+      "source": {
+        "repo": "ProbiusOfficial/owasp2025-top10-ctf",
+        "url": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/owasp2025-top10-ctf/blob/main/A10-ExceptionHandling/medium/WriteUP.md",
+      "dir": "docker/ctf-contests/owasp2025/a10-medium",
+      "status": "deployed",
+      "flagMechanism": "原题动态注入链(DASFLAG/FLAG/GZCTF_FLAG 运行时读 ENV),已加 ARG FLAG+ENV FLAG=",
+      "reason": "同比赛同名冲突：平台已有 \"OWASP25 A10-EXCEPTIONHANDLING medium\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/owasp2025/owasp2025.md"
+    },
+    {
+      "id": "0xgame2024-rogue-mysql",
+      "title": "rogue_mysql",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-rogue-mysql:latest",
+      "flag": "flag{batch42-0xgame2024-rogue-mysql_47ebecc5c84a}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/rogue-mysql",
+      "status": "deployed",
+      "flagMechanism": "flask;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"rogue_mysql\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "nepctf2023-ezjava-checkin",
+      "title": "ezjava_checkin",
+      "contest": "NepCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8081,
+      "image": "localtrain/ctf-nepctf2023-ezjava-checkin:latest",
+      "flag": "flag{batch42-nepctf2023-ezjava-checkin_ea2a8c676647}",
+      "source": {
+        "repo": "NepnepSec/NepCTF-2023",
+        "url": "https://github.com/NepnepSec/NepCTF-2023"
+      },
+      "writeup": "https://f0rget.me/2023/08/14/nepctf-2023-writeup/",
+      "dir": "docker/ctf-contests/nepctf2023/ezjava-checkin",
+      "status": "deployed",
+      "flagMechanism": "java shiro/spring jar;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"ezjava_checkin\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/nepctf2023/nepctf2023.md"
+    }
+  ]
+}

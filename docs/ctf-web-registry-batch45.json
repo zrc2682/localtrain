@@ -1,0 +1,197 @@
+{
+  "batch": 45,
+  "screenedAt": "2026-09-11",
+  "notes": "0xGame 2025(X1cT34m/0xGame2025 官方仓)余量题。原题 compose 多为 web+db 双服务,部署时合并单容器;端口以实际 Dockerfile/源码为准。",
+  "challenges": [
+    {
+      "id": "0xgame2025-ez-soap",
+      "title": "ez_soap",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-ez-soap:latest",
+      "flag": "flag{batch45-0xgame2025-ez-soap_f50bc87ff58c}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-soap",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-ssrf",
+      "title": "ez_ssrf",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2025-ez-ssrf:latest",
+      "flag": "flag{batch45-0xgame2025-ez-ssrf_b61e7c3f819a}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-ssrf",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-upload",
+      "title": "ez_upload",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2025-ez-upload:latest",
+      "flag": "flag{batch45-0xgame2025-ez-upload_95aa07430967}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-upload",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-plus-plus",
+      "title": "plus_plus",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-plus-plus:latest",
+      "flag": "flag{batch45-0xgame2025-plus-plus_a3a49bd0a44c}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://devpress.csdn.net/v1/article/detail/154525718",
+      "dir": "docker/ctf-contests/0xgame2025/plus-plus",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-evernight",
+      "title": "Evernight",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-evernight:latest",
+      "flag": "flag{batch45-0xgame2025-evernight_bdc9beb5a350}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/evernight",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-phar",
+      "title": "ez_phar",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-ez-phar:latest",
+      "flag": "flag{batch45-0xgame2025-ez-phar_f364633660f6}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-phar",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-php",
+      "title": "ez_php",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-ez-php:latest",
+      "flag": "flag{batch45-0xgame2025-ez-php_3c56f3ce6b53}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-php",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-ssti2",
+      "title": "ez_ssti2",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2025-ez-ssti2:latest",
+      "flag": "flag{batch45-0xgame2025-ez-ssti2_0d522dbd1b03}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-ssti2",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-ez-stack",
+      "title": "ez_stack",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 9000,
+      "image": "localtrain/ctf-0xgame2025-ez-stack:latest",
+      "flag": "flag{batch45-0xgame2025-ez-stack_22a437c957c7}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-stack",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-test-your-uuid8",
+      "title": "Test_Your_UUID8",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 9000,
+      "image": "localtrain/ctf-0xgame2025-test-your-uuid8:latest",
+      "flag": "flag{batch45-0xgame2025-test-your-uuid8_1d9c2da26d0f}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/test-your-uuid8",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    }
+  ]
+}

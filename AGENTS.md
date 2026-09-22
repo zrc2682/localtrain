@@ -9,7 +9,7 @@
 LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题目管理、Docker 容器环境启停、flag 提交、提示解锁、积分排行。
 
 - 本项目默认账号、JWT 密钥均为硬编码本地配置，**请勿部署到公网**，安全加固不改变这一前提。
-- 平台当前存量：CVE 题 45 道（另有 5 道 skipped），CTF 比赛 Web 题 33 个批次（截至 2026-08-23 第 33 批完成，**下一批次从 batch34 开始**）。精确数字以 `docs/ctf-web-challenges.md` 和登记表统计为准。
+- 平台当前存量：CVE 题 45 道（另有 5 道 skipped），CTF 比赛 Web 题 46 个批次（截至 2026-09-11 第 51 批完成，**下一批次从 batch52 开始**）。精确数字以 `docs/ctf-web-challenges.md` 和登记表统计为准。
 
 ## ⚠️ 必读：环境关键事实（踩坑记录）
 
@@ -64,7 +64,7 @@ localtrain/
 │   ├── ctf-web-challenges.md # 比赛题目部署记录（每批明细，必读必更）
 │   └── cve-deploy-report.md
 ├── .deployed-challenges/     # 已部署比赛题目空文件夹索引（脚本维护，勿手改）
-├── cve-writeup/  ctf-writeup/  # writeup（按比赛分目录）
+├── cve-writeup/  ctf-writeup/  # writeup；ctf-writeup 一赛一文件：<比赛slug>/<比赛slug>.md（README.md 是覆盖索引）
 ├── scripts/                  # 部署辅助脚本（见 Runbook）
 ├── .tmp/                     # 临时下载/中间产物（gitignore，见「.tmp 管理」）
 └── packages/
@@ -218,7 +218,7 @@ API_BASE=http://localhost:3008 node import-ctf-contests.mjs docs/ctf-web-registr
 - 一次性收尾（刷索引 → .tmp 清理预览 → 更新 tmp 报告 → 生成文档表格草稿 + 手工事项清单）：`node scripts/close-batch.mjs docs/ctf-web-registry-batchN.json`。
 - 更新文档：`docs/ctf-web-challenges.md` 加批次章节（构建备注/特殊处理/writeup 来源）、`CHALLENGE-DEPLOYMENT.md` 5.3 批次表 + 第 9 章历史记录。
 - 确认 close-batch 的清理预览无误后真实清理：`node scripts/clean-tmp-deployed.mjs`（不带 --dry-run）。
-- writeup 本地化到 `ctf-writeup/<比赛slug>/<题目slug>.md`，PDF 等无法抓取的记录链接。
+- writeup 写入该比赛的合并文档 `ctf-writeup/<比赛slug>/<比赛slug>.md`（一赛一 wp，含题目索引与来源；同一比赛跨批次重复部署的题共用一节）。找全后跑登记表回写：writeupLocal 指向合并文档。无法抓取的 PDF 记录链接。
 
 ### 常见构建坑速查（历史批次实录，详见 ctf-web-challenges.md）
 

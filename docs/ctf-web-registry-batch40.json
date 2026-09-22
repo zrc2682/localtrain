@@ -1,0 +1,263 @@
+{
+  "batch": 40,
+  "screenedAt": "2026-09-10",
+  "notes": "miniL 2024 docker 完备的 web 题(官方 WP 自带)+minil2023-guess 补位;JvavGuy/ezjaba(java)与 mini-jail(pwn 嫌疑)弃",
+  "challenges": [
+    {
+      "id": "minil2024-injections",
+      "title": "InjectionS",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2024-injections:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/minil2024/injections",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "skipped",
+      "reason": "Java+数据库双容器编排(compose 含 mysqllllll/postgres 服务),违反单容器排除项"
+    },
+    {
+      "id": "minil2024-phonebook",
+      "title": "PhoneBook",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2024-phonebook:latest",
+      "flag": "flag{batch40-minil2024-phonebook_1154a2b5d44a}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Pwn/Pwn%20wp.md",
+      "dir": "docker/ctf-contests/minil2024/phonebook",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"PhoneBook\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-smartpark",
+      "title": "SmartPark",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-smartpark:latest",
+      "flag": "flag{batch40-minil2024-smartpark_223c434c9899}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Web/Web-official.md",
+      "dir": "docker/ctf-contests/minil2024/smartpark",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"SmartPark\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-smartpark-revenge",
+      "title": "SmartPark-Revenge",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2024-smartpark-revenge:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/minil2024/smartpark-revenge",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "skipped",
+      "reason": "Java+数据库双容器编排(compose 含 mysqllllll/postgres 服务),违反单容器排除项"
+    },
+    {
+      "id": "minil2024-snooker-king",
+      "title": "Snooker King",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2024-snooker-king:latest",
+      "flag": "flag{batch40-minil2024-snooker-king_8f06fc318bb2}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Web/Web-official.md",
+      "dir": "docker/ctf-contests/minil2024/snooker-king",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"Snooker King\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-game",
+      "title": "game",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2024-game:latest",
+      "flag": "flag{batch40-minil2024-game_f65f552160d1}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Pwn/Pwn%20wp.md",
+      "dir": "docker/ctf-contests/minil2024/game",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-le-dao-bu-pao",
+      "title": "le-dao-bu-pao",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-le-dao-bu-pao:latest",
+      "flag": "flag{batch40-minil2024-le-dao-bu-pao_44048e85c3a3}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Misc/README.md",
+      "dir": "docker/ctf-contests/minil2024/le-dao-bu-pao",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"le-dao-bu-pao\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-2bytes",
+      "title": "2bytes",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2024-2bytes:latest",
+      "flag": "flag{batch40-minil2024-2bytes_80a4ebdb16f4}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Pwn/Pwn%20wp.md",
+      "dir": "docker/ctf-contests/minil2024/2bytes",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"2bytes\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-msgbox",
+      "title": "Msgbox",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-minil2024-msgbox:latest",
+      "flag": "flag{batch40-minil2024-msgbox_07f4b320dfca}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Web/Web-official.md",
+      "dir": "docker/ctf-contests/minil2024/msgbox",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"Msgbox\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2023-guess",
+      "title": "guess",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 10001,
+      "image": "localtrain/ctf-minil2023-guess:latest",
+      "flag": "flag{batch40-minil2023-guess_3c29081a2d0a}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Crypto.md",
+      "dir": "docker/ctf-contests/minil2023/guess",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"guess\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "minil2024-ezjaba",
+      "title": "ezjaba",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-ezjaba:latest",
+      "flag": "flag{batch40-minil2024-ezjaba_0be70515b1cb}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024/blob/main/OfficialWriteups/Web/Web-official.md",
+      "dir": "docker/ctf-contests/minil2024/ezjaba",
+      "status": "deployed",
+      "flagMechanism": "fastjson 反序列化 RCE 读 /flag(三保险注入)",
+      "reason": "同比赛同名冲突：平台已有 \"ezjaba\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
+    },
+    {
+      "id": "minil2024-jvavguy",
+      "title": "JvavGuy",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-jvavguy:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "url": "https://github.com/XDSEC/miniLCTF_2024"
+      },
+      "writeup": "官方 WP(仓库 OfficialWriteups)",
+      "dir": "docker/ctf-contests/minil2024/jvavguy",
+      "status": "skipped",
+      "flagMechanism": "Java web 题(三保险注入);基础镜像 openjdk:8-jre→openjdk:8",
+      "reason": "ruoyi(若依)+MySQL 双容器编排(compose 含 mysql 服务),违反单容器排除项"
+    },
+    {
+      "id": "0xgame2024-whysoserial",
+      "title": "WhySoSerial",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-whysoserial:latest",
+      "flag": "flag{batch40-0xgame2024-whysoserial_f15018aaeab8}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/whysoserial",
+      "status": "deployed",
+      "flagMechanism": "python 反序列化;构建期注入",
+      "reason": "同比赛同名冲突：平台已有 \"WhySoSerial\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    }
+  ]
+}

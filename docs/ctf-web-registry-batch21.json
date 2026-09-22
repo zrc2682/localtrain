@@ -17,7 +17,7 @@
         "url": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Signin"
       },
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Signin",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md",
       "dir": "docker/ctf-contests/xyctf-2025/xyctf-2025-signin",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag_dda2d465-af33-4c56-8cc9-fd4306867b70，Bottle pickle 反序列化 + 路径穿越读取",
@@ -40,7 +40,7 @@
         "url": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/ezsql"
       },
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/ezsql",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md",
       "dir": "docker/ctf-contests/xyctf-2025/xyctf-2025-ezsql",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag.txt，PHP + MySQL 布尔/时间盲注读取",
@@ -63,7 +63,7 @@
         "url": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/crazy"
       },
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/crazy",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md",
       "dir": "docker/ctf-contests/xyctf-2025/xyctf-2025-crazy",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Bottle SSTI 长度 < 25 绕过黑名单读取",
@@ -86,7 +86,7 @@
         "url": "https://github.com/XDSEC/miniLCTF_2025/tree/main/Challenges/Web/GuessOneGuess"
       },
       "writeup": "https://github.com/XDSEC/miniLCTF_2025/tree/main/OfficialWriteups/Web",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/minilctf-2025/minilctf-2025.md",
       "dir": "docker/ctf-contests/minilctf-2025/minilctf-2025-guessoneguess",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入环境变量 FLAG，Node.js Socket 浮点溢出/Infinity 让 score 超过阈值后服务端返回",
@@ -109,7 +109,7 @@
         "url": "https://github.com/X1cT34m/0xGame2025/tree/main/Web/Week4/ez_bottle"
       },
       "writeup": "https://github.com/X1cT34m/0xGame2025/tree/main/Web/Week4/ez_bottle",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md",
       "dir": "docker/ctf-contests/oxgame-2025/oxgame-2025-ez-bottle",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Bottle 框架漏洞利用读取",
@@ -132,7 +132,7 @@
         "url": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Fate"
       },
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Fate",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md",
       "dir": "docker/ctf-contests/xyctf-2025/xyctf-2025-fate",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag_h3r3，Flask SSRF + JSON 反序列化 + Python f-string + SQL 注入组合链读取",
@@ -155,7 +155,7 @@
         "url": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Now%20you%20see%20me"
       },
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025/tree/main/Web/Now%20you%20see%20me",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md",
       "dir": "docker/ctf-contests/xyctf-2025/xyctf-2025-now-you-see-me",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag_h3r3，Flask 有回显 SSTI + 混淆读取",
@@ -178,7 +178,7 @@
         "url": "https://github.com/XDSEC/miniLCTF_2025/tree/main/Challenges/Web/clickclick"
       },
       "writeup": "https://github.com/XDSEC/miniLCTF_2025/tree/main/OfficialWriteups/Web/clickclick.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/minilctf-2025/minilctf-2025.md",
       "dir": "docker/ctf-contests/minilctf-2025/minilctf-2025-clickclick",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 server.cjs 中的 FLAG 占位符，Node.js 原型链污染使 amount >= 10000 后返回 flag",
@@ -201,7 +201,7 @@
         "url": "https://github.com/r3kapig/r3ctf-2025/tree/main/Web/evalgelist"
       },
       "writeup": "https://github.com/r3kapig/r3ctf-2025/tree/main/Web/evalgelist",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/r3ctf-2025/r3ctf-2025.md",
       "dir": "docker/ctf-contests/r3ctf-2025/r3ctf-2025-evalgelist",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP 7.3 include + PATH 常量 trick 读取 flag",
@@ -224,7 +224,7 @@
         "url": "https://github.com/orangetw/My-CTF-Web-Challenges/tree/master/hitcon-ctf-2025/pholyglot"
       },
       "writeup": "https://github.com/orangetw/My-CTF-Web-Challenges/tree/master/hitcon-ctf-2025/pholyglot",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/hitcon-2025/hitcon-2025.md",
       "dir": "docker/ctf-contests/hitcon-2025/hitcon-2025-pholyglot",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP polyglot 利用后通过 SUID read_flag 二进制读取",

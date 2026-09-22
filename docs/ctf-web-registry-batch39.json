@@ -1,0 +1,263 @@
+{
+  "batch": 39,
+  "screenedAt": "2026-09-10",
+  "notes": "NCTF2022 calc/ez_sql(源码自审计,官方无 WP)+miniL 2022/2023 有 Dockerfile 的 web 题;EzJava(java)与 waf_sql_injection(modsecurity 多容器)弃",
+  "challenges": [
+    {
+      "id": "nctf2022-calc",
+      "title": "calc",
+      "contest": "NCTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 5000,
+      "image": "localtrain/ctf-nctf2022-calc:latest",
+      "flag": "flag{batch39-nctf2022-calc_890785b31214}",
+      "source": {
+        "repo": "X1cT34m/NCTF2022",
+        "url": "https://github.com/X1cT34m/NCTF2022"
+      },
+      "writeup": "https://ctf.njupt.edu.cn/archives/805",
+      "dir": "docker/ctf-contests/nctf2022/calc",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"calc\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/nctf2022/nctf2022.md"
+    },
+    {
+      "id": "minil2023-fake-login",
+      "title": "fake_login",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-minil2023-fake-login:latest",
+      "flag": "flag{batch39-minil2023-fake-login_4bd831e70361}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Web.md",
+      "dir": "docker/ctf-contests/minil2023/fake-login",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"fake_login\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "minil2023-ezsql",
+      "title": "ezsql_minil",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 1433,
+      "image": "localtrain/ctf-minil2023-ezsql:latest",
+      "flag": "flag{batch39-minil2023-ezsql_26c8b592a9a8}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Web.md",
+      "dir": "docker/ctf-contests/minil2023/ezsql",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"ezsql_minil\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "minil2023-pycalculator",
+      "title": "pycalculator",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2023-pycalculator:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/minil2023/pycalculator",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "skipped",
+      "reason": "附件为 socat 交互式 python 沙箱题,非 HTTP web,按排除项剔除"
+    },
+    {
+      "id": "minil2023-giveaway",
+      "title": "giveaway",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 10007,
+      "image": "localtrain/ctf-minil2023-giveaway:latest",
+      "flag": "flag{batch39-minil2023-giveaway_e52287d25365}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Crypto.md",
+      "dir": "docker/ctf-contests/minil2023/giveaway",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"giveaway\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "minil2022-include",
+      "title": "include",
+      "contest": "Mini L-CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-minil2022-include:latest",
+      "flag": "flag{batch39-minil2022-include_28826edb0e19}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2022",
+        "url": "https://github.com/XDSEC/miniLCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2022/blob/main/WriteUps/Rewind/README.md",
+      "dir": "docker/ctf-contests/minil2022/include",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"include\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2022/minil2022.md"
+    },
+    {
+      "id": "minil2022-checkin",
+      "title": "checkin",
+      "contest": "Mini L-CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-minil2022-checkin:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2022",
+        "url": "https://github.com/XDSEC/miniLCTF_2022"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/minil2022/checkin",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "skipped",
+      "reason": "ENTRYPOINT 直接运行二进制(nc 服务),非 HTTP web,剔除"
+    },
+    {
+      "id": "minil2022-easy-httpd",
+      "title": "easy-httpd",
+      "contest": "Mini L-CTF 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 2048,
+      "image": "localtrain/ctf-minil2022-easy-httpd:latest",
+      "flag": "flag{batch39-minil2022-easy-httpd_9198748e7b96}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2022",
+        "url": "https://github.com/XDSEC/miniLCTF_2022"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2022/blob/main/WriteUps/Rewind/README.md",
+      "dir": "docker/ctf-contests/minil2022/easy-httpd",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "deployed",
+      "reason": "同比赛同名冲突：平台已有 \"easy-httpd\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2022/minil2022.md"
+    },
+    {
+      "id": "minil2022-kvdb",
+      "title": "kvdb",
+      "contest": "Mini L-CTF 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2022-kvdb:latest",
+      "flag": "",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2022",
+        "url": "https://github.com/XDSEC/miniLCTF_2022"
+      },
+      "writeup": "官方 WP(仓库内)",
+      "dir": "docker/ctf-contests/minil2022/kvdb",
+      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
+      "status": "skipped",
+      "reason": "KV 存储 TCP 服务(lib32 pwn 结构),非 HTTP web,剔除"
+    },
+    {
+      "id": "0xgame2023-ez-sqli",
+      "title": "ez_sqli_23",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2023-ez-sqli:latest",
+      "flag": "flag{batch39-0xgame2023-ez-sqli_9db974e7e51c}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/ez-sqli",
+      "status": "deployed",
+      "flagMechanism": "flask+mysql sql 注入;合并单容器(mariadb 内置+改连接 host);flag 在数据库表,构建期注入",
+      "reason": "同比赛同名冲突：平台已有 \"ez_sqli_23\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2023-signin",
+      "title": "signin",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2023-signin:latest",
+      "flag": "flag{batch40-0xgame2023-signin_3cf0b438eb55}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "url": "https://github.com/X1cT34m/0xGame2023"
+      },
+      "writeup": "0xGame2023 官方 WP(同仓库)",
+      "dir": "docker/ctf-contests/0xgame2023/signin",
+      "status": "deployed",
+      "flagMechanism": "前端 JS 混淆藏 flag(构建产物内直接替换平台 flag);nginx 静态",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
+    },
+    {
+      "id": "0xgame2024-basic-flask",
+      "title": "basic_flask",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-basic-flask:latest",
+      "flag": "flag{batch39-0xgame2024-basic-flask_6107ec9eadf4}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/basic-flask",
+      "status": "deployed",
+      "flagMechanism": "flask 入门;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"basic_flask\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    },
+    {
+      "id": "0xgame2024-ez-rce-24",
+      "title": "ez_rce_24",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2024-ez-rce-24:latest",
+      "flag": "flag{batch39-0xgame2024-ez-rce-24_aa9f4b9ac42e}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "url": "https://github.com/X1cT34m/0xGame2024"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/0xgame2024/ez-rce-24",
+      "status": "deployed",
+      "flagMechanism": "python rce;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"ez_rce_24\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
+    }
+  ]
+}

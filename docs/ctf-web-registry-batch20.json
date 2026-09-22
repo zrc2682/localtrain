@@ -17,7 +17,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/EOF-CTF-Qual/2026/web/linkoreco"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/EOF-CTF-Qual/2026/web/linkoreco",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/eof-ctf-qual-2026/eof-ctf-qual-2026.md",
       "dir": "docker/ctf-contests/eof-ctf-qual-2026/eof-ctf-qual-2026-linkoreco",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /etc/REDACTED_FILENAME.txt，PHP SSRF + 本地 token 校验后文件读取",
@@ -40,7 +40,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/when"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/when",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nohacknoctf-2025/nohacknoctf-2025.md",
       "dir": "docker/ctf-contests/nohacknoctf-2025/nohacknoctf-2025-when",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag_yep_u_get_this，保留 PHP-FPM FastCGI，通过 socket-test 执行任意 PHP 读取",
@@ -63,7 +63,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/xxs-xss"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/xxs-xss",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nohacknoctf-2025/nohacknoctf-2025.md",
       "dir": "docker/ctf-contests/nohacknoctf-2025/nohacknoctf-2025-xxs-xss",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + Chromium XSS bot 通过 PoW 后访问，cookie 注入 flag",
@@ -86,7 +86,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/not-xss"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/NoHackNoCTF/2025/Web/not-xss",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nohacknoctf-2025/nohacknoctf-2025.md",
       "dir": "docker/ctf-contests/nohacknoctf-2025/nohacknoctf-2025-not-xss",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + CORS + Chromium XSS bot，通过前缀猜测侧信道泄漏 flag",
@@ -109,7 +109,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/AIS3-Pre-Exam/2025/lickleak"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/AIS3-Pre-Exam/2025/lickleak",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ais3-pre-exam-2025/ais3-pre-exam-2025.md",
       "dir": "docker/ctf-contests/ais3-pre-exam-2025/ais3-pre-exam-2025-lickleak",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + Chromium bot 访问 /search 泄漏 flag",
@@ -132,7 +132,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/AIS3-Pre-Exam/2026/crypto/easyweb"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/AIS3-Pre-Exam/2026/crypto/easyweb",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ais3-pre-exam-2026/ais3-pre-exam-2026.md",
       "dir": "docker/ctf-contests/ais3-pre-exam-2026/ais3-pre-exam-2026-easyweb",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + AES-ECB cookie 文件名加密/路径穿越读取",
@@ -155,7 +155,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/qnqsec/2025/faas"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/qnqsec/2025/faas",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qnqsec-2025/qnqsec-2025.md",
       "dir": "docker/ctf-contests/qnqsec-2025/qnqsec-2025-faas",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，/readflag i want the flag please 输出 flag",
@@ -178,7 +178,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges/tree/main/qnqsec/2025/date_logger"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges/tree/main/qnqsec/2025/date_logger",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qnqsec-2025/qnqsec-2025.md",
       "dir": "docker/ctf-contests/qnqsec-2025/qnqsec-2025-date-logger",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask 搜索消息命中后返回含 flag 的内容",
@@ -201,7 +201,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges-Old/tree/main/2024-springcomp/web/click_me"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges-Old/tree/main/2024-springcomp/web/click_me",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nehs-iced-2024/nehs-iced-2024.md",
       "dir": "docker/ctf-contests/nehs-iced-2024/nehs-iced-2024-click-me",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask 表单提交非 'no' 时返回 flag",
@@ -224,7 +224,7 @@
         "url": "https://github.com/William957-web/My-CTF-Challenges-Old/tree/main/2024-springcomp/web/hack_my_x"
       },
       "writeup": "https://github.com/William957-web/My-CTF-Challenges-Old/tree/main/2024-springcomp/web/hack_my_x",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nehs-iced-2024/nehs-iced-2024.md",
       "dir": "docker/ctf-contests/nehs-iced-2024/nehs-iced-2024-hack-my-x",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + SQLite 登录/SQL 注入获取 flag",

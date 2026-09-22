@@ -1,0 +1,223 @@
+{
+  "batch": 46,
+  "screenedAt": "2026-09-11",
+  "notes": "0xGame 2025(X1cT34m/0xGame2025 官方仓)余量题。原题 compose 多为 web+db 双服务,部署时合并单容器;端口以实际 Dockerfile/源码为准。",
+  "challenges": [
+    {
+      "id": "0xgame2025-ez-pollute",
+      "title": "ez_pollute",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-0xgame2025-ez-pollute:latest",
+      "flag": "flag{batch46-0xgame2025-ez-pollute_c492999d88cc}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/ez-pollute",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-springshiro",
+      "title": "SpringShiro",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-0xgame2025-springshiro:latest",
+      "flag": "flag{batch46-0xgame2025-springshiro_1d2f9f2bb17b}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/springshiro",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "reason": "同比赛同名冲突：平台已有 \"SpringShiro\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-test",
+      "title": "test",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-0xgame2025-test:latest",
+      "flag": "flag{batch46-0xgame2025-test_352542ed1344}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/test",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "reason": "同比赛同名冲突：平台已有 \"test\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "0xgame2025-xss-re",
+      "title": "xss_re",
+      "contest": "0xGame 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-0xgame2025-xss-re:latest",
+      "flag": "flag{batch46-0xgame2025-xss-re_8d491c58a3bb}",
+      "source": {
+        "repo": "X1cT34m/0xGame2025",
+        "url": "https://github.com/X1cT34m/0xGame2025"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2025",
+      "dir": "docker/ctf-contests/0xgame2025/xss-re",
+      "status": "deployed",
+      "flagMechanism": "构建期注入;compose 多服务的合并单容器或按 Dockerfile 直构",
+      "reason": "同比赛同名冲突：平台已有 \"xss_re\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2025/0xgame2025.md"
+    },
+    {
+      "id": "nctf2026-n-horse",
+      "title": "N-Horse",
+      "contest": "NCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-nctf2026-n-horse:latest",
+      "flag": "flag{batch46-nctf2026-n-horse_3972db378952}",
+      "source": {
+        "repo": "X1cT34m/NCTF2026",
+        "url": "https://github.com/X1cT34m/NCTF2026"
+      },
+      "writeup": "https://github.com/X1cT34m/NCTF2026/blob/main/NCTF%202026%20Official%20Writeup.pdf",
+      "dir": "docker/ctf-contests/nctf2026/n-horse",
+      "status": "deployed",
+      "flagMechanism": "三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"N-Horse\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/nctf2026/nctf2026.md"
+    },
+    {
+      "id": "nctf2026-openshell",
+      "title": "OpenShell",
+      "contest": "NCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-nctf2026-openshell:latest",
+      "flag": "flag{batch46-nctf2026-openshell_7b6c6cb0a87a}",
+      "source": {
+        "repo": "X1cT34m/NCTF2026",
+        "url": "https://github.com/X1cT34m/NCTF2026"
+      },
+      "writeup": "https://github.com/X1cT34m/NCTF2026/blob/main/NCTF%202026%20Official%20Writeup.pdf",
+      "dir": "docker/ctf-contests/nctf2026/openshell",
+      "status": "deployed",
+      "flagMechanism": "三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"OpenShell\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/nctf2026/nctf2026.md"
+    },
+    {
+      "id": "minil2023-ezbook",
+      "title": "ezbook",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2023-ezbook:latest",
+      "flag": "flag{batch46-minil2023-ezbook_941acd217e79}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Pwn.md",
+      "dir": "docker/ctf-contests/minil2023/ezbook",
+      "status": "deployed",
+      "flagMechanism": "java web;三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"ezbook\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "minil2023-mini-java",
+      "title": "mini_java",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-minil2023-mini-java:latest",
+      "flag": "flag{batch46-minil2023-mini-java_32c6c38990c1}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "url": "https://github.com/XDSEC/miniLCTF_2023"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023/blob/main/Official/Web.md",
+      "dir": "docker/ctf-contests/minil2023/mini-java",
+      "status": "deployed",
+      "flagMechanism": "java -jar;flag 文件注入",
+      "reason": "同比赛同名冲突：平台已有 \"mini_java\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
+    },
+    {
+      "id": "nailong2025-hello-netdream",
+      "title": "Hello_netdreamCTF_2025",
+      "contest": "奶龙杯 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-nailong2025-hello-netdream:latest",
+      "flag": "flag{batch46-nailong2025-hello-netdream_01345f67aebc}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "官方 WP",
+      "dir": "docker/ctf-contests/nailong2025/hello-netdream",
+      "status": "deployed",
+      "flagMechanism": "三保险注入",
+      "reason": "同比赛同名冲突：平台已有 \"Hello_netdreamCTF_2025\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "isctf2025-baby-notice-board",
+      "title": "baby_notice_board",
+      "contest": "ISCTF 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-isctf2025-baby-notice-board:latest",
+      "flag": "",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "官方 WP",
+      "dir": "docker/ctf-contests/isctf2025/baby-notice-board",
+      "status": "skipped",
+      "flagMechanism": "三保险注入",
+      "reason": "构建期 mysql 初始化失败(待修复),留作 47 批候选"
+    },
+    {
+      "id": "nailong2025-picklelovedill",
+      "title": "picklelovedill",
+      "contest": "奶龙杯 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-nailong2025-picklelovedill:latest",
+      "flag": "flag{batch46-nailong2025-picklelovedill_da36c8d7c562}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "url": "https://github.com/LamentXU123/myCTFchallenges"
+      },
+      "writeup": "https://blog.csdn.net/2302_77769584/article/details/152168744",
+      "dir": "docker/ctf-contests/nailong2025/picklelovedill",
+      "status": "deployed",
+      "flagMechanism": "python pickle 反序列化;三保险注入",
+      "writeupLocal": "ctf-writeup/nailong2025/nailong2025.md"
+    }
+  ]
+}

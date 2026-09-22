@@ -16,8 +16,8 @@
         "path": ".tmp/batch15-inspect/sdnisc/app.py",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://github.com/davedoesdev/python-jwt/blob/master/test/vulnerability_vows.py",
+      "writeupLocal": "ctf-writeup/sdnisc-2025/sdnisc-2025.md",
       "dir": "docker/ctf-contests/sdnisc-2025-haixuan/sdnisc-2025-haixuan-web2",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Flask + JWT + python-jwt + jwcrypto 漏洞读取",
@@ -40,7 +40,7 @@
         "url": "https://github.com/CTF-Archives/2026-NCO-Final"
       },
       "writeup": "https://github.com/CTF-Archives/2026-NCO-Final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nco-2026/nco-2026.md",
       "dir": "docker/ctf-contests/nco-2026-final/nco-2026-final-what-can-i-say",
       "hasDockerfile": true,
       "flagMechanism": "ENV GZCTF_FLAG 写入 /tmp/flag.txt，30 秒倒计时竞争条件绕过校验读取",
@@ -62,8 +62,8 @@
         "path": ".tmp/batch16-dl/more/AWDP-WEB-SolonMaster.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://www.cnblogs.com/F12-blog/p/18324587",
+      "writeupLocal": "ctf-writeup/ciscn-awdp-2024/ciscn-awdp-2024.md",
       "dir": "docker/ctf-contests/awdp/awdp-web-solonmaster",
       "hasDockerfile": true,
       "flagMechanism": "Java Solon + Freemarker 反序列化，构建期写入 /flag 后读取",
@@ -86,7 +86,7 @@
         "url": "local"
       },
       "writeup": "https://newstar.wiki/wp/2024/week4/web/page",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2024/newstar-2024.md",
       "dir": "docker/ctf-contests/newstar-2024/ns24-web-page",
       "hasDockerfile": true,
       "flagMechanism": "Koa + TypeScript + Puppeteer XSS bot，ENV FLAG 注入 cookie 后读取",
@@ -110,7 +110,7 @@
         "url": "https://github.com/ek1ng/My-CTF-Challenges"
       },
       "writeup": "https://github.com/ek1ng/My-CTF-Challenges",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/hgame-2023-gopher-shop",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ENV 写入 /flag，Go/Gin 应用配置读取",
@@ -134,7 +134,7 @@
         "url": "https://github.com/ek1ng/My-CTF-Challenges"
       },
       "writeup": "https://github.com/ek1ng/My-CTF-Challenges",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/hgame-2023-v2board",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ENV 写入 /flag，Laravel 应用漏洞读取",
@@ -179,8 +179,8 @@
         "path": ".tmp/qwb8/ezcalc",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://blog.wm-team.cn/index.php/archives/85/",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwb8-2024-semis/qwb8-2024-semis-ezcalc",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ENV 写入 /flag，bot 访问 /flag 路径校验",
@@ -203,7 +203,7 @@
         "url": "local"
       },
       "writeup": "local",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/pengcheng-2025/pengcheng-2025.md",
       "dir": "docker/ctf-contests/pengcheng-2025/pengcheng-2025-office",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ENV 写入 /flag，PHP OA 漏洞读取",
@@ -225,8 +225,8 @@
         "path": ".tmp/batch18-ext/releases/oa_system.zip",
         "url": "local"
       },
-      "writeup": "local",
-      "writeupLocal": null,
+      "writeup": "https://nvd.nist.gov/vuln/detail/CVE-2025-3388,",
+      "writeupLocal": "ctf-writeup/pengcheng-2025/pengcheng-2025.md",
       "dir": "docker/ctf-contests/pengcheng-2025/pengcheng-2025-oa-system",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ENV 写入 /flag，Java OA 漏洞读取",

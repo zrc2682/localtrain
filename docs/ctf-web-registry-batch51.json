@@ -1,0 +1,197 @@
+{
+  "batch": 51,
+  "screenedAt": "2026-09-19",
+  "notes": "HKCERT CTF 2022 十道 web 全量(Spyce 系列为 Python 沙箱逃逸,protoTYPE 系列为原型链污染)。全部需自建 Dockerfile。",
+  "challenges": [
+    {
+      "id": "hkcert2022-motp",
+      "title": "MOTP",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-motp:latest",
+      "flag": "flag{batch51-hkcert2022-motp_babfccf60d29}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/motp",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2022-secured-web-service",
+      "title": "Secured Web Service",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-secured-web-service:latest",
+      "flag": "flag{batch51-hkcert2022-secured-web-service_147c999af281}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/secured-web-service",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2022-math24-1",
+      "title": "The Math24 Game 1",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-math24-1:latest",
+      "flag": "flag{batch51-hkcert2022-math24-1_20268cf26c90}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/math24-1",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2022-expat-passer-confucian",
+      "title": "Expat Passer Confucian",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-expat-passer-confucian:latest",
+      "flag": "flag{batch51-hkcert2022-expat-passer-confucian_d1255aede2ce}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/expat-passer-confucian",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 4
+    },
+    {
+      "id": "hkcert2022-back-to-the-past",
+      "title": "Back to the Past",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-back-to-the-past:latest",
+      "flag": "flag{batch51-hkcert2022-back-to-the-past_d038dc45a240}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/back-to-the-past",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 1
+    },
+    {
+      "id": "hkcert2022-cve-1999",
+      "title": "CVE 1999",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-cve-1999:latest",
+      "flag": "flag{batch51-hkcert2022-cve-1999_cf4d729c745f}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/cve-1999",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2022-spyce",
+      "title": "Spyce",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-spyce:latest",
+      "flag": "flag{batch51-hkcert2022-spyce_f7cfe1000b97}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/spyce",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 1
+    },
+    {
+      "id": "hkcert2022-spyce2",
+      "title": "Spyce2",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-spyce2:latest",
+      "flag": "flag{batch51-hkcert2022-spyce2_8b3f949ab675}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/spyce2",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 5
+    },
+    {
+      "id": "hkcert2022-prototype-sanityxss",
+      "title": "protoTYPE:v2 - sanityXSS",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-prototype-sanityxss:latest",
+      "flag": "flag{batch51-hkcert2022-prototype-sanityxss_b416115e29c0}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/prototype-sanityxss",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2022-prototype-chaos",
+      "title": "protoTYPE:v3 - Chaos",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2022-prototype-chaos:latest",
+      "flag": "flag{batch51-hkcert2022-prototype-chaos_91b5314aea20}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2022/prototype-chaos",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
+      "stars": 4
+    }
+  ]
+}

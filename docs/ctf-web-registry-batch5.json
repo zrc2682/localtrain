@@ -16,8 +16,8 @@
         "path": "web-Deprecated.zip",
         "url": "https://github.com/CTF-Archives/2025-ccb-final/releases/tag/attachment"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://asal1n.github.io/2025/05/04/2025%20CCB%20final/",
+      "writeupLocal": "ctf-writeup/ccb-2025/ccb-2025.md",
       "dir": "docker/ctf-contests/ccb-2025-final/ccb-2025-deprecated",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，通过 JWT algorithm confusion + SQLite 注入/文件读取获得",
@@ -82,8 +82,8 @@
         "path": "web/LovePHP.php",
         "url": "https://github.com/2023-Bluehat-Quals"
       },
-      "writeup": null,
-      "writeupLocal": null,
+      "writeup": "https://blog.csdn.net/Leaf_initial/article/details/132515752",
+      "writeupLocal": "ctf-writeup/bluehat-2023/bluehat-2023.md",
       "dir": "docker/ctf-contests/bluehat-2023/bluehat-2023-lovephp",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，PHP 反序列化 + file() 函数读取",
@@ -106,7 +106,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/note_taking_1"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/susctf-2024-note-taking-1",
       "hasDockerfile": true,
       "flagMechanism": "GZCTF_FLAG 环境变量 → app.js 写入 /app/public/<flag_id>/flag.txt，bot 访问带出",
@@ -129,7 +129,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/vote_now"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/susctf-2024-vote-now",
       "hasDockerfile": true,
       "flagMechanism": "GZCTF_FLAG 环境变量 → main.py 在首页模板中显示",
@@ -152,7 +152,7 @@
         "url": "https://github.com/susers/susctf-2024/tree/master/challenges/web/webhook-as-a-service"
       },
       "writeup": "https://github.com/susers/susctf-2024/blob/master/writeup.pdf",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md",
       "dir": "docker/ctf-contests/susctf-2024/susctf-2024-webhook-as-a-service",
       "hasDockerfile": true,
       "flagMechanism": "GZCTF_FLAG 环境变量 → run.sh 写入 /flag，通过 SSTI/RCE 后读取",
@@ -175,7 +175,7 @@
         "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/What's%20my%20name"
       },
       "writeup": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/blob/main/Writeup/Web.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/isoon-2023/isoon-2023.md",
       "dir": "docker/ctf-contests/isoon-2023/isoon-2023-whats-my-name",
       "hasDockerfile": true,
       "flagMechanism": "ICTF 环境变量 → run.sh 写入 /flag 并嵌入 admin.php 后删除 /flag",
@@ -198,7 +198,7 @@
         "url": "https://github.com/X1cT34m/NCTF2024/tree/main/Web/internal_api"
       },
       "writeup": "https://github.com/X1cT34m/NCTF2024/blob/main/Writeup/Web.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/nctf-2024/nctf-2024.md",
       "dir": "docker/ctf-contests/nctf-2024/nctf-2024-internal-api",
       "hasDockerfile": true,
       "flagMechanism": "FLAG 环境变量 → db::init 作为 hidden 评论插入 SQLite，需 bot 访问 /internal/search 带出",
@@ -221,7 +221,7 @@
         "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/ezjava"
       },
       "writeup": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/blob/main/Writeup/Web.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/isoon-2023/isoon-2023.md",
       "dir": "docker/ctf-contests/isoon-2023/isoon-2023-ezjava",
       "hasDockerfile": true,
       "flagMechanism": "D0g3CTF 环境变量 → start.sh 写入 /flag 后启动 jar",

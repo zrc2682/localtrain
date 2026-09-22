@@ -930,3 +930,255 @@
 | pybox | CISCN 2024 初赛 | medium | 5000 | Python 沙箱代码执行绕过 | 待补充 | 已部署 |
 | jain streak dreamers | CUHK CTF 2025 | hard | 8080 | OCaml Dream 应用文件包含/路径遍历 | 待补充 | 已部署 |
 | web-log-api | 2025 强网杯初赛 | easy | 80 | PHP 日志污染/文件包含 | 待补充 | 已部署 |
+
+## 第34批(2026-09-11 部署,10 道已部署)
+
+2026 湾区杯初赛(4)、0xGame 2023(6)。湾区杯四道为白盒源码题无公开 writeup,由源码自审计确认解法(ShadowArchive=pickle逃逸+深合并污染,DockRelay=SSRF策略绕过+容器内附 flag 服务,nimbus=Go CMS 审计,hanziguard=H2 1.4.200 CREATE ALIAS RCE);0xGame2023 使用官方 X1cT34m 仓库 docker。web_snapshot(双容器 redis slaveOf)与 litemall-plus/SchemaStudio/ThemeForge/jdbc/Robo Admin 均 skipped
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| ShadowArchive | 2026 湾区杯初赛 | hard | 5000 | 待补充 | 已部署 |
+| DockRelay | 2026 湾区杯初赛 | medium | 3000 | 待补充 | 已部署 |
+| one-click-to-build | 2026 湾区杯初赛 | medium | 8090 | 待补充 | 已部署 |
+| hanziguard | 2026 湾区杯初赛 | medium | 8000 | 待补充 | 已部署 |
+| baby_php | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| ping | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| ez_upload | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| ez_unserialize | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| GoShop | 0xGame 2023 | medium | 8000 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| hello_http | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+
+## 第35批(2026-09-11 部署,10 道已部署)
+
+0xGame 2022 全批(X1cT34m/0xGame2022 官方仓,官方 WP 为 wp/Week1-4.pdf)。nginx+php-fpm 双容器题合并为 php:7.4-apache 单容器;Ez_sql 合并 mariadb 进单容器并导入官方 sql;i_want_4090ssti/session 为 python:3.7-alpine(1337);dont_pollute_me 为 node(3000)。ssrf_me(ctfhub 老镜像)/think_about_php(linode/lamp)/ez_girlfriend(附件不全) skipped
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| login | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week1.pdf | 已部署 |
+| where_U_from | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week1.pdf | 已部署 |
+| Myrobots | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week1.pdf | 已部署 |
+| Ez_rce | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week1.pdf | 已部署 |
+| Ez_sql | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week2.pdf | 已部署 |
+| do_u_like_pop | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week2.pdf | 已部署 |
+| upload_whatever | 0xGame 2022 | easy | 80 | 0xGame2022 wp/Week2.pdf | 已部署 |
+| i_want_4090ssti | 0xGame 2022 | medium | 1337 | 0xGame2022 wp/Week2.pdf | 已部署 |
+| session | 0xGame 2022 | medium | 1337 | 0xGame2022 wp/Week3.pdf | 已部署 |
+| dont_pollute_me | 0xGame 2022 | medium | 3000 | 0xGame2022 wp/Week3.pdf | 已部署 |
+
+## 第36批(2026-09-11 部署,10 道已部署)
+
+0xGame 2024 全批(官方仓 23 道 web 全自带 Dockerfile)。hello_http 的 flag 被源码 str_split 切 9 段分发,平台 flag 需 <=45 字符,故该题 flag 短格式。ez_rce/ez_unser/ez_sql 因与 0xGame2022 撞名未收录
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| hello_web | 0xGame 2024 | easy | 80 | 0xGame2024 Writeup/Week 1 Writeup.pdf | 已部署 |
+| hello_http | 0xGame 2024 | easy | 80 | 0xGame2024 Writeup/Week 1 Writeup.pdf | 已部署 |
+| picture | 0xGame 2024 | easy | 80 | 0xGame2024 Writeup/Week 1 Writeup.pdf | 已部署 |
+| hello_include | 0xGame 2024 | easy | 80 | 0xGame2024 Writeup/Week 2 Writeup.pdf | 已部署 |
+| hello_shell | 0xGame 2024 | easy | 80 | 0xGame2024 Writeup/Week 2 Writeup.pdf | 已部署 |
+| ez_login | 0xGame 2024 | easy | 8000 | 0xGame2024 Writeup/Week 1 Writeup.pdf | 已部署 |
+| ez_ssti | 0xGame 2024 | easy | 8000 | 0xGame2024 Writeup/Week 1 Writeup.pdf | 已部署 |
+| baby_pickle | 0xGame 2024 | medium | 8000 | 0xGame2024 Writeup/Week 2 Writeup.pdf | 已部署 |
+| baby_xxe | 0xGame 2024 | medium | 8000 | 0xGame2024 Writeup/Week 2 Writeup.pdf | 已部署 |
+| hello_jwt | 0xGame 2024 | medium | 3000 | 0xGame2024 Writeup/Week 3 Writeup.pdf | 已部署 |
+
+## 第37批(2026-09-11 部署,10 道已部署)
+
+MoeCTF 2022 七道+MoeCTF 2023 三道入门(XDSEC 官方仓,自带官方 WP)。signin/cookie flask 监听 9999
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| baby_file | MoeCTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| cookiehead | MoeCTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| ezhtml | MoeCTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| ezphp | MoeCTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| sqlmap_boy | MoeCTF 2022 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| what are y0u uploading？ | MoeCTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| God_of_Aim | MoeCTF 2022 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| signin | MoeCTF 2023 | easy | 9999 | 官方 WP(仓库内) | 已部署 |
+| cookie | MoeCTF 2023 | easy | 9999 | 官方 WP(仓库内) | 已部署 |
+| http | MoeCTF 2023 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+
+## 第38批(2026-09-11 部署,10 道已部署)
+
+MoeCTF 2023 其余七道+0xGame 2023 剩余三道(notebook/ez_sandbox/repo_leak)。webimp/php-72-apache 与 vulhub/php-xxe 基础镜像镜像源不可得,统一替换 php:7.4-apache;moeworld(三容器)剔除
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| gas!gas!gas! | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| meo图床 | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| moe图床 | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| 了解你的座驾 | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| 彼岸的flag | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| 大海捞针 | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| 夺命十三枪 | MoeCTF 2023 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| notebook | 0xGame 2023 | medium | 8000 | 官方 WP(仓库内) | 已部署 |
+| ez_sandbox | 0xGame 2023 | medium | 3000 | 官方 WP(仓库内) | 已部署 |
+| repo_leak | 0xGame 2023 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+
+## 第39批(2026-09-11 部署,10 道已部署)
+
+NCTF 2022(calc/ez_sql 外为多容器或 deno 依赖被墙,仅收 2 道)+miniL 2022/2023 的 docker 完备 web 题+0xGame 2024 补位(ez-rce-24/basic-flask)。nctf2022-ez-sql 因 deno.land 依赖被墙剔除;pycalculator 实为 socat 沙箱题剔除
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| calc | NCTF 2022 | easy | 5000 | 官方 WP(仓库内) | 已部署 |
+| fake_login | Mini L-CTF 2023 | easy | 8000 | 官方 WP(仓库内) | 已部署 |
+| ezsql_minil | Mini L-CTF 2023 | easy | 1433 | 官方 WP(仓库内) | 已部署 |
+| giveaway | Mini L-CTF 2023 | medium | 10007 | 官方 WP(仓库内) | 已部署 |
+| include | Mini L-CTF 2022 | easy | 80 | 官方 WP(仓库内) | 已部署 |
+| easy-httpd | Mini L-CTF 2022 | medium | 2048 | 官方 WP(仓库内) | 已部署 |
+| ez_sqli_23 | 0xGame 2023 | medium | 8000 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| signin | 0xGame 2023 | easy | 80 | 0xGame2023 官方 WP(同仓库) | 已部署 |
+| basic_flask | 0xGame 2024 | easy | 8000 | 0xGame2024 Writeup/Week 4 | 已部署 |
+| ez_rce_24 | 0xGame 2024 | easy | 8000 | 0xGame2024 Writeup/Week 1 | 已部署 |
+
+## 第40批(2026-09-11 部署,10 道已部署)
+
+miniL 2024 docker 完备 web 题+minil2023-guess+0xgame2024-whysoserial(golang:1.22,readflag 题需去掉 BuildKit --chmod 兼容 legacy builder)+0xgame2023-signin(Vue dist 产物 sed 注入)+minil2024-ezjaba(fastjson,flag 在 rm chmod 前写入并 o+r 放行)。JvavGuy/injections/smartpark-revenge(Java+DB 双容器)剔除
+
+| 题目 | 比赛 | 难度 | 端口 | writeup | 状态 |
+|------|------|------|------|---------|------|
+| PhoneBook | Mini L-CTF 2024 | medium | 9999 | 官方 WP(仓库内) | 已部署 |
+| SmartPark | Mini L-CTF 2024 | medium | 8080 | 官方 WP(仓库内) | 已部署 |
+| Snooker King | Mini L-CTF 2024 | medium | 80 | 官方 WP(仓库内) | 已部署 |
+| game | Mini L-CTF 2024 | medium | 9999 | 官方 WP(仓库内) | 已部署 |
+| le-dao-bu-pao | Mini L-CTF 2024 | medium | 8080 | 官方 WP(仓库内) | 已部署 |
+| 2bytes | Mini L-CTF 2024 | medium | 9999 | 官方 WP(仓库内) | 已部署 |
+| Msgbox | Mini L-CTF 2024 | medium | 5000 | 官方 WP(仓库内) | 已部署 |
+| guess | Mini L-CTF 2023 | medium | 10001 | 官方 WP(仓库内) | 已部署 |
+| ezjaba | Mini L-CTF 2024 | medium | 8080 | 官方 WP(仓库 OfficialWriteups) | 已部署 |
+| WhySoSerial | 0xGame 2024 | medium | 8000 | 0xGame2024 Writeup/Week 3 | 已部署 |
+
+## 第44批(2026-09-11 部署,10 道已部署)
+
+来源:0xGame 2025 官方仓余量(X1cT34m/0xGame2025)。全部 compose 多服务题合并为单容器部署。
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| Ez_HTTP | 0xGame 2025 | easy | 80 | 已部署 |
+| ez_xxe | 0xGame 2025 | easy | 8000 | 已部署 |
+| Lemon | 0xGame 2025 | easy | 80 | 已部署 |
+| Lemon_RevEnge | 0xGame 2025 | easy | 9000 | 已部署 |
+| RCE1 | 0xGame 2025 | easy | 80 | 已部署 |
+| Rubbish_Flask | 0xGame 2025 | easy | 5000 | 已部署 |
+| Rubbish_Unser | 0xGame 2025 | easy | 8000 | 已部署 |
+| 404NotFound_rEvenGe | 0xGame 2025 | medium | 5000 | 已部署 |
+| ez_pickle | 0xGame 2025 | medium | 9000 | 已部署 |
+| ez_signin | 0xGame 2025 | medium | 80 | 已部署 |
+
+## 第45批(2026-09-11 部署,10 道已部署)
+
+来源:0xGame 2025 官方仓余量(X1cT34m/0xGame2025)。全部 compose 多服务题合并为单容器部署。
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| ez_soap | 0xGame 2025 | medium | 80 | 已部署 |
+| ez_ssrf | 0xGame 2025 | medium | 8000 | 已部署 |
+| ez_upload | 0xGame 2025 | medium | 8000 | 已部署 |
+| plus_plus | 0xGame 2025 | medium | 80 | 已部署 |
+| Evernight | 0xGame 2025 | hard | 80 | 已部署 |
+| ez_phar | 0xGame 2025 | hard | 80 | 已部署 |
+| ez_php | 0xGame 2025 | hard | 80 | 已部署 |
+| ez_ssti2 | 0xGame 2025 | hard | 80 | 已部署 |
+| ez_stack | 0xGame 2025 | hard | 9000 | 已部署 |
+| Test_Your_UUID8 | 0xGame 2025 | hard | 9000 | 已部署 |
+
+## 第46批(2026-09-11 部署,10 道已部署)
+
+来源:0xGame 2025 官方仓余量(X1cT34m/0xGame2025)+NCTF 2026+miniL 2023 余量+奶龙杯 2025。全部 compose 多服务题合并为单容器部署。
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| ez_pollute | 0xGame 2025 | hard | 8080 | 已部署 |
+| SpringShiro | 0xGame 2025 | hard | 8000 | 已部署 |
+| test | 0xGame 2025 | hard | 8080 | 已部署 |
+| xss_re | 0xGame 2025 | hard | 3000 | 已部署 |
+| N-Horse | NCTF 2026 | medium | 8000 | 已部署 |
+| OpenShell | NCTF 2026 | medium | 8000 | 已部署 |
+| ezbook | Mini L-CTF 2023 | medium | 8080 | 已部署 |
+| mini_java | Mini L-CTF 2023 | medium | 8000 | 已部署 |
+| Hello_netdreamCTF_2025 | 奶龙杯 2025 | easy | 80 | 已部署 |
+| picklelovedill | 奶龙杯 2025 | medium | 80 | 已部署 |
+
+## 第47批(2026-09-12 部署,10 道已部署)
+
+来源:XYCTF 2025(6)、LILCTF 2025(1)、Mini V&N CTF 2025(1)、V&NCTF 2026(1)、0xGame 2024(1)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| division | XYCTF 2025 | medium | 13337 | 已部署 |
+| greedymen | XYCTF 2025 | medium | 13337 | 已部署 |
+| Now you see me 1 | XYCTF 2025 | medium | 8000 | 已部署 |
+| Now you see me 2 | XYCTF 2025 | medium | 8000 | 已部署 |
+| 出题人又疯 | XYCTF 2025 | medium | 8000 | 已部署 |
+| 出题人已疯 | XYCTF 2025 | medium | 8000 | 已部署 |
+| ekko_exec | LILCTF 2025 | medium | 5000 | 已部署 |
+| check_in | Mini V&N CTF 2025 | medium | 8080 | 已部署 |
+| I really really really 系列 | V&NCTF 2026 | medium | 8080 | 已部署 |
+| ez_sql_24 | 0xGame 2024 | easy | 8000 | 已部署 |
+
+## 第48批(2026-09-12 部署,9 道已部署)
+
+来源:SUSCTF 2025(6)、HKCERT CTF 2024(3)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| am-i-admin | SUSCTF 2025 | medium | 8080 | 已部署 |
+| am-i-admin-2 | SUSCTF 2025 | hard | 8080 | 已部署 |
+| easyoa | SUSCTF 2025 | medium | 80 | 已部署 |
+| easyprint | SUSCTF 2025 | medium | 5000 | 已部署 |
+| make_php_great_again | SUSCTF 2025 | medium | 80 | 已部署 |
+| susmarket | SUSCTF 2025 | hard | 5000 | 已部署 |
+| Custom Web Server (1) | HKCERT CTF 2024 | easy | 80 | 已部署 |
+| New Free Lunch | HKCERT CTF 2024 | easy | 80 | 已部署 |
+| Mystiz's Mini CTF (1) | HKCERT CTF 2024 | easy | 80 | 已部署 |
+
+## 第49批(2026-09-12 部署,9 道已部署)
+
+来源:HKCERT CTF 2024(7)、HKCERT CTF 2023(2)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| Custom Web Server (2) | HKCERT CTF 2024 | medium | 80 | 已部署 |
+| ⚡ | HKCERT CTF 2024 | hard | 80 | 已部署 |
+| Chimera | HKCERT CTF 2024 | hard | 80 | 已部署 |
+| Webpage to PDF (1) | HKCERT CTF 2024 | easy | 80 | 已部署 |
+| Webpage to PDF (2) | HKCERT CTF 2024 | easy | 80 | 已部署 |
+| Tuning Keyboard 5.5 | HKCERT CTF 2024 | hard | 80 | 已部署 |
+| JSPyaml | HKCERT CTF 2024 | hard | 80 | 已部署 |
+| Myblog | HKCERT CTF 2023 | easy | 80 | 已部署 |
+| Re:Zero | HKCERT CTF 2023 | easy | 80 | 已部署 |
+
+## 第50批(2026-09-12 部署,9 道已部署)
+
+来源:HKCERT CTF 2023(9)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| ProbablyUnknown's Markup Language | HKCERT CTF 2023 | medium | 80 | 已部署 |
+| Secret Notebook | HKCERT CTF 2023 | medium | 80 | 已部署 |
+| ST Code (III) | HKCERT CTF 2023 | medium | 80 | 已部署 |
+| Infant XSS again | HKCERT CTF 2023 | easy | 80 | 已部署 |
+| Wishlist | HKCERT CTF 2023 | hard | 80 | 已部署 |
+| PHP.net Backdoor (I) | HKCERT CTF 2023 | easy | 80 | 已部署 |
+| Baby XSS again | HKCERT CTF 2023 | easy | 80 | 已部署 |
+| Fetus XSS again | HKCERT CTF 2023 | easy | 80 | 已部署 |
+| Fake/Ground Offer | HKCERT CTF 2023 | easy | 80 | 已部署 |
+
+## 第51批(2026-09-12 部署,10 道已部署)
+
+来源:HKCERT CTF 2022(10)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| MOTP | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| Secured Web Service | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| The Math24 Game 1 | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| Expat Passer Confucian | HKCERT CTF 2022 | hard | 80 | 已部署 |
+| Back to the Past | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| CVE 1999 | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| Spyce | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| Spyce2 | HKCERT CTF 2022 | hard | 80 | 已部署 |
+| protoTYPE:v2 - sanityXSS | HKCERT CTF 2022 | easy | 80 | 已部署 |
+| protoTYPE:v3 - Chaos | HKCERT CTF 2022 | hard | 80 | 已部署 |

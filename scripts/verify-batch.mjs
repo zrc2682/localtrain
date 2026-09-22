@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import http from 'http';
+import net from 'net';
 import { spawnSync } from 'child_process';
 
 // 批次冒烟验证工具（Runbook 第 4 步构建冒烟 + 第 6 步平台验证二合一，每批通用，无需再仿写副本）
@@ -60,6 +61,13 @@ async function httpProbe(url) {
       // 连接未就绪，重试
     }
   }
+  // HTTP 探测全失败,降级 TCP 端口探测(nc 类题目):TCP 可连即视为服务存活
+  const m2 = url.match(/:(\d+)/);
+  if (m2 && (await new Promise((res) => {
+    const s = net.connect({ host: '127.0.0.1', port: Number(m2[1]), timeout: 4000 }, () => { s.destroy(); res(true); });
+    s.on('error', () => res(false));
+    s.on('timeout', () => { s.destroy(); res(false); });
+  }))) return 'TCP';
   return null;
 }
 
@@ -113,12 +121,12 @@ async function main() {
     const adminToken = await login('admin');
     const listRes = await request('GET', '/api/challenges', null, { Authorization: `Bearer ${adminToken}` });
     if (listRes.status !== 200) throw new Error('获取题目列表失败');
-    const byTitle = new Map(listRes.data.map((c) => [c.title, c]));
+    const byTitle = new Map(listRes.data.map((c) => [c.title + "|" + (c.contest || ""), c]));
 
     const userToken = await login('user');
     for (const entry of entries) {
       console.log(`\n[${entry.title}] 启动环境...`);
-      const c = byTitle.get(entry.title);
+      const c = byTitle.get(entry.title + "|" + (entry.contest || "")) || byTitle.get(entry.title);
       if (!c) {
         console.log('  平台未找到该题（未导入或标题不一致）');
         results.push({ title: entry.title, ok: false, reason: '平台未找到' });

@@ -18,7 +18,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/F12"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/F12.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/F12",
       "hasDockerfile": true,
       "flagMechanism": "flag.php 中 $flag 被包含进 index.php HTML 注释，需替换为静态 flag",
@@ -40,7 +40,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/ping"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/Ping.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/ping",
       "hasDockerfile": true,
       "flagMechanism": "index.php 中 $flag 变量直接回显，替换为静态 flag",
@@ -62,7 +62,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Follow%20me%20and%20hack%20me"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/Follow-me-and-hack-me.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/follow-me-and-hack-me",
       "hasDockerfile": true,
       "flagMechanism": "index.php 中 setcookie('flag', 'FLAGGG') 使用静态 flag，替换 FLAGGG",
@@ -84,7 +84,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/vimyyds"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/Vim-yyds.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/vimyyds",
       "hasDockerfile": true,
       "flagMechanism": "命令注入后读取 /flag 文件，镜像构建时写入静态 flag",
@@ -106,7 +106,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/1zjs"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/1zjs.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/1zjs",
       "hasDockerfile": true,
       "flagMechanism": "main.js 中 JSFuck 编码的 flag，替换为当前静态 flag",
@@ -128,7 +128,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/http%20pro%20max%20plus"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/http-pro-max-plus.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/http-pro-max-plus",
       "hasDockerfile": true,
       "flagMechanism": "index.php 中 $flag 变量，替换为静态 flag",
@@ -150,7 +150,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Missile%20trail"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/Missile-trail.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/missile-trail",
       "hasDockerfile": true,
       "flagMechanism": "game.js 中硬编码的 flag，替换为静态 flag",
@@ -172,7 +172,7 @@
         "url": "https://github.com/ProbiusOfficial/LitCTF/tree/main/2023/Web/Homework%20management%20system"
       },
       "writeup": "https://github.com/ProbiusOfficial/LitCTF/blob/main/2023/WriteUp/Web_Writeup.md",
-      "writeupLocal": "ctf-writeup/litctf-2023/Homework-management-system.md",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md",
       "dir": "docker/ctf-contests/litctf-2023/homework-management-system",
       "hasDockerfile": true,
       "flagMechanism": "命令注入后读取 /flag 文件，镜像构建时写入静态 flag",
@@ -194,7 +194,7 @@
         "url": "https://github.com/CTF-Archives/2023-hgame-week1-web-classic_childhood_game"
       },
       "writeup": "https://exp10it.io/posts/hgame-2023-web-writeup/",
-      "writeupLocal": "ctf-writeup/hgame-2023/classic-childhood-game.md",
+      "writeupLocal": "ctf-writeup/hgame-2023/hgame-2023.md",
       "dir": "docker/ctf-contests/hgame-2023/classic-childhood-game",
       "hasDockerfile": true,
       "flagMechanism": "src/Res/Events.js 中 mota() 硬编码的 flag（原动态 flag 在 obfuscated 字符串中），替换为静态 flag",
@@ -216,7 +216,7 @@
         "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/easy_unserialize"
       },
       "writeup": "https://blog.csdn.net/m0_74825093/article/details/144706002",
-      "writeupLocal": "ctf-writeup/isoon-2023/easy-unserialize.md",
+      "writeupLocal": "ctf-writeup/isoon-2023/isoon-2023.md",
       "dir": "docker/ctf-contests/isoon-2023/easy-unserialize",
       "hasDockerfile": true,
       "flagMechanism": "$ICTF 环境变量写入 /FfffLlllLaAaaggGgGg，改为 Dockerfile RUN echo 'flag{...}' > /FfffLlllLaAaaggGgGg && chmod 444 写入静态 flag",

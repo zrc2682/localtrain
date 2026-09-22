@@ -18,7 +18,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week2/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/whitek1",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -42,7 +42,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week2/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/e-manage-system",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -66,7 +66,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week4/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/xiaoyang",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -90,7 +90,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week5/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/broken-ai",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -114,7 +114,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week5/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/familiar-calc",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -138,7 +138,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/week5/web.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/binary-blog",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",
@@ -186,7 +186,7 @@
         "url": "https://github.com/CTF-Archives/energyCTF2025/blob/main/README.md"
       },
       "writeup": "https://github.com/CTF-Archives/energyCTF2025/blob/main/README.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/energyctf-2025/energyctf-2025.md",
       "dir": "docker/ctf-contests/energyctf-2025/energy-zhuanti-web-guai",
       "hasDockerfile": true,
       "flagMechanism": "PHP 源码内含 flaaaaaaag.php；Dockerfile 写入平台静态 flag 到 /flag 并通过 include 读取",
@@ -210,7 +210,7 @@
         "url": "https://github.com/CTF-Archives/energyCTF2025/blob/main/README.md"
       },
       "writeup": "https://github.com/CTF-Archives/energyCTF2025/blob/main/README.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/energyctf-2025/energyctf-2025.md",
       "dir": "docker/ctf-contests/energyctf-2025/energy-easy-node",
       "hasDockerfile": true,
       "flagMechanism": "Node.js 应用；Dockerfile 写入平台静态 flag 到 /flag，应用通过 SSTI/原型链污染读取",
@@ -234,7 +234,7 @@
         "url": "https://github.com/CTF-Archives/2025-SDNISC-haixuan/blob/main/README.md"
       },
       "writeup": "https://github.com/CTF-Archives/2025-SDNISC-haixuan/blob/main/README.md",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/sdnisc-2025/sdnisc-2025.md",
       "dir": "docker/ctf-contests/sdnisc-2025-haixuan/sdnisc-2025-haixuan-web1",
       "hasDockerfile": true,
       "flagMechanism": "Flask 应用；Dockerfile 写入平台静态 flag 到 /flag，应用通过 JWT 算法混淆 + SSTI 读取",

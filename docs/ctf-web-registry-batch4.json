@@ -18,7 +18,7 @@
         "url": "https://github.com/CTF-Archives/2024-qwbs8"
       },
       "writeup": "https://blog.xmcve.com/2024/11/04/%E5%BC%BA%E7%BD%91%E6%9D%AF2024-Writeup/",
-      "writeupLocal": "ctf-writeup/qwbs8-2024/proxy.md",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwbs8-2024/qwbs8-2024-proxy",
       "hasDockerfile": true,
       "flagMechanism": "entrypoint.sh 将 ICQ_FLAG 环境变量写入 /flag(root 400),配 SUID /readflag;改为 Dockerfile ENV ICQ_FLAG 写入静态 flag",
@@ -40,7 +40,7 @@
         "url": "https://github.com/CTF-Archives/2024-qwbs8"
       },
       "writeup": "https://blog.yllhwa.com/qwb-2024-proxy-revenge-wp/",
-      "writeupLocal": "ctf-writeup/qwbs8-2024/proxy-revenge.md",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwbs8-2024/qwbs8-2024-proxy-revenge",
       "hasDockerfile": true,
       "flagMechanism": "同 Proxy:entrypoint.sh 将 ICQ_FLAG 写入 /flag + SUID /readflag;Dockerfile ENV 写入静态 flag",
@@ -62,7 +62,7 @@
         "url": "https://github.com/CTF-Archives/2024-qwbs8"
       },
       "writeup": "https://www.cnblogs.com/gxngxngxn/p/18525365",
-      "writeupLocal": "ctf-writeup/qwbs8-2024/pyblockly.md",
+      "writeupLocal": "ctf-writeup/qwbs8-2024/qwbs8-2024.md",
       "dir": "docker/ctf-contests/qwbs8-2024/qwbs8-2024-pyblockly",
       "hasDockerfile": false,
       "flagMechanism": "pyjail 逃逸后读 /flag,原题无 Dockerfile;自写 python 镜像,构建时写入静态 flag 到 /flag,并将前端 CDN 资源本地化",
@@ -83,8 +83,8 @@
         "path": "Release v0.1 Web1.zip",
         "url": "https://github.com/CTF-Archives/2024-wdb-zhuque"
       },
-      "writeup": "",
-      "writeupLocal": "ctf-writeup/wdb-2024/ezblog.md",
+      "writeup": "https://github.com/CTF-Archives/2024-wdb-zhuque",
+      "writeupLocal": "ctf-writeup/wdb-2024/wdb-2024.md",
       "dir": "docker/ctf-contests/wdb-2024/wdb-2024-ezblog",
       "hasDockerfile": true,
       "flagMechanism": "blog/src/db.js 读 process.env.FLAG,作为 admin 私密博文;Dockerfile ENV FLAG 写入静态 flag,ADMIN_PASSWORD=e1f09d8553d8f145 固定写死。注:该题无公开 writeup,writeupLocal 为本地源码审计自写",
@@ -106,7 +106,7 @@
         "url": "https://github.com/CTF-Archives/2024-newstar"
       },
       "writeup": "https://newstar.wiki/wp/2024/week4/web/ezpollute",
-      "writeupLocal": "ctf-writeup/newstar-2024/ezpollute.md",
+      "writeupLocal": "ctf-writeup/newstar-2024/newstar-2024.md",
       "dir": "docker/ctf-contests/newstar-2024/newstar-2024-ezpollute",
       "hasDockerfile": true,
       "flagMechanism": "start.sh 将 ICQ_FLAG 写入 /flag 后清空变量;Dockerfile ENV ICQ_FLAG 写入静态 flag",
@@ -128,7 +128,7 @@
         "url": "https://github.com/CTF-Archives/2024-newstar"
       },
       "writeup": "https://newstar.wiki/wp/2024/week4/web/pangbai4",
-      "writeupLocal": "ctf-writeup/newstar-2024/pangbai4.md",
+      "writeupLocal": "ctf-writeup/newstar-2024/newstar-2024.md",
       "dir": "docker/ctf-contests/newstar-2024/newstar-2024-pangbai4",
       "hasDockerfile": true,
       "flagMechanism": "Go SSTI 读进程环境变量;Dockerfile 原 ENV FLAG=flag{test_flag} 替换为静态 flag",
@@ -150,7 +150,7 @@
         "url": "https://github.com/X1cT34m/NCTF2024/tree/main/Web/sqlmap-master"
       },
       "writeup": "https://github.com/X1cT34m/NCTF2024/blob/main/Writeup/Web.md",
-      "writeupLocal": "ctf-writeup/nctf-2024/sqlmap-master.md",
+      "writeupLocal": "ctf-writeup/nctf-2024/nctf-2024.md",
       "dir": "docker/ctf-contests/nctf-2024/nctf-2024-sqlmap-master",
       "hasDockerfile": true,
       "flagMechanism": "预期经 sqlmap 回读进程环境变量;Dockerfile ENV FLAG 写入静态 flag",
@@ -172,7 +172,7 @@
         "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/signal"
       },
       "writeup": "https://www.cnblogs.com/backlion/p/17925610.html",
-      "writeupLocal": "ctf-writeup/isoon-2023/signal.md",
+      "writeupLocal": "ctf-writeup/isoon-2023/isoon-2023.md",
       "dir": "docker/ctf-contests/isoon-2023/isoon-2023-signal",
       "hasDockerfile": true,
       "flagMechanism": "init.sh 将 ICTF 写入 /flag(chmod 444),/flag 路由经 SUID /readflag 读取;Dockerfile ENV ICTF 写入静态 flag。注:仓库自带 readflag 为钓鱼二进制,已替换为本地编译 readflag.c(多阶段构建),真正读取 /flag",
@@ -194,7 +194,7 @@
         "url": "https://github.com/D0g3-Lab/i-SOON_CTF_2023/tree/main/web/swagger%20docs"
       },
       "writeup": "https://www.cnblogs.com/backlion/p/17925610.html",
-      "writeupLocal": "ctf-writeup/isoon-2023/swagger-docs.md",
+      "writeupLocal": "ctf-writeup/isoon-2023/isoon-2023.md",
       "dir": "docker/ctf-contests/isoon-2023/isoon-2023-swagger-docs",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 构建期将 flag 写入随机命名文件;替换占位串为静态 flag,保持文件路径不变",
@@ -216,7 +216,7 @@
         "url": "https://github.com/CTF-Archives/2025-pengchengcup-quals"
       },
       "writeup": "https://www.cnblogs.com/xNftrOne/articles/19346930",
-      "writeupLocal": "ctf-writeup/pengchengcup-2025/ezdjango.md",
+      "writeupLocal": "ctf-writeup/pengcheng-2025/pengcheng-2025.md",
       "dir": "docker/ctf-contests/pengchengcup-2025/pcb-2025-ezdjango",
       "hasDockerfile": false,
       "flagMechanism": "Django 文件缓存 pickle 反序列化 RCE 后读 /flag;原题无 Dockerfile,自写 python+gunicorn 镜像,构建时写入静态 flag 到 /flag",

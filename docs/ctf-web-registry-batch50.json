@@ -1,0 +1,198 @@
+{
+  "batch": 50,
+  "screenedAt": "2026-09-19",
+  "notes": "HKCERT CTF 2023 十道 web(php-net-backdoor 系列为 PHP 源码审计,XSS 系列需确认是否依赖 bot)。全部需自建 Dockerfile。",
+  "challenges": [
+    {
+      "id": "hkcert2023-puml",
+      "title": "ProbablyUnknown's Markup Language",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-puml:latest",
+      "flag": "flag{batch50-hkcert2023-puml_f75e00e02294}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/puml",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 3
+    },
+    {
+      "id": "hkcert2023-secret-notebook",
+      "title": "Secret Notebook",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-secret-notebook:latest",
+      "flag": "flag{batch50-hkcert2023-secret-notebook_9f8552de6cb5}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/secret-notebook",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 3
+    },
+    {
+      "id": "hkcert2023-stcode3",
+      "title": "ST Code (III)",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-stcode3:latest",
+      "flag": "flag{batch50-hkcert2023-stcode3_eab72d2901f1}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/stcode3",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 3
+    },
+    {
+      "id": "hkcert2023-infantxss-again",
+      "title": "Infant XSS again",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-infantxss-again:latest",
+      "flag": "flag{batch50-hkcert2023-infantxss-again_0fd9f9099369}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/infantxss-again",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 1
+    },
+    {
+      "id": "hkcert2023-wishlist",
+      "title": "Wishlist",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-wishlist:latest",
+      "flag": "flag{batch50-hkcert2023-wishlist_75e1fb0c624d}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/wishlist",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 4
+    },
+    {
+      "id": "hkcert2023-php-net-backdoor",
+      "title": "PHP.net Backdoor (I)",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-php-net-backdoor:latest",
+      "flag": "flag{batch50-hkcert2023-php-net-backdoor_af73be241df5}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/php-net-backdoor",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2023-php-net-backdoor2",
+      "title": "PHP.net Backdoor (II)",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-php-net-backdoor2:latest",
+      "flag": "",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/php-net-backdoor2",
+      "status": "skipped",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 5,
+      "reason": "官方仓仅 README 无源码，无法容器化"
+    },
+    {
+      "id": "hkcert2023-babyxss-again",
+      "title": "Baby XSS again",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-babyxss-again:latest",
+      "flag": "flag{batch50-hkcert2023-babyxss-again_03a7a4269be5}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/babyxss-again",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 0
+    },
+    {
+      "id": "hkcert2023-fetusxss-again",
+      "title": "Fetus XSS again",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-fetusxss-again:latest",
+      "flag": "flag{batch50-hkcert2023-fetusxss-again_066c1503c3cb}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/fetusxss-again",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 2
+    },
+    {
+      "id": "hkcert2023-fake-ground-offer",
+      "title": "Fake/Ground Offer",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert2023-fake-ground-offer:latest",
+      "flag": "flag{batch50-hkcert2023-fake-ground-offer_a6632962f302}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "url": "https://github.com/hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "官方 writeup(仓库/官网)",
+      "dir": "docker/ctf-contests/hkcert2023/fake-ground-offer",
+      "status": "deployed",
+      "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
+      "stars": 2
+    }
+  ]
+}

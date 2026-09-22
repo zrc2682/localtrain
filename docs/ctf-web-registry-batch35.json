@@ -1,0 +1,257 @@
+{
+  "batch": 35,
+  "screenedAt": "2026-09-10",
+  "notes": "筛选日期 2026-09-10。单一比赛批次:0xGame 2022(X1cT34m/0xGame2022 官方仓,新手赛)。题目源码无明文 flag(原为平台注入),统一构建期 RUN echo 写 /flag 或改写源码;官方 WP 为 wp/Week1-4.pdf。ssrf_me(ctfhub/base_web_nginx_mysql_php_56 老镜像)与 think_about_php(linode/lamp)因基础镜像生态老旧标 skipped;Ez_sql 原为 nginx+php-mysql 双容器,部署时合并单容器。",
+  "challenges": [
+    {
+      "id": "0xgame2022-login",
+      "title": "login",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-login:latest",
+      "flag": "flag{batch35-0xgame2022-login_4dfbbd3661cd}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week1.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/login",
+      "status": "deployed",
+      "flagMechanism": "php 认证题;构建期 RUN echo 写 /flag",
+      "reason": "同比赛同名冲突：平台已有 \"login\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-where-u-from",
+      "title": "where_U_from",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-where-u-from:latest",
+      "flag": "flag{batch35-0xgame2022-where-u-from_3debef3100c0}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week1.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/where-u-from",
+      "status": "deployed",
+      "flagMechanism": "http 头伪造题;构建期 RUN echo 写 /flag",
+      "reason": "同比赛同名冲突：平台已有 \"where_U_from\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-myrobots",
+      "title": "Myrobots",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-myrobots:latest",
+      "flag": "flag{batch35-0xgame2022-myrobots_293cd9a6f024}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week1.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/myrobots",
+      "status": "deployed",
+      "flagMechanism": "robots.txt 信息收集;flag 文件置于 web 目录受保护的路径,构建期注入",
+      "reason": "同比赛同名冲突：平台已有 \"Myrobots\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-ez-rce",
+      "title": "Ez_rce",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-ez-rce:latest",
+      "flag": "flag{batch35-0xgame2022-ez-rce_69a42910c6db}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week1.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/ez-rce",
+      "status": "deployed",
+      "flagMechanism": "php rce;构建期 RUN echo 写 /flag(原题无 Dockerfile,compose 引用现成 php 镜像,部署时补写 Dockerfile)",
+      "reason": "同比赛同名冲突：平台已有 \"Ez_rce\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-ez-sql",
+      "title": "Ez_sql",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-ez-sql:latest",
+      "flag": "flag{batch35-0xgame2022-ez-sql_802d645df410}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week2.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/ez-sql",
+      "status": "deployed",
+      "flagMechanism": "sql 注入;原 nginx+php-mysql 双容器,合并为单容器(php 内置 mysql 或改 sqlite);flag 写入数据表,构建期注入",
+      "reason": "同比赛同名冲突：平台已有 \"Ez_sql\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-do-u-like-pop",
+      "title": "do_u_like_pop",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-do-u-like-pop:latest",
+      "flag": "flag{batch35-0xgame2022-do-u-like-pop_b9b9aa8469d2}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week2.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/do-u-like-pop",
+      "status": "deployed",
+      "flagMechanism": "php 反序列化 POP;flag.php 明文,构建期替换;补写 Dockerfile(原 compose 引用现成镜像)",
+      "reason": "同比赛同名冲突：平台已有 \"do_u_like_pop\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-upload-whatever",
+      "title": "upload_whatever",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-upload-whatever:latest",
+      "flag": "flag{batch35-0xgame2022-upload-whatever_4e116fb4edb8}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week2.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/upload-whatever",
+      "status": "deployed",
+      "flagMechanism": "php 文件上传;php:7.4-apache 官方镜像;构建期 RUN echo 写 /flag",
+      "reason": "同比赛同名冲突：平台已有 \"upload_whatever\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-i-want-4090ssti",
+      "title": "i_want_4090ssti",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1337,
+      "image": "localtrain/ctf-0xgame2022-i-want-4090ssti:latest",
+      "flag": "flag{batch35-0xgame2022-i-want-4090ssti_0f0747ba88b7}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week2.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/i-want-4090ssti",
+      "status": "deployed",
+      "flagMechanism": "flask SSTI(python:3.7-alpine);构建期 RUN echo 写 /flag",
+      "reason": "同比赛同名冲突：平台已有 \"i_want_4090ssti\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-session",
+      "title": "session",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1337,
+      "image": "localtrain/ctf-0xgame2022-session:latest",
+      "flag": "flag{batch35-0xgame2022-session_5f5e486c5b04}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week3.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/session",
+      "status": "deployed",
+      "flagMechanism": "flask session 伪造(python:3.7-alpine);构建期 RUN echo 写 /flag",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-dont-pollute-me",
+      "title": "dont_pollute_me",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-0xgame2022-dont-pollute-me:latest",
+      "flag": "flag{batch35-0xgame2022-dont-pollute-me_ffbdf2f732af}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week3.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/dont-pollute-me",
+      "status": "deployed",
+      "flagMechanism": "nodejs 原型链污染;原 Dockerfile COPY flag 到 /usr/local/share/doc/node/flag,改为构建期注入平台 flag",
+      "reason": "同比赛同名冲突：平台已有 \"dont_pollute_me\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
+    },
+    {
+      "id": "0xgame2022-ssrf-me",
+      "title": "ssrf_me",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-ssrf-me:latest",
+      "flag": "",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week3.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/ssrf-me",
+      "status": "skipped"
+    },
+    {
+      "id": "0xgame2022-think-about-php",
+      "title": "think_about_php",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-think-about-php:latest",
+      "flag": "",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week3.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/think-about-php",
+      "status": "skipped"
+    },
+    {
+      "id": "0xgame2022-ez-girlfriend",
+      "title": "ez_girlfriend",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xgame2022-ez-girlfriend:latest",
+      "flag": "",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "url": "https://github.com/X1cT34m/0xGame2022"
+      },
+      "writeup": "0xGame2022 wp/Week4.pdf",
+      "dir": "docker/ctf-contests/0xgame2022/ez-girlfriend",
+      "status": "skipped"
+    }
+  ]
+}
