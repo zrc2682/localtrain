@@ -126,7 +126,7 @@ router.get('/', authMiddleware, async (req: AuthRequest, res) => {
     image: c.image,
     port: c.port,
     visible: c.visible,
-    note: isAdmin || c.note ? c.note : undefined,
+    note: isAdmin ? c.note : undefined,
     createdAt: c.createdAt,
     solved: c.submissions.some((s) => s.isCorrect),
     flagCount: c._count.flags,
@@ -355,7 +355,7 @@ router.get('/:id', authMiddleware, async (req: AuthRequest, res) => {
 
   res.json({
     ...challenge,
-    note: isAdmin || challenge.note ? challenge.note : undefined,
+    note: isAdmin ? challenge.note : undefined,
     hints: challenge.hints.map((h) => ({
       ...h,
       content: isAdmin || usedHintIds.has(h.id) ? h.content : undefined,

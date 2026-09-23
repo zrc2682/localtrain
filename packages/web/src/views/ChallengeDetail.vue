@@ -219,10 +219,8 @@ onUnmounted(stopTimer);
         <el-tag style="margin-right: 8px;">{{ challenge.category.toUpperCase() }}</el-tag>
         <el-tag type="warning">{{ difficultyText(challenge.difficulty) }}</el-tag>
         <el-tag v-if="challenge.contest" type="danger" effect="plain" style="margin-left: 8px; cursor: pointer;" @click="filterByContest">{{ challenge.contest }}</el-tag>
-        <el-tag v-if="challenge.solved" type="success" style="margin-left: 8px;">已完整解出</el-tag>
+        <el-tag v-if="challenge.solved" type="success" size="small" style="margin-left: 8px;">已完整解出</el-tag>
       </div>
-
-      <el-alert v-if="challenge.note" :title="`备注：${challenge.note}`" type="warning" :closable="false" style="margin-bottom: 20px;" />
 
       <el-card style="margin-bottom: 20px;">
         <p style="white-space: pre-wrap;">{{ challenge.description || '暂无描述' }}</p>

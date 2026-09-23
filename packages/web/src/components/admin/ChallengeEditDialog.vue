@@ -2,6 +2,7 @@
 import { ref, reactive, computed, watch } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import { api } from '../../api/client';
 
 const props = defineProps<{ modelValue: boolean; challenge: any | null }>();
@@ -112,7 +113,8 @@ function difficultyText(d: string) {
 }
 
 const renderedDescription = computed(() => {
-  return marked.parse(form.description || '', { async: false }) as string;
+  // marked 不做消毒；description 可能来自批量导入的网络内容，v-html 前必须过 DOMPurify
+  return DOMPurify.sanitize(marked.parse(form.description || '', { async: false }) as string);
 });
 
 function applyTemplate(value: string) {

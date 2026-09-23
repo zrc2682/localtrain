@@ -105,9 +105,6 @@ function difficultyType(d: string) {
             <el-tag :type="difficultyType(c.difficulty)" size="small">{{ difficultyText(c.difficulty) }}</el-tag>
             <el-tag v-if="c.contest" type="danger" effect="plain" size="small" style="margin-left: 8px; cursor: pointer;" @click="filter.contest = c.contest">{{ c.contest }}</el-tag>
           </div>
-          <p v-if="c.note" style="color: #e6a23c; font-size: 13px; margin-bottom: 8px;">
-            备注：{{ c.note }}
-          </p>
           <p style="color: #666; font-size: 13px; min-height: 40px;">
             {{ c.description.slice(0, 60) || '暂无描述' }}
             {{ c.description.length > 60 ? '...' : '' }}

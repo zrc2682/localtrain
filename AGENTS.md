@@ -126,7 +126,7 @@ rm packages/server/prisma/dev.db && npm run db:push && npm run db:seed
 
 ### 数据库业务规则（Prisma，`packages/server/prisma/schema.prisma`）
 
-- Challenge 可含多个 Flag（0-based `index`）；`visible` 控制普通用户可见性（admin 不受限）；`contest` 仅展示标签。
+- Challenge 可含多个 Flag（0-based `index`）；`visible` 控制普通用户可见性（admin 不受限）；`contest` 仅展示标签；`note` 为**管理员私有备注**，接口对非 admin 一律不下发（面向用户的运维提示应写进 description）。
 - Submission 按 `(userId, challengeId)` 唯一：记录已解出 flag 下标数组、累计 `solveCount`、`solvedAt`、首次完整解出的 `score`。
 - **计分**：easy/medium/hard/expert = 100/200/300/400 分，仅首次完整解出记一次（`SCORE_MAP` 在 `challenges.ts` 顶部）；首次解出时按该题已解锁提示的 `scorePenalty` 总和扣减（下限 0）；重置后重新解出 `solveCount +1` 但不再加分。
 - 「重置题目」清空当前进度、不清历史。
