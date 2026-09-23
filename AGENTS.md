@@ -15,7 +15,7 @@ LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题
 
 这些是本机（Windows 11 + Git Bash + Docker Desktop）的实际状况，与部分文档的陈旧描述不一致时，**以本节为准**：
 
-1. **版本控制（2026-09-09 起）**：仓库 `https://github.com/zrc2682/localtrain.git`（私有，main 分支）。**只跟踪靶场本体**（packages/、scripts/、docs/、根目录工具与文档，约 107 个文件）；题目 docker 环境（`docker/`）、writeup、`docker-images/` tar、`dev.db`、`uploads/`、`.tmp` 均被 .gitignore 排除、仅存本机——**换新机器克隆仓库拿不到题目环境**。`.gitattributes` 固定 `* -text` 禁止换行符转换（防题目脚本被转成 CRLF 后容器起不来）。push 走 Clash 代理：`git -c http.proxy=http://127.0.0.1:7890 push`。**`dev.db` 与 `uploads/` 依然没有任何备份**，删除/损坏不可恢复，操作前先确认目标、必要时先备份。
+1. **版本控制（2026-09-09 起）**：仓库 `https://github.com/zrc2682/localtrain.git`（私有，main 分支）。**只跟踪靶场本体**（packages/、scripts/、docs/、根目录工具与文档，约 107 个文件）；题目 docker 环境（`docker/`）、writeup、`docker-images/` tar、`dev.db`、`uploads/`、`.tmp` 均被 .gitignore 排除、仅存本机——**换新机器克隆仓库拿不到题目环境**。`.gitattributes` 固定 `* -text` 禁止换行符转换（防题目脚本被转成 CRLF 后容器起不来）。push 走 Clash 代理：`git -c http.proxy=http://127.0.0.1:7890 push`。**`dev.db` 与 `uploads/` 不在 git 内，用 `node scripts/backup-live-data.mjs` 备份到 `backups/`（同样被 gitignore）**，删除/损坏不可恢复，操作前先确认目标、必要时先备份。
 2. **端口约定（2026-09-09 已全项目统一为 3008）**：
    - 本机 Windows 会保留 3000/3001 等端口（`netsh interface ipv4 show excludedportrange` 可查），因此 `packages/server/.env` 的 `PORT`、`start.cmd`/`start.sh`、所有导入/验证脚本（`import-ctf-contests.mjs`、`verify-batch*.mjs`、`scripts/*.mjs`）的 `API_BASE` 默认值、`test-api.sh` 均为 **3008**。
    - 前端 Vite 固定 `127.0.0.1:8080`，代理 `/api` → `http://localhost:3008`。
@@ -92,9 +92,11 @@ bash start.sh                      # 标准启动：PORT=3008 同时起前后端
 PORT=3008 npm run dev              # 等价写法（前端 8080 / 后端 3008）
 npm run dev:server / dev:web       # 单独启动
 
-bash test-api.sh                   # 后端启动后跑 curl 端到端回归（登录/建题/提示/启停/提交/重置）
-npm run build                      # 前端构建到 packages/web/dist
+bash test-api.sh                   # 后端启动后跑 curl 端到端回归（登录/建题/提示/启停/提交/重置；退出自动清理测试题）
+npm run build                      # 前端构建到 packages/web/dist（含 vue-tsc 类型检查）
 npm run build -w packages/server   # 后端 tsc 编译到 dist
+
+node scripts/backup-live-data.mjs  # 备份活数据：dev.db（VACUUM INTO 快照）+ uploads/ → backups/<时间戳>/，默认保留最近 10 份（--keep N 调整）
 
 # 重置数据库（会清空所有题目/做题记录，谨慎）
 rm packages/server/prisma/dev.db && npm run db:push && npm run db:seed
@@ -119,13 +121,14 @@ rm packages/server/prisma/dev.db && npm run db:push && npm run db:seed
 
 - `tsconfig` 用 `moduleResolution: "bundler"`，可直接导入 `.ts`/`.vue`；组件用 `<script setup lang="ts">`。
 - `api/client.ts`：Axios 封装，自动附加 Bearer Token，401 跳登录。
-- 主要页面：UserDashboard（题目列表筛选）、ChallengeDetail（详情/环境/flag）、AdminDashboard（40KB，题目+用户+容器管理）、LeaderboardView、ProfileView、UserContainers。
+- 主要页面：UserDashboard（题目列表筛选）、ChallengeDetail（详情/环境/flag）、AdminDashboard（外壳 + `components/admin/` 5 个子组件：UsersTab / ChallengesTab / ContainersTab / ChallengeEditDialog / ChallengeHintsDialog）、LeaderboardView、ProfileView、UserContainers。
+- 列表接口 `GET /challenges` 只返回摘要字段与计数（flagCount/hintCount/attachmentCount/solved），hints/flags/attachments 明细走详情接口 `GET /challenges/:id`；编辑弹窗打开时自行拉详情。
 
 ### 数据库业务规则（Prisma，`packages/server/prisma/schema.prisma`）
 
 - Challenge 可含多个 Flag（0-based `index`）；`visible` 控制普通用户可见性（admin 不受限）；`contest` 仅展示标签。
 - Submission 按 `(userId, challengeId)` 唯一：记录已解出 flag 下标数组、累计 `solveCount`、`solvedAt`、首次完整解出的 `score`。
-- **计分**：easy/medium/hard/expert = 100/200/300/400 分，仅首次完整解出记一次（`SCORE_MAP` 在 `challenges.ts` 顶部）；重置后重新解出 `solveCount +1` 但不再加分。
+- **计分**：easy/medium/hard/expert = 100/200/300/400 分，仅首次完整解出记一次（`SCORE_MAP` 在 `challenges.ts` 顶部）；首次解出时按该题已解锁提示的 `scorePenalty` 总和扣减（下限 0）；重置后重新解出 `solveCount +1` 但不再加分。
 - 「重置题目」清空当前进度、不清历史。
 - 删除 Challenge 级联删除 Submission 并**停止所有运行中的对应容器**（防容器游离）。
 - Container 按 `(userId, challengeId)` 唯一；端口 30000–39999 自动分配；TTL 2 小时可延长 1 小时；每用户最多 5 个并发容器。
@@ -136,7 +139,7 @@ rm packages/server/prisma/dev.db && npm run db:push && npm run db:seed
 
 - 启动环境时本地无镜像 → 自动从 `docker-images/<镜像名替换非法字符为_>.tar` 加载。
 - 容器 Labels：`localtrain.project=localtrain`、`localtrain.user=<userId>`、`localtrain.challenge=<challengeId>`（清理游离容器时按此识别）。
-- 服务重启会 `restoreTimers()` 恢复未过期容器的清理定时器。
+- 服务重启会 `restoreTimers()` 重建未过期容器的清理定时器，并**立即清理已过期的残留记录**（防停机期间容器游离）；`startChallenge` 复用旧容器前校验未过期。
 - 平台**不会**向容器注入 FLAG 环境变量——flag 必须在构建期写死进镜像（见 Runbook）。
 
 ## CTF 批量部署 Runbook（核心运维任务）

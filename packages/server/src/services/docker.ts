@@ -57,10 +57,14 @@ class DockerService {
   }
 
   private async restoreTimers() {
-    const records = await prisma.container.findMany({
-      where: { expiresAt: { gt: new Date() } },
-    });
+    // 恢复全部容器记录：已过期的立即清理（防止服务停机期间漏掉的容器游离），
+    // 未过期且存活的重建清理定时器，其余仅删除失效记录。
+    const records = await prisma.container.findMany();
     for (const record of records) {
+      if (record.expiresAt <= new Date()) {
+        await this.cleanup(record.containerId);
+        continue;
+      }
       const running = await this.isContainerRunning(record.containerId);
       if (!running) {
         await this.deleteContainerRecord(record.containerId);
@@ -215,7 +219,8 @@ class DockerService {
 
     if (existing) {
       const running = await this.isContainerRunning(existing.containerId);
-      if (running) {
+      // 已过期或已停止的旧容器不复用，清理后重新创建
+      if (running && existing.expiresAt > new Date()) {
         return this.toStatus(existing);
       }
       await this.cleanup(existing.containerId);

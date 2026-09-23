@@ -98,30 +98,40 @@ router.get('/containers/all', authMiddleware, requireAdmin, async (req: AuthRequ
   res.json(statuses);
 });
 
-// 普通用户 / 管理员 均可查看题目列表
+// 普通用户 / 管理员 均可查看题目列表（仅摘要字段 + 计数，明细走详情接口）
 router.get('/', authMiddleware, async (req: AuthRequest, res) => {
   const isAdmin = req.user!.role === 'admin';
   const challenges = await prisma.challenge.findMany({
     where: isAdmin ? undefined : { visible: true },
     include: {
-      hints: { orderBy: { level: 'asc' } },
-      flags: { orderBy: { index: 'asc' } },
-      attachments: { orderBy: { createdAt: 'asc' } },
-      submissions: { where: { userId: req.user!.id } },
+      _count: {
+        select: {
+          flags: true,
+          hints: true,
+          attachments: isAdmin ? true : { where: { visibleToUser: true } },
+        },
+      },
+      submissions: { where: { userId: req.user!.id }, select: { isCorrect: true } },
     },
     orderBy: { createdAt: 'desc' },
   });
 
   const result = challenges.map((c) => ({
-    ...c,
+    id: c.id,
+    title: c.title,
+    description: c.description,
+    category: c.category,
+    difficulty: c.difficulty,
+    contest: c.contest,
+    image: c.image,
+    port: c.port,
+    visible: c.visible,
     note: isAdmin || c.note ? c.note : undefined,
-    hints: isAdmin ? c.hints : c.hints.map((h) => ({ id: h.id, level: h.level, label: h.label, scorePenalty: h.scorePenalty })),
-    flags: isAdmin ? c.flags : undefined,
-    flagCount: c.flags.length,
-    attachments: isAdmin ? c.attachments : undefined,
-    attachmentCount: isAdmin ? c.attachments.length : c.attachments.filter((a) => a.visibleToUser).length,
+    createdAt: c.createdAt,
     solved: c.submissions.some((s) => s.isCorrect),
-    submissions: undefined,
+    flagCount: c._count.flags,
+    hintCount: c._count.hints,
+    attachmentCount: c._count.attachments,
   }));
 
   res.json(result);
@@ -568,7 +578,17 @@ router.post('/:id/submit', authMiddleware, async (req: AuthRequest, res) => {
 
   const now = new Date();
   const isFirstSolve = !existing || existing.solveCount === 0;
-  const score = solvedAll && isFirstSolve ? (SCORE_MAP[challenge.difficulty] || 0) : (existing?.score ?? 0);
+  let score = existing?.score ?? 0;
+  if (solvedAll && isFirstSolve) {
+    // 首次完整解出记基准分，并扣减该题已解锁提示的 scorePenalty 总和（下限 0）
+    const base = SCORE_MAP[challenge.difficulty] || 0;
+    const unlockedHints = await prisma.usedHint.findMany({
+      where: { userId: req.user!.id, hint: { challengeId: challenge.id } },
+      select: { hint: { select: { scorePenalty: true } } },
+    });
+    const penalty = unlockedHints.reduce((sum, u) => sum + u.hint.scorePenalty, 0);
+    score = Math.max(0, base - penalty);
+  }
 
   await prisma.submission.upsert({
     where: { userId_challengeId: { userId: req.user!.id, challengeId: challenge.id } },

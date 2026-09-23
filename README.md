@@ -439,4 +439,7 @@ node scripts/prepare-batch.mjs docs/ctf-web-registry-batchX.json --import
 rm packages/server/prisma/dev.db
 npm run db:push
 npm run db:seed
+
+# 备份活数据（dev.db 快照 + uploads/ → backups/<时间戳>/，默认保留最近 10 份）
+node scripts/backup-live-data.mjs
 ```

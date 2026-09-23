@@ -21,3 +21,6 @@ cve-writeup/
 packages/server/prisma/*.db
 packages/server/prisma/*.db-journal
 packages/server/uploads/
+
+# 备份脚本产物
+backups/
