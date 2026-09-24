@@ -63,25 +63,6 @@
       "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
     },
     {
-      "id": "minil2024-smartpark-revenge",
-      "title": "SmartPark-Revenge",
-      "contest": "Mini L-CTF 2024",
-      "category": "web",
-      "difficulty": "medium",
-      "port": 80,
-      "image": "localtrain/ctf-minil2024-smartpark-revenge:latest",
-      "flag": "",
-      "source": {
-        "repo": "XDSEC/miniLCTF_2024",
-        "url": "https://github.com/XDSEC/miniLCTF_2024"
-      },
-      "writeup": "官方 WP(仓库内)",
-      "dir": "docker/ctf-contests/minil2024/smartpark-revenge",
-      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
-      "status": "skipped",
-      "reason": "Java+数据库双容器编排(compose 含 mysqllllll/postgres 服务),违反单容器排除项"
-    },
-    {
       "id": "minil2024-snooker-king",
       "title": "Snooker King",
       "contest": "Mini L-CTF 2024",

@@ -203,40 +203,6 @@
       "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
     },
     {
-      "id": "0xgame2022-ssrf-me",
-      "title": "ssrf_me",
-      "contest": "0xGame 2022",
-      "category": "web",
-      "difficulty": "medium",
-      "port": 80,
-      "image": "localtrain/ctf-0xgame2022-ssrf-me:latest",
-      "flag": "",
-      "source": {
-        "repo": "X1cT34m/0xGame2022",
-        "url": "https://github.com/X1cT34m/0xGame2022"
-      },
-      "writeup": "0xGame2022 wp/Week3.pdf",
-      "dir": "docker/ctf-contests/0xgame2022/ssrf-me",
-      "status": "skipped"
-    },
-    {
-      "id": "0xgame2022-think-about-php",
-      "title": "think_about_php",
-      "contest": "0xGame 2022",
-      "category": "web",
-      "difficulty": "medium",
-      "port": 80,
-      "image": "localtrain/ctf-0xgame2022-think-about-php:latest",
-      "flag": "",
-      "source": {
-        "repo": "X1cT34m/0xGame2022",
-        "url": "https://github.com/X1cT34m/0xGame2022"
-      },
-      "writeup": "0xGame2022 wp/Week3.pdf",
-      "dir": "docker/ctf-contests/0xgame2022/think-about-php",
-      "status": "skipped"
-    },
-    {
       "id": "0xgame2022-ez-girlfriend",
       "title": "ez_girlfriend",
       "contest": "0xGame 2022",

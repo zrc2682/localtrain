@@ -91,9 +91,27 @@ function makeZip(zipPath, srcPaths) {
 function makeSourceZip(zipPath, srcPaths, cwd) {
   fs.mkdirSync(TMP_DIR, { recursive: true });
   if (fs.existsSync(zipPath)) fs.unlinkSync(zipPath);
+  // 深度排除 flag 载体与部署文件：flag 常写在 bin/flag、flag1/2、pushflag.sh、
+  // Dockerfile(ENV FLAG)、compose(environment) 里，附件是给玩家的手出物，这些都不该带出去
+  const DEEP_EXCLUDE = [
+    '*/node_modules/*', '*/__pycache__/*', '*/.git/*',
+    '*/flag', '*/flag.txt', '*/flag1', '*/flag2', '*/flag.sh', '*/pushflag.sh',
+    '*/Dockerfile', '*/Dockerfile.flag-inject', '*/dockerfile',
+    '*/docker-compose.yml', '*/docker-compose.yaml',
+    '*/.env', '*/entrypoint.sh', '*/docker-entrypoint.sh',
+    '*/start.sh', '*/entrypo1nt.sh', '*/run.sh', '*/flag.txt.bak',
+    '*/generate_flag.sh', '*/seef1ag_getfl4g', '*/getflag*', '*/db.sql', 'db.sql', '*/init.sql', 'init.sql',
+    // 顶层（zip 内相对路径无目录前缀，*/ 前缀模式匹配不到）
+    'flag', 'flag.txt', 'flag1', 'flag2', 'flag.sh', 'pushflag.sh',
+    'Dockerfile', 'Dockerfile.flag-inject', 'dockerfile',
+    'docker-compose.yml', 'docker-compose.yaml',
+    '.env', 'entrypoint.sh', 'docker-entrypoint.sh',
+    'start.sh', 'entrypo1nt.sh', 'run.sh',
+  ];
   try {
     // 优先使用 zip 命令，可递归排除 node_modules 等目录
-    const args = ['-r', '-q', zipPath, ...srcPaths.map((p) => path.basename(p)), '-x', '*/node_modules/*', '-x', '*/__pycache__/*', '-x', '*/.git/*'];
+    const args = ['-r', '-q', zipPath, ...srcPaths.map((p) => path.basename(p)),
+      ...DEEP_EXCLUDE.flatMap((x) => ['-x', x])];
     execSync(`zip ${args.map((a) => `"${a}"`).join(' ')}`, { cwd, stdio: 'pipe' });
     return fs.existsSync(zipPath) ? zipPath : null;
   } catch {

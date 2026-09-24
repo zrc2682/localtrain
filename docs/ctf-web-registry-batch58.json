@@ -1,0 +1,115 @@
+{
+  "batch": 58,
+  "contest": "0xGame 2022/2024 重挖混合批",
+  "source": "X1cT34m/0xGame2022 + X1cT34m/0xGame2024",
+  "challenges": [
+    {
+      "id": "0xg2022-ssrf-me",
+      "title": "ssrf_me",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xg2022-ssrf-me:latest",
+      "flag": "0xGame{SSRF_Me_p1z_549j)g*hdJ}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "path": "Web/week3/ssrf_me"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2022",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2022-ssrf-me",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (ctfhub nginx+mysql+php56)"
+    },
+    {
+      "id": "0xg2022-think-about-php",
+      "title": "think_about_php",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-0xg2022-think-about-php:latest",
+      "flag": "0xGame{th1nk_php_c4refu1ly}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "path": "Web/week3/think_about_php"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2022",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2022-think-about-php",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (linode/lamp)"
+    },
+    {
+      "id": "0xg2022-profile",
+      "title": "profile",
+      "contest": "0xGame 2022",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-0xg2022-profile:latest",
+      "flag": "0xGame{bad_c0de_1snt_it_38ef20ccac34}",
+      "source": {
+        "repo": "X1cT34m/0xGame2022",
+        "path": "Web/week4/profile"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2022",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2022-profile",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (node16 原型链污染)"
+    },
+    {
+      "id": "0xg2024-cargo-shop",
+      "title": "cargo_shop",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-0xg2024-cargo-shop:latest",
+      "flag": "0xGame{Rewrite_GoShop_in_Rust_cd57122cfed3}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "path": "Web/Week 3/cargo_shop"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2024-cargo-shop",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (rust actix, 构建重)"
+    },
+    {
+      "id": "0xg2024-next-db",
+      "title": "next-db",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-0xg2024-next-db:latest",
+      "flag": "0xGame{mongodb_injection_in_next_js_eeb1751b8d4c}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "path": "Web/Week 3/next-db"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2024-next-db",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (next.js + mongodb)"
+    },
+    {
+      "id": "0xg2024-paste-bin",
+      "title": "paste_bin",
+      "contest": "0xGame 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-0xg2024-paste-bin:latest",
+      "flag": "0xGame{easy_csp_bypass_in_rust-e928e182b4fd}",
+      "source": {
+        "repo": "X1cT34m/0xGame2024",
+        "path": "Web/Week 3/paste_bin"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2024",
+      "dir": "docker/ctf-contests/batch58-mix/0xg2024-paste-bin",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (rust, CSP 绕过)"
+    }
+  ]
+}

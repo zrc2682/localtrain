@@ -197,9 +197,13 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 
 > 常见否决项（第 32 批教训）：自定义非 HTTP 协议服务（如 sockserver）、需 SSH/交互式进容器才能解题（如 OnlyLocalSql 需容器内起恶意 MySQL）、只有附件没有可运行源码、标题归一化与旧题冲突且未加前缀。
 
+- 2026-09-23：CTF 第 52-58 批部署完成（SUCTF 2026 全量 7、miniLCTF 2026+LitCTF 2026 11、SUCTF 2025+DubheCTF 2024+N1CTF 2025 9、N1CTF/Aliyun/Nep/HGAME/GeekGame 混合 7、GeekGame 4th/5th+0xGame 2023 7、MoeCTF 修仙+LitCTF 2023+XYCTF+ACTF 9、0xGame 2022/2024 重挖 6，共 52 道全部成功并平台验证）。新矿源：XDSEC/miniLCTF_2026、ProbiusOfficial/LitCTF2026、team-su/SUCTF-2025/2026 官方归档、mix-archive(DubheCTF 2024)、Nu1LCTF/n1ctf-2022/2023/2025、LFYSec/aliyunctf-ezbean、skymansoul/NepCTF-2026、Tremse/HGAME-2025-Web-AyaNews、PKU-GeekGame/geekgame-3rd/4th/5th，以及对已挖掘仓库的系统性重挖（scripts/re-mine-repos.mjs）。工程要点：miniL 系列运行时 FLAG env 改 entrypoint 硬编码、LitCTF/SUSCTF 的 GZCTF_FLAG 改构建期 ENV 烧入、rust:1.79 升 rust:latest、buster/bullseye EOL 源改 archive、import 脚本附件 zip 深度排除 flag 载体文件（Dockerfile/entrypoint/start.sh/db.sql 等）。
+- 2026-09-23：CTF 第 59 批部署完成（miniL 2024、NCKUCTF 2024、SUSCTF 2024 重挖，3 道全部成功并平台验证）。SmartPark-Revenge 与 ncku DOUBLE EXPLOIT 因镜像层损坏（容器停在 Created 状态）剔除；Docker Desktop 守护进程在本轮高强度构建中多次挂起，通过重启恢复。
+- 2026-09-24：CTF 第 60 批部署完成（GeekGame 3rd prob14-emoji 未收录因 sbt 基础镜像两镜像源均无；miniL 2023 twins、miniL 2024 mini-jail 重挖 2 道全部成功）。mini-jail 原 Dockerfile 删除 /bin/busybox 导致 runc 无法启动，保留 busybox 修复。至此 2022 年后国内主要 CTF 官方公开仓库的 Web 题源码已系统性挖尽，剩余可部署题目以"已挖掘仓库重挖补漏"为主。
+
 > 选题过程中同时维护 `docs/ctf-web-challenges.md` 的批次章节（构建备注、附件补齐、writeup 来源）；`.deployed-challenges/` 索引由 `update-deployed-index.mjs` 维护，不要手工增删。
 
-### 5.3 当前状态（32 批）
+### 5.3 当前状态（60 批）
 
 | 批次 | 日期 | 数量 | 部署 | 跳过 | 失败 | 备注 |
 |------|------|------|------|------|------|------|
@@ -243,8 +247,18 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 | 第 38 批 | 2026-09-11 | 10 | 10 | 0 | 0 | MoeCTF 2023(7)、0xGame 2023(3)；webimp/php-72-apache 与 vulhub/php-xxe 基础镜像镜像源不可得,统一替换 php:7.4-apache;moeworld(三容器)剔除 |
 | 第 39 批 | 2026-09-11 | 10 | 10 | 0 | 0 | NCTF 2022(1)、Mini L-CTF 2023(3)、Mini L-CTF 2022(2)、0xGame 2023(2)、0xGame 2024(2)；nctf2022-ez-sql 因 deno.land 依赖被墙剔除;pycalculator 实为 socat 沙箱题剔除 |
 | 第 40 批 | 2026-09-11 | 10 | 10 | 0 | 0 | Mini L-CTF 2024(8)、Mini L-CTF 2023(1)、0xGame 2024(1)；JvavGuy/injections/smartpark-revenge(Java+DB 双容器)剔除 |
+| 第 41-51 批 | 2026-09-08 ~ 09-12 | 105 | 105 | 0 | 0 | 十一批连续部署：AIS3 2025/2026、CCB/CISCN 2025、CUHK 2025、EOF 2026、energyCTF 2025、金山 JKSN 2025/2026、LILCTF 2025、蓝桥杯 2025/2026、Nailong 2025、OWASP 2025、鹏城 2025、qnqsec 2025、湾区杯 2026、SDNISC 2025、TSCTF-J 2025、西湖论剑 2024、XYCTF 2025、YCB 2024、浙师 2024 等，逐批明细见 docs/ctf-web-challenges.md |
+| 第 52 批 | 2026-09-23 | 7 | 7 | 0 | 0 | SUCTF 2026 官方归档(7)；SU_wms 双容器排除；全部构建期静态 flag |
+| 第 53 批 | 2026-09-23 | 11 | 11 | 0 | 0 | miniLCTF 2026(6)、LitCTF 2026(5)；miniL 原运行时 FLAG env 改 entrypoint 硬编码；LitCTF 统一 ENV GZCTF_FLAG 烧入 |
+| 第 54 批 | 2026-09-23 | 9 | 9 | 0 | 0 | SUCTF 2025(5)、DubheCTF 2024(2)、N1CTF 2025(2)；Tagebuch 去除 cloudflared 隧道容器；VulnTagger 构建期下载 AI 模型约 40 分钟 |
+| 第 55 批 | 2026-09-23 | 7 | 7 | 0 | 0 | N1CTF 2022/2023(3)、AliyunCTF 2023(1)、NepCTF 2026(1)、HGAME 2025(1)、GeekGame 5th(2)；ezbean 基础镜像两源均无改为 temurin:8 |
+| 第 56 批 | 2026-09-23 | 7 | 7 | 0 | 0 | GeekGame 4th/5th(3)、0xGame 2023 重挖；web-copy/graphauth 缺作者未提交文件跳过；ez_sqli 双容器合并单容器 |
+| 第 57 批 | 2026-09-23 | 9 | 9 | 0 | 0 | MoeCTF 2025 修仙系列(3)、LitCTF 2023(3)、XYCTF 2025(2)、ACTF 2026(1)；RealDLsite 构建期 git clone 与 go-drive 下载改宿主机预下载 |
+| 第 58 批 | 2026-09-23 | 6 | 6 | 0 | 0 | 0xGame 2022(3)、0xGame 2024(3) 重挖；rust:1.79 因依赖需 edition2024 升级 rust:latest；ssrf-me/think-about-php 换通用基础镜像 |
+| 第 59 批 | 2026-09-23 | 3 | 3 | 0 | 0 | miniL 2024(1)、NCKUCTF 2024(1)、SUSCTF 2024(1)；SmartPark-Revenge 与 ncku DOUBLE EXPLOIT 镜像层损坏无法启动剔除 |
+| 第 60 批 | 2026-09-24 | 2 | 2 | 0 | 0 | GeekGame 3rd(1, sbt 镜像源无未收录)、miniL 2023/2024(2) 重挖；mini-jail 保留 busybox 修复 runc 启动；hkcert 差集经平台侧证实全部重复部署 |
 
-**合计**：33 个批次，已部署 342 道，待构建 0 道，跳过 8 道，失败 6 道（部分失败题目为候选，未占用最终名额）。
+**合计**：60 个批次，登记表累计 608 道其中已部署 577 道（另有 CVE 题 45 道已部署）；第 41-51 批为汇总行，明细见 docs/ctf-web-challenges.md 各批章节
 
 ### 5.4 部署流程（每批次通用）
 

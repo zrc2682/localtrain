@@ -1,0 +1,43 @@
+{
+  "batch": 60,
+  "contest": "GeekGame 3rd + miniL 2023/2024 重挖混合批",
+  "source": "PKU-GeekGame/geekgame-3rd + XDSEC/miniLCTF_2023 + XDSEC/miniLCTF_2024",
+  "challenges": [
+    {
+      "id": "minil2023-twins",
+      "title": "twins",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2023-twins:latest",
+      "flag": "miniL{tw1ns_j41l_l0c4l_2023}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "path": "Challenges/twins/docker"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023",
+      "dir": "docker/ctf-contests/batch60-mix/minil2023-twins",
+      "status": "deployed",
+      "flagMechanism": "xinetd python jail, TCP 探活"
+    },
+    {
+      "id": "minil2024-mini-jail",
+      "title": "mini-jail",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2024-mini-jail:latest",
+      "flag": "miniL{m1n1_j41l_s0c4t_2024}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "path": "Challenges/mini-jail"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024",
+      "dir": "docker/ctf-contests/batch60-mix/minil2024-mini-jail",
+      "status": "deployed",
+      "flagMechanism": "socat node jail, TCP 探活"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "batch": 54,
+  "contest": "SUCTF 2025 + DubheCTF 2024 + N1CTF 2025",
+  "source": "https://github.com/team-su/SUCTF-2025 + mix-archive (DubheCTF) + https://github.com/Nu1LCTF/n1ctf-2025",
+  "challenges": [
+    {
+      "id": "suctf2025-sujava",
+      "title": "sujava",
+      "contest": "SUCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-suctf2025-sujava:latest",
+      "flag": "SUCTF{Y0u_Re41ly_a_JdbC_M4st3r_And_H4v3_A_G0od_d4y!!!}",
+      "source": {
+        "repo": "team-su/SUCTF-2025",
+        "path": "web/sujava/env"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2025",
+      "dir": "docker/ctf-contests/suctf2025/suctf2025-sujava",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 构建期烧入 + /ctf/suctf_fl4g (java8 JDBC RCE)",
+      "reason": "同比赛同名冲突：平台已有 \"sujava\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2025-su-blog",
+      "title": "SU blog",
+      "contest": "SUCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 10006,
+      "image": "localtrain/ctf-suctf2025-su-blog:latest",
+      "flag": "SUCTF{fl4sk_1s_5imp1e_bu7_pyd45h_1s_n0t_s0_I_l0v3}",
+      "source": {
+        "repo": "team-su/SUCTF-2025",
+        "path": "web/SU_blog/env"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2025",
+      "dir": "docker/ctf-contests/suctf2025/suctf2025-su-blog",
+      "status": "deployed",
+      "flagMechanism": "generate_flag.sh 构建期静态写入 /flag + readflag (flask pydash sandbox escape)",
+      "reason": "同比赛同名冲突：平台已有 \"SU blog\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2025-su-dotnet",
+      "title": "SU DOTNET",
+      "contest": "SUCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2025-su-dotnet:latest",
+      "flag": "flag{6f2aca7e03975c0c09028a3b413253c9}",
+      "source": {
+        "repo": "team-su/SUCTF-2025",
+        "path": "web/SU_DOTNET/env"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2025",
+      "dir": "docker/ctf-contests/suctf2025/suctf2025-su-dotnet",
+      "status": "deployed",
+      "flagMechanism": "COPY flag.txt 静态 + setuid readflag (mono .net deserialization)",
+      "reason": "同比赛同名冲突：平台已有 \"SU DOTNET\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2025-su-photogallery",
+      "title": "SU photogallery",
+      "contest": "SUCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2025-su-photogallery:latest",
+      "flag": "SUCTF{sti1l_w0t3r_Run_d@@p!!!}",
+      "source": {
+        "repo": "team-su/SUCTF-2025",
+        "path": "web/SU_photogallery/env"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2025",
+      "dir": "docker/ctf-contests/suctf2025/suctf2025-su-photogallery",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已硬编码真实值(原为空占位), flag.sh 运行时落盘 (php webshell upload)",
+      "reason": "同比赛同名冲突：平台已有 \"SU photogallery\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2025-su-pop",
+      "title": "SU POP",
+      "contest": "SUCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2025-su-pop:latest",
+      "flag": "SUCTF{PoP_CHaiN5_@Re_SO_fUn!!!}",
+      "source": {
+        "repo": "team-su/SUCTF-2025",
+        "path": "web/SU_POP/env"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2025",
+      "dir": "docker/ctf-contests/suctf2025/suctf2025-su-pop",
+      "status": "deployed",
+      "flagMechanism": "COPY src/flag.txt 静态 (php8.4 pop chain)",
+      "reason": "同比赛同名冲突：平台已有 \"SU POP\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "dubhe2024-tagebuch",
+      "title": "Tagebuch",
+      "contest": "DubheCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-dubhe2024-tagebuch:latest",
+      "flag": "flag{dubhe2024_t4gebuch_n0de_ssr1f}",
+      "source": {
+        "repo": "mix-archive/Tagebuch",
+        "path": "."
+      },
+      "writeup": "https://github.com/mix-archive/Tagebuch (含 exploit)",
+      "dir": "docker/ctf-contests/dubhectf2024/dubhe2024-tagebuch",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 构建期烧入 (node pnpm 博客站, 原 compose 的 cloudflared 隧道容器已去除)",
+      "reason": "同比赛同名冲突：平台已有 \"Tagebuch\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "dubhe2024-vulntagger",
+      "title": "VulnTagger",
+      "contest": "DubheCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-dubhe2024-vulntagger:latest",
+      "flag": "flag{dubhe2024_vulntagg3r_gguf_rce}",
+      "source": {
+        "repo": "mix-archive/VulnTagger",
+        "path": "."
+      },
+      "writeup": "https://github.com/mix-archive/VulnTagger (含 exploit)",
+      "dir": "docker/ctf-contests/dubhectf2024/dubhe2024-vulntagger",
+      "status": "deployed",
+      "flagMechanism": "entrypoint 硬编码写 /flag + setuid readflag (python AI 模型站)",
+      "reason": "同比赛同名冲突：平台已有 \"VulnTagger\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "n1ctf2025-eezzjs",
+      "title": "eezzjs",
+      "contest": "N1CTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-n1ctf2025-eezzjs:latest",
+      "flag": "n1ctf{eezz_js_ez_readfile}",
+      "source": {
+        "repo": "Nu1LCTF/n1ctf-2025",
+        "path": "web/eezzjs"
+      },
+      "writeup": "https://github.com/Nu1LCTF/n1ctf-2025",
+      "dir": "docker/ctf-contests/n1ctf2025/n1ctf2025-eezzjs",
+      "status": "deployed",
+      "flagMechanism": "start.sh 硬编码写 /flag (node 读文件, 原 FLAG env 逻辑已替换)",
+      "reason": "同比赛同名冲突：平台已有 \"eezzjs\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "n1ctf2025-n1cat",
+      "title": "n1cat",
+      "contest": "N1CTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-n1ctf2025-n1cat:latest",
+      "flag": "n1ctf{n1cat_t0mc4t_rewr1te_ssrf}",
+      "source": {
+        "repo": "Nu1LCTF/n1ctf-2025",
+        "path": "web/n1cat"
+      },
+      "writeup": "https://github.com/Nu1LCTF/n1ctf-2025",
+      "dir": "docker/ctf-contests/n1ctf2025/n1ctf2025-n1cat",
+      "status": "deployed",
+      "flagMechanism": "start.sh 硬编码写 /flag (tomcat RewriteValve path 转发)",
+      "reason": "同比赛同名冲突：平台已有 \"n1cat\"；未导入。确认有意更新请加 --allow-update"
+    }
+  ]
+}

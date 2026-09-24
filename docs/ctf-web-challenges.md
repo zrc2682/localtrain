@@ -1182,3 +1182,145 @@ miniL 2024 docker 完备 web 题+minil2023-guess+0xgame2024-whysoserial(golang:1
 | Spyce2 | HKCERT CTF 2022 | hard | 80 | 已部署 |
 | protoTYPE:v2 - sanityXSS | HKCERT CTF 2022 | easy | 80 | 已部署 |
 | protoTYPE:v3 - Chaos | HKCERT CTF 2022 | hard | 80 | 已部署 |
+
+## 第52批(2026-09-23 部署,7 道已部署)
+
+来源:SUCTF 2026(7)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| SU-Note | SUCTF 2026 | medium | 80 | 已部署 |
+| SU-Note-Rev | SUCTF 2026 | medium | 80 | 已部署 |
+| SU Thief | SUCTF 2026 | medium | 80 | 已部署 |
+| SU cmsAgain | SUCTF 2026 | medium | 80 | 已部署 |
+| SU jdbc-master | SUCTF 2026 | hard | 8080 | 已部署 |
+| SU sqli | SUCTF 2026 | easy | 8080 | 已部署 |
+| SU uri | SUCTF 2026 | hard | 8080 | 已部署 |
+
+构建备注:来源:team-su/SUCTF-2026 官方归档。SU_wms 因 mysql 双容器排除;SU_sqli 原 flag 为占位符已自拟。所有题均为构建期静态 flag。
+
+## 第53批(2026-09-23 部署,11 道已部署)
+
+来源:miniLCTF 2026 + LitCTF 2026(11)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| EzPing | miniLCTF 2026 | easy | 5000 | 已部署 |
+| EzOmniprobe | miniLCTF 2026 | medium | 5000 | 已部署 |
+| Ezjvav | miniLCTF 2026 | hard | 8080 | 已部署 |
+| Hdphp | miniLCTF 2026 | medium | 80 | 已部署 |
+| ezff | miniLCTF 2026 | medium | 8888 | 已部署 |
+| 博丽神社的御神签 | miniLCTF 2026 | medium | 5000 | 已部署 |
+| Northbridge Document Hub | LitCTF 2026 | medium | 8080 | 已部署 |
+| ezsql | LitCTF 2026 | easy | 80 | 已部署 |
+| ezssti | LitCTF 2026 | easy | 80 | 已部署 |
+| reverseMyWeb | LitCTF 2026 | medium | 80 | 已部署 |
+| 华辰企业服务运营平台 | LitCTF 2026 | hard | 8080 | 已部署 |
+
+构建备注:来源:XDSEC/miniLCTF_2026 与 ProbiusOfficial/LitCTF2026 官方归档。miniL 系列原为运行时 FLAG env,统一改为 entrypoint 硬编码;LitCTF 系列统一在 Dockerfile 追加 ENV GZCTF_FLAG 构建期烧入;Ezdomain 与 prob01 无 Dockerfile 未收录。
+
+## 第54批(2026-09-23 部署,9 道已部署)
+
+来源:SUCTF 2025 + DubheCTF 2024 + N1CTF 2025(9)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| sujava | SUCTF 2025 | hard | 8080 | 已部署 |
+| SU blog | SUCTF 2025 | medium | 10006 | 已部署 |
+| SU DOTNET | SUCTF 2025 | hard | 80 | 已部署 |
+| SU photogallery | SUCTF 2025 | medium | 80 | 已部署 |
+| SU POP | SUCTF 2025 | hard | 80 | 已部署 |
+| Tagebuch | DubheCTF 2024 | hard | 80 | 已部署 |
+| VulnTagger | DubheCTF 2024 | hard | 8080 | 已部署 |
+| eezzjs | N1CTF 2025 | medium | 3000 | 已部署 |
+| n1cat | N1CTF 2025 | hard | 8080 | 已部署 |
+
+构建备注:来源:team-su/SUCTF-2025、mix-archive(DubheCTF 2024)与 Nu1LCTF/n1ctf-2025。SU_photogallery 原 ENV FLAG 为空占位已补真实值;Tagebuch 去除 cloudflared 隧道容器并将 node:slim 固定为 node:22-slim + pnpm@9;VulnTagger 需下载 AI 模型(构建约 40 分钟)并将 RUN --mount 改为普通 RUN;eezzjs/n1cat 的 start.sh 改为硬编码写 /flag。
+
+## 第55批(2026-09-23 部署,7 道已部署)
+
+来源:N1CTF/AliyunCTF/NepCTF/HGAME/GeekGame 混合批(7)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| ezmaria | N1CTF 2023 | medium | 80 | 已部署 |
+| do_not_touch_my_local_host | N1CTF 2022 | hard | 8888 | 已部署 |
+| ezbean | AliyunCTF 2023 | hard | 8080 | 已部署 |
+| 挂钩都在干什么呢 | NepCTF 2026 | medium | 5173 | 已部署 |
+| AyaNews | HGAME 2025 | hard | 5173 | 已部署 |
+| web-grafana 熙熙攘攘的数据面板 | GeekGame 5th | hard | 3000 | 已部署 |
+| web-calcaas | GeekGame 5th | medium | 8000 | 已部署 |
+
+构建备注:来源:Nu1LCTF(n1ctf 2022/2023)、LFYSec/aliyunctf-ezbean、skymansoul/NepCTF-2026、Tremse/HGAME-2025-Web-AyaNews、PKU-GeekGame/geekgame-5th。SU_wms、antweb(源码不全)、ytiruces(缺 bot)未收录;ezbean 原基础镜像 ctfhub/base_web_tomcat_8u121 两镜像源均无,改为 eclipse-temurin:8-jdk 并将 apk 改 apt;AyaNews 去除 entrypoint 的 unset FLAG 并以 ENV FLAG 注入;grafana 题 flag1/flag2 由构建期 COPY。
+
+## 第56批(2026-09-23 部署,7 道已部署)
+
+来源:GeekGame 4th/5th + 0xGame 2023 重挖混合批(7)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| web-memos ICS笑传之查查表 | GeekGame 4th | hard | 5230 | 已部署 |
+| ez_sqli | 0xGame 2023 | easy | 8000 | 已部署 |
+| rss_parser | 0xGame 2023 | medium | 8000 | 已部署 |
+| zip_file_manager | 0xGame 2023 | medium | 8000 | 已部署 |
+| TestConnection | 0xGame 2023 | medium | 8081 | 已部署 |
+| YourBatis | 0xGame 2023 | hard | 8081 | 已部署 |
+| auth_bypass | 0xGame 2023 | hard | 8080 | 已部署 |
+
+构建备注:来源:PKU-GeekGame/geekgame-4th、5th 与 X1cT34m/0xGame2023 重挖。web-copy 缺 2024.pub、graphauth 缺 logger.py(作者未提交)未收录;ez_sqli 原为 web+db 双容器,合并为单容器(容器内 mariadb 导入 db.sql,连接 host 改 localhost);web_snapshot 在 batch34 已有 skipped 登记故跳过;TestConnection/YourBatis 基础镜像 openjdk:8 两源均无改为 eclipse-temurin:8-jdk。
+
+## 第57批(2026-09-23 部署,9 道已部署)
+
+来源:MoeCTF 2025 + LitCTF 2023 + XYCTF 2025 + ACTF 2026 重挖混合批(9)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| 第一章 神秘的手镯 | MoeCTF 2025 | easy | 80 | 已部署 |
+| 第三章 问剑石！篡天改命！ | MoeCTF 2025 | medium | 5000 | 已部署 |
+| 第六章 藏经禁制？玄机初探！ | MoeCTF 2025 | medium | 80 | 已部署 |
+| Giveflag | LitCTF 2023 | easy | 5000 | 已部署 |
+| PHP is the best language in the world | LitCTF 2023 | medium | 80 | 已部署 |
+| SQL_Letmein | LitCTF 2023 | easy | 80 | 已部署 |
+| crazy_again | XYCTF 2025 | hard | 5000 | 已部署 |
+| ezpuzzle | XYCTF 2025 | medium | 80 | 已部署 |
+| RealDLsite | ACTF 2026 | hard | 80 | 已部署 |
+
+构建备注:来源:XDSEC/MoeCTF_2025 修仙系列、ProbiusOfficial/LitCTF 2023、saltedfisholdxu/XYCTF2025、team-s2/ACTF-2026 重挖。第一章占位 flag 替换为静态值(与已部署的 _revenge 版为不同题);ezpuzzle 原仓缺 files/flag.sh 已补标准脚本;RealDLsite 构建期 git clone 与 go-drive 下载均需外网,改为宿主机预下载进 context。
+
+## 第58批(2026-09-23 部署,6 道已部署)
+
+来源:0xGame 2022/2024 重挖混合批(6)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| ssrf_me | 0xGame 2022 | medium | 80 | 已部署 |
+| think_about_php | 0xGame 2022 | easy | 80 | 已部署 |
+| profile | 0xGame 2022 | medium | 3000 | 已部署 |
+| cargo_shop | 0xGame 2024 | hard | 8000 | 已部署 |
+| next-db | 0xGame 2024 | hard | 3000 | 已部署 |
+| paste_bin | 0xGame 2024 | hard | 8000 | 已部署 |
+
+构建备注:来源:X1cT34m/0xGame2022 与 0xGame2024 重挖。ssrf-me 原 ctfhub/base_web_nginx_mysql_php_56 两源均无改为 php:5.6-apache;think-about-php 原 linode/lamp 改为 php:7.4-apache 并开 AllowOverride;cargo_shop/paste_bin 基础镜像 rust:1.79 因依赖要求 edition2024 升级为 rust:latest;paste_bin 原仓缺 db/ 目录改为 mkdir;profile/next-db/cargo-shop/paste-bin 原无 EXPOSE 已补。
+
+## 第59批(2026-09-23 部署,3 道已部署)
+
+来源:miniL 2024 + NoHackNoCTF 2025 + NCKUCTF 2024 + OWASP 2025 + SUSCTF 2024 重挖混合批(3)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| sandbox | SUSCTF 2024 | hard | 8000 | 已部署 |
+| King of RPS | HKCERT CTF 2022 | easy | 1337 | 已部署 |
+| json2csv | HKCERT CTF 2023 | medium | 8080 | 已部署 |
+
+构建备注:来源:XDSEC/miniLCTF_2024、William957-web/My-CTF-Challenges、susers/susctf-2024 重挖。SmartPark-Revenge 在 batch40 有 skipped 旧登记已清理;flag 文件由 GET IT FROM ENV 占位符写入真实值;sandbox 的 COPY --chmod 改为 COPY+RUN chmod(legacy builder 不支持 --mount/--chmod)。
+
+## 第60批(2026-09-23 部署,2 道已部署)
+
+来源:GeekGame 3rd + miniL 2023/2024 重挖混合批(2)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| twins | Mini L-CTF 2023 | medium | 9999 | 已部署 |
+| mini-jail | Mini L-CTF 2024 | medium | 9999 | 已部署 |
+
+构建备注:来源:PKU-GeekGame/geekgame-3rd(prob14-emoji, sbt 基础镜像镜像源无未收录)、XDSEC/miniLCTF 2023/2024 重挖。twins/mini-jail 均为 socat/xinetd TCP 监听(9999),平台探活走 TCP 回退;mini-jail 原 Dockerfile rm /bin/busybox 导致 runc 无法启动已保留 busybox;mini-jail 原 flag 不可考,已自拟。两题均为 TCP 类轻量 jail。

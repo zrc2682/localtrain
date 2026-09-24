@@ -1,0 +1,133 @@
+{
+  "batch": 55,
+  "contest": "N1CTF/AliyunCTF/NepCTF/HGAME/GeekGame 混合批",
+  "source": "Nu1LCTF/n1ctf-2023 + Nu1LCTF/n1ctf-2022 + LFYSec/aliyunctf-ezbean + skymansoul/NepCTF-2026 + Tremse/HGAME-2025-Web-AyaNews + PKU-GeekGame/geekgame-5th",
+  "challenges": [
+    {
+      "id": "n1ctf2023-ezmaria",
+      "title": "ezmaria",
+      "contest": "N1CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-n1ctf2023-ezmaria:latest",
+      "flag": "n1ctf{e5mar1a_sqli_ch4ll3nge}",
+      "source": {
+        "repo": "Nu1LCTF/n1ctf-2023",
+        "path": "web/ezmaria/environment/app"
+      },
+      "writeup": "https://github.com/Nu1LCTF/n1ctf-2023/tree/main/web/ezmaria/writeup",
+      "dir": "docker/ctf-contests/batch55-mix/n1ctf2023-ezmaria",
+      "status": "deployed",
+      "flagMechanism": "start.sh 硬编码写 /flag (httpd+maria+php, setcap 提权读)"
+    },
+    {
+      "id": "n1ctf2022-do-not-touch-my-localhost",
+      "title": "do_not_touch_my_local_host",
+      "contest": "N1CTF 2022",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8888,
+      "image": "localtrain/ctf-n1ctf2022-do-not-touch-my-localhost:latest",
+      "flag": "n1ctf{d0_n0t_t0uch_my_l0calh0st}",
+      "source": {
+        "repo": "Nu1LCTF/n1ctf-2022",
+        "path": "Web/do-not-touch-my-localhost/source"
+      },
+      "writeup": "https://github.com/Nu1LCTF/n1ctf-2022",
+      "dir": "docker/ctf-contests/batch55-mix/n1ctf2022-do-not-touch-my-localhost",
+      "status": "deployed",
+      "flagMechanism": "start.sh 硬编码写 /flag (golang+archlinux+caddy, chromium 反连)"
+    },
+    {
+      "id": "aliyunctf2023-ezbean",
+      "title": "ezbean",
+      "contest": "AliyunCTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-aliyunctf2023-ezbean:latest",
+      "flag": "aliyunctf{327a6c4304dd5938eaf0efb6cc3e53dc}",
+      "source": {
+        "repo": "LFYSec/aliyunctf-ezbean",
+        "path": "files"
+      },
+      "writeup": "https://github.com/LFYSec/aliyunctf-ezbean (含部署说明)",
+      "dir": "docker/ctf-contests/batch55-mix/aliyunctf2023-ezbean",
+      "status": "deployed",
+      "flagMechanism": "COPY _files/flag /flag 静态 (tomcat springbean RCE, 原 flag 保留)"
+    },
+    {
+      "id": "nepctf2026-goupan",
+      "title": "挂钩都在干什么呢",
+      "contest": "NepCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5173,
+      "image": "localtrain/ctf-nepctf2026-goupan:latest",
+      "flag": "nepctf{nep_h00k_all_the_things}",
+      "source": {
+        "repo": "skymansoul/NepCTF-2026",
+        "path": "web/挂钩都在干什么呢"
+      },
+      "writeup": "https://github.com/fjh1997/nepctf2026-writeup",
+      "dir": "docker/ctf-contests/batch55-mix/nepctf2026-goupan",
+      "status": "deployed",
+      "flagMechanism": "entrypoint 硬编码写 /flag (vite node 钩子题)"
+    },
+    {
+      "id": "hgame2025-ayanews",
+      "title": "AyaNews",
+      "contest": "HGAME 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5173,
+      "image": "localtrain/ctf-hgame2025-ayanews:latest",
+      "flag": "hgame{ay4_news_xss_b0t_2025}",
+      "source": {
+        "repo": "Tremse/HGAME-2025-Web-AyaNews",
+        "path": "."
+      },
+      "writeup": "https://github.com/Tremse/HGAME-2025-Web-AyaNews",
+      "dir": "docker/ctf-contests/batch55-mix/hgame2025-ayanews",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 构建期烧入供 bot 读 cookie (rust+supervisord+xssbot)"
+    },
+    {
+      "id": "geekgame5-web-grafana",
+      "title": "web-grafana 熙熙攘攘的数据面板",
+      "contest": "GeekGame 5th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-geekgame5-web-grafana:latest",
+      "flag": "geekgame{grafana_pi1ot_v1ew}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-5th",
+        "path": "official_writeup/web-grafana/game"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-grafana",
+      "dir": "docker/ctf-contests/batch55-mix/geekgame5-web-grafana",
+      "status": "deployed",
+      "flagMechanism": "flag1/flag2 构建期 COPY, entrypoint 写入 influxdb (grafana 12 未授权数据源)"
+    },
+    {
+      "id": "geekgame5-web-calcaas",
+      "title": "web-calcaas",
+      "contest": "GeekGame 5th",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-geekgame5-web-calcaas:latest",
+      "flag": "geekgame{c4lcaas_deno_rc3}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-5th",
+        "path": "official_writeup/web-calcaas/game"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-calcaas",
+      "dir": "docker/ctf-contests/batch55-mix/geekgame5-web-calcaas",
+      "status": "deployed",
+      "flagMechanism": "RUN echo 写 /flag, deno --allow-read 读取 (deno 计算器)"
+    }
+  ]
+}

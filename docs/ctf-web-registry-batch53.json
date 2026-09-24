@@ -1,0 +1,212 @@
+{
+  "batch": 53,
+  "contest": "miniLCTF 2026 + LitCTF 2026",
+  "source": "https://github.com/XDSEC/miniLCTF_2026 + https://github.com/ProbiusOfficial/LitCTF2026",
+  "challenges": [
+    {
+      "id": "minil2026-ezping",
+      "title": "EzPing",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 5000,
+      "image": "localtrain/ctf-minil2026-ezping:latest",
+      "flag": "miniL{p1ng_1s_p0werful_2026}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/EzPing"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-ezping",
+      "status": "deployed",
+      "flagMechanism": "entrypoint 硬编码(原 FLAG env 已改写死): sed 占位符写入 /flag (flask 命令注入 ping)",
+      "reason": "同比赛同名冲突：平台已有 \"EzPing\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "minil2026-ezomniprobe",
+      "title": "EzOmniprobe",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-minil2026-ezomniprobe:latest",
+      "flag": "miniL{0mn1_pr0be_3scalat10n}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/EzOmniprobe"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-ezomniprobe",
+      "status": "deployed",
+      "flagMechanism": "entrypoint 硬编码写 /flag (node 提权 pkexec)",
+      "reason": "同比赛同名冲突：平台已有 \"EzOmniprobe\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "minil2026-ezjvav",
+      "title": "Ezjvav",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2026-ezjvav:latest",
+      "flag": "miniL{j4va_rust_hybrid_s3cret}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/Ezjvav"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-ezjvav",
+      "status": "deployed",
+      "flagMechanism": "entrypoint SECRET_VALUE 硬编码(多阶段 java+rust, 构建重)",
+      "reason": "同比赛同名冲突：平台已有 \"Ezjvav\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "minil2026-hdphp",
+      "title": "Hdphp",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-minil2026-hdphp:latest",
+      "flag": "miniL{hd_php_master_2026}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/Hdphp"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-hdphp",
+      "status": "deployed",
+      "flagMechanism": "entrypo1nt.sh 硬编码 echo > /flag (php-fpm+nginx)"
+    },
+    {
+      "id": "minil2026-ezff",
+      "title": "ezff",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8888,
+      "image": "localtrain/ctf-minil2026-ezff:latest",
+      "flag": "miniL{ff_jar_pr0tect_1s_n0t_s4fe}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/ezff"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-ezff",
+      "status": "deployed",
+      "flagMechanism": "entrypoint 硬编码写 /flag (java jar)",
+      "reason": "同比赛同名冲突：平台已有 \"ezff\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "minil2026-boli-omikuji",
+      "title": "博丽神社的御神签",
+      "contest": "miniLCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-minil2026-boli-omikuji:latest",
+      "flag": "miniL{p0stgre5t_0m1kuji_2026}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2026",
+        "path": "Challenges/Web/博丽神社的御神签"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
+      "dir": "docker/ctf-contests/minil2026/minil2026-boli-omikuji",
+      "status": "deployed",
+      "flagMechanism": "start.sh 硬编码写 /tmp/therealflag_<sha3_512_32> (postgrest+postgres 单容器)"
+    },
+    {
+      "id": "litctf2026-northbridge",
+      "title": "Northbridge Document Hub",
+      "contest": "LitCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-litctf2026-northbridge:latest",
+      "flag": "flag{kkfileview_audit_read_history_then_download}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF2026",
+        "path": "Web-Northbridge_Document_Hub/docker"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
+      "dir": "docker/ctf-contests/litctf2026/litctf2026-northbridge",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG 构建期注入 (tomcat war, maven 构建)",
+      "reason": "同比赛同名冲突：平台已有 \"Northbridge Document Hub\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "litctf2026-ezsql",
+      "title": "ezsql",
+      "contest": "LitCTF 2026",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf2026-ezsql:latest",
+      "flag": "flag{ezsql_uni0n_master_2026}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF2026",
+        "path": "Web-ezsql/docker"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
+      "dir": "docker/ctf-contests/litctf2026/litctf2026-ezsql",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG (flask+mysql 同容器)"
+    },
+    {
+      "id": "litctf2026-ezssti",
+      "title": "ezssti",
+      "contest": "LitCTF 2026",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf2026-ezssti:latest",
+      "flag": "flag{ezssti_jinja_gadget_2026}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF2026",
+        "path": "Web-ezssti/docker"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
+      "dir": "docker/ctf-contests/litctf2026/litctf2026-ezssti",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG (flask SSTI)"
+    },
+    {
+      "id": "litctf2026-reversemyweb",
+      "title": "reverseMyWeb",
+      "contest": "LitCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf2026-reversemyweb:latest",
+      "flag": "flag{rev_my_web_pr0tobuf}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF2026",
+        "path": "Web-reverseMyWeb/docker"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
+      "dir": "docker/ctf-contests/litctf2026/litctf2026-reversemyweb",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG (go 多阶段构建)",
+      "reason": "同比赛同名冲突：平台已有 \"reverseMyWeb\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "litctf2026-huachen",
+      "title": "华辰企业服务运营平台",
+      "contest": "LitCTF 2026",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-litctf2026-huachen:latest",
+      "flag": "flag{actuator_heapdump_shiro_gcm_vertical_auth}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF2026",
+        "path": "Web-华辰企业服务运营平台/docker"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
+      "dir": "docker/ctf-contests/litctf2026/litctf2026-huachen",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG (java8 springboot actuator+shiro, maven 构建)",
+      "reason": "同比赛同名冲突：平台已有 \"华辰企业服务运营平台\"；未导入。确认有意更新请加 --allow-update"
+    }
+  ]
+}

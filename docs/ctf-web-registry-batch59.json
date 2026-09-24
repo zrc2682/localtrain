@@ -1,0 +1,64 @@
+{
+  "batch": 59,
+  "contest": "miniL 2024 + NoHackNoCTF 2025 + NCKUCTF 2024 + OWASP 2025 + SUSCTF 2024 重挖混合批",
+  "source": "XDSEC/miniLCTF_2024 + William957-web/My-CTF-Challenges + ProbiusOfficial/owasp2025-top10-ctf + susers/susctf-2024",
+  "challenges": [
+    {
+      "id": "susctf2024-sandbox",
+      "title": "sandbox",
+      "contest": "SUSCTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8000,
+      "image": "localtrain/ctf-susctf2024-sandbox:latest",
+      "flag": "flag{susctf24_py_s4ndb0x_escape}",
+      "source": {
+        "repo": "susers/susctf-2024",
+        "path": "challenges/web/sandbox/build"
+      },
+      "writeup": "https://github.com/susers/susctf-2024",
+      "dir": "docker/ctf-contests/batch59-mix/susctf2024-sandbox",
+      "status": "deployed",
+      "flagMechanism": "ENV GZCTF_FLAG 烧入, run.sh 写 /flag (flask python 沙箱逃逸)",
+      "reason": "同比赛同名冲突：平台已有 \"sandbox\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "hkcert22-king-of-rps",
+      "title": "King of RPS",
+      "contest": "HKCERT CTF 2022",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 1337,
+      "image": "localtrain/ctf-hkcert22-king-of-rps:latest",
+      "flag": "hkcert22{k1ng_0f_rps_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2022/02-king-of-rps"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2022/02-king-of-rps",
+      "dir": "docker/ctf-contests/batch59-mix/hkcert22-king-of-rps",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 烧入(原题为运行时 env 注入)",
+      "reason": "同比赛同名冲突：平台已有 \"King of RPS\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "hkcert23-json2csv",
+      "title": "json2csv",
+      "contest": "HKCERT CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8080,
+      "image": "localtrain/ctf-hkcert23-json2csv:latest",
+      "flag": "hkcert23{js0n2csv_p0llut10n}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2023/20-json2csv"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2023/20-json2csv",
+      "dir": "docker/ctf-contests/batch59-mix/hkcert23-json2csv",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 烧入(原题为运行时 env 注入)",
+      "reason": "同比赛同名冲突：平台已有 \"json2csv\"；未导入。确认有意更新请加 --allow-update"
+    }
+  ]
+}

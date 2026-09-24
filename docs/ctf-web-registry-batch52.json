@@ -1,0 +1,137 @@
+{
+  "batch": 52,
+  "contest": "SUCTF 2026",
+  "source": "https://github.com/team-su/SUCTF-2026",
+  "challenges": [
+    {
+      "id": "suctf2026-su-note",
+      "title": "SU-Note",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2026-su-note:latest",
+      "flag": "SUCTF{1101101010}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU-Note"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU-Note/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-note",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY ./flag /opt/su-eznote/flag (php+apache+XSS bot)",
+      "reason": "同比赛同名冲突：平台已有 \"SU-Note\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2026-su-note-rev",
+      "title": "SU-Note-Rev",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2026-su-note-rev:latest",
+      "flag": "SUCTF{10001101}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU-Note-rev"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU-Note-rev/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-note-rev",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY ./flag /opt/su-eznote/flag",
+      "reason": "同比赛同名冲突：平台已有 \"SU-Note-Rev\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2026-su-thief",
+      "title": "SU Thief",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2026-su-thief:latest",
+      "flag": "SUCTF{c4ddy_4dm1n_4p1_2019_pr1v35c}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU_Thief"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_Thief/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-thief",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: RUN echo flag > /root/flag (grafana+caddy admin api 提权读文件)",
+      "reason": "同比赛同名冲突：平台已有 \"SU Thief\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "suctf2026-su-cmsagain",
+      "title": "SU cmsAgain",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-suctf2026-su-cmsagain:latest",
+      "flag": "SUCTF{cms_1s_@easy_good}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU_cmsAgain"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_cmsAgain/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-cmsagain",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY ./env/data/flag.txt /var/www/html/flag.txt (ubuntu+apache+php7.2+mysql 单容器)"
+    },
+    {
+      "id": "suctf2026-su-jdbc-master",
+      "title": "SU jdbc-master",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-suctf2026-su-jdbc-master:latest",
+      "flag": "suctf{u5Ing_JdbC_70_rce_iS_vEry_s1mpl3!_!!}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU_jdbc-master"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_jdbc-master/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-jdbc-master",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY bin/flag /flag (java8 JDBC RCE)"
+    },
+    {
+      "id": "suctf2026-su-sqli",
+      "title": "SU sqli",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8080,
+      "image": "localtrain/ctf-suctf2026-su-sqli:latest",
+      "flag": "flag{g0_pg_sqli_1n_suctf2026}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU_sqli"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_sqli/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-sqli",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY bin/flag /flag (go+postgres 单容器, 原仓 flag 为占位符已自拟)"
+    },
+    {
+      "id": "suctf2026-su-uri",
+      "title": "SU uri",
+      "contest": "SUCTF 2026",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-suctf2026-su-uri:latest",
+      "flag": "SUCTF{P9s9L_!Nject!On_IS_3@$Y_RiGht}",
+      "source": {
+        "repo": "team-su/SUCTF-2026",
+        "path": "web/SU_uri"
+      },
+      "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_uri/writeup",
+      "dir": "docker/ctf-contests/suctf2026/suctf2026-su-uri",
+      "status": "deployed",
+      "flagMechanism": "构建期静态: COPY bin/flag /flag + readflag (go webhook 服务)",
+      "reason": "同比赛同名冲突：平台已有 \"SU uri\"；未导入。确认有意更新请加 --allow-update"
+    }
+  ]
+}

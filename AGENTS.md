@@ -9,7 +9,7 @@
 LocalTrain 是一个**仅供本地使用**的 CTF / CVE 复现靶场网站：题目管理、Docker 容器环境启停、flag 提交、提示解锁、积分排行。
 
 - 本项目默认账号、JWT 密钥均为硬编码本地配置，**请勿部署到公网**，安全加固不改变这一前提。
-- 平台当前存量：CVE 题 45 道（另有 5 道 skipped），CTF 比赛 Web 题 46 个批次（截至 2026-09-11 第 51 批完成，**下一批次从 batch52 开始**）。精确数字以 `docs/ctf-web-challenges.md` 和登记表统计为准。
+- 平台当前存量：CVE 题 45 道（另有 5 道 skipped），CTF 比赛 Web 题 60 个批次（截至 2026-09-24 第 60 批完成，**下一批次从 batch61 开始**；52-60 批新增 65 道，2022 年后国内主要 CTF 官方公开仓库 Web 题源码已系统性挖尽，后续以已挖掘仓库重挖补漏为主）。精确数字以 `docs/ctf-web-challenges.md` 和登记表统计为准。
 
 ## ⚠️ 必读：环境关键事实（踩坑记录）
 
@@ -148,7 +148,7 @@ rm packages/server/prisma/dev.db && npm run db:push && npm run db:seed
 
 **流程严格按脚本门禁执行，先跑脚本再看输出，禁止手工翻历史登记表查重。**
 
-### 1. 选题（batchN = 下一批次号，从 34 起）
+### 1. 选题（batchN = 下一批次号，从 61 起）
 
 ```bash
 node scripts/update-deployed-index.mjs        # 0. 每次必做：重建查重索引

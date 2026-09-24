@@ -1,0 +1,169 @@
+{
+  "batch": 57,
+  "contest": "MoeCTF 2025 + LitCTF 2023 + XYCTF 2025 + ACTF 2026 重挖混合批",
+  "source": "XDSEC/MoeCTF_2025 + ProbiusOfficial/LitCTF + saltedfisholdxu/XYCTF2025 + team-s2/ACTF-2026",
+  "challenges": [
+    {
+      "id": "moectf2025-chapter1",
+      "title": "第一章 神秘的手镯",
+      "contest": "MoeCTF 2025",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2025-chapter1:latest",
+      "flag": "flag{m0ectf_xiuxian_s3ries_2025}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2025",
+        "path": "challenges/Web/第一章 神秘的手镯"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
+      "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter1",
+      "status": "deployed",
+      "flagMechanism": "占位符已替换为静态 flag (修仙系列第一章, 注意与已部署的 _revenge 版为不同题)"
+    },
+    {
+      "id": "moectf2025-chapter3",
+      "title": "第三章 问剑石！篡天改命！",
+      "contest": "MoeCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-moectf2025-chapter3:latest",
+      "flag": "flag{m0ectf_xiuxian_s3ries_2025}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2025",
+        "path": "challenges/Web/第三章 问剑石！篡天改命！"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
+      "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter3",
+      "status": "deployed",
+      "flagMechanism": "占位符已替换 (flask)"
+    },
+    {
+      "id": "moectf2025-chapter6",
+      "title": "第六章 藏经禁制？玄机初探！",
+      "contest": "MoeCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-moectf2025-chapter6:latest",
+      "flag": "flag{m0ectf_xiuxian_s3ries_2025}",
+      "source": {
+        "repo": "XDSEC/MoeCTF_2025",
+        "path": "challenges/Web/第六章 藏经禁制？玄机初探！"
+      },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
+      "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter6",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 烧入, flag.sh 启动时注入 mysql (php+nginx+mysql)"
+    },
+    {
+      "id": "litctf2023-giveflag",
+      "title": "Giveflag",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 5000,
+      "image": "localtrain/ctf-litctf2023-giveflag:latest",
+      "flag": "flag{g1ve_fl4g_pl3ase_2023}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "path": "2023/Web/Giveflag"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF",
+      "dir": "docker/ctf-contests/batch57-mix/litctf2023-giveflag",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换静态值 (python flask 条件竞争)"
+    },
+    {
+      "id": "litctf2023-php-best",
+      "title": "PHP is the best language in the world",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-litctf2023-php-best:latest",
+      "flag": "flag{php_1s_th3_b3st_2023}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "path": "2023/Web/PHP is the best language in the world"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF",
+      "dir": "docker/ctf-contests/batch57-mix/litctf2023-php-best",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 烧入, entrypoint sed 写 /flag (php 弱类型)"
+    },
+    {
+      "id": "litctf2023-sql-letmein",
+      "title": "SQL_Letmein",
+      "contest": "LitCTF 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-litctf2023-sql-letmein:latest",
+      "flag": "flag{sql_letmein_2023}",
+      "source": {
+        "repo": "ProbiusOfficial/LitCTF",
+        "path": "2023/Web/SQL_Letmein"
+      },
+      "writeup": "https://github.com/ProbiusOfficial/LitCTF",
+      "dir": "docker/ctf-contests/batch57-mix/litctf2023-sql-letmein",
+      "status": "deployed",
+      "flagMechanism": "test_flag 占位符已替换 (php sql 注入)"
+    },
+    {
+      "id": "xyctf2025-crazy-again",
+      "title": "crazy_again",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5000,
+      "image": "localtrain/ctf-xyctf2025-crazy-again:latest",
+      "flag": "flag{L@men7XU_d0es_n0t_w@nt_t0_t@ke_@ny_f**king_exams}",
+      "source": {
+        "repo": "saltedfisholdxu/XYCTF2025",
+        "path": "Web/crazy_again"
+      },
+      "writeup": "https://github.com/saltedfisholdxu/XYCTF2025",
+      "dir": "docker/ctf-contests/batch57-mix/xyctf2025-crazy-again",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (python 原型链/沙箱)"
+    },
+    {
+      "id": "xyctf2025-ezpuzzle",
+      "title": "ezpuzzle",
+      "contest": "XYCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-xyctf2025-ezpuzzle:latest",
+      "flag": "flag{Y0u__aRe_a_mAsteR_of_PUzZL!!@!!~!}",
+      "source": {
+        "repo": "saltedfisholdxu/XYCTF2025",
+        "path": "Web/ezpuzzle"
+      },
+      "writeup": "https://github.com/saltedfisholdxu/XYCTF2025",
+      "dir": "docker/ctf-contests/batch57-mix/xyctf2025-ezpuzzle",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (php 拼图)"
+    },
+    {
+      "id": "actf2026-realdlsite",
+      "title": "RealDLsite",
+      "contest": "ACTF 2026",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-actf2026-realdlsite:latest",
+      "flag": "ACTF{d0_an_Upgra3e_1n_s0m3_cases_tDUgp8JNKA}",
+      "source": {
+        "repo": "team-s2/ACTF-2026",
+        "path": "web/RealDLsite/env"
+      },
+      "writeup": "https://github.com/team-s2/ACTF-2026",
+      "dir": "docker/ctf-contests/batch57-mix/actf2026-realdlsite",
+      "status": "deployed",
+      "flagMechanism": "源码内置静态 flag (下载站, 原 flag 保留)"
+    }
+  ]
+}

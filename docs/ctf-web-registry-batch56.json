@@ -1,0 +1,139 @@
+{
+  "batch": 56,
+  "contest": "GeekGame 4th/5th + 0xGame 2023 重挖混合批",
+  "source": "PKU-GeekGame/geekgame-4th + PKU-GeekGame/geekgame-5th + X1cT34m/0xGame2023",
+  "challenges": [
+    {
+      "id": "geekgame4-web-memos",
+      "title": "web-memos ICS笑传之查查表",
+      "contest": "GeekGame 4th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 5230,
+      "image": "localtrain/ctf-geekgame4-web-memos:latest",
+      "flag": "geekgame{mem0s_sql1te_x55_dump}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-4th",
+        "path": "official_writeup/web-memos/game"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-4th/tree/main/official_writeup/web-memos",
+      "dir": "docker/ctf-contests/batch56-mix/geekgame4-web-memos",
+      "status": "deployed",
+      "flagMechanism": "构建期 COPY flag /flag, init.sh 注入 sqlite 库 (memos 笔记站)",
+      "reason": "同比赛同名冲突：平台已有 \"web-memos ICS笑传之查查表\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "0xg2023-ez-sqli",
+      "title": "ez_sqli",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 8000,
+      "image": "localtrain/ctf-0xg2023-ez-sqli:latest",
+      "flag": "0xGame{4286b62d-c37e-4010-ba9c-35d47641fb91}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 2/ez_sqli"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-ez-sqli",
+      "status": "deployed",
+      "flagMechanism": "源码内置 flag (python flask sql 注入)"
+    },
+    {
+      "id": "0xg2023-rss-parser",
+      "title": "rss_parser",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xg2023-rss-parser:latest",
+      "flag": "0xGame{67fd16b1-3aa5-4d83-8766-73264038184e}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 3/rss_parser"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-rss-parser",
+      "status": "deployed",
+      "flagMechanism": "readflag 双阶段 (go readflag + python flask XXE/SSRF)",
+      "reason": "同比赛同名冲突：平台已有 \"rss_parser\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "0xg2023-zip-file-manager",
+      "title": "zip_file_manager",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8000,
+      "image": "localtrain/ctf-0xg2023-zip-file-manager:latest",
+      "flag": "0xGame{2fc76ab2-aa2f-441d-9143-210150fabce9}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 3/zip_file_manager"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-zip-file-manager",
+      "status": "deployed",
+      "flagMechanism": "Dockerfile RUN echo 写 /flag (python zip 解压)",
+      "reason": "同比赛同名冲突：平台已有 \"zip_file_manager\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "0xg2023-testconnection",
+      "title": "TestConnection",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8081,
+      "image": "localtrain/ctf-0xg2023-testconnection:latest",
+      "flag": "0xGame{17fe878f-cbe3-4bc6-aca9-340fbc61f160}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 4/TestConnection"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-testconnection",
+      "status": "deployed",
+      "flagMechanism": "源码内置 flag (java jmx/rmi)",
+      "reason": "同比赛同名冲突：平台已有 \"TestConnection\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "0xg2023-yourbatis",
+      "title": "YourBatis",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8081,
+      "image": "localtrain/ctf-0xg2023-yourbatis:latest",
+      "flag": "0xGame{18cb86b1-2272-4da0-b2e7-89f0771d329b}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 4/YourBatis"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-yourbatis",
+      "status": "deployed",
+      "flagMechanism": "源码内置 flag (java mybatis 注入)",
+      "reason": "同比赛同名冲突：平台已有 \"YourBatis\"；未导入。确认有意更新请加 --allow-update"
+    },
+    {
+      "id": "0xg2023-auth-bypass",
+      "title": "auth_bypass",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-0xg2023-auth-bypass:latest",
+      "flag": "0xGame{ff87729b-b100-4965-9ed4-b6c0478c76f7}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 4/auth_bypass"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch56-mix/0xg2023-auth-bypass",
+      "status": "deployed",
+      "flagMechanism": "readflag 双阶段 (tomcat 8.5 + go readflag)",
+      "reason": "同比赛同名冲突：平台已有 \"auth_bypass\"；未导入。确认有意更新请加 --allow-update"
+    }
+  ]
+}
