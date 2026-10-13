@@ -19,7 +19,8 @@
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
       "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter1",
       "status": "deployed",
-      "flagMechanism": "占位符已替换为静态 flag (修仙系列第一章, 注意与已部署的 _revenge 版为不同题)"
+      "flagMechanism": "占位符已替换为静态 flag (修仙系列第一章, 注意与已部署的 _revenge 版为不同题)",
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md"
     },
     {
       "id": "moectf2025-chapter3",
@@ -37,7 +38,8 @@
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
       "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter3",
       "status": "deployed",
-      "flagMechanism": "占位符已替换 (flask)"
+      "flagMechanism": "占位符已替换 (flask)",
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md"
     },
     {
       "id": "moectf2025-chapter6",
@@ -55,7 +57,8 @@
       "writeup": "https://github.com/XDSEC/MoeCTF_2025/tree/main/OfficialWriteups",
       "dir": "docker/ctf-contests/batch57-mix/moectf2025-chapter6",
       "status": "deployed",
-      "flagMechanism": "ENV FLAG 烧入, flag.sh 启动时注入 mysql (php+nginx+mysql)"
+      "flagMechanism": "ENV FLAG 烧入, flag.sh 启动时注入 mysql (php+nginx+mysql)",
+      "writeupLocal": "ctf-writeup/moectf-2025/moectf-2025.md"
     },
     {
       "id": "litctf2023-giveflag",
@@ -73,7 +76,8 @@
       "writeup": "https://github.com/ProbiusOfficial/LitCTF",
       "dir": "docker/ctf-contests/batch57-mix/litctf2023-giveflag",
       "status": "deployed",
-      "flagMechanism": "ENV FLAG 已替换静态值 (python flask 条件竞争)"
+      "flagMechanism": "ENV FLAG 已替换静态值 (python flask 条件竞争)",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md"
     },
     {
       "id": "litctf2023-php-best",
@@ -91,7 +95,8 @@
       "writeup": "https://github.com/ProbiusOfficial/LitCTF",
       "dir": "docker/ctf-contests/batch57-mix/litctf2023-php-best",
       "status": "deployed",
-      "flagMechanism": "ENV FLAG 烧入, entrypoint sed 写 /flag (php 弱类型)"
+      "flagMechanism": "ENV FLAG 烧入, entrypoint sed 写 /flag (php 弱类型)",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md"
     },
     {
       "id": "litctf2023-sql-letmein",
@@ -109,7 +114,8 @@
       "writeup": "https://github.com/ProbiusOfficial/LitCTF",
       "dir": "docker/ctf-contests/batch57-mix/litctf2023-sql-letmein",
       "status": "deployed",
-      "flagMechanism": "test_flag 占位符已替换 (php sql 注入)"
+      "flagMechanism": "test_flag 占位符已替换 (php sql 注入)",
+      "writeupLocal": "ctf-writeup/litctf-2023/litctf-2023.md"
     },
     {
       "id": "xyctf2025-crazy-again",
@@ -127,7 +133,8 @@
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025",
       "dir": "docker/ctf-contests/batch57-mix/xyctf2025-crazy-again",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (python 原型链/沙箱)"
+      "flagMechanism": "源码内置静态 flag (python 原型链/沙箱)",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
     },
     {
       "id": "xyctf2025-ezpuzzle",
@@ -145,7 +152,8 @@
       "writeup": "https://github.com/saltedfisholdxu/XYCTF2025",
       "dir": "docker/ctf-contests/batch57-mix/xyctf2025-ezpuzzle",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (php 拼图)"
+      "flagMechanism": "源码内置静态 flag (php 拼图)",
+      "writeupLocal": "ctf-writeup/xyctf-2025/xyctf-2025.md"
     },
     {
       "id": "actf2026-realdlsite",
@@ -163,7 +171,8 @@
       "writeup": "https://github.com/team-s2/ACTF-2026",
       "dir": "docker/ctf-contests/batch57-mix/actf2026-realdlsite",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (下载站, 原 flag 保留)"
+      "flagMechanism": "源码内置静态 flag (下载站, 原 flag 保留)",
+      "writeupLocal": "ctf-writeup/actf-2026/actf-2026.md"
     }
   ]
 }

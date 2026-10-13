@@ -66,7 +66,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-shudaonan",
       "hasDockerfile": true,
       "flagMechanism": "单文件静态 HTML，flag 以 HTML 实体编码藏在 <secret> 标签；Dockerfile 替换为平台静态 flag",
@@ -90,7 +90,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-index-php",
       "hasDockerfile": true,
       "flagMechanism": "PHP 文件下载，路径遍历读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",
@@ -114,7 +114,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-quals-dianzichongwu",
       "hasDockerfile": true,
       "flagMechanism": "Node.js Express 应用，原型链污染开启 debug 后 /get_treasure 返回 flag；Dockerfile 将平台静态 flag 写入常量",
@@ -138,7 +138,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-quals-include",
       "hasDockerfile": true,
       "flagMechanism": "PHP 应用连接 MySQL，flag 写入 /flag 与数据库；通过文件包含/上传链读取",
@@ -234,7 +234,7 @@
         "url": "local"
       },
       "writeup": "local",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ctf-archive-2025/ctf-archive-2025.md",
       "dir": "docker/ctf-contests/deprecated-compare",
       "hasDockerfile": true,
       "flagMechanism": "Node.js Express + SQLite；flag 写入 system.log，通过 JWT 算法混淆 / SQL 注入 / 文件读取链获取",

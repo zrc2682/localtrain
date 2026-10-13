@@ -1324,3 +1324,21 @@ miniL 2024 docker 完备 web 题+minil2023-guess+0xgame2024-whysoserial(golang:1
 | mini-jail | Mini L-CTF 2024 | medium | 9999 | 已部署 |
 
 构建备注:来源:PKU-GeekGame/geekgame-3rd(prob14-emoji, sbt 基础镜像镜像源无未收录)、XDSEC/miniLCTF 2023/2024 重挖。twins/mini-jail 均为 socat/xinetd TCP 监听(9999),平台探活走 TCP 回退;mini-jail 原 Dockerfile rm /bin/busybox 导致 runc 无法启动已保留 busybox;mini-jail 原 flag 不可考,已自拟。两题均为 TCP 类轻量 jail。
+
+## 第61批(2026-10-13 部署,9 道已部署)
+
+来源:2026 湾区杯决赛 AWDP-WEB(3)、SpiritCTF 2026 热身赛(5)、Upload Wall(1)
+
+| 题目 | 比赛 | 难度 | 端口 | 状态 |
+|------|------|------|------|------|
+| sky_uom | 2026 湾区杯决赛 | medium | 80 | 已部署 |
+| lingyun_atlas | 2026 湾区杯决赛 | hard | 80 | 已部署 |
+| Flowise | 2026 湾区杯决赛 | hard | 3000 | 已部署 |
+| Darkroom | SpiritCTF 2026 热身赛 | hard | 80 | 已部署 |
+| ez_gambling | SpiritCTF 2026 热身赛 | easy | 3000 | 已部署 |
+| R0b0ts | SpiritCTF 2026 热身赛 | medium | 3000 | 已部署 |
+| Spirit Notes | SpiritCTF 2026 热身赛 | medium | 3000 | 已部署 |
+| escape-backrooms | SpiritCTF 2026 热身赛 | medium | 3000 | 已部署 |
+| Upload Wall | Upload Wall 2026 | medium | 80 | 已部署 |
+
+构建备注:新矿源 CTF-Archives/2026-WQB-Finals Releases(湾区杯决赛 AWDP,sky_uom 为自包含 node 服务、lingyun_atlas 为静态 Go ELF 自行包 Dockerfile、Flowise 为 24MB pnpm monorepo 定制 fork——容器内 npm 换 npmmirror、faiss-node 的 GitHub prebuild 宿主机代理预下载注入 /root/.npm/_prebuilds、sqlite3 走 node-gyp 源码编译、flag 写入移到 USER node 之前)、residream/2026-SpiritCTF-Warm-Web(吉林大学 SpiritCTF 热身赛官方出题人归档,五题统一 ENV FLAG 构建期烧入,Darkroom 用 wp 中的真实 flag)、dez-eng/upload-wall(个人原创 PHP 上传题,GZCTF 动态 flag 约定改 ENV FLAG 烧入)。CCB2026-Quals 的 Web 三题(OOOOOOAuth/configcenter/AegisCore)未发附件、InduCoreBot 附件上游损坏(9 字节)、CarbonTrace 依赖外部以太坊 RPC,均未收录。期间 Docker Desktop 守护进程再次挂起一次,重启后全部层缓存复用完成构建。

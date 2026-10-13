@@ -18,7 +18,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-quals"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-quals/jksn-2025-quals-download-php",
       "hasDockerfile": true,
       "flagMechanism": "PHP 文件上传后通过文件包含/路径穿越读取 /flag；Dockerfile 将平台静态 flag 写入 /flag",

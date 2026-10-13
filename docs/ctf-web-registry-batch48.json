@@ -16,10 +16,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/am-i-admin",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "susctf2025-am-i-admin-2",
@@ -34,10 +35,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/am-i-admin-2",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "susctf2025-easyoa",
@@ -52,10 +54,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/easyoa",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "susctf2025-easyprint",
@@ -70,10 +73,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/easyprint",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "susctf2025-make-php-greater-again",
@@ -88,10 +92,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/make-php-greater-again",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "susctf2025-susmarket",
@@ -106,10 +111,11 @@
         "repo": "susers/susctf-2025",
         "url": "https://github.com/susers/susctf-2025"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/susers/susctf-2025/blob/master/writeup.pdf",
       "dir": "docker/ctf-contests/susctf2025/susmarket",
       "status": "deployed",
-      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)"
+      "flagMechanism": "官方 Dockerfile 自带 GZCTF_FLAG 注入链,加 ARG FLAG+ENV 即适配;flag 注入点按源码(run.sh/entrypoint)",
+      "writeupLocal": "ctf-writeup/susctf2025/susctf2025.md"
     },
     {
       "id": "hkcert2024-custom-server-1",
@@ -124,11 +130,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://mystiz.hk/posts/2025/2025-06-29-hkcert-ctf-3/",
       "dir": "docker/ctf-contests/hkcert2024/custom-server-1",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2024/hkcert2024.md"
     },
     {
       "id": "hkcert2024-new-free-lunch",
@@ -143,11 +150,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/blackb6a/hkcert-ctf-2024-challenges-public/tree/master/08-new-free-lunch/writeup",
       "dir": "docker/ctf-contests/hkcert2024/new-free-lunch",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
-      "stars": 1
+      "stars": 1,
+      "writeupLocal": "ctf-writeup/hkcert2024/hkcert2024.md"
     },
     {
       "id": "hkcert2024-minictf-1",
@@ -162,11 +170,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://mystiz.hk/posts/2025/2025-06-29-hkcert-ctf-3/",
       "dir": "docker/ctf-contests/hkcert2024/minictf-1",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码(public/+README),部署时自建 Dockerfile;flag 注入按源码(多为读 flag 文件/ENV)",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2024/hkcert2024.md"
     },
     {
       "id": "hkcert2024-minictf-2",

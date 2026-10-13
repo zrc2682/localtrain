@@ -193,7 +193,7 @@
         "url": "https://github.com/CTF-Archives/2023-XHLJ"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xhlj-2023/xhlj-2023.md",
       "dir": "docker/ctf-contests/xhlj-2023/xhlj-2023-ezupload",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Spring Boot 文件上传漏洞后读取",
@@ -215,7 +215,7 @@
         "url": "https://github.com/CTF-Archives/2024-dfjk"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/dfjk-2024/dfjk-2024.md",
       "dir": "docker/ctf-contests/dfjk-2024/dfjk-2024-oldapi",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Spring Boot 旧 API 漏洞 + nginx 反代后读取",

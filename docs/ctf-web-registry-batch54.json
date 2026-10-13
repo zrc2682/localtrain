@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/suctf2025/suctf2025-sujava",
       "status": "deployed",
       "flagMechanism": "ENV FLAG 构建期烧入 + /ctf/suctf_fl4g (java8 JDBC RCE)",
-      "reason": "同比赛同名冲突：平台已有 \"sujava\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"sujava\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2025/suctf2025.md"
     },
     {
       "id": "suctf2025-su-blog",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/suctf2025/suctf2025-su-blog",
       "status": "deployed",
       "flagMechanism": "generate_flag.sh 构建期静态写入 /flag + readflag (flask pydash sandbox escape)",
-      "reason": "同比赛同名冲突：平台已有 \"SU blog\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU blog\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2025/suctf2025.md"
     },
     {
       "id": "suctf2025-su-dotnet",
@@ -58,7 +60,8 @@
       "dir": "docker/ctf-contests/suctf2025/suctf2025-su-dotnet",
       "status": "deployed",
       "flagMechanism": "COPY flag.txt 静态 + setuid readflag (mono .net deserialization)",
-      "reason": "同比赛同名冲突：平台已有 \"SU DOTNET\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU DOTNET\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2025/suctf2025.md"
     },
     {
       "id": "suctf2025-su-photogallery",
@@ -77,7 +80,8 @@
       "dir": "docker/ctf-contests/suctf2025/suctf2025-su-photogallery",
       "status": "deployed",
       "flagMechanism": "ENV FLAG 已硬编码真实值(原为空占位), flag.sh 运行时落盘 (php webshell upload)",
-      "reason": "同比赛同名冲突：平台已有 \"SU photogallery\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU photogallery\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2025/suctf2025.md"
     },
     {
       "id": "suctf2025-su-pop",
@@ -96,7 +100,8 @@
       "dir": "docker/ctf-contests/suctf2025/suctf2025-su-pop",
       "status": "deployed",
       "flagMechanism": "COPY src/flag.txt 静态 (php8.4 pop chain)",
-      "reason": "同比赛同名冲突：平台已有 \"SU POP\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU POP\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2025/suctf2025.md"
     },
     {
       "id": "dubhe2024-tagebuch",
@@ -115,7 +120,8 @@
       "dir": "docker/ctf-contests/dubhectf2024/dubhe2024-tagebuch",
       "status": "deployed",
       "flagMechanism": "ENV FLAG 构建期烧入 (node pnpm 博客站, 原 compose 的 cloudflared 隧道容器已去除)",
-      "reason": "同比赛同名冲突：平台已有 \"Tagebuch\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"Tagebuch\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/dubhectf2024/dubhectf2024.md"
     },
     {
       "id": "dubhe2024-vulntagger",
@@ -134,7 +140,8 @@
       "dir": "docker/ctf-contests/dubhectf2024/dubhe2024-vulntagger",
       "status": "deployed",
       "flagMechanism": "entrypoint 硬编码写 /flag + setuid readflag (python AI 模型站)",
-      "reason": "同比赛同名冲突：平台已有 \"VulnTagger\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"VulnTagger\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/dubhectf2024/dubhectf2024.md"
     },
     {
       "id": "n1ctf2025-eezzjs",
@@ -153,7 +160,8 @@
       "dir": "docker/ctf-contests/n1ctf2025/n1ctf2025-eezzjs",
       "status": "deployed",
       "flagMechanism": "start.sh 硬编码写 /flag (node 读文件, 原 FLAG env 逻辑已替换)",
-      "reason": "同比赛同名冲突：平台已有 \"eezzjs\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"eezzjs\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/n1ctf2025/n1ctf2025.md"
     },
     {
       "id": "n1ctf2025-n1cat",
@@ -172,7 +180,8 @@
       "dir": "docker/ctf-contests/n1ctf2025/n1ctf2025-n1cat",
       "status": "deployed",
       "flagMechanism": "start.sh 硬编码写 /flag (tomcat RewriteValve path 转发)",
-      "reason": "同比赛同名冲突：平台已有 \"n1cat\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"n1cat\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/n1ctf2025/n1ctf2025.md"
     }
   ]
 }

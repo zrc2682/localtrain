@@ -66,7 +66,7 @@
         "url": "https://github.com/CTF-Archives/2025-jksn-final"
       },
       "writeup": "https://github.com/CTF-Archives/2025-jksn-final",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md",
       "dir": "docker/ctf-contests/jksn-2025-final/jksn-2025-final-web4",
       "hasDockerfile": false,
       "flagMechanism": "单文件 PHP Session 文件污染 + LFI；flag 写入 /flag 后读取",
@@ -234,7 +234,7 @@
         "url": "https://github.com/CTF-Archives/2023-fjsdxssjan"
       },
       "writeup": "https://github.com/CTF-Archives/2023-fjsdxssjan",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/fjsdxssjan-2023/fjsdxssjan-2023.md",
       "dir": "docker/ctf-contests/fjsdxssjan-2023/fjsdxssjan-2023-no-rce-zentao",
       "hasDockerfile": false,
       "flagMechanism": "完整禅道 PHP 应用；flag 写入 /flag 后由 ZenTao 逻辑漏洞读取",

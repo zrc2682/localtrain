@@ -86,7 +86,7 @@
         "url": ""
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qwbs9-2025/qwbs9-2025.md",
       "dir": "docker/ctf-contests/2025-qwbs9/2025-qwbs9-go2php",
       "hasDockerfile": true,
       "flagMechanism": "ENV FLAG 注入，写入 /flag.txt",

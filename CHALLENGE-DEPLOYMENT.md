@@ -201,9 +201,11 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 - 2026-09-23：CTF 第 59 批部署完成（miniL 2024、NCKUCTF 2024、SUSCTF 2024 重挖，3 道全部成功并平台验证）。SmartPark-Revenge 与 ncku DOUBLE EXPLOIT 因镜像层损坏（容器停在 Created 状态）剔除；Docker Desktop 守护进程在本轮高强度构建中多次挂起，通过重启恢复。
 - 2026-09-24：CTF 第 60 批部署完成（GeekGame 3rd prob14-emoji 未收录因 sbt 基础镜像两镜像源均无；miniL 2023 twins、miniL 2024 mini-jail 重挖 2 道全部成功）。mini-jail 原 Dockerfile 删除 /bin/busybox 导致 runc 无法启动，保留 busybox 修复。至此 2022 年后国内主要 CTF 官方公开仓库的 Web 题源码已系统性挖尽，剩余可部署题目以"已挖掘仓库重挖补漏"为主。
 
+- 2026-10-13：CTF 第 61 批部署完成（2026 湾区杯决赛 AWDP-WEB sky_uom/lingyun_atlas/Flowise、SpiritCTF 2026 热身赛 Darkroom/ez_gambling/R0b0ts/Spirit Notes/escape-backrooms、dez-eng/upload-wall，9 道全部成功并平台验证）。新矿源：CTF-Archives/2026-WQB-Finals Releases、residream/2026-SpiritCTF-Warm-Web、dez-eng/upload-wall。工程要点：Flowise（24MB pnpm monorepo）容器内 npm 换 npmmirror、faiss-node GitHub prebuild 宿主机代理预下载后 COPY 进 /root/.npm/_prebuilds 缓存（缓存名以构建日志为准）、sqlite3 由 node-gyp 源码编译、/flag 写入须置于 USER node 降权之前；lingyun_atlas 为静态 Go ELF 直接包 Dockerfile。CCB2026-Quals Web 三题未发附件、InduCoreBot 附件上游损坏、CarbonTrace 依赖外部以太坊 RPC，均未收录。MoeCTF_2026 官方仓已删除（404），归档预计 1-2 周内出现；NewStar/0xGame 2026 按惯例 11-12 月归档。
+
 > 选题过程中同时维护 `docs/ctf-web-challenges.md` 的批次章节（构建备注、附件补齐、writeup 来源）；`.deployed-challenges/` 索引由 `update-deployed-index.mjs` 维护，不要手工增删。
 
-### 5.3 当前状态（60 批）
+### 5.3 当前状态（61 批）
 
 | 批次 | 日期 | 数量 | 部署 | 跳过 | 失败 | 备注 |
 |------|------|------|------|------|------|------|
@@ -257,8 +259,9 @@ node scripts/validate-batch-registry.mjs docs/ctf-web-registry-batchN.json
 | 第 58 批 | 2026-09-23 | 6 | 6 | 0 | 0 | 0xGame 2022(3)、0xGame 2024(3) 重挖；rust:1.79 因依赖需 edition2024 升级 rust:latest；ssrf-me/think-about-php 换通用基础镜像 |
 | 第 59 批 | 2026-09-23 | 3 | 3 | 0 | 0 | miniL 2024(1)、NCKUCTF 2024(1)、SUSCTF 2024(1)；SmartPark-Revenge 与 ncku DOUBLE EXPLOIT 镜像层损坏无法启动剔除 |
 | 第 60 批 | 2026-09-24 | 2 | 2 | 0 | 0 | GeekGame 3rd(1, sbt 镜像源无未收录)、miniL 2023/2024(2) 重挖；mini-jail 保留 busybox 修复 runc 启动；hkcert 差集经平台侧证实全部重复部署 |
+| 第 61 批 | 2026-10-13 | 9 | 9 | 0 | 0 | 2026 湾区杯决赛 AWDP-WEB(3)、SpiritCTF 2026 热身赛(5)、Upload Wall(1)；Flowise 容器内网络受限,faiss-node prebuild 预下载注入缓存 |
 
-**合计**：60 个批次，登记表累计 608 道其中已部署 577 道（另有 CVE 题 45 道已部署）；第 41-51 批为汇总行，明细见 docs/ctf-web-challenges.md 各批章节
+**合计**：61 个批次，登记表累计 617 道其中已部署 586 道（另有 CVE 题 45 道已部署）；第 41-51 批为汇总行，明细见 docs/ctf-web-challenges.md 各批章节
 
 ### 5.4 部署流程（每批次通用）
 

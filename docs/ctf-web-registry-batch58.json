@@ -19,7 +19,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2022",
       "dir": "docker/ctf-contests/batch58-mix/0xg2022-ssrf-me",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (ctfhub nginx+mysql+php56)"
+      "flagMechanism": "源码内置静态 flag (ctfhub nginx+mysql+php56)",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
     },
     {
       "id": "0xg2022-think-about-php",
@@ -37,7 +38,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2022",
       "dir": "docker/ctf-contests/batch58-mix/0xg2022-think-about-php",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (linode/lamp)"
+      "flagMechanism": "源码内置静态 flag (linode/lamp)",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
     },
     {
       "id": "0xg2022-profile",
@@ -55,7 +57,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2022",
       "dir": "docker/ctf-contests/batch58-mix/0xg2022-profile",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (node16 原型链污染)"
+      "flagMechanism": "源码内置静态 flag (node16 原型链污染)",
+      "writeupLocal": "ctf-writeup/0xgame2022/0xgame2022.md"
     },
     {
       "id": "0xg2024-cargo-shop",
@@ -73,7 +76,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2024",
       "dir": "docker/ctf-contests/batch58-mix/0xg2024-cargo-shop",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (rust actix, 构建重)"
+      "flagMechanism": "源码内置静态 flag (rust actix, 构建重)",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
     },
     {
       "id": "0xg2024-next-db",
@@ -91,7 +95,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2024",
       "dir": "docker/ctf-contests/batch58-mix/0xg2024-next-db",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (next.js + mongodb)"
+      "flagMechanism": "源码内置静态 flag (next.js + mongodb)",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
     },
     {
       "id": "0xg2024-paste-bin",
@@ -109,7 +114,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2024",
       "dir": "docker/ctf-contests/batch58-mix/0xg2024-paste-bin",
       "status": "deployed",
-      "flagMechanism": "源码内置静态 flag (rust, CSP 绕过)"
+      "flagMechanism": "源码内置静态 flag (rust, CSP 绕过)",
+      "writeupLocal": "ctf-writeup/0xgame2024/0xgame2024.md"
     }
   ]
 }

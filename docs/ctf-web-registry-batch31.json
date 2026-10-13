@@ -200,7 +200,8 @@
       "dir": "docker/ctf-contests/jksn-2025-final/web4-lfi",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "PHP 7.4 Apache，监听 80；LFI 类题目。"
+      "notes": "PHP 7.4 Apache，监听 80；LFI 类题目。",
+      "writeupLocal": "ctf-writeup/jksn-2025/jksn-2025.md"
     }
   ]
 }

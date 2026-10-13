@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/batch59-mix/susctf2024-sandbox",
       "status": "deployed",
       "flagMechanism": "ENV GZCTF_FLAG 烧入, run.sh 写 /flag (flask python 沙箱逃逸)",
-      "reason": "同比赛同名冲突：平台已有 \"sandbox\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"sandbox\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/susctf-2024/susctf-2024.md"
     },
     {
       "id": "hkcert22-king-of-rps",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/batch59-mix/hkcert22-king-of-rps",
       "status": "deployed",
       "flagMechanism": "ENV FLAG 烧入(原题为运行时 env 注入)",
-      "reason": "同比赛同名冲突：平台已有 \"King of RPS\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"King of RPS\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert23-json2csv",
@@ -58,7 +60,8 @@
       "dir": "docker/ctf-contests/batch59-mix/hkcert23-json2csv",
       "status": "deployed",
       "flagMechanism": "ENV FLAG 烧入(原题为运行时 env 注入)",
-      "reason": "同比赛同名冲突：平台已有 \"json2csv\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"json2csv\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     }
   ]
 }

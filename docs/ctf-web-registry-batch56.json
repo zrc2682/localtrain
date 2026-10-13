@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/batch56-mix/geekgame4-web-memos",
       "status": "deployed",
       "flagMechanism": "构建期 COPY flag /flag, init.sh 注入 sqlite 库 (memos 笔记站)",
-      "reason": "同比赛同名冲突：平台已有 \"web-memos ICS笑传之查查表\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"web-memos ICS笑传之查查表\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/geekgame-2024/geekgame-2024.md"
     },
     {
       "id": "0xg2023-ez-sqli",
@@ -38,7 +39,8 @@
       "writeup": "https://github.com/X1cT34m/0xGame2023",
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-ez-sqli",
       "status": "deployed",
-      "flagMechanism": "源码内置 flag (python flask sql 注入)"
+      "flagMechanism": "源码内置 flag (python flask sql 注入)",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
       "id": "0xg2023-rss-parser",
@@ -57,7 +59,8 @@
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-rss-parser",
       "status": "deployed",
       "flagMechanism": "readflag 双阶段 (go readflag + python flask XXE/SSRF)",
-      "reason": "同比赛同名冲突：平台已有 \"rss_parser\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"rss_parser\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
       "id": "0xg2023-zip-file-manager",
@@ -76,7 +79,8 @@
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-zip-file-manager",
       "status": "deployed",
       "flagMechanism": "Dockerfile RUN echo 写 /flag (python zip 解压)",
-      "reason": "同比赛同名冲突：平台已有 \"zip_file_manager\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"zip_file_manager\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
       "id": "0xg2023-testconnection",
@@ -95,7 +99,8 @@
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-testconnection",
       "status": "deployed",
       "flagMechanism": "源码内置 flag (java jmx/rmi)",
-      "reason": "同比赛同名冲突：平台已有 \"TestConnection\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"TestConnection\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
       "id": "0xg2023-yourbatis",
@@ -114,7 +119,8 @@
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-yourbatis",
       "status": "deployed",
       "flagMechanism": "源码内置 flag (java mybatis 注入)",
-      "reason": "同比赛同名冲突：平台已有 \"YourBatis\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"YourBatis\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
       "id": "0xg2023-auth-bypass",
@@ -133,7 +139,8 @@
       "dir": "docker/ctf-contests/batch56-mix/0xg2023-auth-bypass",
       "status": "deployed",
       "flagMechanism": "readflag 双阶段 (tomcat 8.5 + go readflag)",
-      "reason": "同比赛同名冲突：平台已有 \"auth_bypass\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"auth_bypass\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     }
   ]
 }

@@ -19,7 +19,8 @@
       "writeup": "https://github.com/Nu1LCTF/n1ctf-2023/tree/main/web/ezmaria/writeup",
       "dir": "docker/ctf-contests/batch55-mix/n1ctf2023-ezmaria",
       "status": "deployed",
-      "flagMechanism": "start.sh 硬编码写 /flag (httpd+maria+php, setcap 提权读)"
+      "flagMechanism": "start.sh 硬编码写 /flag (httpd+maria+php, setcap 提权读)",
+      "writeupLocal": "ctf-writeup/n1ctf-2023/n1ctf-2023.md"
     },
     {
       "id": "n1ctf2022-do-not-touch-my-localhost",
@@ -37,7 +38,8 @@
       "writeup": "https://github.com/Nu1LCTF/n1ctf-2022",
       "dir": "docker/ctf-contests/batch55-mix/n1ctf2022-do-not-touch-my-localhost",
       "status": "deployed",
-      "flagMechanism": "start.sh 硬编码写 /flag (golang+archlinux+caddy, chromium 反连)"
+      "flagMechanism": "start.sh 硬编码写 /flag (golang+archlinux+caddy, chromium 反连)",
+      "writeupLocal": "ctf-writeup/n1ctf-2022/n1ctf-2022.md"
     },
     {
       "id": "aliyunctf2023-ezbean",
@@ -55,7 +57,8 @@
       "writeup": "https://github.com/LFYSec/aliyunctf-ezbean (含部署说明)",
       "dir": "docker/ctf-contests/batch55-mix/aliyunctf2023-ezbean",
       "status": "deployed",
-      "flagMechanism": "COPY _files/flag /flag 静态 (tomcat springbean RCE, 原 flag 保留)"
+      "flagMechanism": "COPY _files/flag /flag 静态 (tomcat springbean RCE, 原 flag 保留)",
+      "writeupLocal": "ctf-writeup/aliyunctf-2023/aliyunctf-2023.md"
     },
     {
       "id": "nepctf2026-goupan",
@@ -73,7 +76,8 @@
       "writeup": "https://github.com/fjh1997/nepctf2026-writeup",
       "dir": "docker/ctf-contests/batch55-mix/nepctf2026-goupan",
       "status": "deployed",
-      "flagMechanism": "entrypoint 硬编码写 /flag (vite node 钩子题)"
+      "flagMechanism": "entrypoint 硬编码写 /flag (vite node 钩子题)",
+      "writeupLocal": "ctf-writeup/nepctf-2026/nepctf-2026.md"
     },
     {
       "id": "hgame2025-ayanews",
@@ -91,7 +95,8 @@
       "writeup": "https://github.com/Tremse/HGAME-2025-Web-AyaNews",
       "dir": "docker/ctf-contests/batch55-mix/hgame2025-ayanews",
       "status": "deployed",
-      "flagMechanism": "ENV FLAG 构建期烧入供 bot 读 cookie (rust+supervisord+xssbot)"
+      "flagMechanism": "ENV FLAG 构建期烧入供 bot 读 cookie (rust+supervisord+xssbot)",
+      "writeupLocal": "ctf-writeup/hgame-2025/hgame-2025.md"
     },
     {
       "id": "geekgame5-web-grafana",
@@ -109,7 +114,8 @@
       "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-grafana",
       "dir": "docker/ctf-contests/batch55-mix/geekgame5-web-grafana",
       "status": "deployed",
-      "flagMechanism": "flag1/flag2 构建期 COPY, entrypoint 写入 influxdb (grafana 12 未授权数据源)"
+      "flagMechanism": "flag1/flag2 构建期 COPY, entrypoint 写入 influxdb (grafana 12 未授权数据源)",
+      "writeupLocal": "ctf-writeup/geekgame-2025/geekgame-2025.md"
     },
     {
       "id": "geekgame5-web-calcaas",
@@ -127,7 +133,8 @@
       "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-calcaas",
       "dir": "docker/ctf-contests/batch55-mix/geekgame5-web-calcaas",
       "status": "deployed",
-      "flagMechanism": "RUN echo 写 /flag, deno --allow-read 读取 (deno 计算器)"
+      "flagMechanism": "RUN echo 写 /flag, deno --allow-read 读取 (deno 计算器)",
+      "writeupLocal": "ctf-writeup/geekgame-2025/geekgame-2025.md"
     }
   ]
 }

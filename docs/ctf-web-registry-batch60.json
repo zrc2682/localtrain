@@ -19,7 +19,8 @@
       "writeup": "https://github.com/XDSEC/miniLCTF_2023",
       "dir": "docker/ctf-contests/batch60-mix/minil2023-twins",
       "status": "deployed",
-      "flagMechanism": "xinetd python jail, TCP 探活"
+      "flagMechanism": "xinetd python jail, TCP 探活",
+      "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
     },
     {
       "id": "minil2024-mini-jail",
@@ -37,7 +38,8 @@
       "writeup": "https://github.com/XDSEC/miniLCTF_2024",
       "dir": "docker/ctf-contests/batch60-mix/minil2024-mini-jail",
       "status": "deployed",
-      "flagMechanism": "socat node jail, TCP 探活"
+      "flagMechanism": "socat node jail, TCP 探活",
+      "writeupLocal": "ctf-writeup/minil2024/minil2024.md"
     }
   ]
 }

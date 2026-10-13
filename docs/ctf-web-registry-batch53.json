@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/minil2026/minil2026-ezping",
       "status": "deployed",
       "flagMechanism": "entrypoint 硬编码(原 FLAG env 已改写死): sed 占位符写入 /flag (flask 命令注入 ping)",
-      "reason": "同比赛同名冲突：平台已有 \"EzPing\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"EzPing\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "minil2026-ezomniprobe",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/minil2026/minil2026-ezomniprobe",
       "status": "deployed",
       "flagMechanism": "entrypoint 硬编码写 /flag (node 提权 pkexec)",
-      "reason": "同比赛同名冲突：平台已有 \"EzOmniprobe\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"EzOmniprobe\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "minil2026-ezjvav",
@@ -58,7 +60,8 @@
       "dir": "docker/ctf-contests/minil2026/minil2026-ezjvav",
       "status": "deployed",
       "flagMechanism": "entrypoint SECRET_VALUE 硬编码(多阶段 java+rust, 构建重)",
-      "reason": "同比赛同名冲突：平台已有 \"Ezjvav\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"Ezjvav\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "minil2026-hdphp",
@@ -76,7 +79,8 @@
       "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
       "dir": "docker/ctf-contests/minil2026/minil2026-hdphp",
       "status": "deployed",
-      "flagMechanism": "entrypo1nt.sh 硬编码 echo > /flag (php-fpm+nginx)"
+      "flagMechanism": "entrypo1nt.sh 硬编码 echo > /flag (php-fpm+nginx)",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "minil2026-ezff",
@@ -95,7 +99,8 @@
       "dir": "docker/ctf-contests/minil2026/minil2026-ezff",
       "status": "deployed",
       "flagMechanism": "entrypoint 硬编码写 /flag (java jar)",
-      "reason": "同比赛同名冲突：平台已有 \"ezff\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"ezff\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "minil2026-boli-omikuji",
@@ -113,7 +118,8 @@
       "writeup": "https://github.com/XDSEC/miniLCTF_2026/tree/main/OfficialWriteups/web",
       "dir": "docker/ctf-contests/minil2026/minil2026-boli-omikuji",
       "status": "deployed",
-      "flagMechanism": "start.sh 硬编码写 /tmp/therealflag_<sha3_512_32> (postgrest+postgres 单容器)"
+      "flagMechanism": "start.sh 硬编码写 /tmp/therealflag_<sha3_512_32> (postgrest+postgres 单容器)",
+      "writeupLocal": "ctf-writeup/minil2026/minil2026.md"
     },
     {
       "id": "litctf2026-northbridge",
@@ -132,7 +138,8 @@
       "dir": "docker/ctf-contests/litctf2026/litctf2026-northbridge",
       "status": "deployed",
       "flagMechanism": "ENV GZCTF_FLAG 构建期注入 (tomcat war, maven 构建)",
-      "reason": "同比赛同名冲突：平台已有 \"Northbridge Document Hub\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"Northbridge Document Hub\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/litctf2026/litctf2026.md"
     },
     {
       "id": "litctf2026-ezsql",
@@ -150,7 +157,8 @@
       "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
       "dir": "docker/ctf-contests/litctf2026/litctf2026-ezsql",
       "status": "deployed",
-      "flagMechanism": "ENV GZCTF_FLAG (flask+mysql 同容器)"
+      "flagMechanism": "ENV GZCTF_FLAG (flask+mysql 同容器)",
+      "writeupLocal": "ctf-writeup/litctf2026/litctf2026.md"
     },
     {
       "id": "litctf2026-ezssti",
@@ -168,7 +176,8 @@
       "writeup": "https://github.com/ProbiusOfficial/LitCTF2026",
       "dir": "docker/ctf-contests/litctf2026/litctf2026-ezssti",
       "status": "deployed",
-      "flagMechanism": "ENV GZCTF_FLAG (flask SSTI)"
+      "flagMechanism": "ENV GZCTF_FLAG (flask SSTI)",
+      "writeupLocal": "ctf-writeup/litctf2026/litctf2026.md"
     },
     {
       "id": "litctf2026-reversemyweb",
@@ -187,7 +196,8 @@
       "dir": "docker/ctf-contests/litctf2026/litctf2026-reversemyweb",
       "status": "deployed",
       "flagMechanism": "ENV GZCTF_FLAG (go 多阶段构建)",
-      "reason": "同比赛同名冲突：平台已有 \"reverseMyWeb\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"reverseMyWeb\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/litctf2026/litctf2026.md"
     },
     {
       "id": "litctf2026-huachen",
@@ -206,7 +216,8 @@
       "dir": "docker/ctf-contests/litctf2026/litctf2026-huachen",
       "status": "deployed",
       "flagMechanism": "ENV GZCTF_FLAG (java8 springboot actuator+shiro, maven 构建)",
-      "reason": "同比赛同名冲突：平台已有 \"华辰企业服务运营平台\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"华辰企业服务运营平台\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/litctf2026/litctf2026.md"
     }
   ]
 }

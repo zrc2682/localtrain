@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/qwbs6qsn-2023/ezdja",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "Django 应用，数据库改为 SQLite3，python 3.11 运行 runserver 0.0.0.0:5000。"
+      "notes": "Django 应用，数据库改为 SQLite3，python 3.11 运行 runserver 0.0.0.0:5000。",
+      "writeupLocal": "ctf-writeup/qwbs6qsn-2023/qwbs6qsn-2023.md"
     },
     {
       "id": "qwbs6qsn-2023-fuond-cms",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/qwbs6qsn-2023/fuond-cms",
       "status": "deployed",
       "flagMechanism": "flag.sh 写入 /flag，容器启动时初始化 MySQL 数据库",
-      "notes": "PHP CMS，使用 ctftraining/base_image_nginx_mysql_php_73 单容器 LAMP。"
+      "notes": "PHP CMS，使用 ctftraining/base_image_nginx_mysql_php_73 单容器 LAMP。",
+      "writeupLocal": "ctf-writeup/qwbs6qsn-2023/qwbs6qsn-2023.md"
     },
     {
       "id": "zjsdxs-2024-qualifier-cybersecurity-knowledge",
@@ -78,7 +80,8 @@
       "dir": "docker/ctf-contests/jksn-2026-quals/teacher-panel",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /tmp/flag",
-      "notes": "Flask 应用，从 /tmp/flag 读取 flag，监听 8000。"
+      "notes": "Flask 应用，从 /tmp/flag 读取 flag，监听 8000。",
+      "writeupLocal": "ctf-writeup/jksn-2026/jksn-2026.md"
     },
     {
       "id": "jksn-2026-quals-waf-bypass",
@@ -97,7 +100,8 @@
       "dir": "docker/ctf-contests/jksn-2026-quals/waf-bypass",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag",
-      "notes": "Spring Boot 可执行 jar ez-fastjson，监听 8080。"
+      "notes": "Spring Boot 可执行 jar ez-fastjson，监听 8080。",
+      "writeupLocal": "ctf-writeup/jksn-2026/jksn-2026.md"
     }
   ]
 }

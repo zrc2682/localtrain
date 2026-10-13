@@ -160,7 +160,8 @@
       "dir": "docker/ctf-contests/ciscn-2024-quals/pybox",
       "status": "deployed",
       "flagMechanism": "构建时 ARG FLAG 写入 /flag，Flask 运行用户提交的 Python 代码，绕过沙箱读取 /flag",
-      "notes": "Python 沙箱代码执行题。源码来自 .tmp/batch31/ciscn_quals_extract，已补充 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。"
+      "notes": "Python 沙箱代码执行题。源码来自 .tmp/batch31/ciscn_quals_extract，已补充 Dockerfile 使用 python:3.12-alpine 并注入动态 flag。",
+      "writeupLocal": "ctf-writeup/ciscn-2024-quals/ciscn-2024-quals.md"
     },
     {
       "id": "cuhk-ctf-2025-jain-streak-dreamers",

@@ -16,11 +16,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/05-motp/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/motp",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-secured-web-service",
@@ -35,11 +36,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/08-secured-web-service/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/secured-web-service",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-math24-1",
@@ -54,11 +56,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/10-math24-1/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/math24-1",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-expat-passer-confucian",
@@ -73,11 +76,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/17-expat-passer-confucian/writeup/writeup.md",
       "dir": "docker/ctf-contests/hkcert2022/expat-passer-confucian",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 4
+      "stars": 4,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-back-to-the-past",
@@ -92,11 +96,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/22-back-to-the-past/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/back-to-the-past",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 1
+      "stars": 1,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-cve-1999",
@@ -111,11 +116,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/29-cve-1999/writeup/sol.txt",
       "dir": "docker/ctf-contests/hkcert2022/cve-1999",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-spyce",
@@ -130,11 +136,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/39-spyce/writeup/solve.py",
       "dir": "docker/ctf-contests/hkcert2022/spyce",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 1
+      "stars": 1,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-spyce2",
@@ -149,11 +156,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/40-spyce2/writeup/solve.py",
       "dir": "docker/ctf-contests/hkcert2022/spyce2",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 5
+      "stars": 5,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-prototype-sanityxss",
@@ -168,11 +176,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/42-prototype-sanityxss/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/prototype-sanityxss",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     },
     {
       "id": "hkcert2022-prototype-chaos",
@@ -187,11 +196,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/blob/main/CTF-2022/43-prototype-chaos/writeup/README.md",
       "dir": "docker/ctf-contests/hkcert2022/prototype-chaos",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile",
-      "stars": 4
+      "stars": 4,
+      "writeupLocal": "ctf-writeup/hkcert2022/hkcert2022.md"
     }
   ]
 }

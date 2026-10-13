@@ -16,11 +16,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://hackmd.io/@nutty-h0p/hkcert2023-writeup-probablyunknowns-markup-language-by-nightsedge",
       "dir": "docker/ctf-contests/hkcert2023/puml",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 3
+      "stars": 3,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-secret-notebook",
@@ -35,11 +36,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://siunam321.github.io/ctf/HKCERT-CTF-2023/web/Secret-Notebook/",
       "dir": "docker/ctf-contests/hkcert2023/secret-notebook",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 3
+      "stars": 3,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-stcode3",
@@ -54,11 +56,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/blackb6a/hkcert-ctf-2023-challenges/tree/main/13-stcode3",
       "dir": "docker/ctf-contests/hkcert2023/stcode3",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 3
+      "stars": 3,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-infantxss-again",
@@ -73,11 +76,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/STC-STEM/hkcert23ctf-writeups/tree/main/infant-xss-again",
       "dir": "docker/ctf-contests/hkcert2023/infantxss-again",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 1
+      "stars": 1,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-wishlist",
@@ -92,11 +96,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/blackb6a/hkcert-ctf-2023-challenges/tree/main/15-wishlist",
       "dir": "docker/ctf-contests/hkcert2023/wishlist",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 4
+      "stars": 4,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-php-net-backdoor",
@@ -111,11 +116,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/blackb6a/hkcert-ctf-2023-challenges/tree/main/26-php-net-backdoor",
       "dir": "docker/ctf-contests/hkcert2023/php-net-backdoor",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-php-net-backdoor2",
@@ -150,11 +156,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://hackmd.io/@blackb6a/hkcert-ctf-2023-ii-en-4e6150a89a1ff32c",
       "dir": "docker/ctf-contests/hkcert2023/babyxss-again",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 0
+      "stars": 0,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-fetusxss-again",
@@ -169,11 +176,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://github.com/blackb6a/hkcert-ctf-2023-challenges/tree/main/33-fetusxss-again",
       "dir": "docker/ctf-contests/hkcert2023/fetusxss-again",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     },
     {
       "id": "hkcert2023-fake-ground-offer",
@@ -188,11 +196,12 @@
         "repo": "hkcert-ctf/CTF-Challenges",
         "url": "https://github.com/hkcert-ctf/CTF-Challenges"
       },
-      "writeup": "官方 writeup(仓库/官网)",
+      "writeup": "https://siunam321.github.io/ctf/HKCERT-CTF-2023/web/Fake-Ground-Offer/",
       "dir": "docker/ctf-contests/hkcert2023/fake-ground-offer",
       "status": "deployed",
       "flagMechanism": "官方仓仅源码,部署时自建 Dockerfile;XSS 类(infant/baby/fetus)若依赖解题 bot 需内建 bot 组件或降级 skipped",
-      "stars": 2
+      "stars": 2,
+      "writeupLocal": "ctf-writeup/hkcert2023/hkcert2023.md"
     }
   ]
 }

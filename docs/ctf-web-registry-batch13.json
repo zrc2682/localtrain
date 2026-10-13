@@ -162,7 +162,7 @@
         "url": "https://github.com/pj-newstar/newstar-ctf-2025/blob/main/extras/README.md"
       },
       "writeup": "https://www.cnblogs.com/sbhglqy/p/19677307",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/newstar-2025/newstar-2025.md",
       "dir": "docker/ctf-contests/newstar-2025-batch13/whossti-revenge",
       "hasDockerfile": true,
       "flagMechanism": "原始镜像以环境变量 ICQ_FLAG 传入，启动脚本写入 /flag；Dockerfile 固定 ICQ_FLAG 为平台静态 flag",

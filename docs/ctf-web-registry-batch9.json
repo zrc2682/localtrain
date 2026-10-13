@@ -17,7 +17,7 @@
         "url": "https://github.com/CTF-Archives/2025-qwbs9-quals"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qwbs9-2025/qwbs9-2025.md",
       "dir": "docker/ctf-contests/qwbs9-2025/qwbs9-2025-go2php",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag.txt，通过 PHP 扩展 /catflag 读取",

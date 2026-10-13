@@ -61,7 +61,7 @@
         "url": "https://github.com/CTF-Archives/2025-ccb-final/releases/tag/attachment"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ccb-2025/ccb-2025.md",
       "dir": "docker/ctf-contests/ccb-2025-final/ccb-2025-solidrockmonitor",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，通过 Shiro rememberMe 反序列化 getshell 后读取",

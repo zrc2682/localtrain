@@ -1,0 +1,169 @@
+{
+  "batch": 61,
+  "contest": "2026 湾区杯决赛 AWDP-WEB + SpiritCTF 2026 热身赛 + Upload Wall 混合批",
+  "source": "CTF-Archives/2026-WQB-Finals releases + residream/2026-SpiritCTF-Warm-Web + dez-eng/upload-wall",
+  "challenges": [
+    {
+      "id": "wqb2026finals-sky-uom",
+      "title": "sky_uom",
+      "contest": "2026 湾区杯决赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-wqb2026finals-sky-uom:latest",
+      "flag": "flag{wqb26_sky_u0m_v1_s1gn_l34k}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Finals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Finals/releases/tag/attachments"
+      },
+      "writeup": null,
+      "dir": "docker/ctf-contests/wqb2026finals/wqb2026finals-sky-uom",
+      "status": "deployed",
+      "flagMechanism": "构建期 RUN echo 写 /flag(server.js readFlag 读 /flag); 原题 GZCTF 动态 flag"
+    },
+    {
+      "id": "wqb2026finals-lingyun-atlas",
+      "title": "lingyun_atlas",
+      "contest": "2026 湾区杯决赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-wqb2026finals-lingyun-atlas:latest",
+      "flag": "flag{wqb26_l1ngyun_4tl4s_tpl_1nj}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Finals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Finals/releases/tag/attachments"
+      },
+      "writeup": null,
+      "dir": "docker/ctf-contests/wqb2026finals/wqb2026finals-lingyun-atlas",
+      "status": "deployed",
+      "flagMechanism": "构建期 RUN echo 写 /flag(Go 二进制 readFlag); 附件为静态 Go ELF, 监听 :80"
+    },
+    {
+      "id": "wqb2026finals-flowise",
+      "title": "Flowise",
+      "contest": "2026 湾区杯决赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-wqb2026finals-flowise:latest",
+      "flag": "flag{wqb26_fl0w1se_s5t1_rce_1nj}",
+      "source": {
+        "repo": "CTF-Archives/2026-WQB-Finals",
+        "url": "https://github.com/CTF-Archives/2026-WQB-Finals/releases/tag/attachments"
+      },
+      "writeup": null,
+      "dir": "docker/ctf-contests/wqb2026finals/wqb2026finals-flowise",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG + /flag 双写入; Flowise 定制 fork(pnpm monorepo, node24 构建重)"
+    },
+    {
+      "id": "spiritctf2026-darkroom",
+      "title": "Darkroom",
+      "contest": "SpiritCTF 2026 热身赛",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-spiritctf2026-darkroom:latest",
+      "flag": "flag{TH3-baCkUP-rev34L5_A-g1F-PHaR_thAT-HIJ@ckS_THe_P@th0}",
+      "source": {
+        "repo": "residream/2026-SpiritCTF-Warm-Web",
+        "path": "darkroom/challenge"
+      },
+      "writeup": "https://github.com/residream/2026-SpiritCTF-Warm-Web/blob/main/darkroom/author/writeup.md",
+      "dir": "docker/ctf-contests/spiritctf2026/spiritctf2026-darkroom",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换真实值(wp 提取); php7.4-fpm 单容器"
+    },
+    {
+      "id": "spiritctf2026-ez-gambling",
+      "title": "ez_gambling",
+      "contest": "SpiritCTF 2026 热身赛",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 3000,
+      "image": "localtrain/ctf-spiritctf2026-ez-gambling:latest",
+      "flag": "flag{5p1r1t_ez_gambl1ng_int_n3g}",
+      "source": {
+        "repo": "residream/2026-SpiritCTF-Warm-Web",
+        "path": "ez_gambling/challenge"
+      },
+      "writeup": "https://github.com/residream/2026-SpiritCTF-Warm-Web/blob/main/ez_gambling/author/writeup.md",
+      "dir": "docker/ctf-contests/spiritctf2026/spiritctf2026-ez-gambling",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换(原题动态 flag 自拟); oven/bun 运行时"
+    },
+    {
+      "id": "spiritctf2026-r0b0ts",
+      "title": "R0b0ts",
+      "contest": "SpiritCTF 2026 热身赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-spiritctf2026-r0b0ts:latest",
+      "flag": "flag{5p1r1t_r0b0ts_r0b0ts_txt_ssrf}",
+      "source": {
+        "repo": "residream/2026-SpiritCTF-Warm-Web",
+        "path": "R0b0ts/challenge"
+      },
+      "writeup": "https://github.com/residream/2026-SpiritCTF-Warm-Web/blob/main/R0b0ts/author/writeup.md",
+      "dir": "docker/ctf-contests/spiritctf2026/spiritctf2026-r0b0ts",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换(自拟); robots.txt + SSRF"
+    },
+    {
+      "id": "spiritctf2026-spirit-notes",
+      "title": "Spirit Notes",
+      "contest": "SpiritCTF 2026 热身赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-spiritctf2026-spirit-notes:latest",
+      "flag": "flag{5p1r1t_n0tes_l0g_bl1nd_1nj}",
+      "source": {
+        "repo": "residream/2026-SpiritCTF-Warm-Web",
+        "path": "spirit-notes/challenge"
+      },
+      "writeup": "https://github.com/residream/2026-SpiritCTF-Warm-Web/blob/main/spirit-notes/author/writeup.md",
+      "dir": "docker/ctf-contests/spiritctf2026/spiritctf2026-spirit-notes",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换(自拟); python3.12"
+    },
+    {
+      "id": "spiritctf2026-escape-backrooms",
+      "title": "escape-backrooms",
+      "contest": "SpiritCTF 2026 热身赛",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-spiritctf2026-escape-backrooms:latest",
+      "flag": "flag{5p1r1t_3sc4p3_b4ckr00ms_r0ut3}",
+      "source": {
+        "repo": "residream/2026-SpiritCTF-Warm-Web",
+        "path": "escape-backrooms/challenge"
+      },
+      "writeup": "https://github.com/residream/2026-SpiritCTF-Warm-Web/blob/main/escape-backrooms/author/writeup.md",
+      "dir": "docker/ctf-contests/spiritctf2026/spiritctf2026-escape-backrooms",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 已替换(自拟); python3.12"
+    },
+    {
+      "id": "uploadwall2026-upload-wall",
+      "title": "Upload Wall",
+      "contest": "Upload Wall 2026",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-uploadwall2026-upload-wall:latest",
+      "flag": "flag{upl04d_w4ll_bl4ckl1st_byp4ss}",
+      "source": {
+        "repo": "dez-eng/upload-wall",
+        "path": "."
+      },
+      "writeup": "https://github.com/dez-eng/upload-wall",
+      "dir": "docker/ctf-contests/uploadwall2026/uploadwall2026-upload-wall",
+      "status": "deployed",
+      "flagMechanism": "ENV FLAG 烧入, start.sh 落盘 /flag(GZCTF 约定); php8.2-apache 黑名单绕过+.htaccess"
+    }
+  ]
+}

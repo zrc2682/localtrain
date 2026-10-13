@@ -20,7 +20,8 @@
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-note",
       "status": "deployed",
       "flagMechanism": "构建期静态: COPY ./flag /opt/su-eznote/flag (php+apache+XSS bot)",
-      "reason": "同比赛同名冲突：平台已有 \"SU-Note\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU-Note\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-note-rev",
@@ -39,7 +40,8 @@
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-note-rev",
       "status": "deployed",
       "flagMechanism": "构建期静态: COPY ./flag /opt/su-eznote/flag",
-      "reason": "同比赛同名冲突：平台已有 \"SU-Note-Rev\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU-Note-Rev\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-thief",
@@ -58,7 +60,8 @@
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-thief",
       "status": "deployed",
       "flagMechanism": "构建期静态: RUN echo flag > /root/flag (grafana+caddy admin api 提权读文件)",
-      "reason": "同比赛同名冲突：平台已有 \"SU Thief\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU Thief\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-cmsagain",
@@ -76,7 +79,8 @@
       "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_cmsAgain/writeup",
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-cmsagain",
       "status": "deployed",
-      "flagMechanism": "构建期静态: COPY ./env/data/flag.txt /var/www/html/flag.txt (ubuntu+apache+php7.2+mysql 单容器)"
+      "flagMechanism": "构建期静态: COPY ./env/data/flag.txt /var/www/html/flag.txt (ubuntu+apache+php7.2+mysql 单容器)",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-jdbc-master",
@@ -94,7 +98,8 @@
       "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_jdbc-master/writeup",
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-jdbc-master",
       "status": "deployed",
-      "flagMechanism": "构建期静态: COPY bin/flag /flag (java8 JDBC RCE)"
+      "flagMechanism": "构建期静态: COPY bin/flag /flag (java8 JDBC RCE)",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-sqli",
@@ -112,7 +117,8 @@
       "writeup": "https://github.com/team-su/SUCTF-2026/tree/main/web/SU_sqli/writeup",
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-sqli",
       "status": "deployed",
-      "flagMechanism": "构建期静态: COPY bin/flag /flag (go+postgres 单容器, 原仓 flag 为占位符已自拟)"
+      "flagMechanism": "构建期静态: COPY bin/flag /flag (go+postgres 单容器, 原仓 flag 为占位符已自拟)",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     },
     {
       "id": "suctf2026-su-uri",
@@ -131,7 +137,8 @@
       "dir": "docker/ctf-contests/suctf2026/suctf2026-su-uri",
       "status": "deployed",
       "flagMechanism": "构建期静态: COPY bin/flag /flag + readflag (go webhook 服务)",
-      "reason": "同比赛同名冲突：平台已有 \"SU uri\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"SU uri\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/suctf2026/suctf2026.md"
     }
   ]
 }

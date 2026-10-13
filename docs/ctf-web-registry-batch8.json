@@ -39,7 +39,7 @@
         "url": "https://github.com/CTF-Archives/2024-qwb-qsnxbs"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/qwb-qsnxbs-2024/qwb-qsnxbs-2024.md",
       "dir": "docker/ctf-contests/qwb-qsnxbs-2024/qwb-qsnxbs-2024-mysqlprobe",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，反序列化/命令执行后读取",
@@ -149,7 +149,7 @@
         "url": "https://github.com/dfjk-Lab/tpcms"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/dfjk-lab/dfjk-lab.md",
       "dir": "docker/ctf-contests/dfjk-lab/dfjk-lab-tpcms",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，CMS 漏洞 getshell 后读取",
@@ -171,7 +171,7 @@
         "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Semis"
       },
       "writeup": null,
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ccbciscn-2024/ccbciscn-2024.md",
       "dir": "docker/ctf-contests/ccbciscn-2024/ccbciscn-2024-java-again",
       "hasDockerfile": true,
       "flagMechanism": "构建期写入 /flag，Spring Boot 漏洞 RCE 后读取",

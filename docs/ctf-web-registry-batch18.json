@@ -157,7 +157,7 @@
         "url": "local"
       },
       "writeup": "local",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/xhlj-2024/xhlj-2024.md",
       "dir": "docker/ctf-contests/xhlj-2024/xhlj-2024-ezerp",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile ARG FLAG 写入 /flag，Spring Boot 漏洞读取",

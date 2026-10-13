@@ -179,7 +179,8 @@
       "dir": "docker/ctf-contests/nailong2025/hello-netdream",
       "status": "deployed",
       "flagMechanism": "三保险注入",
-      "reason": "同比赛同名冲突：平台已有 \"Hello_netdreamCTF_2025\"；未导入。确认有意更新请加 --allow-update"
+      "reason": "同比赛同名冲突：平台已有 \"Hello_netdreamCTF_2025\"；未导入。确认有意更新请加 --allow-update",
+      "writeupLocal": "ctf-writeup/nailong2025/nailong2025.md"
     },
     {
       "id": "isctf2025-baby-notice-board",

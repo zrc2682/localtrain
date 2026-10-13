@@ -201,7 +201,7 @@
         "url": "https://github.com/CTF-Archives/2024-CCB-CISCN-Quals"
       },
       "writeup": "https://github.com/CTF-Archives/2024-CCB-CISCN-Quals",
-      "writeupLocal": null,
+      "writeupLocal": "ctf-writeup/ccbciscn-2024/ccbciscn-2024.md",
       "dir": "docker/ctf-contests/ccbciscn-2024-quals/ccbciscn-2024-quals-ezruby",
       "hasDockerfile": true,
       "flagMechanism": "Dockerfile 写入 /flag，Ruby Sinatra 对象注入/SSRF 漏洞读取",
