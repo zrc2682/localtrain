@@ -24,3 +24,4 @@ packages/server/uploads/
 
 # 备份脚本产物
 backups/
+inc-admin.jar
