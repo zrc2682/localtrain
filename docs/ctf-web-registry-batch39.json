@@ -64,25 +64,6 @@
       "writeupLocal": "ctf-writeup/minil2023/minil2023.md"
     },
     {
-      "id": "minil2023-pycalculator",
-      "title": "pycalculator",
-      "contest": "Mini L-CTF 2023",
-      "category": "web",
-      "difficulty": "medium",
-      "port": 80,
-      "image": "localtrain/ctf-minil2023-pycalculator:latest",
-      "flag": "",
-      "source": {
-        "repo": "XDSEC/miniLCTF_2023",
-        "url": "https://github.com/XDSEC/miniLCTF_2023"
-      },
-      "writeup": "官方 WP(仓库内)",
-      "dir": "docker/ctf-contests/minil2023/pycalculator",
-      "flagMechanism": "构建期 RUN echo 写 /flag 或替换源码 flag 占位(部署时按源码定)",
-      "status": "skipped",
-      "reason": "附件为 socat 交互式 python 沙箱题,非 HTTP web,按排除项剔除"
-    },
-    {
       "id": "minil2023-giveaway",
       "title": "giveaway",
       "contest": "Mini L-CTF 2023",

@@ -183,25 +183,6 @@
       "writeupLocal": "ctf-writeup/nailong2025/nailong2025.md"
     },
     {
-      "id": "isctf2025-baby-notice-board",
-      "title": "baby_notice_board",
-      "contest": "ISCTF 2025",
-      "category": "web",
-      "difficulty": "easy",
-      "port": 80,
-      "image": "localtrain/ctf-isctf2025-baby-notice-board:latest",
-      "flag": "",
-      "source": {
-        "repo": "LamentXU123/myCTFchallenges",
-        "url": "https://github.com/LamentXU123/myCTFchallenges"
-      },
-      "writeup": "官方 WP",
-      "dir": "docker/ctf-contests/isctf2025/baby-notice-board",
-      "status": "skipped",
-      "flagMechanism": "三保险注入",
-      "reason": "构建期 mysql 初始化失败(待修复),留作 47 批候选"
-    },
-    {
       "id": "nailong2025-picklelovedill",
       "title": "picklelovedill",
       "contest": "奶龙杯 2025",

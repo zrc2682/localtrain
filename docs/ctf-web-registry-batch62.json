@@ -1,0 +1,169 @@
+{
+  "batch": 62,
+  "contest": "重挖补漏混合批(0xGame/miniL/NCKUCTF/NHNC/HITCON展/ISCTF)",
+  "source": "多仓库重挖; 部分为历史构建失败/镜像损坏重试题",
+  "challenges": [
+    {
+      "id": "0xg2023-spring",
+      "title": "spring",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 8081,
+      "image": "localtrain/ctf-0xg2023-spring:latest",
+      "flag": "flag{0xg2023_spr1ng_rce_l0c4l}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 4/spring"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch62-mix/0xg2023-spring",
+      "status": "pending",
+      "flagMechanism": "源码内置(部署时确认); 基础镜像 openjdk:8 需换 eclipse-temurin:8-jdk; spring.jar 单容器"
+    },
+    {
+      "id": "0xg2023-web-snapshot",
+      "title": "web_snapshot",
+      "contest": "0xGame 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-0xg2023-web-snapshot:latest",
+      "flag": "0xGame{aef421d4-0f35-4b82-b7ee-0dbea46b6333}",
+      "source": {
+        "repo": "X1cT34m/0xGame2023",
+        "path": "Web/Week 3/web_snapshot"
+      },
+      "writeup": "https://github.com/X1cT34m/0xGame2023",
+      "dir": "docker/ctf-contests/batch62-mix/0xg2023-web-snapshot",
+      "status": "pending",
+      "flagMechanism": "源码内置真实 flag(php:7.2-apache 截图服务); batch34 陈旧 skipped 条目已清理"
+    },
+    {
+      "id": "minil2023-pycalculator",
+      "title": "pycalculator",
+      "contest": "Mini L-CTF 2023",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9999,
+      "image": "localtrain/ctf-minil2023-pycalculator:latest",
+      "flag": "miniL{pyc4lcul4t0r_l0c4l}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2023",
+        "path": "Challenges/pycalculator"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2023",
+      "dir": "docker/ctf-contests/batch62-mix/minil2023-pycalculator",
+      "status": "pending",
+      "flagMechanism": "自拟; xinetd TCP 9999 python jail, ENV FLAG→start.sh 写 /home/ctf/flag; 探活走 TCP; batch39 陈旧 skipped 已清理"
+    },
+    {
+      "id": "minil2024-smartpark-revenge",
+      "title": "SmartPark-Revenge",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-smartpark-revenge:latest",
+      "flag": "miniL{smartpark_r3v3ng3_2024}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "path": "Challenges/SmartPark-Revenge"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024",
+      "dir": "docker/ctf-contests/batch62-mix/minil2024-smartpark-revenge",
+      "status": "pending",
+      "flagMechanism": "重试题(上轮镜像层损坏容器停在 Created 已 rmi); flag 文件原为 GET IT FROM ENV 占位需写真实值"
+    },
+    {
+      "id": "minil2024-injections",
+      "title": "InjectionS",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-injections:latest",
+      "flag": "miniL{1nj3ct10n5_sh1r0_rc3}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "path": "Challenges/InjectionS"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024",
+      "dir": "docker/ctf-contests/batch62-mix/minil2024-injections",
+      "status": "pending",
+      "flagMechanism": "自拟; 原 web(spring+shiro)+mysql 双容器 compose 需合并单容器(参考 ez_sql 先例)"
+    },
+    {
+      "id": "minil2024-jvavguy",
+      "title": "JvavGuy",
+      "contest": "Mini L-CTF 2024",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-minil2024-jvavguy:latest",
+      "flag": "miniL{jv4vguy_ru0y1_rc3}",
+      "source": {
+        "repo": "XDSEC/miniLCTF_2024",
+        "path": "Challenges/JvavGuy"
+      },
+      "writeup": "https://github.com/XDSEC/miniLCTF_2024",
+      "dir": "docker/ctf-contests/batch62-mix/minil2024-jvavguy",
+      "status": "pending",
+      "flagMechanism": "自拟; ruoyi(CMS)+mysql 双容器需合并; 构建工作量偏大"
+    },
+    {
+      "id": "nckuctf2024-double-exploit",
+      "title": "DOUBLE EXPLOIT",
+      "contest": "NCKUCTF 2024",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-nckuctf2024-double-exploit:latest",
+      "flag": "NCKUCTF{my_first_pwn+web}",
+      "source": {
+        "repo": "William957-web/My-CTF-Challenges",
+        "path": "NCKUCTF/2024/NCKU-DOUBLE-EXPLOIT-main"
+      },
+      "writeup": "https://github.com/William957-web/My-CTF-Challenges",
+      "dir": "docker/ctf-contests/batch62-mix/nckuctf2024-double-exploit",
+      "status": "pending",
+      "flagMechanism": "secret.php 内置真实 flag(php mysqli); 重试题(上轮镜像层损坏已 rmi)"
+    },
+    {
+      "id": "hitconex2025-cardmachine",
+      "title": "Daemon Slayer Card Machine",
+      "contest": "HITCON Exhibition 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 1202,
+      "image": "localtrain/ctf-hitconex2025-cardmachine:latest",
+      "flag": "hitcon{i_really_enjoy_the_day_when_will_us_meet_next_time_..._bypass_hitcon_d2}",
+      "source": {
+        "repo": "William957-web/My-CTF-Challenges",
+        "path": "hitcon_exhibition/2025"
+      },
+      "writeup": "https://github.com/William957-web/My-CTF-Challenges",
+      "dir": "docker/ctf-contests/batch62-mix/hitconex2025-cardmachine",
+      "status": "pending",
+      "flagMechanism": "flag.txt 内置真实 flag; flask 单容器 :1202; HITCON 摊位展题"
+    },
+    {
+      "id": "isctf2025-baby-notice-board",
+      "title": "baby_notice_board",
+      "contest": "ISCTF 2025",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-isctf2025-baby-notice-board:latest",
+      "flag": "flag{3a4cc347-8475-46cd-9f3e-64b393749fd2}",
+      "source": {
+        "repo": "LamentXU123/myCTFchallenges",
+        "path": "ISCTF 2025/baby_notice_board"
+      },
+      "writeup": "https://github.com/LamentXU123/myCTFchallenges",
+      "dir": "docker/ctf-contests/batch62-mix/isctf2025-baby-notice-board",
+      "status": "pending",
+      "flagMechanism": "源码内置真实 flag; php7.3-fpm+nginx+mysql 单容器(自带); 重试题(历史 mysql 初始化失败); batch46 陈旧 skipped 已清理"
+    }
+  ]
+}

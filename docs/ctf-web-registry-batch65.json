@@ -1,0 +1,76 @@
+{
+  "batch": 65,
+  "contest": "HKCERT CTF 2021 Web 扩展收录(入门组)",
+  "source": "hkcert-ctf/CTF-Challenges CTF-2021",
+  "note": "2022 年前比赛扩展收录; babyxss/babyurii 依赖公共 xss-bot 基础设施, 单容器部署时需内置 bot 或调整解题路径(参考已部署 Infant XSS again 先例)",
+  "challenges": [
+    {
+      "id": "hkcert21-infantxss",
+      "title": "Infant XSS",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-infantxss:latest",
+      "flag": "flag{hkcert21_1nf4ntx55_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021a/hkcert21-infantxss",
+      "status": "pending",
+      "flagMechanism": "自拟; XSS 类需评估 bot 依赖, jqplayground 为 jq 注入"
+    },
+    {
+      "id": "hkcert21-babyxss",
+      "title": "babyXSS",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-babyxss:latest",
+      "flag": "flag{hkcert21_b4byx55_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021a/hkcert21-babyxss",
+      "status": "pending",
+      "flagMechanism": "自拟; XSS 类需评估 bot 依赖, jqplayground 为 jq 注入"
+    },
+    {
+      "id": "hkcert21-babyurii",
+      "title": "babyURIi",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-babyurii:latest",
+      "flag": "flag{hkcert21_b4byur11_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021a/hkcert21-babyurii",
+      "status": "pending",
+      "flagMechanism": "自拟; XSS 类需评估 bot 依赖, jqplayground 为 jq 注入"
+    },
+    {
+      "id": "hkcert21-jqplayground",
+      "title": "jqplayground",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-jqplayground:latest",
+      "flag": "flag{hkcert21_jqpl4ygr0und_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021a/hkcert21-jqplayground",
+      "status": "pending",
+      "flagMechanism": "自拟; XSS 类需评估 bot 依赖, jqplayground 为 jq 注入"
+    }
+  ]
+}

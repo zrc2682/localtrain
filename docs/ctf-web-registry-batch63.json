@@ -1,0 +1,61 @@
+{
+  "batch": 63,
+  "contest": "GeekGame 2nd/3rd Web 自建批",
+  "source": "PKU-GeekGame/geekgame-2nd + geekgame-3rd; 另有企鹅文档(txdocs)/给钱不要(omnibox)两题无源码环境, 仅官方 wp, 未收录待自建",
+  "challenges": [
+    {
+      "id": "geekgame2-mediawiki",
+      "title": "私有笔记",
+      "contest": "GeekGame 2nd",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-geekgame2-mediawiki:latest",
+      "flag": "flag{insecure_01d_mediavviki}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-2nd",
+        "path": "official_writeup/mediawiki"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-2nd/tree/main/official_writeup/mediawiki",
+      "dir": "docker/ctf-contests/geekgame2nd/geekgame2-mediawiki",
+      "status": "pending",
+      "flagMechanism": "官方 writeup 提取真实 flag; MediaWiki 私有笔记, 需自建容器(mediawiki 镜像+数据)"
+    },
+    {
+      "id": "geekgame3-homepage",
+      "title": "第三新XSS",
+      "contest": "GeekGame 3rd",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 5000,
+      "image": "localtrain/ctf-geekgame3-homepage:latest",
+      "flag": "flag{gg3_h0mep4g3_5w_x55_l0c4l}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-3rd",
+        "path": "official_writeup/prob01-homepage"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-3rd/tree/main/official_writeup/prob01-homepage",
+      "dir": "docker/ctf-contests/geekgame3rd/geekgame3-homepage",
+      "status": "pending",
+      "flagMechanism": "自拟; server(flask)+xssbot 双容器需合并(supervisord); Service Worker XSS 向"
+    },
+    {
+      "id": "geekgame3-emoji-wordle",
+      "title": "Emoji Wordle",
+      "contest": "GeekGame 3rd",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 9000,
+      "image": "localtrain/ctf-geekgame3-emoji-wordle:latest",
+      "flag": "flag{s1Mp1e_brut3f0rc3}",
+      "source": {
+        "repo": "PKU-GeekGame/geekgame-3rd",
+        "path": "official_writeup/prob14-emoji"
+      },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-3rd/tree/main/official_writeup/prob14-emoji",
+      "dir": "docker/ctf-contests/geekgame3rd/geekgame3-emoji-wordle",
+      "status": "pending",
+      "flagMechanism": "源码内置三 flag 取 flag1(scala sbt); 风险: sbtscala/scala-sbt 基础镜像两镜像源均无, 需直连拉取或换基础镜像自装 sbt"
+    }
+  ]
+}

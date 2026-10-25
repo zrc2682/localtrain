@@ -1,0 +1,59 @@
+{
+  "batch": 67,
+  "contest": "HKCERT CTF 2021 Web 扩展收录(进阶组 II)",
+  "source": "hkcert-ctf/CTF-Challenges CTF-2021",
+  "note": "2022 年前比赛扩展收录; retk/tuning-master 原依赖公共 xss-bot, 需内置 bot",
+  "challenges": [
+    {
+      "id": "hkcert21-sea-of-thorns",
+      "title": "sea of thorns",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-sea-of-thorns:latest",
+      "flag": "flag{hkcert21_s3a_0f_th0rn5_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021c/hkcert21-sea-of-thorns",
+      "status": "pending",
+      "flagMechanism": "自拟; sea-of-thorns=PHP 白名单逃逸, tuning 系=xssbot 交互"
+    },
+    {
+      "id": "hkcert21-retk",
+      "title": "Return of the Tuning Keyboard",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-retk:latest",
+      "flag": "flag{hkcert21_r0tk_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021c/hkcert21-retk",
+      "status": "pending",
+      "flagMechanism": "自拟; sea-of-thorns=PHP 白名单逃逸, tuning 系=xssbot 交互"
+    },
+    {
+      "id": "hkcert21-ctf-tuning-master",
+      "title": "CTF Tuning Master",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-ctf-tuning-master:latest",
+      "flag": "flag{hkcert21_tun1ng_m4st3r_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021c/hkcert21-ctf-tuning-master",
+      "status": "pending",
+      "flagMechanism": "自拟; sea-of-thorns=PHP 白名单逃逸, tuning 系=xssbot 交互"
+    }
+  ]
+}

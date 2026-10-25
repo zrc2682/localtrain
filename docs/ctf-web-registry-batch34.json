@@ -156,24 +156,6 @@
       "writeupLocal": "ctf-writeup/0xgame2023/0xgame2023.md"
     },
     {
-      "id": "0xgame2023-web-snapshot",
-      "title": "web_snapshot",
-      "contest": "0xGame 2023",
-      "category": "web",
-      "difficulty": "medium",
-      "port": 80,
-      "image": "localtrain/ctf-0xgame2023-web-snapshot:latest",
-      "flag": "",
-      "source": {
-        "repo": "X1cT34m/0xGame2023",
-        "url": "https://github.com/X1cT34m/0xGame2023"
-      },
-      "writeup": "0xGame2023 官方 WP(同仓库)",
-      "dir": "docker/ctf-contests/0xgame2023/web-snapshot",
-      "status": "skipped",
-      "reason": "原题为 web+redis(slaveOf) 双容器依赖,cache.php 硬编码 db 主机名,合并单容器改造风险高,换 hello_http"
-    },
-    {
       "id": "0xgame2023-goshop",
       "title": "GoShop",
       "contest": "0xGame 2023",

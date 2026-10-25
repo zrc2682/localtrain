@@ -1,0 +1,76 @@
+{
+  "batch": 66,
+  "contest": "HKCERT CTF 2021 Web 扩展收录(进阶组 I)",
+  "source": "hkcert-ctf/CTF-Challenges CTF-2021",
+  "note": "2022 年前比赛扩展收录",
+  "challenges": [
+    {
+      "id": "hkcert21-positron",
+      "title": "positron",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-positron:latest",
+      "flag": "flag{hkcert21_p051tr0n_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021b/hkcert21-positron",
+      "status": "pending",
+      "flagMechanism": "自拟; positron=Electron 向, because-i-said-it=HTTP 语义, squirrelcommunity=Squirrel 语言站"
+    },
+    {
+      "id": "hkcert21-because-i-said-it",
+      "title": "because i said it",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-because-i-said-it:latest",
+      "flag": "flag{hkcert21_b3c4us3_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021b/hkcert21-because-i-said-it",
+      "status": "pending",
+      "flagMechanism": "自拟; positron=Electron 向, because-i-said-it=HTTP 语义, squirrelcommunity=Squirrel 语言站"
+    },
+    {
+      "id": "hkcert21-squirrelcommunity",
+      "title": "squirrelcommunity",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-squirrelcommunity:latest",
+      "flag": "flag{hkcert21_sq31rr3l_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021b/hkcert21-squirrelcommunity",
+      "status": "pending",
+      "flagMechanism": "自拟; positron=Electron 向, because-i-said-it=HTTP 语义, squirrelcommunity=Squirrel 语言站"
+    },
+    {
+      "id": "hkcert21-infantbrowser",
+      "title": "infantbrowser",
+      "contest": "HKCERT CTF 2021",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert21-infantbrowser:latest",
+      "flag": "flag{hkcert21_1nf4ntbr0wser_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2021",
+      "dir": "docker/ctf-contests/hkcert2021b/hkcert21-infantbrowser",
+      "status": "pending",
+      "flagMechanism": "自拟; positron=Electron 向, because-i-said-it=HTTP 语义, squirrelcommunity=Squirrel 语言站"
+    }
+  ]
+}

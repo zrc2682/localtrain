@@ -1,0 +1,98 @@
+{
+  "batch": 64,
+  "contest": "HKCERT CTF 2020 Web 扩展收录",
+  "source": "hkcert-ctf/CTF-Challenges CTF-2020",
+  "note": "2022 年前比赛, 属平台既有 HKCERT 2022-2025 系列的向早期扩展, 部署前请确认是否接受",
+  "challenges": [
+    {
+      "id": "hkcert20-rickroll",
+      "title": "Rickroll",
+      "contest": "HKCERT CTF 2020",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert20-rickroll:latest",
+      "flag": "flag{hkcert20_r1ckr0ll_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2020/3. Web Exploitation/Rickroll"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2020/3.%20Web%20Exploitation/Rickroll",
+      "dir": "docker/ctf-contests/hkcert2020/hkcert20-rickroll",
+      "status": "pending",
+      "flagMechanism": "自拟(部署时可用官方 wp 校验); 原题运行时 FLAG env 注入, 部署时改 ENV FLAG 烧入"
+    },
+    {
+      "id": "hkcert20-sanity-check-2",
+      "title": "Sanity Check II",
+      "contest": "HKCERT CTF 2020",
+      "category": "web",
+      "difficulty": "easy",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert20-sanity-check-2:latest",
+      "flag": "flag{hkcert20_s4n1ty_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2020/3. Web Exploitation/Sanity Check II"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2020/3.%20Web%20Exploitation/Sanity%20Check%20II",
+      "dir": "docker/ctf-contests/hkcert2020/hkcert20-sanity-check-2",
+      "status": "pending",
+      "flagMechanism": "自拟(部署时可用官方 wp 校验); 原题运行时 FLAG env 注入, 部署时改 ENV FLAG 烧入"
+    },
+    {
+      "id": "hkcert20-c99mask",
+      "title": "C99Mask",
+      "contest": "HKCERT CTF 2020",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert20-c99mask:latest",
+      "flag": "flag{hkcert20_c99m4sk_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2020/3. Web Exploitation/C99Mask"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2020/3.%20Web%20Exploitation/C99Mask",
+      "dir": "docker/ctf-contests/hkcert2020/hkcert20-c99mask",
+      "status": "pending",
+      "flagMechanism": "自拟(部署时可用官方 wp 校验); 原题运行时 FLAG env 注入, 部署时改 ENV FLAG 烧入"
+    },
+    {
+      "id": "hkcert20-conversion-center",
+      "title": "Conversion Center",
+      "contest": "HKCERT CTF 2020",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 3000,
+      "image": "localtrain/ctf-hkcert20-conversion-center:latest",
+      "flag": "flag{hkcert20_c0nv3rs10n_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2020/3. Web Exploitation/Conversion Center"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2020/3.%20Web%20Exploitation/Conversion%20Center",
+      "dir": "docker/ctf-contests/hkcert2020/hkcert20-conversion-center",
+      "status": "pending",
+      "flagMechanism": "自拟(部署时可用官方 wp 校验); 原题运行时 FLAG env 注入, 部署时改 ENV FLAG 烧入"
+    },
+    {
+      "id": "hkcert20-lockpickduck-v3",
+      "title": "LockPickDuck v3",
+      "contest": "HKCERT CTF 2020",
+      "category": "web",
+      "difficulty": "medium",
+      "port": 80,
+      "image": "localtrain/ctf-hkcert20-lockpickduck-v3:latest",
+      "flag": "flag{hkcert20_l0ckp1ckduck_l0c4l}",
+      "source": {
+        "repo": "hkcert-ctf/CTF-Challenges",
+        "path": "CTF-2020/3. Web Exploitation/LockPickDuck v3"
+      },
+      "writeup": "https://github.com/hkcert-ctf/CTF-Challenges/tree/main/CTF-2020/3.%20Web%20Exploitation/LockPickDuck%20v3",
+      "dir": "docker/ctf-contests/hkcert2020/hkcert20-lockpickduck-v3",
+      "status": "pending",
+      "flagMechanism": "自拟(部署时可用官方 wp 校验); 原题运行时 FLAG env 注入, 部署时改 ENV FLAG 烧入"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "batch": 68,
+  "contest": "GeekGame 4th/5th Web 环境题 + MoeCTF 2023 moeworld",
+  "source": "PKU-GeekGame/geekgame-4th + geekgame-5th + XDSEC/MoeCTF_2023",
+  "challenges": [
+    {
+      "id": "geekgame5-web-ezmcp",
+      "title": "web-ezmcp",
+      "contest": "GeekGame 5th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 3000,
+      "image": "localtrain/ctf-geekgame5-web-ezmcp:latest",
+      "flag": "flag{gg5_ezmcp_t00l_p01s0n_l0c4l}",
+      "source": { "repo": "PKU-GeekGame/geekgame-5th", "path": "official_writeup/web-ezmcp/game" },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-ezmcp",
+      "dir": "docker/ctf-contests/geekgame4x5/geekgame5-web-ezmcp",
+      "status": "pending",
+      "flagMechanism": "自拟; MCP 工具注入向, 自带 Dockerfile(EXPOSE 3000), flag 注入方式部署时按源码确认"
+    },
+    {
+      "id": "geekgame5-web-clash",
+      "title": "web-clash 提权潜兵",
+      "contest": "GeekGame 5th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-geekgame5-web-clash:latest",
+      "flag": "flag{gg5_cl4sh_c0re_escal4te_l0c4l}",
+      "source": { "repo": "PKU-GeekGame/geekgame-5th", "path": "official_writeup/web-clash/src" },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-5th/tree/main/official_writeup/web-clash",
+      "dir": "docker/ctf-contests/geekgame4x5/geekgame5-web-clash",
+      "status": "pending",
+      "flagMechanism": "自拟(取 flag1); FlClashCore 代理配置提权向; 使用 Dockerfile_flag1 已复制为 Dockerfile; entrypoint 原写 fake flag 需替换; 对外端口部署时按 entrypoint 实际监听确认"
+    },
+    {
+      "id": "geekgame4-web-ppl",
+      "title": "web-ppl 概率题目概率过",
+      "contest": "GeekGame 4th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-geekgame4-web-ppl:latest",
+      "flag": "flag{gg4_ppl_pr0b4b1l1ty_l0c4l}",
+      "source": { "repo": "PKU-GeekGame/geekgame-4th", "path": "official_writeup/web-ppl/src" },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-4th/tree/main/official_writeup/web-ppl",
+      "dir": "docker/ctf-contests/geekgame4x5/geekgame4-web-ppl",
+      "status": "pending",
+      "flagMechanism": "自拟; 原为纯 xssbot.py selenium 脚本+webppl_site 站, 无对外端口, 部署时需补 web 提交入口(参考 hitcon cardmachine 合并先例); Dockerfile 内 fake flag 需替换"
+    },
+    {
+      "id": "geekgame4-web-crx",
+      "title": "web-crx 好评返红包",
+      "contest": "GeekGame 4th",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 80,
+      "image": "localtrain/ctf-geekgame4-web-crx:latest",
+      "flag": "flag{gg4_crx_e5tens10n_x55_l0c4l}",
+      "source": { "repo": "PKU-GeekGame/geekgame-4th", "path": "official_writeup/web-crx/attachment/web-crx-src" },
+      "writeup": "https://github.com/PKU-GeekGame/geekgame-4th/tree/main/official_writeup/web-crx",
+      "dir": "docker/ctf-contests/geekgame4x5/geekgame4-web-crx",
+      "status": "pending",
+      "flagMechanism": "自拟(取 flag1); 浏览器扩展 XSS 向; 双内网 flask(127.0.1.14/127.0.5.14:1919)+xssbot, 部署时需补对外 web 入口; flag_server 读 /flag1 /flag2 部署时写真实值"
+    },
+    {
+      "id": "moectf2023-moeworld",
+      "title": "moeworld",
+      "contest": "MoeCTF 2023",
+      "category": "web",
+      "difficulty": "hard",
+      "port": 8080,
+      "image": "localtrain/ctf-moectf2023-moeworld:latest",
+      "flag": "flag{m0ew0rld_3v41_pr0xy_l0c4l}",
+      "source": { "repo": "XDSEC/MoeCTF_2023", "path": "Challenges/Web/moeworld" },
+      "writeup": "https://github.com/XDSEC/MoeCTF_2023",
+      "dir": "docker/ctf-contests/moectf2023-moeworld",
+      "status": "pending",
+      "flagMechanism": "自拟; 原三容器(1_flaskBlog:8000→8080/2_mysql/3_redis)需合并单容器(flask+mysql+redis 同容器, 参考 ez_sqli 合并先例); SSRF 打内网三组件向"
+    }
+  ]
+}
